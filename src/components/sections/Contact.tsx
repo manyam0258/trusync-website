@@ -5,6 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { submitContactForm } from "@/app/actions/contact";
 
 export function Contact() {
     return (
@@ -76,13 +77,23 @@ export function Contact() {
 
                         {/* Right Panel - Contact Form */}
                         <div className="lg:col-span-3 p-10">
-                            <form className="space-y-6">
+                            <form action={async (formData) => {
+                                const result = await submitContactForm(formData);
+                                if (result.error) {
+                                    alert(result.error); // Simple alert for now, or use a toast
+                                } else {
+                                    alert("Message sent successfully!");
+                                    (document.getElementById("contact-form") as HTMLFormElement)?.reset();
+                                }
+                            }} id="contact-form" className="space-y-6">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label htmlFor="name" className="text-sm font-semibold text-slate-700">Name *</label>
                                         <input
                                             id="name"
+                                            name="name"
                                             type="text"
+                                            required
                                             className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
                                             placeholder="John Doe"
                                         />
@@ -91,7 +102,9 @@ export function Contact() {
                                         <label htmlFor="email" className="text-sm font-semibold text-slate-700">Email *</label>
                                         <input
                                             id="email"
+                                            name="email"
                                             type="email"
+                                            required
                                             suppressHydrationWarning
                                             className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
                                             placeholder="john@example.com"
@@ -104,6 +117,7 @@ export function Contact() {
                                         <label htmlFor="phone" className="text-sm font-semibold text-slate-700">Phone</label>
                                         <input
                                             id="phone"
+                                            name="phone"
                                             type="tel"
                                             className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
                                             placeholder="+1 (555) 000-0000"
@@ -113,13 +127,14 @@ export function Contact() {
                                         <label htmlFor="service" className="text-sm font-semibold text-slate-700">Service Interest</label>
                                         <select
                                             id="service"
+                                            name="service"
                                             className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-white transition-all"
                                         >
-                                            <option>Select a service</option>
-                                            <option>ERP Implementation</option>
-                                            <option>AI Automation</option>
-                                            <option>Both ERP & AI</option>
-                                            <option>Consulting</option>
+                                            <option value="">Select a service</option>
+                                            <option value="ERP Implementation">ERP Implementation</option>
+                                            <option value="AI Automation">AI Automation</option>
+                                            <option value="Both ERP & AI">Both ERP & AI</option>
+                                            <option value="Consulting">Consulting</option>
                                         </select>
                                     </div>
                                 </div>
@@ -128,6 +143,8 @@ export function Contact() {
                                     <label htmlFor="message" className="text-sm font-semibold text-slate-700">Message *</label>
                                     <textarea
                                         id="message"
+                                        name="message"
+                                        required
                                         rows={5}
                                         className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none"
                                         placeholder="Tell us about your project..."
