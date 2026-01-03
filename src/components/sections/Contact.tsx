@@ -6,8 +6,24 @@ import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { submitContactForm } from "@/app/actions/contact";
+import { useState } from "react";
+import { Toast } from "@/components/ui/Toast";
 
 export function Contact() {
+    const [toast, setToast] = useState<{ isVisible: boolean; message: string; type: "success" | "error" }>({
+        isVisible: false,
+        message: "",
+        type: "success",
+    });
+
+    const showToast = (message: string, type: "success" | "error" = "success") => {
+        setToast({ isVisible: true, message, type });
+    };
+
+    const hideToast = () => {
+        setToast((prev) => ({ ...prev, isVisible: false }));
+    };
+
     return (
         <Section id="contact" className="bg-gradient-to-br from-slate-50 to-white">
             <Container>
@@ -80,9 +96,9 @@ export function Contact() {
                             <form action={async (formData) => {
                                 const result = await submitContactForm(formData);
                                 if (result.error) {
-                                    alert(result.error); // Simple alert for now, or use a toast
+                                    showToast(result.error, "error");
                                 } else {
-                                    alert("Message sent successfully!");
+                                    showToast("Message sent successfully!");
                                     (document.getElementById("contact-form") as HTMLFormElement)?.reset();
                                 }
                             }} id="contact-form" className="space-y-6">
@@ -159,6 +175,12 @@ export function Contact() {
                     </div>
                 </div>
             </Container>
+            <Toast
+                message={toast.message}
+                type={toast.type}
+                isVisible={toast.isVisible}
+                onClose={hideToast}
+            />
         </Section>
     );
 }
