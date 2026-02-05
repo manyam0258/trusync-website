@@ -1,6 +1,18 @@
 import React from 'react';
-import ServicePageLayout from '@/components/ServicePageLayout';
 import { Metadata } from 'next';
+import { FrameworkHero } from '@/components/sections/framework/FrameworkHero';
+import { ArchitectureSection } from '@/components/sections/framework/ArchitectureSection';
+import { ERPNextSection } from '@/components/sections/framework/ERPNextSection';
+import { POSSection } from '@/components/sections/framework/POSSection';
+import { HRSection } from '@/components/sections/framework/HRSection';
+import { InsightsSection } from '@/components/sections/framework/InsightsSection';
+import { CRMHelpdeskSection } from '@/components/sections/framework/CRMHelpdeskSection';
+import { VerticalsSection } from '@/components/sections/framework/VerticalsSection';
+import { BuilderSection } from '@/components/sections/framework/BuilderSection';
+import { PricingSection } from '@/components/sections/framework/PricingSection';
+import { ERPFlowSection } from '@/components/sections/framework/ERPFlowSection';
+import { ComparisonSection } from '@/components/sections/framework/ComparisonSection';
+import { Contact } from '@/components/sections/Contact';
 
 export const metadata: Metadata = {
     title: 'Frappe Framework Development | Low Code Platform',
@@ -8,26 +20,21 @@ export const metadata: Metadata = {
 };
 
 export default function FrappeFrameworkPage() {
-    const painPoints = [
-        { title: 'Slow Development', description: 'Traditional coding takes months to deploy MVPs.' },
-        { title: 'Rigid Systems', description: 'Off-the-shelf software fails to adapt to unique business workflows.' },
-        { title: 'High Maintenance', description: 'Custom stacks require large teams to maintain and upgrade.' },
-    ];
-
-    const features = [
-        { title: 'Rapid Prototyping', description: 'Go from idea to live app in days, not months.' },
-        { title: 'Metadata Driven', description: 'Define DocTypes and let the framework handle the rest.' },
-        { title: 'Built-in Features', description: 'Auth, PDF generation, Email, and REST API out of the box.' },
-        { title: 'Scalable Architecture', description: 'Powered by Python, MariaDB, and Redis for high performance.' },
-    ];
-
     return (
-        <ServicePageLayout
-            title="Frappe Framework Development"
-            subtitle="Accelerate your digital transformation with the world's best 100% Open Source Low Code Framework."
-            painPoints={painPoints}
-            features={features}
-            techStack={['Python', 'JavaScript', 'MariaDB', 'Redis']}
-        />
+        <main className="min-h-screen">
+            <FrameworkHero />
+            <ArchitectureSection />
+            <ERPNextSection />
+            <POSSection />
+            <HRSection />
+            <InsightsSection />
+            <CRMHelpdeskSection />
+            <VerticalsSection />
+            <BuilderSection />
+            <PricingSection />
+            <ERPFlowSection />
+            <ComparisonSection />
+            <Contact />
+        </main>
     );
 }
