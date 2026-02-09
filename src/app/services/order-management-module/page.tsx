@@ -45,7 +45,8 @@ import {
     Tags,
     FileCheck,
     RefreshCw,
-
+    WifiOff,
+    MousePointer2,
     Anchor
 } from 'lucide-react';
 
@@ -1399,272 +1400,627 @@ const Page = () => {
 
 
             {/* Blanket Orders & Long-Term Revenue */}
-            <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-4 text-center">
+            <section className="py-24 bg-white overflow-hidden">
+                <div className="container mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="mb-16"
+                        className="text-center mb-16"
                     >
-                        <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
+                        <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
                             Secure Long-Term Revenue with Blanket Orders
                         </h2>
-                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                        <p className="text-xl text-slate-600 max-w-2xl mx-auto">
                             Automate compliance with long-term contracts and rate locking.
                         </p>
                     </motion.div>
 
-                    <div className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-                        <div className="flex justify-between items-center mb-6">
-                            <h3 className="font-bold text-slate-800">Blanket Order #BO-9901 Contract Limit</h3>
-                            <div className="text-sm text-slate-500">Total Quantity: 10,000 Units</div>
-                        </div>
+                    <div className="max-w-6xl mx-auto relative">
+                        <div className="grid lg:grid-cols-12 gap-12 items-center">
+                            <div className="lg:col-span-10">
+                                <div className="bg-white p-8 md:p-12 rounded-[2rem] shadow-2xl border border-slate-100 relative overflow-hidden group">
+                                    {/* Glassmorphism Background elements */}
+                                    <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50"></div>
 
-                        {/* Progress Bar Visualization */}
-                        <div className="relative h-16 bg-slate-100 rounded-xl overflow-hidden mb-8 border border-slate-200">
-                            {/* Filled Portion */}
-                            <div className="absolute top-0 left-0 h-full bg-blue-600 w-[65%] flex items-center justify-end pr-4">
-                                <div className="bg-white text-blue-600 text-xs font-bold px-2 py-1 rounded shadow-sm">
-                                    Ordered: 6,500
+                                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+                                        <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
+                                            Blanket Order <span className="text-blue-600 font-mono">#BO-9901</span> Contract Limit
+                                        </h3>
+                                        <div className="text-slate-500 font-medium bg-slate-50 px-4 py-2 rounded-lg border border-slate-100">
+                                            Total Quantity: <span className="text-slate-900 font-bold">10,000 Units</span>
+                                        </div>
+                                    </div>
+
+                                    {/* Progress Bar Visualization */}
+                                    <div className="relative h-20 bg-slate-100 rounded-2xl overflow-hidden mb-12 border border-slate-200 p-1 shadow-inner">
+                                        {/* Filled Portion */}
+                                        <motion.div
+                                            initial={{ width: 0 }}
+                                            whileInView={{ width: '65%' }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 1.5, ease: "easeOut" }}
+                                            className="absolute top-1 left-1 bottom-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl flex items-center justify-end pr-6 shadow-lg shadow-blue-500/20"
+                                        >
+                                            <div className="bg-white text-blue-600 text-sm font-bold px-3 py-1.5 rounded-lg shadow-xl translate-x-3 md:translate-x-0 relative">
+                                                Ordered: 6,500
+                                                <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-white"></div>
+                                            </div>
+                                        </motion.div>
+
+                                        {/* Remaining Portion Tooltip */}
+                                        <div className="absolute top-1/2 left-[82.5%] -translate-x-1/2 -translate-y-1/2">
+                                            <div className="bg-slate-800 text-white text-sm font-bold px-4 py-2 rounded-lg shadow-xl flex items-center gap-3">
+                                                Remaining: 3,500
+                                                <div className="w-2.5 h-2.5 bg-white rounded-full animate-ping"></div>
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[6px] border-b-slate-800"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Rate Lock Badge */}
+                                    <div className="flex justify-center -mb-4">
+                                        <motion.div
+                                            initial={{ y: 20, opacity: 0 }}
+                                            whileInView={{ y: 0, opacity: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: 0.5 }}
+                                            className="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl shadow-blue-500/40 relative z-10"
+                                        >
+                                            <Lock className="w-6 h-6" />
+                                            Rate Locked: $5.50/unit until Dec 31st
+                                            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[8px] border-b-blue-600"></div>
+                                        </motion.div>
+                                    </div>
                                 </div>
                             </div>
 
-                            {/* Remaining Portion Tooltip */}
-                            <div className="absolute top-1/2 right-[15%] -translate-y-1/2">
-                                <div className="bg-slate-800 text-white text-xs font-bold px-2 py-1 rounded shadow-sm flex items-center gap-2">
-                                    Remaining: 3,500
-                                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                                </div>
+                            {/* Decorative Arrow Pattern */}
+                            <div className="hidden lg:flex lg:col-span-2 flex-col gap-6 items-center">
+                                <motion.div
+                                    animate={{ x: [0, 10, 0] }}
+                                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                                    className="relative h-32 w-full"
+                                >
+                                    <div className="absolute top-0 right-0 w-full h-[2px] bg-blue-600/30"></div>
+                                    <div className="absolute top-8 right-0 w-3/4 h-[2px] bg-orange-500/30"></div>
+                                    <div className="absolute top-16 right-0 w-full h-[2px] bg-blue-500/30"></div>
+                                    <div className="absolute top-24 right-0 w-1/2 h-[2px] bg-orange-600/30"></div>
+
+                                    <div className="absolute -right-1 top-[-9px] text-blue-600"><ArrowRight className="w-5 h-5" /></div>
+                                    <div className="absolute -right-1 top-[23px] text-orange-500"><ArrowRight className="w-5 h-5" /></div>
+                                    <div className="absolute -right-1 top-[55px] text-blue-500"><ArrowRight className="w-5 h-5" /></div>
+                                    <div className="absolute -right-1 top-[87px] text-orange-600"><ArrowRight className="w-5 h-5" /></div>
+                                </motion.div>
                             </div>
                         </div>
 
-                        {/* Rate Lock Badge */}
-                        <div className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full font-medium text-sm shadow-lg transform -translate-y-4">
-                            <Lock className="w-4 h-4" />
-                            Rate Locked: $5.50/unit until Dec 31st
-                        </div>
-
-                        <div className="grid md:grid-cols-3 gap-6 mt-12 text-left">
-                            <div className="flex gap-3">
-                                <div className="mt-1 text-blue-600"><ArrowRight className="w-5 h-5" /></div>
-                                <p className="text-slate-700 font-medium">Lock in rates and quantities for key customers.</p>
-                            </div>
-                            <div className="flex gap-3">
-                                <div className="mt-1 text-blue-600"><ArrowRight className="w-5 h-5" /></div>
-                                <p className="text-slate-700 font-medium">Auto-validation against contract terms on every new order.</p>
-                            </div>
-                            <div className="flex gap-3">
-                                <div className="mt-1 text-blue-600"><ArrowRight className="w-5 h-5" /></div>
-                                <p className="text-slate-700 font-medium">Monitor fulfillment progress to prompt timely renewals.</p>
-                            </div>
+                        <div className="grid md:grid-cols-3 gap-8 mt-20">
+                            {[
+                                "Lock in rates and quantities for key customers.",
+                                "Auto-validation against contract terms on every new order.",
+                                "Monitor fulfillment progress to prompt timely renewals."
+                            ].map((text, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.1 }}
+                                    className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-colors group"
+                                >
+                                    <div className="mt-1 bg-blue-100 text-blue-600 p-1.5 rounded-lg group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                        <ArrowRight className="w-5 h-5" />
+                                    </div>
+                                    <p className="text-slate-700 font-bold text-lg leading-tight">{text}</p>
+                                </motion.div>
+                            ))}
                         </div>
                     </div>
                 </div>
-            </section >
+            </section>
 
             {/* Flawless Fulfillment */}
-            < section className="py-24 bg-white" >
-                <div className="container mx-auto px-4">
+            <section className="py-24 bg-white relative overflow-hidden">
+                <div className="absolute top-1/2 left-0 w-full h-1 bg-slate-50 -translate-y-1/2 pointer-events-none"></div>
+                <div className="container mx-auto px-4 relative z-10">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
+                        <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
                             Flawless Fulfillment and Delivery
                         </h2>
-                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                        <p className="text-xl text-slate-600 max-w-2xl mx-auto">
                             Move from digital promise to physical delivery without data re-entry.
                         </p>
                     </div>
 
                     <div className="max-w-6xl mx-auto">
-                        <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-0">
+                        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-20">
 
                             {/* Sales Order Doc */}
-                            <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 shadow-sm w-64 text-center shrink-0">
-                                <div className="bg-white w-12 h-16 mx-auto mb-4 border border-slate-200 shadow-sm rounded flex flex-col p-1 gap-1">
-                                    <div className="h-1 bg-slate-200 w-full rounded-sm"></div>
-                                    <div className="h-1 bg-slate-200 w-3/4 rounded-sm"></div>
-                                    <div className="h-4 bg-blue-100 w-full mt-auto rounded-sm"></div>
-                                </div>
-                                <h3 className="font-bold text-slate-800">Sales Order</h3>
-                            </div>
-
-                            <ArrowRight className="w-8 h-8 text-blue-500 lg:rotate-0 rotate-90" />
-
-                            {/* Delivery Note Doc */}
-                            <div className="bg-white p-6 rounded-xl border border-blue-600 shadow-lg w-64 text-center relative z-10 shrink-0">
-                                <div className="bg-white w-12 h-16 mx-auto mb-4 border border-slate-200 shadow-sm rounded flex flex-col p-1 gap-1 relative overflow-hidden">
-                                    <div className="absolute top-0 right-0 w-4 h-4 bg-blue-600 text-[8px] text-white flex items-center justify-center font-bold">✓</div>
-                                    <div className="h-1 bg-slate-200 w-full rounded-sm"></div>
-                                    <div className="h-1 bg-slate-200 w-3/4 rounded-sm"></div>
-                                    <div className="h-4 bg-blue-600 w-full mt-auto rounded-sm"></div>
-                                </div>
-                                <h3 className="font-bold text-blue-600">Delivery Note</h3>
-                            </div>
-
-                            <ArrowRight className="w-8 h-8 text-blue-500 lg:rotate-0 rotate-90" />
-
-                            {/* Stock Ledger */}
-                            <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm w-full max-w-lg lg:ml-4">
-                                <h3 className="font-bold text-slate-800 mb-3 border-b border-slate-200 pb-2">Stock Ledger</h3>
-                                <div className="grid grid-cols-4 gap-2 text-[10px] font-bold text-slate-500 mb-2">
-                                    <div>Item Code</div>
-                                    <div>Warehouse</div>
-                                    <div>Opening</div>
-                                    <div>Closing</div>
-                                </div>
-                                <div className="grid grid-cols-4 gap-2 text-xs items-center bg-white p-2 rounded border border-slate-100">
-                                    <div className="font-mono">ITEM-001</div>
-                                    <div>WH-001</div>
-                                    <div>500</div>
-                                    <div className="flex items-center gap-1 font-bold text-red-500">
-                                        <ArrowRight className="w-3 h-3 rotate-45" />
-                                        499
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-xl w-72 text-center shrink-0 group hover:border-blue-200 transition-colors"
+                            >
+                                <div className="bg-white w-16 h-20 mx-auto mb-6 border border-slate-200 shadow-sm rounded-lg flex flex-col p-2 gap-1.5 relative">
+                                    <div className="h-1.5 bg-slate-100 w-full rounded-full"></div>
+                                    <div className="h-1.5 bg-slate-100 w-3/4 rounded-full"></div>
+                                    <div className="h-1.5 bg-slate-100 w-1/2 rounded-full"></div>
+                                    <div className="h-6 bg-blue-100 w-full mt-auto rounded-md flex items-center justify-center">
+                                        <Handshake className="w-4 h-4 text-blue-600" />
                                     </div>
                                 </div>
-                            </div>
+                                <h3 className="text-xl font-bold text-slate-800">Sales Order</h3>
+                            </motion.div>
+
+                            <motion.div
+                                animate={{ x: [0, 10, 0] }}
+                                transition={{ repeat: Infinity, duration: 2 }}
+                                className="text-blue-500 hidden lg:block"
+                            >
+                                <ArrowRight className="w-10 h-10" />
+                            </motion.div>
+
+                            {/* Delivery Note Doc */}
+                            <motion.div
+                                initial={{ opacity: 0, scale: 1.1 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.2 }}
+                                className="bg-white p-8 rounded-3xl border-2 border-blue-600 shadow-2xl w-72 text-center relative z-10 shrink-0 transform lg:-translate-y-4"
+                            >
+                                <div className="absolute -top-4 -right-4 bg-blue-600 text-white p-2 rounded-full shadow-lg">
+                                    <CheckCircle className="w-6 h-6" />
+                                </div>
+                                <div className="bg-white w-16 h-20 mx-auto mb-6 border border-slate-200 shadow-sm rounded-lg flex flex-col p-2 gap-1.5 relative overflow-hidden">
+                                    <div className="h-1.5 bg-slate-100 w-full rounded-full"></div>
+                                    <div className="h-1.5 bg-slate-200 w-3/4 rounded-full"></div>
+                                    <div className="h-6 bg-blue-600 w-full mt-auto rounded-md flex items-center justify-center">
+                                        <Truck className="w-4 h-4 text-white" />
+                                    </div>
+                                </div>
+                                <h3 className="text-xl font-bold text-blue-600">Delivery Note</h3>
+                                <div className="mt-4 flex justify-center gap-1">
+                                    <motion.div
+                                        animate={{ y: [0, 5, 0], opacity: [1, 0, 1] }}
+                                        transition={{ repeat: Infinity, duration: 1.5 }}
+                                        className="text-red-500 font-black text-2xl"
+                                    >
+                                        -1
+                                    </motion.div>
+                                </div>
+                            </motion.div>
+
+                            <motion.div
+                                animate={{ x: [0, 10, 0] }}
+                                transition={{ repeat: Infinity, duration: 2, delay: 0.5 }}
+                                className="text-blue-500 hidden lg:block"
+                            >
+                                <ArrowRight className="w-10 h-10" />
+                            </motion.div>
+
+                            {/* Stock Ledger */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.4 }}
+                                className="bg-slate-900 p-8 rounded-3xl border border-slate-800 shadow-2xl w-full max-w-xl lg:ml-4 text-white overflow-hidden relative"
+                            >
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
+                                <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
+                                    <Database className="w-6 h-6 text-blue-400" />
+                                    Stock Ledger
+                                </h3>
+                                <div className="space-y-4">
+                                    <div className="grid grid-cols-5 gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-widest px-4">
+                                        <div className="col-span-2">Item Code</div>
+                                        <div>Wh</div>
+                                        <div className="text-right">Open</div>
+                                        <div className="text-right">Close</div>
+                                    </div>
+                                    <div className="grid grid-cols-5 gap-2 text-sm items-center bg-slate-800/50 p-4 rounded-xl border border-white/5 backdrop-blur-sm">
+                                        <div className="col-span-2 font-mono text-blue-400">ITEM-001</div>
+                                        <div className="text-slate-400">WH-01</div>
+                                        <div className="text-right font-medium">500</div>
+                                        <div className="text-right flex items-center justify-end gap-1.5 font-bold text-red-400 bg-red-400/10 px-2 py-1 rounded-lg">
+                                            <TrendingUp className="w-3 h-3 rotate-180" />
+                                            499
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
                         </div>
 
                         {/* Feature Capabilities below */}
-                        <div className="grid md:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto">
-                            <motion.div whileHover={{ y: -5 }} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
-                                <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                    <ClipboardList className="w-6 h-6" />
+                        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                            {[
+                                { icon: ClipboardList, title: "Pick List", desc: "Group orders for efficient picking tours.", color: "blue" },
+                                { icon: ScanLine, title: "Barcode Scan", desc: "Mobile scanning for error-free dispatch.", color: "indigo" },
+                                { icon: Tags, title: "Batch Tracking", desc: "Full traceability from supplier to customer.", color: "purple" }
+                            ].map((feature, i) => (
+                                <motion.div
+                                    key={i}
+                                    whileHover={{ y: -10, scale: 1.02 }}
+                                    className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-xl text-center group transition-all duration-300 hover:shadow-2xl active:scale-95"
+                                >
+                                    <div className={`w-16 h-16 bg-${feature.color}-50 text-${feature.color}-600 rounded-2xl mx-auto mb-6 flex items-center justify-center transform transition-transform group-hover:rotate-12`}>
+                                        <feature.icon className="w-8 h-8" />
+                                    </div>
+                                    <h4 className="text-xl font-bold text-slate-800 mb-3">{feature.title}</h4>
+                                    <p className="text-slate-500 leading-relaxed">{feature.desc}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Faster Invoicing, Healthy Cash Flow */}
+            <section className="py-24 bg-slate-50 overflow-hidden">
+                <div className="container mx-auto px-4">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <div className="text-orange-600 font-bold tracking-widest uppercase text-sm mb-4">Financial Velocity</div>
+                            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-slate-900 leading-tight">
+                                Faster Invoicing, <br /><span className="text-orange-600">Healthy Cash Flow</span>
+                            </h2>
+                            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+                                A sale isn't complete until the money is in the bank. Convert delivery notes to invoices instantly and monitor payments in real-time.
+                            </p>
+
+                            <div className="space-y-6">
+                                {[
+                                    { title: "Instant Conversion", desc: "Generate invoices directly from delivery notes or sales orders." },
+                                    { title: "Automated Reminders", desc: "Never chase a payment manually again with auto-emailers." },
+                                    { title: "Direct Payment Links", desc: "Include Razorpay, PayPal, or Stripe links in every PDF." }
+                                ].map((item, i) => (
+                                    <div key={i} className="flex gap-4">
+                                        <div className="mt-1 bg-orange-100 p-1 rounded-full h-6 w-6 flex items-center justify-center">
+                                            <CheckCircle className="w-4 h-4 text-orange-600" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold text-slate-900 text-lg">{item.title}</h4>
+                                            <p className="text-slate-600">{item.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </motion.div>
+
+                        <div className="relative">
+                            {/* Document Conversion Graphic */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="bg-white p-8 rounded-[2.5rem] shadow-2xl border border-slate-100 relative z-10"
+                            >
+                                <div className="flex justify-between items-center mb-8 pb-4 border-b border-slate-50">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600">
+                                            <FileText className="w-6 h-6" />
+                                        </div>
+                                        <h3 className="font-bold text-slate-800">Sales Invoice</h3>
+                                    </div>
+                                    <div className="text-sm font-mono text-slate-400">#INV-2024-089</div>
                                 </div>
-                                <h4 className="font-bold text-slate-800 mb-2">Pick List</h4>
-                                <p className="text-sm text-slate-500">Group orders for efficient picking tours.</p>
+
+                                <div className="space-y-4 mb-8">
+                                    <div className="flex justify-between text-sm"><span className="text-slate-500">Subtotal:</span> <span className="font-bold text-slate-800">$1,200.00</span></div>
+                                    <div className="flex justify-between text-sm"><span className="text-slate-500">Tax (VAT 5%):</span> <span className="font-bold text-slate-800">$60.00</span></div>
+                                    <div className="flex justify-between text-xl pt-4 border-t border-slate-100"><span className="font-bold text-slate-900">Total:</span> <span className="font-black text-orange-600">$1,260.00</span></div>
+                                </div>
+
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="w-full bg-orange-600 text-white font-black py-4 rounded-2xl shadow-xl shadow-orange-500/30 flex items-center justify-center gap-3 relative overflow-hidden group"
+                                >
+                                    <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
+                                    <FilePlus className="w-6 h-6" />
+                                    CREATE INVOICE
+                                    <motion.div
+                                        animate={{ x: [0, 10, 0], y: [0, 10, 0] }}
+                                        transition={{ repeat: Infinity, duration: 1.5 }}
+                                        className="absolute -bottom-2 -right-2 text-white/50"
+                                    >
+                                        <MousePointer2 className="w-8 h-8 rotate-[25deg] fill-white" />
+                                    </motion.div>
+                                </motion.button>
                             </motion.div>
-                            <motion.div whileHover={{ y: -5 }} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
-                                <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                    <ScanLine className="w-6 h-6" />
+
+                            {/* Aging Summary Card Overlay */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.3 }}
+                                className="absolute -bottom-10 -right-6 lg:-right-12 bg-white p-6 rounded-3xl shadow-2xl border border-slate-100 w-72 z-20"
+                            >
+                                <h4 className="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                                    <History className="w-4 h-4 text-orange-500" />
+                                    Aging Summary
+                                </h4>
+                                <div className="space-y-3">
+                                    <div>
+                                        <div className="flex justify-between text-[10px] font-bold text-slate-500 mb-1"><span>0-30 DAYS</span> <span>$45.5k</span></div>
+                                        <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                                            <div className="h-full bg-green-500 w-[75%]"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="flex justify-between text-[10px] font-bold text-slate-500 mb-1"><span>30-60 DAYS</span> <span>$12.2k</span></div>
+                                        <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                                            <div className="h-full bg-yellow-400 w-[20%]"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="flex justify-between text-[10px] font-bold text-slate-500 mb-1"><span>60+ DAYS</span> <span>$3.1k</span></div>
+                                        <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                                            <div className="h-full bg-red-500 w-[5%]"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h4 className="font-bold text-slate-800 mb-2">Barcode Scan</h4>
-                                <p className="text-sm text-slate-500">Mobile scanning for error-free dispatch.</p>
-                            </motion.div>
-                            <motion.div whileHover={{ y: -5 }} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
-                                <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                    <Tags className="w-6 h-6" />
-                                </div>
-                                <h4 className="font-bold text-slate-800 mb-2">Batch Tracking</h4>
-                                <p className="text-sm text-slate-500">Traceability from supplier to customer.</p>
                             </motion.div>
                         </div>
                     </div>
                 </div>
-            </section >
+            </section>
 
-            {/* Actionable Analytics & Reporting */}
+            {/* Strategic Insights & Sales Analytics */}
             < section className="py-24 bg-white overflow-hidden" >
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
-                            Actionable Analytics & Reporting
+                        <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
+                            Strategic Insights & Sales Analytics
                         </h2>
-                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                            Turn raw data into strategic decisions. Identify bottlenecks, reduce holding costs, and optimize inventory turnover.
+                        <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+                            Turn raw data into predictable revenue growth. Identify high-value territories and optimize your sales conversion funnel.
                         </p>
                     </div>
 
-                    <div className="max-w-6xl mx-auto bg-slate-900 rounded-3xl p-4 md:p-8 shadow-2xl relative">
+                    <div className="max-w-6xl mx-auto bg-slate-900 rounded-[3rem] p-6 md:p-12 shadow-2xl relative overflow-hidden">
                         <div className="absolute top-0 left-0 w-full h-full bg-grid-white/[0.05] pointer-events-none"></div>
+                        <div className="absolute -bottom-48 -left-48 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px]"></div>
+                        <div className="absolute -top-48 -right-48 w-96 h-96 bg-purple-500/20 rounded-full blur-[120px]"></div>
 
-                        <div className="grid lg:grid-cols-3 gap-6 relative z-10">
-                            {/* Stock Aging Card */}
+                        <div className="grid lg:grid-cols-12 gap-8 relative z-10">
+                            {/* Sales Funnel Card */}
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="bg-slate-800 p-6 rounded-2xl border border-slate-700"
+                                className="lg:col-span-5 bg-slate-800/50 backdrop-blur-xl p-8 rounded-3xl border border-white/10"
                             >
-                                <div className="flex items-center justify-between mb-4">
-                                    <h3 className="font-bold text-white">Stock Aging</h3>
-                                    <PieChart className="w-5 h-5 text-purple-400" />
+                                <div className="flex items-center justify-between mb-8">
+                                    <h3 className="text-xl font-bold text-white">Conversion Funnel</h3>
+                                    <div className="bg-blue-500/20 text-blue-400 text-xs px-3 py-1 rounded-full font-bold">LIVE</div>
                                 </div>
-                                <div className="flex items-end gap-3 h-40 mt-6 px-2">
-                                    <div className="w-1/3 bg-green-500/20 border-t-2 border-green-500 h-[30%] rounded-t-sm relative group">
-                                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-green-400 opacity-0 group-hover:opacity-100 transition-opacity">120</div>
+
+                                <div className="space-y-6">
+                                    <div className="relative h-12 bg-white/5 rounded-xl flex items-center justify-between px-6 overflow-hidden">
+                                        <div className="absolute inset-0 bg-blue-600/20 w-full"></div>
+                                        <span className="relative z-10 text-sm font-bold text-slate-300">Leads Generated</span>
+                                        <span className="relative z-10 font-black text-white">100%</span>
                                     </div>
-                                    <div className="w-1/3 bg-yellow-500/20 border-t-2 border-yellow-500 h-[50%] rounded-t-sm relative group">
-                                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity">450</div>
+                                    <div className="relative h-12 bg-white/5 rounded-xl flex items-center justify-between px-6 overflow-hidden mx-4">
+                                        <div className="absolute inset-0 bg-blue-500/20 w-[65%]"></div>
+                                        <span className="relative z-10 text-sm font-bold text-slate-300">Quotations</span>
+                                        <span className="relative z-10 font-black text-white">65%</span>
                                     </div>
-                                    <div className="w-1/3 bg-red-500/20 border-t-2 border-red-500 h-[80%] rounded-t-sm relative group">
-                                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-red-400 opacity-0 group-hover:opacity-100 transition-opacity">890</div>
+                                    <div className="relative h-12 bg-white/5 rounded-xl flex items-center justify-between px-6 overflow-hidden mx-8">
+                                        <div className="absolute inset-0 bg-blue-400/20 w-[35%]"></div>
+                                        <span className="relative z-10 text-sm font-bold text-slate-300">Sales Orders</span>
+                                        <span className="relative z-10 font-black text-white">35%</span>
                                     </div>
                                 </div>
-                                <div className="flex justify-between text-xs text-slate-400 mt-2 px-2">
-                                    <span>0-30</span>
-                                    <span>30-60</span>
-                                    <span>90+</span>
+                                <div className="mt-8 pt-6 border-t border-white/5 text-center">
+                                    <div className="text-blue-400 text-3xl font-black">3.5%</div>
+                                    <div className="text-slate-500 text-xs font-bold uppercase tracking-widest mt-1">Lead to Cash Velocity</div>
                                 </div>
                             </motion.div>
 
-                            {/* Projected Quantity Card */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.1 }}
-                                className="bg-slate-800 p-6 rounded-2xl border border-slate-700"
-                            >
-                                <div className="flex items-center justify-between mb-2">
-                                    <h3 className="font-bold text-white">Projected Quantity</h3>
-                                    <TrendingUp className="w-5 h-5 text-blue-400" />
-                                </div>
-                                <div className="text-3xl font-bold text-white mb-6">4,250 <span className="text-sm font-normal text-slate-400">units</span></div>
-                                <div className="relative h-32 w-full">
-                                    <svg className="w-full h-full overflow-visible" viewBox="0 0 100 50" preserveAspectRatio="none">
-                                        <path d="M0,50 L20,35 L40,45 L60,15 L80,25 L100,5" fill="none" stroke="#60a5fa" strokeWidth="2" />
-                                        <circle cx="60" cy="15" r="3" fill="#60a5fa" className="animate-pulse" />
-                                        <path d="M0,50 L20,35 L40,45 L60,15 L80,25 L100,5 V50 H0 Z" fill="url(#gradient)" opacity="0.2" />
-                                        <defs>
-                                            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                                <stop offset="0%" stopColor="#60a5fa" />
-                                                <stop offset="100%" stopColor="transparent" />
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </div>
-                            </motion.div>
+                            {/* Revenue & Map Column */}
+                            <div className="lg:col-span-7 space-y-8">
+                                {/* Revenue Chart Card */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.2 }}
+                                    className="bg-slate-800/50 backdrop-blur-xl p-8 rounded-3xl border border-white/10"
+                                >
+                                    <div className="flex justify-between items-center mb-6">
+                                        <h3 className="text-xl font-bold text-white">Monthly Revenue</h3>
+                                        <TrendingUp className="w-6 h-6 text-green-400" />
+                                    </div>
+                                    <div className="flex items-end gap-3 h-32 mt-4">
+                                        {[40, 65, 45, 80, 55, 95, 85].map((h, i) => (
+                                            <motion.div
+                                                key={i}
+                                                initial={{ height: 0 }}
+                                                whileInView={{ height: `${h}%` }}
+                                                viewport={{ once: true }}
+                                                transition={{ delay: 0.5 + (i * 0.1), duration: 1 }}
+                                                className="flex-1 bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-lg relative group"
+                                            >
+                                                <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-slate-900 text-[10px] font-bold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                                    ${h}k
+                                                </div>
+                                            </motion.div>
+                                        ))}
+                                    </div>
+                                    <div className="flex justify-between text-[10px] font-bold text-slate-500 mt-4 px-2 tracking-widest">
+                                        <span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span><span>MAY</span><span>JUN</span><span>JUL</span>
+                                    </div>
+                                </motion.div>
 
-                            {/* KPI List */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.2 }}
-                                className="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex flex-col justify-center gap-4"
-                            >
-                                <div className="flex items-center gap-4 p-3 bg-slate-700/50 rounded-xl">
-                                    <div className="p-2 bg-blue-500/20 text-blue-400 rounded-lg">
-                                        <ClipboardList className="w-5 h-5" />
+                                {/* Territory Heatmap Mini-Card */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.3 }}
+                                    className="bg-slate-800/50 backdrop-blur-xl p-6 rounded-3xl border border-white/10 flex items-center gap-6"
+                                >
+                                    <div className="w-24 h-24 bg-slate-700/50 rounded-2xl flex items-center justify-center p-2 relative overflow-hidden">
+                                        <Globe className="w-12 h-12 text-blue-500/50" />
+                                        <div className="absolute top-4 left-6 w-3 h-3 bg-blue-500 rounded-full animate-ping"></div>
+                                        <div className="absolute bottom-8 right-6 w-2 h-2 bg-purple-500 rounded-full animate-ping delay-700"></div>
                                     </div>
-                                    <div>
-                                        <div className="text-sm text-slate-400">Stock Ledger</div>
-                                        <div className="font-bold text-white">View History</div>
+                                    <div className="flex-1">
+                                        <h4 className="font-bold text-white">Territory Insights</h4>
+                                        <p className="text-slate-400 text-sm mt-1">North America leads with 45% of total Q3 volume.</p>
                                     </div>
-                                </div>
-                                <div className="flex items-center gap-4 p-3 bg-slate-700/50 rounded-xl">
-                                    <div className="p-2 bg-purple-500/20 text-purple-400 rounded-lg">
-                                        <Database className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <div className="text-sm text-slate-400">Stock Balance</div>
-                                        <div className="font-bold text-white">$1.2M Value</div>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-4 p-3 bg-slate-700/50 rounded-xl">
-                                    <div className="p-2 bg-orange-500/20 text-orange-400 rounded-lg">
-                                        <History className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <div className="text-sm text-slate-400">Turnover Ratio</div>
-                                        <div className="font-bold text-white">4.5x / Year</div>
-                                    </div>
-                                </div>
-                            </motion.div>
+                                </motion.div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section >
+            </section>
+
+            {/* Unified Retail Point of Sale (POS) */}
+            <section className="py-24 bg-slate-900 overflow-hidden relative">
+                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#1e293b_0%,#0f172a_100%)]"></div>
+
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="text-center mb-16">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-bold mb-6 border border-blue-500/20"
+                        >
+                            <Laptop className="w-4 h-4" />
+                            Retail Excellence
+                        </motion.div>
+                        <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-white">
+                            Unified Retail Point of Sale (POS)
+                        </h2>
+                        <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+                            Sell anywhere, anytime. A high-performance retail interface that stays operational even when the internet goes down.
+                        </p>
+                    </div>
+
+                    <div className="max-w-6xl mx-auto">
+                        <div className="grid lg:grid-cols-12 gap-12 items-center">
+                            {/* POS Tablet Mockup */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="lg:col-span-8 group"
+                            >
+                                <div className="bg-slate-800 p-3 rounded-[3rem] border-[12px] border-slate-700 shadow-2xl relative overflow-hidden aspect-[16/10] flex flex-col">
+                                    {/* POS Interface Header */}
+                                    <div className="bg-slate-900 p-4 flex justify-between items-center border-b border-slate-700">
+                                        <div className="flex items-center gap-4">
+                                            <div className="font-black text-white tracking-tighter">TRUSYNC <span className="text-blue-500">POS</span></div>
+                                            <div className="h-4 w-[1px] bg-slate-700"></div>
+                                            <div className="text-xs font-bold text-slate-400">Main Store - Register 01</div>
+                                        </div>
+                                        <div className="flex items-center gap-3">
+                                            <div className="flex items-center gap-2 bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-[10px] font-bold animate-pulse">
+                                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                                                OFFLINE MODE ACTIVE
+                                            </div>
+                                            <WifiOff className="w-4 h-4 text-slate-500" />
+                                        </div>
+                                    </div>
+
+                                    {/* POS Main Area */}
+                                    <div className="flex-1 flex overflow-hidden">
+                                        {/* Product Grid */}
+                                        <div className="flex-1 p-4 grid grid-cols-3 gap-3 overflow-y-auto custom-scrollbar">
+                                            {[1, 2, 3, 4, 5, 6].map((i) => (
+                                                <div key={i} className="bg-slate-700/50 p-3 rounded-2xl border border-slate-600 hover:border-blue-500/50 transition-colors cursor-pointer group/item">
+                                                    <div className="aspect-square bg-slate-800 rounded-xl mb-3 flex items-center justify-center text-slate-600 group-hover/item:text-blue-400 transition-colors">
+                                                        <Package className="w-8 h-8" />
+                                                    </div>
+                                                    <div className="text-xs font-bold text-white mb-1">Premium Product {i}</div>
+                                                    <div className="text-blue-400 font-black">$45.00</div>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        {/* Cart Sidebar */}
+                                        <div className="w-72 bg-slate-900 border-l border-slate-700 p-4 flex flex-col">
+                                            <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Current Order</h4>
+                                            <div className="flex-1 space-y-3 mb-4">
+                                                <div className="flex justify-between items-center bg-slate-800 p-2 rounded-lg text-xs">
+                                                    <span className="text-white">Product 1 x 2</span>
+                                                    <span className="font-bold text-blue-400">$90.00</span>
+                                                </div>
+                                                <div className="flex justify-between items-center bg-slate-800 p-2 rounded-lg text-xs">
+                                                    <span className="text-white">Product 3 x 1</span>
+                                                    <span className="font-bold text-blue-400">$45.00</span>
+                                                </div>
+                                            </div>
+                                            <div className="pt-4 border-t border-slate-700 space-y-2 mb-4">
+                                                <div className="flex justify-between text-xs text-slate-400"><span>Subtotal:</span> <span>$135.00</span></div>
+                                                <div className="flex justify-between text-lg font-black text-white"><span>Total:</span> <span>$135.00</span></div>
+                                            </div>
+                                            <button className="w-full bg-blue-600 text-white font-black py-3 rounded-xl shadow-lg hover:bg-blue-500 transition-colors">
+                                                CHECKOUT
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+
+                            {/* POS Benefits */}
+                            <div className="lg:col-span-4 space-y-8">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    className="p-6 rounded-2xl bg-white/5 border border-white/10"
+                                >
+                                    <div className="w-12 h-12 bg-blue-500 text-white rounded-xl flex items-center justify-center mb-6">
+                                        <RefreshCw className="w-6 h-6" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-2">Automated Offline Sync</h3>
+                                    <p className="text-slate-400">Transactions are stored locally and automatically synced to the clerk's ledger once the connection is restored.</p>
+                                </motion.div>
+
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.1 }}
+                                    className="p-6 rounded-2xl bg-white/5 border border-white/10"
+                                >
+                                    <div className="w-12 h-12 bg-purple-500 text-white rounded-xl flex items-center justify-center mb-6">
+                                        <Printer className="w-6 h-6" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-2">Hardware Ready</h3>
+                                    <p className="text-slate-400">Native support for thermal printers, barcode scanners, and cash drawers via Frappe Raw Printing.</p>
+                                </motion.div>
+
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.2 }}
+                                    className="p-6 rounded-2xl bg-white/5 border border-white/10"
+                                >
+                                    <div className="w-12 h-12 bg-green-500 text-white rounded-xl flex items-center justify-center mb-6">
+                                        <Users className="w-6 h-6" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-2">Multi-Store Control</h3>
+                                    <p className="text-slate-400">Manage pricing, loyalty points, and stock levels across 100+ locations from a single dashboard.</p>
+                                </motion.div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* Mobile & Barcode Integration */}
             < section className="py-24 bg-slate-50 relative overflow-hidden" >
@@ -1893,10 +2249,10 @@ const Page = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* CTA Section */}
-            <section className="py-20 bg-blue-600 text-white">
+            < section className="py-20 bg-blue-600 text-white" >
                 <div className="container mx-auto px-4 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -1915,8 +2271,8 @@ const Page = () => {
                         </Link>
                     </motion.div>
                 </div>
-            </section>
-        </div>
+            </section >
+        </div >
     );
 };
 
