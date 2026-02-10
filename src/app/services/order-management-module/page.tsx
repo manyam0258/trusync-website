@@ -404,234 +404,6 @@ const Page = () => {
                     </div>
                 </div>
             </section>
-            {/* Procure to Pay (Buying) */}
-            <section className="py-24 bg-white relative">
-                <div className="container mx-auto px-4">
-                    <div className="mb-16 md:text-center max-w-3xl mx-auto">
-                        <span className="text-orange-600 font-bold tracking-wider uppercase text-sm">Buying Module</span>
-                        <h2 className="text-3xl lg:text-4xl font-bold mt-2 mb-4 text-slate-900">Procure to Pay Excellence</h2>
-                        <p className="text-lg text-slate-600">
-                            Streamline your purchasing with a unified workflow. From material request to payment, every step is linked and traceable.
-                        </p>
-                    </div>
-
-                    <div className="relative">
-                        {/* Connecting Line */}
-                        <div className="hidden md:block absolute top-[24px] left-0 w-full h-1 bg-slate-100 -z-10"></div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-                            {[
-                                { icon: ClipboardCheck, title: "Request", desc: "Material Requests from stock levels." },
-                                { icon: FileText, title: "Order", desc: "Supplier selection & Purchase Orders." },
-                                { icon: Truck, title: "Receipt", desc: "GRNs update stock instantly." },
-                                { icon: DollarSign, title: "Bill", desc: "Purchase Invoice verification." },
-                                { icon: CheckCircle, title: "Pay", desc: "Payment entry & ledger update." }
-                            ].map((step, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: index * 0.1 }}
-                                    className="bg-white p-6 rounded-xl border border-slate-100 shadow-lg relative group hover:-translate-y-1 transition-transform duration-300"
-                                >
-                                    <div className="w-12 h-12 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center mb-4 text-xl font-bold border-4 border-white shadow-sm mx-auto md:mx-0">
-                                        <step.icon className="w-6 h-6" />
-                                    </div>
-                                    <h3 className="text-lg font-bold text-slate-900 mb-2 md:text-left text-center">{step.title}</h3>
-                                    <p className="text-sm text-slate-600 md:text-left text-center">{step.desc}</p>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Order to Cash (Selling) */}
-            <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-10 pointer-events-none">
-                    <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500 via-slate-900 to-slate-900"></div>
-                </div>
-
-                <div className="container mx-auto px-4 relative z-10">
-                    <div className="mb-16 md:text-center max-w-3xl mx-auto">
-                        <span className="text-blue-400 font-bold tracking-wider uppercase text-sm">Selling Module</span>
-                        <h2 className="text-3xl lg:text-4xl font-bold mt-2 mb-4">Order to Cash Efficiency</h2>
-                        <p className="text-lg text-slate-300">
-                            Accelerate your sales cycle. Quotations, orders, shipments, and invoicing in one seamless flow.
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {[
-                            { title: "Quotation", desc: "Create professional quotes that convert instantly to Sales Orders.", color: "bg-blue-600" },
-                            { title: "Sales Order", desc: "Reserve stock immediately. Trigger procurement if out of stock.", color: "bg-indigo-600" },
-                            { title: "Delivery Note", desc: "Pick, Pack, and Ship. Stock is deducted from specific warehouses.", color: "bg-purple-600" },
-                            { title: "Invoice & Pay", desc: "Automated billing based on delivery or order. Real-time AR tracking.", color: "bg-teal-600" }
-                        ].map((card, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, x: 20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className="bg-slate-800 p-8 rounded-2xl border border-slate-700 relative overflow-hidden group"
-                            >
-                                <div className={`absolute top-0 right-0 w-24 h-24 ${card.color} opacity-10 rounded-bl-[100px] -mr-4 -mt-4 transition-all group-hover:scale-150 group-hover:opacity-20`}></div>
-                                <h3 className="text-xl font-bold mb-3 relative z-10">{card.title}</h3>
-                                <p className="text-slate-400 text-sm relative z-10 leading-relaxed">{card.desc}</p>
-                                <div className={`absolute bottom-0 left-0 w-full h-1 ${card.color}`}></div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Intelligent Replenishment */}
-            <section className="py-24 bg-white relative overflow-hidden">
-                <div className="container mx-auto px-4">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="text-center mb-16"
-                    >
-                        <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
-                            Intelligent Replenishment
-                        </h2>
-                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                            Stop stockouts before they happen. ERPNext acts as an always-on procurement assistant, monitoring levels 24/7.
-                        </p>
-                    </motion.div>
-
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-8 relative z-10">
-                        {[
-                            { icon: Gauge, title: "Stock Monitor", desc: "Stock dips below reorder level", color: "text-red-500 bg-red-50" },
-                            { icon: Cpu, title: "Auto-Trigger", desc: "System detects shortage instantly", color: "text-blue-500 bg-blue-50" },
-                            { icon: FilePlus, title: "Material Request", desc: "Auto-creates Purchase Request", color: "text-indigo-500 bg-indigo-50" },
-                            { icon: Handshake, title: "Procurement", desc: "Purchasing team notified", color: "text-green-500 bg-green-50" }
-                        ].map((step, index) => (
-                            <React.Fragment key={index}>
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: index * 0.1 }}
-                                    className="bg-white p-6 rounded-xl border border-slate-100 shadow-lg w-full md:w-64 text-center z-10"
-                                >
-                                    <div className={`w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center ${step.color}`}>
-                                        <step.icon className="w-8 h-8" />
-                                    </div>
-                                    <h3 className="font-bold text-slate-900 mb-2">{step.title}</h3>
-                                    <p className="text-sm text-slate-600">{step.desc}</p>
-                                </motion.div>
-                                {index < 3 && (
-                                    <div className="hidden md:flex text-slate-300">
-                                        <ArrowRight className="w-8 h-8 animate-pulse" />
-                                    </div>
-                                )}
-                            </React.Fragment>
-                        ))}
-                    </div>
-
-                    <div className="mt-16 text-center">
-                        <p className="text-xl font-medium text-slate-800">
-                            Optimize cash flow by buying only <span className="text-blue-600 font-bold">what you need</span>, when you <span className="text-blue-600 font-bold">need it</span>.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Efficient Inwarding & Organization */}
-            <section className="py-24 bg-slate-50 relative">
-                <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-slate-900">
-                            Efficient Inwarding & Organization
-                        </h2>
-                        <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                            Streamline the receiving process. Ensure items are quality-checked and stored in their optimal location immediately to prevent "lost" inventory.
-                        </p>
-
-                        <div className="space-y-6">
-                            <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border border-slate-100">
-                                <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 shrink-0">
-                                    <FileText className="w-5 h-5" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-slate-900">Purchase Receipt</h4>
-                                    <p className="text-sm text-slate-600">Generated directly from PO.</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border border-slate-100">
-                                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
-                                    <ClipboardCheck className="w-5 h-5" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-slate-900">Quality Inspections</h4>
-                                    <p className="text-sm text-slate-600">Mandatory checks before stock hits the floor.</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border border-slate-100">
-                                <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
-                                    <Box className="w-5 h-5" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-slate-900">Put-away Rules</h4>
-                                    <p className="text-sm text-slate-600">Auto-assign bins for optimal retrieval.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 relative overflow-hidden"
-                    >
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-slate-100 rounded-bl-full opacity-50 -mr-10 -mt-10"></div>
-
-                        <div className="relative z-10 flex flex-col items-center">
-                            <div className="w-full max-w-sm bg-slate-900 rounded-2xl p-6 text-white shadow-2xl mb-8 group hover:scale-105 transition-transform duration-300">
-                                <div className="flex justify-between items-start mb-4">
-                                    <div>
-                                        <div className="text-slate-400 text-xs uppercase tracking-wider mb-1">Item</div>
-                                        <div className="font-bold text-xl">Widget A</div>
-                                    </div>
-                                    <div className="bg-green-500 rounded-full p-1">
-                                        <CheckCircle className="w-5 h-5 text-white" />
-                                    </div>
-                                </div>
-                                <div className="space-y-3">
-                                    <div className="flex justify-between text-sm border-b border-slate-700 pb-2">
-                                        <span className="text-slate-400">Quality Check</span>
-                                        <span className="text-green-400 font-bold">Passed</span>
-                                    </div>
-                                    <div className="flex justify-between text-sm">
-                                        <span className="text-slate-400">Put-Away Location</span>
-                                        <span className="text-orange-400 font-bold flex items-center gap-1">
-                                            <Layers className="w-3 h-3" /> Rack 4, Bin B
-                                        </span>
-                                    </div>
-                                </div>
-
-                                {/* Scanning Laser Effect */}
-                                <div className="absolute top-0 left-0 w-full h-1 bg-red-500 shadow-[0_0_15px_rgba(239,68,68,0.8)] opacity-0 group-hover:opacity-100 group-hover:animate-[scan_1.5s_ease-in-out_infinite]"></div>
-                            </div>
-
-                            <ScanLine className="w-16 h-16 text-slate-300" />
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
-
             {/* Precision Tracking: Serials & Batches */}
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container mx-auto px-4">
@@ -845,6 +617,1187 @@ const Page = () => {
                                 <ClipboardCheck className="w-4 h-4" /> Audit Trail
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Real-Time Inventory Confidence */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <div className="text-blue-600 font-bold tracking-wide uppercase text-sm mb-2">Modern Enterprise Clarity</div>
+                            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-slate-900">
+                                Sell with Confidence Using Real-Time Inventory
+                            </h2>
+                            <p className="text-lg text-slate-600 mb-8">
+                                Never sell what you don't have. ERPNext provides instant visibility into stock levels during the sales process.
+                            </p>
+
+                            <div className="space-y-6">
+                                <div className="flex gap-4">
+                                    <div className="mt-1"><div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-blue-600"></div></div>
+                                    <div>
+                                        <h4 className="font-bold text-slate-900 text-lg">Stock Reservation</h4>
+                                        <p className="text-slate-600">Reserve batches specifically for high-priority orders.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-4">
+                                    <div className="mt-1"><div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-blue-600"></div></div>
+                                    <div>
+                                        <h4 className="font-bold text-slate-900 text-lg">Projected Quantity</h4>
+                                        <p className="text-slate-600">See what's on the shelf vs. what's already committed.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-4">
+                                    <div className="mt-1"><div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-blue-600"></div></div>
+                                    <div>
+                                        <h4 className="font-bold text-slate-900 text-lg">Multi-Warehouse</h4>
+                                        <p className="text-slate-600">Check availability across all stores instantly.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-lg"
+                        >
+                            <div className="bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden mb-4">
+                                <div className="border-b border-slate-100 p-3 bg-slate-50 font-bold text-slate-700 text-sm">
+                                    Sales Order Item
+                                </div>
+                                <div className="p-4">
+                                    <div className="grid grid-cols-4 gap-4 text-xs font-bold text-slate-500 mb-2">
+                                        <div>Item Code</div>
+                                        <div>Description</div>
+                                        <div>Quantity</div>
+                                        <div className="text-right">Action</div>
+                                    </div>
+                                    <div className="grid grid-cols-4 gap-4 items-center text-sm border-t border-slate-100 pt-2">
+                                        <div className="font-mono text-slate-600">ITEM-001</div>
+                                        <div className="text-slate-800">Wireless Mouse</div>
+                                        <div className="relative group">
+                                            <div className="w-3 h-3 bg-green-500 rounded-full mx-auto cursor-help"></div>
+
+                                            {/* Tooltip */}
+                                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 bg-white p-3 rounded shadow-xl border border-slate-200 text-xs hidden group-hover:block z-10">
+                                                <div className="flex justify-between mb-1"><span>Actual Qty:</span> <span className="font-bold">500</span></div>
+                                                <div className="flex justify-between mb-1"><span>Reserved Qty:</span> <span className="font-bold">50</span></div>
+                                                <div className="flex justify-between text-green-600"><span>Available:</span> <span className="font-bold">450</span></div>
+                                            </div>
+                                        </div>
+                                        <div className="text-right">
+                                            <button className="bg-blue-600 text-white text-xs px-3 py-1.5 rounded font-bold hover:bg-blue-700 transition-colors">
+                                                Reserve Stock
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+            {/* Mobile & Barcode Integration */}
+            < section className="py-24 bg-slate-50 relative overflow-hidden" >
+                <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-slate-900">
+                            Mobile & Barcode Integration
+                        </h2>
+                        <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                            Untether your workforce. Manage operations directly from the warehouse floor with the ERPNext mobile app.
+                        </p>
+
+                        <div className="space-y-6">
+                            {[
+                                { title: "Scan to Search", desc: "Instantly retrieve item details by scanning barcodes.", icon: ScanLine },
+                                { title: "Mobile UI", desc: "Create stock entries and check levels on the go.", icon: Smartphone },
+                                { title: "Efficiency Boost", desc: "Reduce manual data entry errors by 90%.", icon: Zap }
+                            ].map((item, i) => (
+                                <div key={i} className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border border-slate-100 group hover:border-blue-200 transition-colors">
+                                    <div className="p-3 bg-slate-100 text-slate-600 rounded-full group-hover:bg-blue-100 group-hover:text-blue-600 transition-colors">
+                                        <item.icon className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-slate-900">{item.title}</h4>
+                                        <p className="text-sm text-slate-600">{item.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="relative flex justify-center"
+                    >
+                        {/* Abstract Phone Mockup with Scanning Effect */}
+                        <div className="w-72 h-[500px] bg-slate-900 rounded-[3rem] border-8 border-slate-800 shadow-2xl relative overflow-hidden flex flex-col">
+                            <div className="h-full bg-slate-800 relative">
+                                {/* Camera Viewfinder */}
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <div className="w-48 h-48 border-2 border-white/30 rounded-lg relative">
+                                        <div className="absolute top-0 left-0 w-4 h-4 border-t-4 border-l-4 border-blue-500 -mt-1 -ml-1"></div>
+                                        <div className="absolute top-0 right-0 w-4 h-4 border-t-4 border-r-4 border-blue-500 -mt-1 -mr-1"></div>
+                                        <div className="absolute bottom-0 left-0 w-4 h-4 border-b-4 border-l-4 border-blue-500 -mb-1 -ml-1"></div>
+                                        <div className="absolute bottom-0 right-0 w-4 h-4 border-b-4 border-r-4 border-blue-500 -mb-1 -mr-1"></div>
+
+                                        {/* Scanning Laser */}
+                                        <div className="absolute top-1/2 left-0 w-full h-0.5 bg-red-500 shadow-[0_0_10px_rgba(239,68,68,1)] animate-[scan_2s_ease-in-out_infinite]"></div>
+                                    </div>
+                                </div>
+
+                                {/* Overlay UI */}
+                                <div className="absolute bottom-0 w-full bg-slate-900/90 backdrop-blur p-6 rounded-t-3xl">
+                                    <div className="text-center">
+                                        <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-[0_0_15px_rgba(34,197,94,0.5)]">
+                                            <CheckCircle className="w-6 h-6 text-white" />
+                                        </div>
+                                        <div className="text-white font-bold text-lg">Item Identified</div>
+                                        <div className="text-slate-400 text-sm">Widget A - 50 Units</div>
+                                    </div>
+                                    <button className="w-full mt-4 bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Floating box being scanned */}
+                        <div className="absolute top-20 -right-4 md:-right-12 w-32 h-32 bg-orange-100 rounded-2xl border-2 border-orange-200 flex flex-col items-center justify-center shadow-lg transform rotate-12 z-10">
+                            <Box className="w-12 h-12 text-orange-500 mb-2" />
+                            <div className="h-6 w-20 bg-slate-800 rounded px-1 flex items-center justify-center gap-0.5" aria-hidden="true">
+                                <div className="w-0.5 h-3 bg-white"></div>
+                                <div className="w-0.5 h-3 bg-white"></div>
+                                <div className="w-1 h-3 bg-white"></div>
+                                <div className="w-0.5 h-3 bg-white"></div>
+                                <div className="w-1 h-3 bg-white"></div>
+                                <div className="w-0.5 h-3 bg-white"></div>
+                                <div className="w-1 h-3 bg-white"></div>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
+            </section >
+
+            {/* Real-Time Valuation & Accounting */}
+            < section className="py-24 bg-white" >
+                <div className="container mx-auto px-4">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-slate-900">
+                                Real-Time Inventory Valuation & Accounting
+                            </h2>
+                            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                                With Perpetual Inventory, every stock movement automatically posts a corresponding entry to the General Ledger. Say goodbye to end-of-year inventory reconciliation nightmares.
+                            </p>
+
+                            <div className="space-y-6">
+                                <div className="flex items-start gap-4">
+                                    <div className="p-2 bg-blue-100 rounded text-blue-600 mt-1">
+                                        <BarChart3 className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-slate-900">Valuation Methods</h4>
+                                        <p className="text-sm text-slate-600">FIFO, Moving Average, and Standard Costing supported out of the box.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-4">
+                                    <div className="p-2 bg-green-100 rounded text-green-600 mt-1">
+                                        <DollarSign className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-slate-900">Landed Cost Vouchers</h4>
+                                        <p className="text-sm text-slate-600">Distribute shipping, customs, and insurance costs to items for true profitability analysis.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-4">
+                                    <div className="p-2 bg-purple-100 rounded text-purple-600 mt-1">
+                                        <Factory className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-slate-900">Asset Capitalization</h4>
+                                        <p className="text-sm text-slate-600">Easily track inventory details of fixed assets and manage depreciation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            className="bg-slate-50 p-8 rounded-2xl border border-slate-200 relative shadow-xl"
+                        >
+                            {/* Interactive Ledger Visualization */}
+                            <div className="flex items-center gap-4 mb-8">
+                                <div className="flex-1 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                                    <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Transaction</div>
+                                    <div className="font-bold text-slate-800">Delivery Note #DN-001</div>
+                                </div>
+                                <ArrowRight className="w-6 h-6 text-slate-400" />
+                                <div className="flex-1 bg-slate-800 p-4 rounded-lg shadow-sm border border-slate-700">
+                                    <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">GL Entry</div>
+                                    <div className="font-bold text-white">Journal #JV-005</div>
+                                </div>
+                            </div>
+
+                            <div className="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                                <table className="w-full text-sm">
+                                    <thead className="bg-slate-50 border-b border-slate-200">
+                                        <tr>
+                                            <th className="p-3 text-left text-slate-500 font-medium">Account</th>
+                                            <th className="p-3 text-right text-slate-500 font-medium">Debit</th>
+                                            <th className="p-3 text-right text-slate-500 font-medium">Credit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-slate-100">
+                                        <tr>
+                                            <td className="p-3 font-medium text-slate-700">Cost of Goods Sold</td>
+                                            <td className="p-3 text-right font-mono text-slate-600">$500.00</td>
+                                            <td className="p-3 text-right font-mono text-slate-400"></td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 font-medium text-slate-700">Stock In Hand</td>
+                                            <td className="p-3 text-right font-mono text-slate-400"></td>
+                                            <td className="p-3 text-right font-mono text-slate-600">$500.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section >
+
+            {/* Strategic Procurement Intro */}
+            <section className="py-24 bg-white relative overflow-hidden">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col lg:flex-row items-center gap-16 mb-24">
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="lg:w-1/2"
+                        >
+                            <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 block">The Buying Module</span>
+                            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-slate-900 leading-tight">
+                                Strategic <br />
+                                <span className="text-blue-600">Procurement</span> <br />
+                                with ERPNext
+                            </h2>
+                            <p className="text-xl text-slate-600 leading-relaxed mb-8">
+                                A comprehensive guide to the Procure-to-Pay lifecycle: from automated replenishment to data-driven supplier analysis.
+                            </p>
+
+                            <div className="flex flex-wrap gap-4">
+                                {["Automated Replenishment", "Supplier Scorecards", "3-Way Matching", "RFQs & Portals"].map((tag, i) => (
+                                    <span key={i} className="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg text-sm font-semibold border border-slate-200">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            className="lg:w-1/2 relative"
+                        >
+                            {/* Isometric Abstract Visualization */}
+                            <div className="relative aspect-square max-w-lg mx-auto">
+                                <div className="absolute inset-0 bg-blue-50 rounded-full blur-3xl opacity-60"></div>
+                                <svg viewBox="0 0 400 300" className="w-full h-full drop-shadow-2xl">
+                                    {/* Pathways */}
+                                    <motion.path d="M50 150 L200 75 L350 150 L200 225 Z" fill="none" stroke="#CBD5E1" strokeWidth="2" />
+                                    <motion.path d="M200 75 V 225" fill="none" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="5 5" />
+                                    <motion.path d="M50 150 H 350" fill="none" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="5 5" />
+
+                                    {/* Nodes */}
+                                    <g transform="translate(200, 75)"> {/* Top: Factory */}
+                                        <rect x="-20" y="-20" width="40" height="40" rx="8" fill="#fff" stroke="#3B82F6" strokeWidth="2" />
+                                        <Factory x="-10" y="-10" width="20" height="20" className="text-blue-600" />
+                                    </g>
+                                    <g transform="translate(50, 150)"> {/* Left: Store */}
+                                        <rect x="-20" y="-20" width="40" height="40" rx="8" fill="#fff" stroke="#F59E0B" strokeWidth="2" />
+                                        <Warehouse x="-10" y="-10" width="20" height="20" className="text-orange-500" />
+                                    </g>
+                                    <g transform="translate(350, 150)"> {/* Right: Supplier */}
+                                        <rect x="-20" y="-20" width="40" height="40" rx="8" fill="#fff" stroke="#10B981" strokeWidth="2" />
+                                        <Truck x="-10" y="-10" width="20" height="20" className="text-green-500" />
+                                    </g>
+                                    <g transform="translate(200, 225)"> {/* Bottom: Finance */}
+                                        <rect x="-20" y="-20" width="40" height="40" rx="8" fill="#fff" stroke="#6366F1" strokeWidth="2" />
+                                        <DollarSign x="-10" y="-10" width="20" height="20" className="text-indigo-500" />
+                                    </g>
+
+                                    {/* Moving Packets */}
+                                    <motion.circle r="4" fill="#3B82F6">
+                                        <animateMotion dur="4s" repeatCount="indefinite" path="M50 150 L200 75 L350 150 L200 225 L50 150" />
+                                    </motion.circle>
+                                </svg>
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    {/* Step 1: Intelligent Planning */}
+                    <div className="relative">
+                        <div className="absolute left-8 top-0 bottom-0 w-1 bg-slate-100 hidden lg:block"></div>
+                        <div className="lg:pl-24 relative space-y-24">
+
+                            {/* PROCESS STEP 1 */}
+                            <div className="relative">
+                                {/* Step Indicator */}
+                                <div className="hidden lg:flex absolute -left-[76px] top-0 w-10 h-10 bg-blue-600 text-white rounded-full items-center justify-center font-bold z-10 shadow-lg shadow-blue-500/30">
+                                    1
+                                </div>
+
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    className="mb-12"
+                                >
+                                    <div className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-blue-600 uppercase bg-blue-50 rounded-full">
+                                        Planning Phase
+                                    </div>
+                                    <h3 className="text-3xl font-bold text-slate-900 mb-4">Procurement Starts with <span className="text-blue-600">Intelligent Planning</span></h3>
+                                    <p className="text-lg text-slate-600 max-w-3xl">
+                                        Optimized purchasing is about buying the right quantity at the fair price. The process begins with identifying the need before it becomes an emergency.
+                                    </p>
+                                </motion.div>
+
+                                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                                    {/* Left: Material Request Visualization */}
+                                    <motion.div
+                                        initial={{ opacity: 0, x: -20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative"
+                                    >
+                                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-900 text-white px-4 py-1 rounded-full text-xs font-bold shadow-lg">
+                                            Material Request Source
+                                        </div>
+
+                                        <div className="flex flex-col gap-6 relative">
+                                            {/* Connecting Lines (CSS/SVG) */}
+                                            <svg className="absolute inset-0 w-full h-full -z-10" style={{ overflow: 'visible' }}>
+                                                <path d="M50 40 Q 150 40 150 100" fill="none" stroke="#CBD5E1" strokeWidth="2" strokeDasharray="4 4" />
+                                                <path d="M50 120 Q 100 120 120 120" fill="none" stroke="#CBD5E1" strokeWidth="2" strokeDasharray="4 4" />
+                                                <path d="M50 200 Q 150 200 150 140" fill="none" stroke="#CBD5E1" strokeWidth="2" strokeDasharray="4 4" />
+                                            </svg>
+
+                                            <div className="flex items-center gap-4 bg-blue-50 p-4 rounded-xl border border-blue-100 w-fit">
+                                                <BarChart3 className="w-5 h-5 text-blue-600" />
+                                                <span className="font-bold text-slate-700">Sales Forecast</span>
+                                            </div>
+                                            <div className="flex items-center gap-4 bg-purple-50 p-4 rounded-xl border border-purple-100 w-fit">
+                                                <Factory className="w-5 h-5 text-purple-600" />
+                                                <span className="font-bold text-slate-700">Manufacturing Plan</span>
+                                            </div>
+                                            <div className="flex items-center gap-4 bg-orange-50 p-4 rounded-xl border border-orange-100 w-fit">
+                                                <Warehouse className="w-5 h-5 text-orange-600" />
+                                                <span className="font-bold text-slate-700">Re-order Levels</span>
+                                            </div>
+
+                                            {/* Central Doc */}
+                                            <div className="absolute right-0 top-1/2 -translate-y-1/2 bg-white p-6 rounded-xl shadow-xl border-t-4 border-blue-600 w-48 text-center">
+                                                <FilePlus className="w-10 h-10 text-slate-400 mx-auto mb-3" />
+                                                <h4 className="font-bold text-slate-900 text-sm">Unified Material Request</h4>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+
+                                    {/* Right: Auto-Replenishment Alert */}
+                                    <motion.div
+                                        initial={{ opacity: 0, x: 20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        className="space-y-6"
+                                    >
+                                        <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl shadow-sm flex items-start gap-4">
+                                            <div className="bg-white p-2 rounded-full shadow-sm text-red-500">
+                                                <Zap className="w-6 h-6" />
+                                            </div>
+                                            <div>
+                                                <h4 className="font-bold text-red-800 text-lg">Alert: Low Stock Warning</h4>
+                                                <p className="text-red-700 mt-1">
+                                                    Stock for <strong>Widget-A</strong> is below re-order level (50 units).
+                                                    <br />
+                                                    <span className="font-semibold">Auto-request generated.</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div className="bg-white p-6 rounded-xl border border-slate-200">
+                                            <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                                                <Cpu className="w-5 h-5 text-blue-600" />
+                                                Auto-Replenishment
+                                            </h4>
+                                            <p className="text-slate-600 text-sm mb-4">
+                                                AI-enabled assistant monitors thresholds and triggers requests automatically, preventing human error.
+                                            </p>
+                                            <div className="flex gap-2 text-xs font-mono text-slate-500 bg-slate-50 p-3 rounded border border-slate-100">
+                                                <span>&gt; Check_Levels()</span>
+                                                <span className="text-green-600">OK</span>
+                                                <span>&gt; Create_PO()</span>
+                                                <span className="animate-pulse">_</span>
+                                            </div>
+                                        </div>
+
+                                        <div className="bg-green-100 text-green-800 px-6 py-4 rounded-xl font-bold flex items-center gap-3">
+                                            <CheckCircle className="w-6 h-6" />
+                                            Benefit: Prevents stock-outs & eliminates over-ordering.
+                                        </div>
+                                    </motion.div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Step 3: Data-Driven Vendor Selection */}
+            <section className="py-24 bg-slate-50 relative overflow-hidden">
+                <div className="container mx-auto px-4">
+                    <div className="relative">
+                        <div className="absolute left-8 top-0 bottom-0 w-1 bg-slate-200 hidden lg:block"></div>
+                        <div className="lg:pl-24 relative">
+
+                            {/* PROCESS STEP 3 */}
+                            <div className="relative">
+                                {/* Step Indicator */}
+                                <div className="hidden lg:flex absolute -left-[76px] top-0 w-10 h-10 bg-white border-4 border-blue-600 text-blue-600 rounded-full items-center justify-center font-bold z-10 shadow-lg">
+                                    3
+                                </div>
+
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    className="mb-12"
+                                >
+                                    <h3 className="text-3xl font-bold text-slate-900 mb-4">
+                                        Data-Driven <span className="text-blue-600">Vendor Selection</span>
+                                    </h3>
+                                    <p className="text-lg text-slate-600 max-w-3xl">
+                                        Make informed purchasing decisions by comparing offers side-by-side rather than sifting through spreadsheets.
+                                    </p>
+                                </motion.div>
+
+                                <div className="grid lg:grid-cols-1 gap-12">
+                                    {/* Comparison Table Visualization */}
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden max-w-4xl mx-auto w-full"
+                                    >
+                                        <div className="grid grid-cols-4 bg-slate-50 border-b border-slate-200 text-sm font-bold text-slate-500">
+                                            <div className="p-4">Criteria</div>
+                                            <div className="p-4 text-center">Supplier A</div>
+                                            <div className="p-4 text-center bg-blue-600 text-white relative">
+                                                Supplier B
+                                                <div className="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-[10px] px-2 py-0.5 font-bold uppercase tracking-wide">Best Match</div>
+                                            </div>
+                                            <div className="p-4 text-center">Supplier C</div>
+                                        </div>
+
+                                        {/* Row 1: Price */}
+                                        <div className="grid grid-cols-4 border-b border-slate-100 last:border-0 hover:bg-slate-50 transition-colors">
+                                            <div className="p-4 font-semibold text-slate-700 flex items-center gap-2">
+                                                <DollarSign className="w-4 h-4 text-slate-400" /> Item Price
+                                            </div>
+                                            <div className="p-4 text-center text-slate-600">$10,500</div>
+                                            <div className="p-4 text-center font-bold text-blue-700 bg-blue-50 flex justify-center items-center gap-2">
+                                                $10,000 <CheckCircle className="w-4 h-4" />
+                                            </div>
+                                            <div className="p-4 text-center text-slate-600">$11,200</div>
+                                        </div>
+
+                                        {/* Row 2: Lead Time */}
+                                        <div className="grid grid-cols-4 border-b border-slate-100 last:border-0 hover:bg-slate-50 transition-colors">
+                                            <div className="p-4 font-semibold text-slate-700 flex items-center gap-2">
+                                                <CalendarCheck className="w-4 h-4 text-slate-400" /> Lead Time
+                                            </div>
+                                            <div className="p-4 text-center text-slate-600">10 Days</div>
+                                            <div className="p-4 text-center font-bold text-blue-700 bg-blue-50 flex justify-center items-center gap-2">
+                                                7 Days <CheckCircle className="w-4 h-4" />
+                                            </div>
+                                            <div className="p-4 text-center text-slate-600">14 Days</div>
+                                        </div>
+
+                                        {/* Row 3: Terms */}
+                                        <div className="grid grid-cols-4 hover:bg-slate-50 transition-colors">
+                                            <div className="p-4 font-semibold text-slate-700 flex items-center gap-2">
+                                                <FileText className="w-4 h-4 text-slate-400" /> Payment Terms
+                                            </div>
+                                            <div className="p-4 text-center text-slate-600">Net 30</div>
+                                            <div className="p-4 text-center font-bold text-blue-700 bg-blue-50 flex justify-center items-center gap-2">
+                                                Net 60 <CheckCircle className="w-4 h-4" />
+                                            </div>
+                                            <div className="p-4 text-center text-slate-600">Net 30</div>
+                                        </div>
+                                    </motion.div>
+
+                                    <div className="flex flex-col md:flex-row gap-6 justify-center">
+                                        <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 flex-1">
+                                            <h4 className="font-bold text-blue-800 mb-2">Supplier Quotation</h4>
+                                            <p className="text-sm text-blue-700">Standardized bid capture from all vendors via Supplier Portal.</p>
+                                        </div>
+                                        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex-1">
+                                            <h4 className="font-bold text-slate-800 mb-2">Comparison Report</h4>
+                                            <p className="text-sm text-slate-600">Auto-generated line-by-line analysis highlighted best value.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            {/* Step 5: Receiving, Quality, and Organization */}
+            <section className="py-24 bg-slate-50 relative overflow-hidden">
+                <div className="container mx-auto px-4">
+                    <div className="relative">
+                        <div className="absolute left-8 top-0 bottom-0 w-1 bg-slate-200 hidden lg:block"></div>
+                        <div className="lg:pl-24 relative space-y-16">
+
+                            {/* PROCESS STEP 5 */}
+                            <div className="relative">
+                                {/* Step Indicator */}
+                                <div className="hidden lg:flex absolute -left-[76px] top-0 w-10 h-10 bg-white border-4 border-blue-600 text-blue-600 rounded-full items-center justify-center font-bold z-10 shadow-lg">
+                                    5
+                                </div>
+
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    className="mb-12"
+                                >
+                                    <h3 className="text-3xl font-bold text-slate-900 mb-4">
+                                        Step 5: <span className="text-blue-600">Receiving, Quality, and Organization</span>
+                                    </h3>
+                                    <p className="text-lg text-slate-600 max-w-3xl">
+                                        Timely receipt is critical. Ensure you get exactly what you paid for before it hits your shelves.
+                                    </p>
+                                </motion.div>
+
+                                {/* Horizontal Process Flow */}
+                                <div className="grid md:grid-cols-4 gap-8 relative items-start">
+                                    {/* Connecting Line (Desktop) */}
+                                    <div className="hidden md:block absolute top-12 left-0 w-full h-1 bg-slate-200 -z-10"></div>
+
+                                    {[
+                                        { icon: Truck, title: "Goods Arrival", sub: "Logistics Tracking" },
+                                        { icon: ClipboardCheck, title: "Purchase Receipt", sub: "Updates Stock Ledger" },
+                                        { icon: FileCheck, title: "Quality Inspection", sub: "Block Defective Items" },
+                                        { icon: Warehouse, title: "Put-away", sub: "Automated Bin Assignment" }
+                                    ].map((step, i) => (
+                                        <motion.div
+                                            key={i}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: i * 0.1 }}
+                                            className="bg-white p-6 rounded-xl border border-slate-100 shadow-lg text-center relative group"
+                                        >
+                                            <div className="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center text-blue-600 mb-4 border-4 border-white shadow-sm relative z-10 group-hover:scale-110 transition-transform">
+                                                <step.icon className="w-8 h-8" />
+                                            </div>
+                                            <h4 className="font-bold text-slate-900 mb-1">{step.title}</h4>
+                                            <p className="text-xs text-slate-500 font-medium uppercase tracking-wide">{step.sub}</p>
+
+                                            {/* Arrow for next step (except last) */}
+                                            {i < 3 && (
+                                                <div className="hidden md:block absolute top-20 -right-6 text-slate-300 z-0">
+                                                    <ArrowRight className="w-8 h-8" />
+                                                </div>
+                                            )}
+                                        </motion.div>
+                                    ))}
+                                </div>
+
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.4 }}
+                                    className="mt-12 bg-blue-600 text-white p-6 rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-6"
+                                >
+                                    <div className="flex items-center gap-4">
+                                        <div className="p-3 bg-white/10 rounded-lg">
+                                            <CheckCircle className="w-8 h-8 text-white" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold text-lg">Benefit: Complete Visibility</h4>
+                                            <p className="text-blue-100">Accurate inventory valuation and 100% visibility of stock movement.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg font-mono text-sm">
+                                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                                        Stock Updated: Just Now
+                                    </div>
+                                </motion.div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Step 6: Closing the Financial Loop */}
+            <section className="py-24 bg-white relative overflow-hidden">
+                <div className="container mx-auto px-4">
+                    <div className="relative">
+                        <div className="absolute left-8 top-0 bottom-0 w-1 bg-slate-100 hidden lg:block"></div>
+                        <div className="lg:pl-24 relative space-y-16">
+
+                            {/* PROCESS STEP 6 */}
+                            <div className="relative">
+                                {/* Step Indicator */}
+                                <div className="hidden lg:flex absolute -left-[76px] top-0 w-10 h-10 bg-white border-4 border-blue-600 text-blue-600 rounded-full items-center justify-center font-bold z-10 shadow-lg">
+                                    6
+                                </div>
+
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    className="mb-12"
+                                >
+                                    <h3 className="text-3xl font-bold text-slate-900 mb-4">
+                                        Step 6: <span className="text-blue-600">Closing the Financial Loop</span>
+                                    </h3>
+                                    <p className="text-lg text-slate-600 max-w-3xl">
+                                        Automated 3-Way Matching ensures you never overpay. System verifies that Invoice matches PO and Receipt before releasing payment.
+                                    </p>
+                                </motion.div>
+
+                                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                                    {/* 3-Way Match Visualization */}
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        viewport={{ once: true }}
+                                        className="relative h-80 flex items-center justify-center"
+                                    >
+                                        {/* Circles */}
+                                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-blue-500/10 rounded-full border-2 border-blue-500 flex items-start justify-center pt-8">
+                                            <span className="font-bold text-blue-800 bg-white px-2 py-1 rounded shadow-sm">Purchase Order</span>
+                                        </div>
+                                        <div className="absolute bottom-0 left-0 w-48 h-48 bg-green-500/10 rounded-full border-2 border-green-500 flex items-end justify-center pb-8">
+                                            <span className="font-bold text-green-800 bg-white px-2 py-1 rounded shadow-sm">Purchase Receipt</span>
+                                        </div>
+                                        <div className="absolute bottom-0 right-0 w-48 h-48 bg-purple-500/10 rounded-full border-2 border-purple-500 flex items-end justify-center pb-8">
+                                            <span className="font-bold text-purple-800 bg-white px-2 py-1 rounded shadow-sm">Purchase Invoice</span>
+                                        </div>
+
+                                        {/* Intersection */}
+                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[20%] w-24 h-24 bg-slate-900 text-white rounded-full flex flex-col items-center justify-center shadow-xl z-10 border-4 border-white">
+                                            <CheckCircle className="w-8 h-8 text-green-400 mb-1" />
+                                            <span className="text-[10px] font-bold uppercase tracking-wider">Match</span>
+                                            <span className="text-xs font-bold text-green-400">Approved</span>
+                                        </div>
+                                    </motion.div>
+
+                                    {/* Description */}
+                                    <motion.div
+                                        initial={{ opacity: 0, x: 20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        className="space-y-8"
+                                    >
+                                        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                            <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                                                <DollarSign className="w-5 h-5 text-blue-600" /> Payment Protection
+                                            </h4>
+                                            <ul className="space-y-3">
+                                                <li className="flex items-start gap-3 text-sm text-slate-600">
+                                                    <div className="mt-1 w-2 h-2 rounded-full bg-red-400"></div>
+                                                    Prevents payment for unreceived goods.
+                                                </li>
+                                                <li className="flex items-start gap-3 text-sm text-slate-600">
+                                                    <div className="mt-1 w-2 h-2 rounded-full bg-red-400"></div>
+                                                    Blocks invoices with price discrepancies greater than tolerance.
+                                                </li>
+                                                <li className="flex items-start gap-3 text-sm text-slate-600">
+                                                    <div className="mt-1 w-2 h-2 rounded-full bg-green-400"></div>
+                                                    Auto-releases payments for perfect matches.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </motion.div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* The Procurement Advantage */}
+            <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="text-center mb-16">
+                        <span className="text-blue-400 font-bold tracking-wider uppercase text-sm">Why ERPNext?</span>
+                        <h2 className="text-3xl lg:text-4xl font-bold mt-2 mb-4">The Procurement Advantage</h2>
+                        <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+                            Transform procurement from a cost center to a strategic asset.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {[
+                            { title: "Efficiency", desc: "Reduce cycle time by 40% with automated workflows.", icon: Zap, color: "text-yellow-400" },
+                            { title: "Control", desc: "100% compliance with budget and approval hierarchies.", icon: Lock, color: "text-red-400" },
+                            { title: "Visibility", desc: "Real-time dashboard for spending and supplier performance.", icon: Gauge, color: "text-blue-400" },
+                            { title: "Savings", desc: "Lower costs through better negotiation and rate locking.", icon: TrendingUp, color: "text-green-400" }
+                        ].map((item, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 }}
+                                className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors"
+                            >
+                                <item.icon className={`w-10 h-10 ${item.color} mb-6`} />
+                                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                                <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* The Connected Architecture of Buying */}
+            <section className="py-24 bg-slate-50 relative overflow-hidden">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-20">
+                        <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-slate-900">
+                            The Connected Architecture of <span className="text-blue-600">Buying</span>
+                        </h2>
+                        <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                            Seamless integration means data is entered once and reflects everywhere instantly.
+                        </p>
+                    </div>
+
+                    <div className="relative max-w-4xl mx-auto min-h-[600px] hidden md:block">
+                        {/* SVG Connections Layer */}
+                        {/* SVG Connections Layer (Desktop) */}
+                        <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" style={{ overflow: 'visible' }}>
+                            <defs>
+                                <marker id="arrowhead-blue-buy-circle" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                    <polygon points="0 0, 10 3.5, 0 7" fill="#CBD5E1" />
+                                </marker>
+                            </defs>
+
+                            {/* Paths and Data Packets */}
+                            {/* Stock (Top) */}
+                            <motion.path d="M448 300 L448 150" stroke="#CBD5E1" strokeWidth="2" fill="none" markerEnd="url(#arrowhead-blue-buy-circle)" />
+                            <motion.circle r="4" fill="#3B82F6">
+                                <animateMotion dur="2s" repeatCount="indefinite" path="M448 300 L448 150" />
+                            </motion.circle>
+                            <text x="458" y="190" className="text-xs font-bold fill-slate-500" style={{ textAnchor: 'start' }}>Inventory Updates</text>
+
+                            {/* Accounting (Right) */}
+                            <motion.path d="M550 300 L700 300" stroke="#CBD5E1" strokeWidth="2" fill="none" markerEnd="url(#arrowhead-blue-buy-circle)" />
+                            <motion.circle r="4" fill="#3B82F6">
+                                <animateMotion dur="2s" repeatCount="indefinite" path="M550 300 L700 300" />
+                            </motion.circle>
+                            <text x="625" y="290" className="text-xs font-bold fill-slate-500" style={{ textAnchor: 'middle' }}>GL Entries & Payments</text>
+
+                            {/* Quality (Bottom) */}
+                            <motion.path d="M448 300 L448 450" stroke="#CBD5E1" strokeWidth="2" fill="none" markerEnd="url(#arrowhead-blue-buy-circle)" />
+                            <motion.circle r="4" fill="#3B82F6">
+                                <animateMotion dur="2s" repeatCount="indefinite" path="M448 300 L448 450" />
+                            </motion.circle>
+                            <text x="458" y="410" className="text-xs font-bold fill-slate-500" style={{ textAnchor: 'start' }}>Inspections</text>
+
+                            {/* Manufacturing (Left) */}
+                            <motion.path d="M346 300 L196 300" stroke="#CBD5E1" strokeWidth="2" fill="none" markerEnd="url(#arrowhead-blue-buy-circle)" />
+                            <motion.circle r="4" fill="#3B82F6">
+                                <animateMotion dur="2s" repeatCount="indefinite" path="M346 300 L196 300" />
+                            </motion.circle>
+                            <text x="271" y="290" className="text-xs font-bold fill-slate-500" style={{ textAnchor: 'middle' }}>BOM & Raw Materials</text>
+                        </svg>
+
+                        {/* Nodes (Desktop Absolute Positioning) */}
+                        {/* Center */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                            <motion.div
+                                initial={{ scale: 0.8, opacity: 0 }}
+                                whileInView={{ scale: 1, opacity: 1 }}
+                                viewport={{ once: true }}
+                                animate={{ boxShadow: ["0 0 0 0 rgba(59, 130, 246, 0.4)", "0 0 0 20px rgba(59, 130, 246, 0)"] }}
+                                transition={{ boxShadow: { duration: 2, repeat: Infinity } }}
+                                className="w-48 h-48 bg-blue-600 rounded-full flex flex-col items-center justify-center text-white shadow-2xl border-4 border-white"
+                            >
+                                <ShoppingCart className="w-10 h-10 mb-2" />
+                                <h3 className="text-xl font-bold">Buying Module</h3>
+                            </motion.div>
+                        </div>
+
+                        {/* Top - Stock */}
+                        <div className="absolute top-[50px] left-1/2 -translate-x-1/2 z-10">
+                            <motion.div
+                                whileHover={{ scale: 1.1 }}
+                                className="w-32 h-32 bg-blue-500 rounded-full flex flex-col items-center justify-center shadow-lg border-4 border-white text-white"
+                            >
+                                <Layers className="w-6 h-6 mb-1" />
+                                <span className="font-bold">Stock</span>
+                            </motion.div>
+                        </div>
+
+                        {/* Right - Accounting */}
+                        <div className="absolute top-1/2 right-[50px] -translate-y-1/2 z-10">
+                            <motion.div
+                                whileHover={{ scale: 1.1 }}
+                                className="w-32 h-32 bg-blue-500 rounded-full flex flex-col items-center justify-center shadow-lg border-4 border-white text-white"
+                            >
+                                <DollarSign className="w-6 h-6 mb-1" />
+                                <span className="font-bold">Accounting</span>
+                            </motion.div>
+                        </div>
+
+                        {/* Bottom - Quality */}
+                        <div className="absolute bottom-[50px] left-1/2 -translate-x-1/2 z-10">
+                            <motion.div
+                                whileHover={{ scale: 1.1 }}
+                                className="w-32 h-32 bg-blue-500 rounded-full flex flex-col items-center justify-center shadow-lg border-4 border-white text-white"
+                            >
+                                <ClipboardCheck className="w-6 h-6 mb-1" />
+                                <span className="font-bold">Quality</span>
+                            </motion.div>
+                        </div>
+
+                        {/* Left - Manufacturing */}
+                        <div className="absolute top-1/2 left-[50px] -translate-y-1/2 z-10">
+                            <motion.div
+                                whileHover={{ scale: 1.1 }}
+                                className="w-32 h-32 bg-blue-500 rounded-full flex flex-col items-center justify-center shadow-lg border-4 border-white text-white"
+                            >
+                                <Factory className="w-6 h-6 mb-1" />
+                                <span className="font-bold text-sm">Manufacturing</span>
+                            </motion.div>
+                        </div>
+                    </div>
+
+                    {/* Mobile View (Stacked) */}
+                    <div className="md:hidden flex flex-col gap-8 items-center mt-12 pb-12">
+                        <div className="relative">
+                            <div className="absolute inset-0 bg-blue-600 blur-xl opacity-20 rounded-full"></div>
+                            <div className="w-40 h-40 bg-blue-600 rounded-full flex flex-col items-center justify-center text-white shadow-xl border-4 border-white relative z-10">
+                                <ShoppingCart className="w-8 h-8 mb-2" />
+                                <h3 className="text-lg font-bold">Buying</h3>
+                            </div>
+                        </div>
+
+                        {[
+                            { title: "Stock", icon: Layers, label: "Inventory Updates" },
+                            { title: "Manufacturing", icon: Factory, label: "BOM & Raw Materials" },
+                            { title: "Accounting", icon: DollarSign, label: "GL Entries" },
+                            { title: "Quality", icon: ClipboardCheck, label: "Inspections" }
+                        ].map((item, i) => (
+                            <div key={i} className="flex flex-col items-center gap-2 w-full">
+                                <ArrowRight className="w-6 h-6 text-slate-300 rotate-90 my-2" />
+                                <div className="w-full max-w-[200px] bg-white p-4 rounded-2xl shadow-md border border-slate-100 flex flex-col items-center text-center">
+                                    <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center mb-2">
+                                        <item.icon className="w-5 h-5 text-blue-600" />
+                                    </div>
+                                    <span className="font-bold text-slate-800">{item.title}</span>
+                                    <span className="text-xs text-slate-500 font-medium mt-1">{item.label}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Strategic Insight: Supplier Scorecards */}
+            <section className="py-24 bg-slate-50 relative overflow-hidden">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
+                                Strategic Insight: <span className="text-blue-600">Supplier Scorecards</span>
+                            </h2>
+                            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+                                Move from transactional buying to strategic relationship management. Know who your best partners are.
+                            </p>
+                        </motion.div>
+                    </div>
+
+                    <div className="max-w-6xl mx-auto relative">
+                        <div className="grid lg:grid-cols-12 gap-12 items-center">
+                            {/* Dashboard Visualization */}
+                            <div className="lg:col-span-8">
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden"
+                                >
+                                    {/* Dashboard Header */}
+                                    <div className="bg-slate-50 border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+                                        <h3 className="font-bold text-slate-700 flex items-center gap-2">
+                                            <Factory className="w-5 h-5 text-blue-600" />
+                                            Supplier Name: <span className="text-slate-900">Acme Corp</span>
+                                        </h3>
+                                        <span className="text-xs font-semibold bg-green-100 text-green-700 px-2 py-1 rounded-full">Preferred Partner</span>
+                                    </div>
+
+                                    {/* Dashboard Content */}
+                                    <div className="p-6 grid md:grid-cols-2 gap-6">
+                                        {/* Delivery Score - Gauge Chart */}
+                                        <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+                                            <h4 className="text-sm font-semibold text-slate-600 mb-4">Delivery Score</h4>
+                                            <div className="relative h-32 flex flex-col items-center justify-end">
+                                                {/* Gauge Background */}
+                                                <svg viewBox="0 0 200 100" className="w-48 overflow-visible">
+                                                    <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#E2E8F0" strokeWidth="20" />
+                                                    <motion.path
+                                                        d="M 20 100 A 80 80 0 0 1 180 100"
+                                                        fill="none"
+                                                        stroke="#22C55E"
+                                                        strokeWidth="20"
+                                                        strokeDasharray="251.2"
+                                                        strokeDashoffset="251.2"
+                                                        whileInView={{ strokeDashoffset: 20 }} // 92% filled approx
+                                                        viewport={{ once: true }}
+                                                        transition={{ duration: 1.5, ease: "easeOut" }}
+                                                    />
+                                                    {/* Needle */}
+                                                    <motion.line
+                                                        x1="100" y1="100" x2="160" y2="100"
+                                                        stroke="#475569"
+                                                        strokeWidth="4"
+                                                        initial={{ rotate: 180 }}
+                                                        whileInView={{ rotate: 340 }} // Pointing to ~90%
+                                                        viewport={{ once: true }}
+                                                        transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+                                                        style={{ originX: "100px", originY: "100px" }}
+                                                    />
+                                                    <circle cx="100" cy="100" r="6" fill="#475569" />
+                                                </svg>
+                                                <div className="absolute bottom-0 text-center">
+                                                    <span className="text-3xl font-bold text-slate-800">92%</span>
+                                                    <p className="text-xs text-slate-500">On-Time Delivery</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Right Column: Key Metrics */}
+                                        <div className="flex flex-col gap-4">
+                                            {/* Quality Score - Bar Chart */}
+                                            <div className="bg-slate-50 rounded-xl p-4 border border-slate-100 flex-1">
+                                                <div className="flex justify-between items-center mb-2">
+                                                    <h4 className="text-sm font-semibold text-slate-600">Quality Score</h4>
+                                                    <span className="text-xs text-green-600 font-bold bg-green-50 px-2 py-0.5 rounded">Low Defect Rate</span>
+                                                </div>
+                                                <div className="flex items-end gap-2 h-24 pt-4">
+                                                    {[40, 65, 30, 85, 50, 20].map((h, i) => (
+                                                        <motion.div
+                                                            key={i}
+                                                            initial={{ height: 0 }}
+                                                            whileInView={{ height: `${h}%` }}
+                                                            viewport={{ once: true }}
+                                                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                                                            className="flex-1 bg-blue-500 rounded-t-sm opacity-80 hover:opacity-100 transition-opacity"
+                                                        ></motion.div>
+                                                    ))}
+                                                </div>
+                                            </div>
+
+                                            {/* Pricing Consistency - Line Chart */}
+                                            <div className="bg-slate-50 rounded-xl p-4 border border-slate-100 flex-1">
+                                                <div className="flex justify-between items-center mb-2">
+                                                    <h4 className="text-sm font-semibold text-slate-600">Pricing Trends</h4>
+                                                    <span className="flex items-center text-xs text-blue-600 font-bold">
+                                                        <TrendingUp className="w-3 h-3 mr-1" /> Stable
+                                                    </span>
+                                                </div>
+                                                <div className="h-16 relative flex items-end">
+                                                    <svg viewBox="0 0 200 60" className="w-full h-full overflow-visible">
+                                                        <defs>
+                                                            <linearGradient id="gradient-blue" x1="0" y1="0" x2="0" y2="1">
+                                                                <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.2" />
+                                                                <stop offset="100%" stopColor="#3B82F6" stopOpacity="0" />
+                                                            </linearGradient>
+                                                        </defs>
+                                                        <motion.path
+                                                            d="M0 50 L40 45 L80 48 L120 40 L160 35 L200 30"
+                                                            fill="none"
+                                                            stroke="#3B82F6"
+                                                            strokeWidth="2"
+                                                            initial={{ pathLength: 0 }}
+                                                            whileInView={{ pathLength: 1 }}
+                                                            viewport={{ once: true }}
+                                                            transition={{ duration: 1.5 }}
+                                                        />
+                                                        <motion.path
+                                                            d="M0 50 L40 45 L80 48 L120 40 L160 35 L200 30 V 60 H 0 Z"
+                                                            fill="url(#gradient-blue)"
+                                                            initial={{ opacity: 0 }}
+                                                            whileInView={{ opacity: 1 }}
+                                                            viewport={{ once: true }}
+                                                            transition={{ delay: 0.5, duration: 1 }}
+                                                        />
+                                                        {[
+                                                            { x: 40, y: 45 }, { x: 80, y: 48 }, { x: 120, y: 40 }, { x: 160, y: 35 }, { x: 200, y: 30 }
+                                                        ].map((point, i) => (
+                                                            <motion.circle
+                                                                key={i}
+                                                                cx={point.x} cy={point.y} r="3" fill="#fff" stroke="#3B82F6" strokeWidth="2"
+                                                                initial={{ scale: 0 }}
+                                                                whileInView={{ scale: 1 }}
+                                                                viewport={{ once: true }}
+                                                                transition={{ delay: 1 + (i * 0.1) }}
+                                                            />
+                                                        ))}
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            </div>
+
+                            {/* Annotations & Text */}
+                            <div className="lg:col-span-4 space-y-8">
+                                <motion.div
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.2 }}
+                                >
+                                    <h3 className="text-2xl font-bold text-slate-900 mb-4">Supplier Groups</h3>
+                                    <p className="text-lg text-slate-600 mb-6">
+                                        Categorize vendors for strategic analysis. Identify risks and opportunities in your supply chain.
+                                    </p>
+
+                                    <div className="space-y-4">
+                                        <div className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-slate-100">
+                                            <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                                <Layers className="w-5 h-5 text-blue-600" />
+                                            </div>
+                                            <div>
+                                                <p className="font-bold text-slate-800">Category Management</p>
+                                                <p className="text-xs text-slate-500">Group by Raw Material, Service, etc.</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-slate-100">
+                                            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                                                <Gauge className="w-5 h-5 text-green-600" />
+                                            </div>
+                                            <div>
+                                                <p className="font-bold text-slate-800">Performance Tracking</p>
+                                                <p className="text-xs text-slate-500">Auto-calculated scorecards.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            </div>
+                        </div>
+
+                        {/* Benefit Banner */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.4 }}
+                            className="mt-16 bg-blue-600 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 shadow-xl text-center md:text-left"
+                        >
+                            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center shrink-0 backdrop-blur-sm">
+                                <CheckCircle className="w-8 h-8 text-white" />
+                            </div>
+                            <div>
+                                <h4 className="text-xl font-bold text-white mb-2">Benefit: Unified Supplier Insights</h4>
+                                <p className="text-blue-100 text-lg">
+                                    Identify top performers and negotiate better terms based on real-time data, not gut feeling.
+                                </p>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Order to Cash (Selling) */}
+            <section className="py-24 bg-slate-900 text-white relative overflow-hidden border-t border-slate-800">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-10 pointer-events-none">
+                    <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500 via-slate-900 to-slate-900"></div>
+                </div>
+
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="mb-16 md:text-center max-w-3xl mx-auto">
+                        <span className="text-blue-400 font-bold tracking-wider uppercase text-sm">Selling Module</span>
+                        <h2 className="text-3xl lg:text-4xl font-bold mt-2 mb-4">Order to Cash Efficiency</h2>
+                        <p className="text-lg text-slate-300">
+                            Accelerate your sales cycle. Quotations, orders, shipments, and invoicing in one seamless flow.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {[
+                            { title: "Quotation", desc: "Create professional quotes that convert instantly to Sales Orders.", color: "bg-blue-600" },
+                            { title: "Sales Order", desc: "Reserve stock immediately. Trigger procurement if out of stock.", color: "bg-indigo-600" },
+                            { title: "Delivery Note", desc: "Pick, Pack, and Ship. Stock is deducted from specific warehouses.", color: "bg-purple-600" },
+                            { title: "Invoice & Pay", desc: "Automated billing based on delivery or order. Real-time AR tracking.", color: "bg-teal-600" }
+                        ].map((card, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="bg-slate-800 p-8 rounded-2xl border border-slate-700 relative overflow-hidden group"
+                            >
+                                <div className={`absolute top-0 right-0 w-24 h-24 ${card.color} opacity-10 rounded-bl-[100px] -mr-4 -mt-4 transition-all group-hover:scale-150 group-hover:opacity-20`}></div>
+                                <h3 className="text-xl font-bold mb-3 relative z-10">{card.title}</h3>
+                                <p className="text-slate-400 text-sm relative z-10 leading-relaxed">{card.desc}</p>
+                                <div className={`absolute bottom-0 left-0 w-full h-1 ${card.color}`}></div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -1219,302 +2172,152 @@ const Page = () => {
                 </div>
             </section>
 
-            {/* Sales Order Backbone */}
-            <section className="py-24 bg-slate-50">
+            {/* Sales Order Backbone - Redesigned Hub & Spoke */}
+            <section className="py-24 bg-slate-50 relative overflow-hidden">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
-                            The Sales Order: Backbone of Repeat Business
+                    <div className="text-center mb-20">
+                        <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-slate-900">
+                            The Sales Order: <span className="text-slate-700">Backbone of Repeat Business</span>
                         </h2>
-                        <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-                            The Sales Order is the pivot point where a promise becomes an operation. It triggers the entire supply chain.
+                        <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                            The Sales Order is the pivot point where a promise becomes an operation. <br className="hidden md:block" />
+                            It triggers the entire supply chain.
                         </p>
                     </div>
 
-                    <div className="max-w-5xl mx-auto relative">
-                        {/* Central Node */}
-                        <div className="flex justify-center mb-12 md:mb-0 relative z-20">
+                    <div className="relative max-w-6xl mx-auto">
+                        {/* SVG Connections Layer */}
+                        <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-0" style={{ overflow: 'visible' }}>
+                            <defs>
+                                <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                    <polygon points="0 0, 10 3.5, 0 7" fill="#3B82F6" />
+                                </marker>
+                                <marker id="arrowhead-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                    <polygon points="0 0, 10 3.5, 0 7" fill="#F97316" />
+                                </marker>
+                            </defs>
+
+                            {/* Logistics Arrow (Center to Left) */}
+                            <motion.path
+                                d="M540 250 L300 250"
+                                stroke="#3B82F6"
+                                strokeWidth="3"
+                                strokeDasharray="8 8"
+                                fill="none"
+                                markerEnd="url(#arrowhead-blue)"
+                                initial={{ pathLength: 0, opacity: 0 }}
+                                whileInView={{ pathLength: 1, opacity: 1 }}
+                                transition={{ duration: 1, delay: 0.5 }}
+                            />
+
+                            {/* Manufacturing Arrow (Center to Top Right) */}
+                            <motion.path
+                                d="M750 220 L900 120"
+                                stroke="#F97316"
+                                strokeWidth="3"
+                                strokeDasharray="8 8"
+                                fill="none"
+                                markerEnd="url(#arrowhead-orange)"
+                                initial={{ pathLength: 0, opacity: 0 }}
+                                whileInView={{ pathLength: 1, opacity: 1 }}
+                                transition={{ duration: 1, delay: 0.7 }}
+                            />
+
+                            {/* Procurement Arrow (Center to Bottom Right) */}
+                            <motion.path
+                                d="M750 280 L900 380"
+                                stroke="#3B82F6"
+                                strokeWidth="3"
+                                strokeDasharray="8 8"
+                                fill="none"
+                                markerEnd="url(#arrowhead-blue)"
+                                initial={{ pathLength: 0, opacity: 0 }}
+                                whileInView={{ pathLength: 1, opacity: 1 }}
+                                transition={{ duration: 1, delay: 0.9 }}
+                            />
+                        </svg>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center relative z-10">
+
+                            {/* Left Column: Logistics */}
                             <motion.div
-                                initial={{ scale: 0.8, opacity: 0 }}
-                                whileInView={{ scale: 1, opacity: 1 }}
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                className="bg-white p-8 rounded-2xl shadow-xl border border-slate-200 text-center w-64"
+                                transition={{ duration: 0.6 }}
+                                className="flex justify-center md:justify-end"
                             >
-                                <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-xl mx-auto mb-4 flex items-center justify-center">
-                                    <FileText className="w-8 h-8" />
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-800 mb-1">Sales Order</h3>
-                                <div className="text-sm font-mono text-slate-500 bg-slate-50 rounded py-1 px-2 inline-block">
-                                    #SO-2024-001
+                                <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center text-center w-64 md:mr-12 hover:scale-105 transition-transform duration-300">
+                                    <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-4 border-4 border-white shadow-sm">
+                                        <Truck className="w-10 h-10 text-blue-600" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-blue-900 mb-1">Logistics</h3>
+                                    <p className="text-sm text-slate-500 font-medium">Plan Dispatch & Route</p>
                                 </div>
                             </motion.div>
-                        </div>
 
-                        {/* Connected Nodes */}
-                        <div className="grid md:grid-cols-3 gap-8 md:mt-[-40px]">
-                            {/* Logistics */}
+                            {/* Center Column: Sales Order Hub */}
                             <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.2 }}
-                                className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center relative md:top-20"
+                                transition={{ duration: 0.5 }}
+                                className="flex justify-center"
                             >
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:hidden">
-                                    <ArrowRight className="w-6 h-6 text-slate-300 rotate-90" />
+                                <div className="bg-white p-10 rounded-[2rem] shadow-2xl border-2 border-slate-100 flex flex-col items-center text-center w-80 relative z-20">
+                                    <div className="absolute -top-3 -right-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md animate-pulse">
+                                        ACTIVE
+                                    </div>
+                                    <div className="w-24 h-24 bg-slate-50 rounded-2xl flex items-center justify-center mb-6 shadow-inner border border-slate-200">
+                                        <FileText className="w-12 h-12 text-slate-700" />
+                                    </div>
+                                    <h3 className="text-2xl font-black text-slate-900 mb-2">Sales Order</h3>
+                                    <div className="bg-slate-100 text-slate-600 font-mono text-sm px-4 py-1.5 rounded-lg border border-slate-200">
+                                        #SO-2024-001
+                                    </div>
+                                    <p className="mt-4 text-xs text-slate-400 max-w-[200px]">
+                                        Confirms details, reserves stock, and initiates fulfillment.
+                                    </p>
                                 </div>
-                                <div className="hidden md:block absolute -top-12 right-0 w-24 h-[2px] bg-slate-300 origin-bottom-right -rotate-45"></div>
-
-                                <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-full mx-auto mb-3 flex items-center justify-center">
-                                    <Truck className="w-6 h-6" />
-                                </div>
-                                <h4 className="font-bold text-slate-800">Logistics</h4>
-                                <p className="text-sm text-slate-500">Plan Dispatch & Route</p>
                             </motion.div>
 
-                            {/* Manufacturing (Spacer for center) */}
-                            <div className="hidden md:block"></div>
-
-                            {/* Procurement & Manufacturing Right Side */}
-                            <div className="space-y-8 md:top-10 relative">
+                            {/* Right Column: Manufacturing & Procurement */}
+                            <div className="flex flex-col gap-12 md:gap-32 md:pl-12">
+                                {/* Manufacturing (Top Right) */}
                                 <motion.div
-                                    initial={{ opacity: 0, x: 20 }}
+                                    initial={{ opacity: 0, x: 30 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.3 }}
-                                    className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center"
+                                    transition={{ duration: 0.6, delay: 0.2 }}
+                                    className="flex justify-center md:justify-start"
                                 >
-                                    <div className="hidden md:block absolute top-1/2 -left-12 w-12 h-[2px] bg-slate-300 -rotate-12 origin-right"></div>
-                                    <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-full mx-auto mb-3 flex items-center justify-center">
-                                        <Factory className="w-6 h-6" />
+                                    <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center text-center w-64 hover:scale-105 transition-transform duration-300">
+                                        <div className="w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center mb-4 border-4 border-white shadow-sm">
+                                            <Factory className="w-10 h-10 text-orange-600" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-orange-900 mb-1">Manufacturing</h3>
+                                        <p className="text-sm text-slate-500 font-medium">Trigger Work Order</p>
                                     </div>
-                                    <h4 className="font-bold text-slate-800">Manufacturing</h4>
-                                    <p className="text-sm text-slate-500">Trigger Work Order</p>
                                 </motion.div>
 
+                                {/* Procurement (Bottom Right) */}
                                 <motion.div
-                                    initial={{ opacity: 0, x: 20 }}
+                                    initial={{ opacity: 0, x: 30 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.4 }}
-                                    className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center"
+                                    transition={{ duration: 0.6, delay: 0.4 }}
+                                    className="flex justify-center md:justify-start"
                                 >
-                                    <div className="hidden md:block absolute top-1/2 -left-12 w-12 h-[2px] bg-slate-300 rotate-12 origin-right"></div>
-                                    <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full mx-auto mb-3 flex items-center justify-center">
-                                        <Warehouse className="w-6 h-6" />
+                                    <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center text-center w-64 hover:scale-105 transition-transform duration-300">
+                                        <div className="w-20 h-20 bg-indigo-50 rounded-full flex items-center justify-center mb-4 border-4 border-white shadow-sm">
+                                            <Warehouse className="w-10 h-10 text-indigo-600" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-indigo-900 mb-1">Procurement</h3>
+                                        <p className="text-sm text-slate-500 font-medium">Generate Material Request</p>
                                     </div>
-                                    <h4 className="font-bold text-slate-800">Procurement</h4>
-                                    <p className="text-sm text-slate-500">Generate Material Request</p>
                                 </motion.div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            {/* Real-Time Inventory Confidence */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                        >
-                            <div className="text-blue-600 font-bold tracking-wide uppercase text-sm mb-2">Modern Enterprise Clarity</div>
-                            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-slate-900">
-                                Sell with Confidence Using Real-Time Inventory
-                            </h2>
-                            <p className="text-lg text-slate-600 mb-8">
-                                Never sell what you don't have. ERPNext provides instant visibility into stock levels during the sales process.
-                            </p>
-
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <div className="mt-1"><div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-blue-600"></div></div>
-                                    <div>
-                                        <h4 className="font-bold text-slate-900 text-lg">Stock Reservation</h4>
-                                        <p className="text-slate-600">Reserve batches specifically for high-priority orders.</p>
-                                    </div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="mt-1"><div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-blue-600"></div></div>
-                                    <div>
-                                        <h4 className="font-bold text-slate-900 text-lg">Projected Quantity</h4>
-                                        <p className="text-slate-600">See what's on the shelf vs. what's already committed.</p>
-                                    </div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="mt-1"><div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-blue-600"></div></div>
-                                    <div>
-                                        <h4 className="font-bold text-slate-900 text-lg">Multi-Warehouse</h4>
-                                        <p className="text-slate-600">Check availability across all stores instantly.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, x: 20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-lg"
-                        >
-                            <div className="bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden mb-4">
-                                <div className="border-b border-slate-100 p-3 bg-slate-50 font-bold text-slate-700 text-sm">
-                                    Sales Order Item
-                                </div>
-                                <div className="p-4">
-                                    <div className="grid grid-cols-4 gap-4 text-xs font-bold text-slate-500 mb-2">
-                                        <div>Item Code</div>
-                                        <div>Description</div>
-                                        <div>Quantity</div>
-                                        <div className="text-right">Action</div>
-                                    </div>
-                                    <div className="grid grid-cols-4 gap-4 items-center text-sm border-t border-slate-100 pt-2">
-                                        <div className="font-mono text-slate-600">ITEM-001</div>
-                                        <div className="text-slate-800">Wireless Mouse</div>
-                                        <div className="relative group">
-                                            <div className="w-3 h-3 bg-green-500 rounded-full mx-auto cursor-help"></div>
-
-                                            {/* Tooltip */}
-                                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 bg-white p-3 rounded shadow-xl border border-slate-200 text-xs hidden group-hover:block z-10">
-                                                <div className="flex justify-between mb-1"><span>Actual Qty:</span> <span className="font-bold">500</span></div>
-                                                <div className="flex justify-between mb-1"><span>Reserved Qty:</span> <span className="font-bold">50</span></div>
-                                                <div className="flex justify-between text-green-600"><span>Available:</span> <span className="font-bold">450</span></div>
-                                            </div>
-                                        </div>
-                                        <div className="text-right">
-                                            <button className="bg-blue-600 text-white text-xs px-3 py-1.5 rounded font-bold hover:bg-blue-700 transition-colors">
-                                                Reserve Stock
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
-
-
-
-            {/* Blanket Orders & Long-Term Revenue */}
-            <section className="py-24 bg-white overflow-hidden">
-                <div className="container mx-auto px-4">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center mb-16"
-                    >
-                        <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
-                            Secure Long-Term Revenue with Blanket Orders
-                        </h2>
-                        <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                            Automate compliance with long-term contracts and rate locking.
-                        </p>
-                    </motion.div>
-
-                    <div className="max-w-6xl mx-auto relative">
-                        <div className="grid lg:grid-cols-12 gap-12 items-center">
-                            <div className="lg:col-span-10">
-                                <div className="bg-white p-8 md:p-12 rounded-[2rem] shadow-2xl border border-slate-100 relative overflow-hidden group">
-                                    {/* Glassmorphism Background elements */}
-                                    <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50"></div>
-
-                                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-                                        <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
-                                            Blanket Order <span className="text-blue-600 font-mono">#BO-9901</span> Contract Limit
-                                        </h3>
-                                        <div className="text-slate-500 font-medium bg-slate-50 px-4 py-2 rounded-lg border border-slate-100">
-                                            Total Quantity: <span className="text-slate-900 font-bold">10,000 Units</span>
-                                        </div>
-                                    </div>
-
-                                    {/* Progress Bar Visualization */}
-                                    <div className="relative h-20 bg-slate-100 rounded-2xl overflow-hidden mb-12 border border-slate-200 p-1 shadow-inner">
-                                        {/* Filled Portion */}
-                                        <motion.div
-                                            initial={{ width: 0 }}
-                                            whileInView={{ width: '65%' }}
-                                            viewport={{ once: true }}
-                                            transition={{ duration: 1.5, ease: "easeOut" }}
-                                            className="absolute top-1 left-1 bottom-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl flex items-center justify-end pr-6 shadow-lg shadow-blue-500/20"
-                                        >
-                                            <div className="bg-white text-blue-600 text-sm font-bold px-3 py-1.5 rounded-lg shadow-xl translate-x-3 md:translate-x-0 relative">
-                                                Ordered: 6,500
-                                                <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-white"></div>
-                                            </div>
-                                        </motion.div>
-
-                                        {/* Remaining Portion Tooltip */}
-                                        <div className="absolute top-1/2 left-[82.5%] -translate-x-1/2 -translate-y-1/2">
-                                            <div className="bg-slate-800 text-white text-sm font-bold px-4 py-2 rounded-lg shadow-xl flex items-center gap-3">
-                                                Remaining: 3,500
-                                                <div className="w-2.5 h-2.5 bg-white rounded-full animate-ping"></div>
-                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[6px] border-b-slate-800"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Rate Lock Badge */}
-                                    <div className="flex justify-center -mb-4">
-                                        <motion.div
-                                            initial={{ y: 20, opacity: 0 }}
-                                            whileInView={{ y: 0, opacity: 1 }}
-                                            viewport={{ once: true }}
-                                            transition={{ delay: 0.5 }}
-                                            className="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl shadow-blue-500/40 relative z-10"
-                                        >
-                                            <Lock className="w-6 h-6" />
-                                            Rate Locked: $5.50/unit until Dec 31st
-                                            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[8px] border-b-blue-600"></div>
-                                        </motion.div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Decorative Arrow Pattern */}
-                            <div className="hidden lg:flex lg:col-span-2 flex-col gap-6 items-center">
-                                <motion.div
-                                    animate={{ x: [0, 10, 0] }}
-                                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                                    className="relative h-32 w-full"
-                                >
-                                    <div className="absolute top-0 right-0 w-full h-[2px] bg-blue-600/30"></div>
-                                    <div className="absolute top-8 right-0 w-3/4 h-[2px] bg-orange-500/30"></div>
-                                    <div className="absolute top-16 right-0 w-full h-[2px] bg-blue-500/30"></div>
-                                    <div className="absolute top-24 right-0 w-1/2 h-[2px] bg-orange-600/30"></div>
-
-                                    <div className="absolute -right-1 top-[-9px] text-blue-600"><ArrowRight className="w-5 h-5" /></div>
-                                    <div className="absolute -right-1 top-[23px] text-orange-500"><ArrowRight className="w-5 h-5" /></div>
-                                    <div className="absolute -right-1 top-[55px] text-blue-500"><ArrowRight className="w-5 h-5" /></div>
-                                    <div className="absolute -right-1 top-[87px] text-orange-600"><ArrowRight className="w-5 h-5" /></div>
-                                </motion.div>
-                            </div>
-                        </div>
-
-                        <div className="grid md:grid-cols-3 gap-8 mt-20">
-                            {[
-                                "Lock in rates and quantities for key customers.",
-                                "Auto-validation against contract terms on every new order.",
-                                "Monitor fulfillment progress to prompt timely renewals."
-                            ].map((text, i) => (
-                                <motion.div
-                                    key={i}
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: i * 0.1 }}
-                                    className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-colors group"
-                                >
-                                    <div className="mt-1 bg-blue-100 text-blue-600 p-1.5 rounded-lg group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                        <ArrowRight className="w-5 h-5" />
-                                    </div>
-                                    <p className="text-slate-700 font-bold text-lg leading-tight">{text}</p>
-                                </motion.div>
-                            ))}
                         </div>
                     </div>
                 </div>
@@ -2021,191 +2824,6 @@ const Page = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Mobile & Barcode Integration */}
-            < section className="py-24 bg-slate-50 relative overflow-hidden" >
-                <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-slate-900">
-                            Mobile & Barcode Integration
-                        </h2>
-                        <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                            Untether your workforce. Manage operations directly from the warehouse floor with the ERPNext mobile app.
-                        </p>
-
-                        <div className="space-y-6">
-                            {[
-                                { title: "Scan to Search", desc: "Instantly retrieve item details by scanning barcodes.", icon: ScanLine },
-                                { title: "Mobile UI", desc: "Create stock entries and check levels on the go.", icon: Smartphone },
-                                { title: "Efficiency Boost", desc: "Reduce manual data entry errors by 90%.", icon: Zap }
-                            ].map((item, i) => (
-                                <div key={i} className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border border-slate-100 group hover:border-blue-200 transition-colors">
-                                    <div className="p-3 bg-slate-100 text-slate-600 rounded-full group-hover:bg-blue-100 group-hover:text-blue-600 transition-colors">
-                                        <item.icon className="w-6 h-6" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-slate-900">{item.title}</h4>
-                                        <p className="text-sm text-slate-600">{item.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="relative flex justify-center"
-                    >
-                        {/* Abstract Phone Mockup with Scanning Effect */}
-                        <div className="w-72 h-[500px] bg-slate-900 rounded-[3rem] border-8 border-slate-800 shadow-2xl relative overflow-hidden flex flex-col">
-                            <div className="h-full bg-slate-800 relative">
-                                {/* Camera Viewfinder */}
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="w-48 h-48 border-2 border-white/30 rounded-lg relative">
-                                        <div className="absolute top-0 left-0 w-4 h-4 border-t-4 border-l-4 border-blue-500 -mt-1 -ml-1"></div>
-                                        <div className="absolute top-0 right-0 w-4 h-4 border-t-4 border-r-4 border-blue-500 -mt-1 -mr-1"></div>
-                                        <div className="absolute bottom-0 left-0 w-4 h-4 border-b-4 border-l-4 border-blue-500 -mb-1 -ml-1"></div>
-                                        <div className="absolute bottom-0 right-0 w-4 h-4 border-b-4 border-r-4 border-blue-500 -mb-1 -mr-1"></div>
-
-                                        {/* Scanning Laser */}
-                                        <div className="absolute top-1/2 left-0 w-full h-0.5 bg-red-500 shadow-[0_0_10px_rgba(239,68,68,1)] animate-[scan_2s_ease-in-out_infinite]"></div>
-                                    </div>
-                                </div>
-
-                                {/* Overlay UI */}
-                                <div className="absolute bottom-0 w-full bg-slate-900/90 backdrop-blur p-6 rounded-t-3xl">
-                                    <div className="text-center">
-                                        <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-[0_0_15px_rgba(34,197,94,0.5)]">
-                                            <CheckCircle className="w-6 h-6 text-white" />
-                                        </div>
-                                        <div className="text-white font-bold text-lg">Item Identified</div>
-                                        <div className="text-slate-400 text-sm">Widget A - 50 Units</div>
-                                    </div>
-                                    <button className="w-full mt-4 bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">
-                                        View Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Floating box being scanned */}
-                        <div className="absolute top-20 -right-4 md:-right-12 w-32 h-32 bg-orange-100 rounded-2xl border-2 border-orange-200 flex flex-col items-center justify-center shadow-lg transform rotate-12 z-10">
-                            <Box className="w-12 h-12 text-orange-500 mb-2" />
-                            <div className="h-6 w-20 bg-slate-800 rounded px-1 flex items-center justify-center gap-0.5" aria-hidden="true">
-                                <div className="w-0.5 h-3 bg-white"></div>
-                                <div className="w-0.5 h-3 bg-white"></div>
-                                <div className="w-1 h-3 bg-white"></div>
-                                <div className="w-0.5 h-3 bg-white"></div>
-                                <div className="w-1 h-3 bg-white"></div>
-                                <div className="w-0.5 h-3 bg-white"></div>
-                                <div className="w-1 h-3 bg-white"></div>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </section >
-
-            {/* Real-Time Valuation & Accounting */}
-            < section className="py-24 bg-white" >
-                <div className="container mx-auto px-4">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-slate-900">
-                                Real-Time Inventory Valuation & Accounting
-                            </h2>
-                            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                                With Perpetual Inventory, every stock movement automatically posts a corresponding entry to the General Ledger. Say goodbye to end-of-year inventory reconciliation nightmares.
-                            </p>
-
-                            <div className="space-y-6">
-                                <div className="flex items-start gap-4">
-                                    <div className="p-2 bg-blue-100 rounded text-blue-600 mt-1">
-                                        <BarChart3 className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-slate-900">Valuation Methods</h4>
-                                        <p className="text-sm text-slate-600">FIFO, Moving Average, and Standard Costing supported out of the box.</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-4">
-                                    <div className="p-2 bg-green-100 rounded text-green-600 mt-1">
-                                        <DollarSign className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-slate-900">Landed Cost Vouchers</h4>
-                                        <p className="text-sm text-slate-600">Distribute shipping, customs, and insurance costs to items for true profitability analysis.</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-4">
-                                    <div className="p-2 bg-purple-100 rounded text-purple-600 mt-1">
-                                        <Factory className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-slate-900">Asset Capitalization</h4>
-                                        <p className="text-sm text-slate-600">Easily track inventory details of fixed assets and manage depreciation.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, x: 20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                            className="bg-slate-50 p-8 rounded-2xl border border-slate-200 relative shadow-xl"
-                        >
-                            {/* Interactive Ledger Visualization */}
-                            <div className="flex items-center gap-4 mb-8">
-                                <div className="flex-1 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
-                                    <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Transaction</div>
-                                    <div className="font-bold text-slate-800">Delivery Note #DN-001</div>
-                                </div>
-                                <ArrowRight className="w-6 h-6 text-slate-400" />
-                                <div className="flex-1 bg-slate-800 p-4 rounded-lg shadow-sm border border-slate-700">
-                                    <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">GL Entry</div>
-                                    <div className="font-bold text-white">Journal #JV-005</div>
-                                </div>
-                            </div>
-
-                            <div className="bg-white rounded-xl border border-slate-200 overflow-hidden">
-                                <table className="w-full text-sm">
-                                    <thead className="bg-slate-50 border-b border-slate-200">
-                                        <tr>
-                                            <th className="p-3 text-left text-slate-500 font-medium">Account</th>
-                                            <th className="p-3 text-right text-slate-500 font-medium">Debit</th>
-                                            <th className="p-3 text-right text-slate-500 font-medium">Credit</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-slate-100">
-                                        <tr>
-                                            <td className="p-3 font-medium text-slate-700">Cost of Goods Sold</td>
-                                            <td className="p-3 text-right font-mono text-slate-600">$500.00</td>
-                                            <td className="p-3 text-right font-mono text-slate-400"></td>
-                                        </tr>
-                                        <tr>
-                                            <td className="p-3 font-medium text-slate-700">Stock In Hand</td>
-                                            <td className="p-3 text-right font-mono text-slate-400"></td>
-                                            <td className="p-3 text-right font-mono text-slate-600">$500.00</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </motion.div>
-                    </div>
-                </div>
-            </section >
 
             {/* Powered by Frappe Framework */}
             < section className="py-24 bg-gradient-to-br from-slate-900 to-indigo-950 text-white relative overflow-hidden" >
