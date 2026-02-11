@@ -1,0 +1,11 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#F1F5F9"/>
+  <rect x="250" y="200" width="300" height="200" rx="20" fill="#CBD5E1"/>
+  <circle cx="400" cy="250" r="50" fill="#94A3B8"/>
+  <path d="M325 400C325 358.579 358.579 325 400 325C441.421 325 475 358.579 475 400H325Z" fill="#94A3B8"/>
+  <circle cx="280" cy="280" r="40" fill="#94A3B8" fill-opacity="0.7"/>
+  <path d="M220 400C220 366.863 246.863 340 280 340C313.137 340 340 366.863 340 400H220Z" fill="#94A3B8" fill-opacity="0.7"/>
+  <circle cx="520" cy="280" r="40" fill="#94A3B8" fill-opacity="0.7"/>
+  <path d="M460 400C460 366.863 486.863 340 520 340C553.137 340 580 366.863 580 400H460Z" fill="#94A3B8" fill-opacity="0.7"/>
+  <text x="400" y="500" font-family="sans-serif" font-size="24" fill="#64748B" text-anchor="middle">HR Team</text>
+</svg>
