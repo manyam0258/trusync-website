@@ -1,0 +1,21 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Product Surface -->
+  <rect width="400" height="400" fill="#334155"/>
+  
+  <!-- Label -->
+  <rect x="100" y="140" width="200" height="120" rx="4" fill="#e2e8f0"/>
+  <rect x="120" y="160" width="60" height="60" fill="white"/> <!-- QR Code Placeholder -->
+  <rect x="125" y="165" width="50" height="50" fill="black" fill-opacity="0.8"/>
+  
+  <text x="200" y="175" font-family="monospace" font-size="10" fill="#1e293b">BATCH: B-2024-Li</text>
+  <text x="200" y="195" font-family="monospace" font-size="10" fill="#1e293b">EXP: 12/2026</text>
+  <text x="200" y="215" font-family="monospace" font-size="10" fill="#1e293b">SN: BAT-88392</text>
+  
+  <!-- Magnifying Glass Overlay -->
+  <circle cx="200" cy="200" r="120" stroke="#3b82f6" stroke-width="8" fill="none"/>
+  <line x1="285" y1="285" x2="350" y2="350" stroke="#3b82f6" stroke-width="20" stroke-linecap="round"/>
+  
+  <!-- Crosshairs -->
+  <line x1="200" y1="180" x2="200" y2="220" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.5"/>
+  <line x1="180" y1="200" x2="220" y2="200" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.5"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tablet Frame -->
+  <rect x="25" y="25" width="450" height="350" rx="20" fill="#1e293b"/>
+  <rect x="45" y="45" width="410" height="310" rx="4" fill="#f8fafc"/>
+  
+  <!-- Header -->
+  <rect x="45" y="45" width="410" height="50" fill="#3b82f6"/>
+  <text x="250" y="78" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="white">Quality Inspection Report</text>
+  
+  <!-- Checklist Item 1 -->
+  <rect x="65" y="115" width="370" height="60" rx="8" fill="white" stroke="#e2e8f0"/>
+  <text x="85" y="150" font-family="sans-serif" font-size="16" fill="#1e293b">Rotor Balance</text>
+  <circle cx="400" cy="145" r="12" fill="#22c55e"/>
+  <path d="M394 145 L398 149 L406 141" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Checklist Item 2 -->
+  <rect x="65" y="195" width="370" height="60" rx="8" fill="white" stroke="#e2e8f0"/>
+  <text x="85" y="230" font-family="sans-serif" font-size="16" fill="#1e293b">GPS Signal Lock</text>
+  <circle cx="400" cy="225" r="12" fill="#22c55e"/>
+  <path d="M394 225 L398 229 L406 221" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Checklist Item 3 (Fail) -->
+  <rect x="65" y="275" width="370" height="60" rx="8" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="85" y="310" font-family="sans-serif" font-size="16" fill="#1e293b">Frame Stress Test</text>
+  <circle cx="400" cy="305" r="12" fill="#ef4444"/>
+  <path d="M394 299 L406 311 M406 299 L394 311" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+</svg>
