@@ -25,6 +25,7 @@ import {
     PieChart
 } from 'lucide-react';
 import { Button } from "@/components/ui/Button";
+import Link from 'next/link';
 
 // --- Components ---
 
@@ -118,11 +119,11 @@ export default function ManufacturingPage() {
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row gap-4">
-                                    <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-blue-500/25 transition-all">
-                                        Watch Context Demo
+                                    <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-blue-500/25 transition-all">
+                                        <Link href="/#contact">Watch Context Demo</Link>
                                     </Button>
-                                    <Button variant="outline" size="lg" className="rounded-full px-8 py-6 text-lg border-slate-300 hover:bg-slate-50">
-                                        Explore Features
+                                    <Button asChild variant="outline" size="lg" className="rounded-full px-8 py-6 text-lg border-slate-300 hover:bg-slate-50">
+                                        <Link href="/#contact">Explore Features</Link>
                                     </Button>
                                 </div>
 
@@ -428,8 +429,8 @@ export default function ManufacturingPage() {
                             <p className="text-slate-300 max-w-2xl mx-auto mb-8 text-lg">
                                 Join 5,000+ manufacturers who trust ERPNext to deliver quality products on time, every time.
                             </p>
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 py-6 text-lg">
-                                Schedule a Demo
+                            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 py-6 text-lg">
+                                <Link href="/#contact">Schedule a Demo</Link>
                             </Button>
                         </div>
                     </div>
@@ -785,11 +786,11 @@ export default function ManufacturingPage() {
                                 ERPNext: The operating system for modern manufacturers.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-full">
-                                    Start a Free Trial
+                                <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-full">
+                                    <Link href="/#contact">Start a Free Trial</Link>
                                 </Button>
-                                <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg rounded-full">
-                                    Schedule Demo
+                                <Button asChild size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg rounded-full">
+                                    <Link href="/#contact">Schedule Demo</Link>
                                 </Button>
                             </div>
                         </div>
