@@ -1,6 +1,7 @@
 "use client";
 
 import { Container } from "@/components/ui/Container";
+import Link from 'next/link';
 import { Section } from "@/components/ui/Section";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";
 import { motion } from "framer-motion";
@@ -11,49 +12,57 @@ const services = [
         title: "Financial Accounting",
         description: "Manage your finances, bookkeeping, and accounting with ease.",
         icon: DollarSign,
-        color: "from-blue-500 to-cyan-500"
+        color: "from-blue-500 to-cyan-500",
+        href: "/services/accounting-module"
     },
     {
         title: "Order Management",
         description: "Streamline your sales and purchase order processing.",
         icon: Briefcase,
-        color: "from-purple-500 to-pink-500"
+        color: "from-purple-500 to-pink-500",
+        href: "/services/order-management-module"
     },
     {
         title: "HR & Payroll",
         description: "Efficiently manage employee data, payroll, and HR processes.",
         icon: Users,
-        color: "from-orange-500 to-red-500"
+        color: "from-orange-500 to-red-500",
+        href: "/services/hr-payroll-module"
     },
     {
         title: "Manufacturing",
         description: "Optimize production planning, BOM, and shop floor control.",
         icon: Settings,
-        color: "from-green-500 to-emerald-500"
+        color: "from-green-500 to-emerald-500",
+        href: "/industries/manufacturing"
     },
     {
         title: "CRM",
         description: "Enhance customer relationships and sales pipeline management.",
         icon: Cpu,
-        color: "from-indigo-500 to-purple-500"
+        color: "from-indigo-500 to-purple-500",
+        href: "/services/crm-module"
     },
     {
         title: "Website",
         description: "Build and manage your website directly within ERPNext.",
         icon: Layout,
-        color: "from-teal-500 to-cyan-500"
+        color: "from-teal-500 to-cyan-500",
+        href: "/services/website-module"
     },
     {
         title: "Helpdesk",
         description: "Provide excellent customer support with an integrated helpdesk.",
         icon: HelpCircle,
-        color: "from-pink-500 to-rose-500"
+        color: "from-pink-500 to-rose-500",
+        href: "/services/helpdesk-module"
     },
     {
         title: "Asset Management",
         description: "Track and manage your company's assets effectively.",
         icon: Building,
-        color: "from-amber-500 to-orange-500"
+        color: "from-amber-500 to-orange-500",
+        href: "/services/asset-management-module"
     },
 ];
 
@@ -87,23 +96,25 @@ export function Services() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
-                            <div className="relative group h-full">
-                                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                <Card className="relative h-full bg-white border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 rounded-2xl overflow-hidden">
-                                    <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color}`} />
-                                    <CardHeader className="pb-4">
-                                        <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 shadow-lg`}>
-                                            <service.icon className="h-8 w-8 text-white" strokeWidth={2.5} />
-                                        </div>
-                                        <CardTitle className="text-xl mb-3 text-slate-900">{service.title}</CardTitle>
-                                    </CardHeader>
-                                    <CardContent className="pt-0">
-                                        <CardDescription className="text-base text-slate-600 leading-relaxed">
-                                            {service.description}
-                                        </CardDescription>
-                                    </CardContent>
-                                </Card>
-                            </div>
+                            <Link href={service.href} className="block h-full">
+                                <div className="relative group h-full">
+                                    <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    <Card className="relative h-full bg-white border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 rounded-2xl overflow-hidden cursor-pointer">
+                                        <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color}`} />
+                                        <CardHeader className="pb-4">
+                                            <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 shadow-lg`}>
+                                                <service.icon className="h-8 w-8 text-white" strokeWidth={2.5} />
+                                            </div>
+                                            <CardTitle className="text-xl mb-3 text-slate-900 group-hover:text-primary transition-colors">{service.title}</CardTitle>
+                                        </CardHeader>
+                                        <CardContent className="pt-0">
+                                            <CardDescription className="text-base text-slate-600 leading-relaxed">
+                                                {service.description}
+                                            </CardDescription>
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                            </Link>
                         </motion.div>
                     ))}
                 </div>

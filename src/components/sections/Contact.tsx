@@ -39,7 +39,7 @@ export function Contact() {
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Get In Touch</h2>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
-                            Ready to transform your business? Let's discuss how we can help you.
+                            Ready to transform your business? Let&apos;s discuss how we can help you.
                         </p>
                     </motion.div>
                 </div>
@@ -52,7 +52,7 @@ export function Contact() {
                             <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -ml-32 -mb-32" />
 
                             <div className="relative z-10">
-                                <h3 className="text-3xl font-bold mb-4">Let's Connect</h3>
+                                <h3 className="text-3xl font-bold mb-4">Let&apos;s Connect</h3>
                                 <p className="text-white/90 mb-10 text-lg">
                                     Fill out the form and our team will get back to you within 24 hours.
                                 </p>
