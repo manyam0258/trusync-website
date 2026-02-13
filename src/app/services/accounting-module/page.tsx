@@ -50,7 +50,7 @@ const Page = () => {
 
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link
-                                href="#contact"
+                                href="/#contact"
                                 className="inline-flex items-center justify-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors group"
                             >
                                 Get Started
@@ -935,7 +935,7 @@ const Page = () => {
                         Get a unified view of your assets and accounting with ERPNext.
                     </p>
                     <Link
-                        href="#contact"
+                        href="/#contact"
                         className="inline-flex items-center justify-center px-10 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors text-lg"
                     >
                         Book a Free Consultation
