@@ -26,6 +26,7 @@ const navigation: NavigationItem[] = [
             { name: "Frappe CRM", href: "/services/crm-module" },
             { name: "Order Management", href: "/services/order-management-module" },
             { name: "Frappe Helpdesk", href: "/services/helpdesk-module" },
+            { name: "Frappe HRMS", href: "/services/hr-payroll-module" },
             { name: "Manufacturing Software", href: "/industries/manufacturing" },
             { name: "Frappe Insights", href: "/solutions/frappe-insights" },
             { name: "Frappe LMS", href: "/solutions/frappe-lms" },
