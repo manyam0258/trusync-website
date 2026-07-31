@@ -24,7 +24,7 @@ export function Hero() {
                         transition={{ duration: 0.6 }}
                     >
                         <span className="inline-flex items-center px-4 py-2 mb-8 text-sm font-semibold text-primary bg-primary/10 rounded-full border border-primary/20">
-                            ✨ Your trusted ERPNext partner
+                            ✨ Your trusted ERPNext partner in Hyderabad
                         </span>
                     </motion.div>
 
@@ -36,9 +36,9 @@ export function Hero() {
                     >
                         The Leading{" "}
                         <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-                            ERPNext
+                            ERPNext & Frappe
                         </span>
-                        {" "}Company!<br className="hidden sm:block" /> Transform Your Business
+                        {" "}Company in Hyderabad!<br className="hidden sm:block" /> Transform Your Business
                     </motion.h1>
 
                     <motion.p
@@ -47,7 +47,7 @@ export function Hero() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
                     >
-                        An ERPNext consulting firm with expertise in enterprise resource planning software. Optimize your business processes, satisfy your customers, and ultimately boost your revenues.
+                        TruSync is an ERPNext consulting firm and Frappe partner in Hyderabad, Telangana. We specialize in custom ERP implementation, module customization, integration, and AI workflow automation to optimize your business processes.
                     </motion.p>
 
                     <motion.div

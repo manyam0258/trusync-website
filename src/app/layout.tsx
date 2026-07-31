@@ -15,8 +15,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TRUSYNC - Smart ERP & AI Automation",
-  description: "Transforming Businesses with Smart ERP & AI Automation. Your trusted Frappe partner in Hyderabad.",
+  title: "ERPNext Services & Frappe Partner in Hyderabad | TruSync",
+  description: "TruSync is a certified Frappe and ERPNext partner in Hyderabad, Telangana. We deliver custom ERP implementation, CRM integrations, and smart AI workflow automation for SMEs.",
   icons: {
     icon: '/logo.png',
     shortcut: '/logo.png',
