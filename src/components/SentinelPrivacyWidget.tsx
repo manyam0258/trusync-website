@@ -2,8 +2,18 @@ import React, { useState, useEffect } from 'react';
 
 const SENTINEL_URL = process.env.NEXT_PUBLIC_SENTINEL_URL || 'https://dev-tridasa.frappe.cloud';
 
-export default function SentinelPrivacyWidget({ onLanguageChange, onMarketingChange, onPolicyLoaded }) {
-  const [languages, setLanguages] = useState(['English', 'Telugu', 'Hindi', 'Tamil', 'Kannada']);
+export interface SentinelPrivacyWidgetProps {
+  onLanguageChange?: (lang: string) => void;
+  onMarketingChange?: (consent: boolean) => void;
+  onPolicyLoaded?: (policy: any) => void;
+}
+
+export default function SentinelPrivacyWidget({
+  onLanguageChange = () => {},
+  onMarketingChange = () => {},
+  onPolicyLoaded = () => {},
+}: SentinelPrivacyWidgetProps) {
+  const [languages, setLanguages] = useState<string[]>(['English', 'Telugu', 'Hindi', 'Tamil', 'Kannada']);
   const [selectedLang, setSelectedLang] = useState('English');
   const [notice, setNotice] = useState({ title: 'Website Contact & Marketing Privacy Notice', version: '1.0', notice_name: 'NOT-2026-0003' });
   const [specifiedPurpose, setSpecifiedPurpose] = useState('Process submitted contact details solely to respond to the enquiry and provide requested service quotation.');
@@ -37,13 +47,13 @@ export default function SentinelPrivacyWidget({ onLanguageChange, onMarketingCha
     loadPolicy();
   }, [selectedLang]);
 
-  const handleLangSelect = (e) => {
+  const handleLangSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const lang = e.target.value;
     setSelectedLang(lang);
     if (onLanguageChange) onLanguageChange(lang);
   };
 
-  const handleCheckbox = (e) => {
+  const handleCheckbox = (e: React.ChangeEvent<HTMLInputElement>) => {
     const checked = e.target.checked;
     setMarketingConsent(checked);
     if (onMarketingChange) onMarketingChange(checked);
