@@ -5,43 +5,50 @@ import Link from 'next/link';
 import { Section } from "@/components/ui/Section";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";
 import { motion } from "framer-motion";
-import { Settings, Briefcase, Users, Cpu, Layout, HelpCircle, Building, DollarSign } from "lucide-react";
+import { Settings, Briefcase, Users, Cpu, Layout, HelpCircle, Phone } from "lucide-react";
 
 const services = [
     {
-        title: "Financial Accounting",
-        description: "Manage your finances, bookkeeping, and accounting with ease.",
-        icon: DollarSign,
+        title: "Consulting",
+        description: "Expert ERPNext consulting services to optimize your business processes.",
+        icon: Settings,
         color: "from-blue-500 to-cyan-500",
-        href: "/services/accounting-module"
+        href: "/services/consulting"
     },
     {
-        title: "Order Management",
-        description: "Streamline your sales and purchase order processing.",
+        title: "ERPnext Implementation",
+        description: "Complete ERPNext implementation tailored to your business requirements.",
         icon: Briefcase,
         color: "from-purple-500 to-pink-500",
-        href: "/services/order-management-module"
+        href: "/services/erpnext-implementation"
     },
     {
-        title: "HR & Payroll",
-        description: "Efficiently manage employee data, payroll, and HR processes.",
-        icon: Users,
+        title: "Development",
+        description: "Custom ERPNext development and module creation.",
+        icon: Cpu,
         color: "from-orange-500 to-red-500",
-        href: "/services/hr-payroll-module"
+        href: "/services/development"
     },
     {
-        title: "Manufacturing",
-        description: "Optimize production planning, BOM, and shop floor control.",
+        title: "Migrations",
+        description: "Seamless data migration from legacy systems to ERPNext.",
         icon: Settings,
         color: "from-green-500 to-emerald-500",
-        href: "/industries/manufacturing"
+        href: "/services/migrations"
     },
     {
-        title: "CRM",
-        description: "Enhance customer relationships and sales pipeline management.",
-        icon: Cpu,
+        title: "Mobile App development",
+        description: "Custom mobile applications integrated with ERPNext.",
+        icon: Phone,
         color: "from-indigo-500 to-purple-500",
-        href: "/services/crm-module"
+        href: "/services/mobile-app-development"
+    },
+    {
+        title: "Training and Support",
+        description: "Comprehensive training and ongoing support for ERPNext users.",
+        icon: Users,
+        color: "from-teal-500 to-cyan-500",
+        href: "/services/training-support"
     },
     {
         title: "Website",
@@ -49,21 +56,7 @@ const services = [
         icon: Layout,
         color: "from-teal-500 to-cyan-500",
         href: "/services/website-module"
-    },
-    {
-        title: "Helpdesk",
-        description: "Provide excellent customer support with an integrated helpdesk.",
-        icon: HelpCircle,
-        color: "from-pink-500 to-rose-500",
-        href: "/services/helpdesk-module"
-    },
-    {
-        title: "Asset Management",
-        description: "Track and manage your company's assets effectively.",
-        icon: Building,
-        color: "from-amber-500 to-orange-500",
-        href: "/services/asset-management-module"
-    },
+    }
 ];
 
 export function Services() {
@@ -80,7 +73,7 @@ export function Services() {
                         <span className="inline-block px-4 py-2 mb-4 text-sm font-semibold text-primary bg-primary/10 rounded-full">
                             Our Services
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">ERPNext Modules</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Our Services</h2>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
                             Comprehensive solutions to drive your business forward with technology and innovation.
                         </p>
