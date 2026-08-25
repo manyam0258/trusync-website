@@ -36,13 +36,25 @@ export async function POST(
   const targetUrl = `${FRAPPE_CLOUD_URL}/api/method/sentinel_dpdp.sentinel_dpdp.api.v1.privacy.${endpoint}`;
 
   try {
-    const body = await request.json();
+    const rawBody = await request.json();
+    
+    // Frappe RPC argument serializer: stringifies nested objects for Frappe's method dispatcher
+    const formattedBody: Record<string, any> = {};
+    for (const [key, val] of Object.entries(rawBody)) {
+      if (typeof val === "object" && val !== null) {
+        formattedBody[key] = JSON.stringify(val);
+      } else {
+        formattedBody[key] = val;
+      }
+    }
+
     const res = await fetch(targetUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json",
       },
+      body: JSON.stringify(formattedBody),
     });
 
     const data = await res.json();
