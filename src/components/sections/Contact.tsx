@@ -61,7 +61,7 @@ export function Contact() {
 
     try {
       // 1. Send Privacy & Consent Event to Sentinel Ingestion Gateway
-      const res = await fetch(`${SENTINEL_URL}/api/method/sentinel_dpdp.sentinel_dpdp.api.v1.privacy.capture_event`, {
+      const res = await fetch('/api/sentinel/capture_event', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

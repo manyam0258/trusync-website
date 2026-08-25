@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-const SENTINEL_URL = process.env.NEXT_PUBLIC_SENTINEL_URL || 'https://dev-tridasa.frappe.cloud';
-
 export interface SentinelPrivacyWidgetProps {
   onLanguageChange?: (lang: string) => void;
   onMarketingChange?: (consent: boolean) => void;
@@ -20,12 +18,12 @@ export default function SentinelPrivacyWidget({
   const [marketingConsent, setMarketingConsent] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  // Fetch multilingual policy from Sentinel Gateway
+  // Fetch multilingual policy from Sentinel Gateway (via Same-Origin Next.js Proxy)
   useEffect(() => {
     async function loadPolicy() {
       setLoading(true);
       try {
-        const res = await fetch(`${SENTINEL_URL}/api/method/sentinel_dpdp.sentinel_dpdp.api.v1.privacy.get_form_policy?form_id=contact-us&language=${encodeURIComponent(selectedLang)}`);
+        const res = await fetch(`/api/sentinel/get_form_policy?form_id=contact-us&language=${encodeURIComponent(selectedLang)}`);
         const json = await res.json();
         const data = json.message || json;
         if (data.notice) {
