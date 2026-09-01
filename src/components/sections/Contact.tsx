@@ -131,7 +131,7 @@ export function Contact() {
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Get In Touch</h2>
             <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
-              Ready to transform your business? Let&apos;s discuss how we can help you.
+              Ready to transform your business? Let's discuss how we can help you.
             </p>
           </motion.div>
         </div>
@@ -144,7 +144,7 @@ export function Contact() {
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -ml-32 -mb-32" />
 
               <div className="relative z-10">
-                <h3 className="text-3xl font-bold mb-4">Let&apos;s Connect</h3>
+                <h3 className="text-3xl font-bold mb-4">Let's Connect</h3>
                 <p className="text-white/90 mb-10 text-lg">
                   Fill out the form and our team will get back to you within 24 hours.
                 </p>
@@ -231,10 +231,37 @@ export function Contact() {
                       className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-white transition-all"
                     >
                       <option value="">Select a service</option>
-                      <option value="ERP Implementation">ERP Implementation</option>
                       <option value="AI Automation">AI Automation</option>
+                      <option value="AI Consulting">AI Consulting</option>
+                      <option value="AI Development">AI Development</option>
+                      <option value="Accounting Module">Accounting Module</option>
+                      <option value="Asset Management Module">Asset Management Module</option>
+                      <option value="Blockchain Development">Blockchain Development</option>
                       <option value="Both ERP & AI">Both ERP & AI</option>
+                      <option value="Business Process Automation">Business Process Automation</option>
+                      <option value="CRM Module">CRM Module</option>
+                      <option value="Cloud Migration">Cloud Migration</option>
                       <option value="Consulting">Consulting</option>
+                      <option value="Cybersecurity Services">Cybersecurity Services</option>
+                      <option value="DPDP Assessment">DPDP Assessment</option>
+                      <option value="DPDP Compliance">DPDP Compliance</option>
+                      <option value="Data Analytics">Data Analytics</option>
+                      <option value="Data Migration Services">Data Migration Services</option>
+                      <option value="Development">Development</option>
+                      <option value="ERP Customization">ERP Customization</option>
+                      <option value="ERP Implementation">ERP Implementation</option>
+                      <option value="ERPNext Implementation">ERPNext Implementation</option>
+                      <option value="Frappe Development">Frappe Development</option>
+                      <option value="Frappe Framework">Frappe Framework</option>
+                      <option value="HR Payroll Module">HR Payroll Module</option>
+                      <option value="Helpdesk Module">Helpdesk Module</option>
+                      <option value="IoT Solutions">IoT Solutions</option>
+                      <option value="Mobile App Development">Mobile App Development</option>
+                      <option value="Open Source Integrations">Open Source Integrations</option>
+                      <option value="Order Management Module">Order Management Module</option>
+                      <option value="Sentinel-DPDP">Sentinel-DPDP</option>
+                      <option value="Training & Support">Training & Support</option>
+                      <option value="Website Development">Website Development</option>
                     </select>
                   </div>
                 </div>
