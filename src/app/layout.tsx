@@ -39,6 +39,13 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        {/* AnythingLLM Chat Widget */}
+        <script
+          data-embed-id="3db2db9f-6b4c-40d5-9a17-5bc3b04f301d"
+          data-base-api-url="https://anythingllm.tridasa.cloud/api/embed"
+          src="https://anythingllm.tridasa.cloud/embed/anythingllm-chat-widget.min.js"
+        ></script>
+        {/* AnythingLLM (https://anythingllm.com) */}
       </body>
     </html>
   );
