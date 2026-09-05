@@ -10,6 +10,8 @@ export const metadata: Metadata = {
         'dpdp compliance solutions',
         'dpdp compliance',
         'trusync dpdp compliance',
+        'dpdp compliance services',
+        'dpdp compliance consulting',
     ],
 };
 
