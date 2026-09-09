@@ -144,7 +144,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({
                 </div>
             </section>
 
-            <section className="py-20 bg-slate-900 text-white">
+            {/* <section className="py-20 bg-slate-900 text-white">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold mb-12">Built on Robust Open Source Technologies</h2>
                     <div className="flex flex-wrap justify-center gap-8 lg:gap-16">
@@ -173,7 +173,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({
                         </Link>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section className="py-24 bg-blue-600 text-white">
                 <div className="container mx-auto px-4 text-center">
