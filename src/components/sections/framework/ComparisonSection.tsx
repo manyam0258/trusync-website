@@ -16,7 +16,7 @@ export function ComparisonSection() {
 
                 <div className="grid lg:grid-cols-2 gap-0 border border-slate-200 rounded-2xl overflow-hidden shadow-xl bg-white">
                     {/* Left Side: The Friction */}
-                    <div className="p-8 lg:p-12 bg-slate-100/50 border-r border-slate-200">
+                    <div className="p-8 lg:p-12 bg-slate-100/50 ">
                         <h3 className="text-2xl font-bold text-slate-500 mb-8 text-center">The Friction</h3>
 
                         {/* Visual Placeholder for "Chaos" */}
@@ -50,14 +50,14 @@ export function ComparisonSection() {
 
                         {/* Visual Placeholder for "Ordered Grid" */}
                         <div className="mb-8 flex justify-center">
-                            <div className="grid grid-cols-4 gap-2 w-48 mx-auto">
+                            <div className="grid grid-cols-6 gap-2 w-full">
                                 {[...Array(16)].map((_, i) => (
                                     <motion.div
                                         key={i}
                                         initial={{ opacity: 0, scale: 0 }}
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         transition={{ delay: i * 0.05 }}
-                                        className={`w-8 h-8 rounded-sm ${i % 2 === 0 ? 'bg-blue-600' : 'bg-blue-200'}`}
+                                        className={`w-10 h-10 rounded-sm ${i % 2 === 0 ? 'bg-blue-600' : 'bg-blue-200'}`}
                                     />
                                 ))}
                             </div>
