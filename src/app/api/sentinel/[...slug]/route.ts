@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const FRAPPE_CLOUD_URL = process.env.SENTINEL_BACKEND_URL || "https://dev-tridasa.frappe.cloud";
+const FRAPPE_CLOUD_URL = process.env.SENTINEL_BACKEND_URL || process.env.NEXT_PUBLIC_SENTINEL_URL || "http://127.0.0.1:8001";
 
 export async function GET(
   request: NextRequest,

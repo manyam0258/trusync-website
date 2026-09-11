@@ -28,6 +28,7 @@ export function Contact() {
 
   const [selectedLanguage, setSelectedLanguage] = useState('English');
   const [marketingConsent, setMarketingConsent] = useState(false);
+  const [preferences, setPreferences] = useState<Record<string, boolean>>({});
   const [submitting, setSubmitting] = useState(false);
   const [sealedReceipt, setSealedReceipt] = useState<SentinelReceipt | null>(null);
 
@@ -77,16 +78,13 @@ export function Contact() {
             purpose: 'ENQUIRY_HANDLING',
             lawful_basis: 'Certain Legitimate Use - Specified Purpose Voluntary'
           },
-          preferences: {
-            marketing: marketingConsent
-          },
+          preferences: preferences,
           notice: {
-            notice_name: 'NOT-2026-0003',
             language: selectedLanguage
           },
           source: {
             system: 'TruSync-Website',
-            form: 'contact-us-page',
+            form: 'contact-us-pilot',
             service_requested: formDataObj.service
           }
         })
@@ -280,8 +278,10 @@ export function Contact() {
 
                 {/* Embedded DPDP Privacy & Multilingual Notice Widget */}
                 <SentinelPrivacyWidget 
+                  formId="contact-us-pilot"
                   onLanguageChange={setSelectedLanguage}
                   onMarketingChange={setMarketingConsent}
+                  onPreferencesChange={setPreferences}
                 />
 
                 <Button type="submit" size="lg" className="w-full sm:w-auto h-12 px-8 rounded-xl shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:scale-105 transition-all">
