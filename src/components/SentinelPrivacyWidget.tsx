@@ -16,11 +16,10 @@ export interface SentinelPrivacyWidgetProps {
   onPolicyLoaded?: (policy: any) => void;
 }
 
-
 const UI_LABELS: Record<string, { specified: string; optional: string }> = {
   English: {
-    specified: "Specified Purpose",
-    optional: "{(UI_LABELS[selectedLang] || UI_LABELS.English).optional}"
+    specified: "Specified Purpose (§4(1)(b))",
+    optional: "Optional Preferences (Unbundled Consent - Section 6):"
   },
   Telugu: {
     specified: "నిర్దేశిత ప్రయోజనం",
@@ -41,7 +40,7 @@ const UI_LABELS: Record<string, { specified: string; optional: string }> = {
 };
 
 export default function SentinelPrivacyWidget({
-  formId = 'contact-us-pilot',
+  formId = 'contact-us',
   onLanguageChange = () => {},
   onMarketingChange = () => {},
   onPreferencesChange = () => {},
@@ -49,7 +48,7 @@ export default function SentinelPrivacyWidget({
 }: SentinelPrivacyWidgetProps) {
   const [languages, setLanguages] = useState<string[]>(['English', 'Telugu', 'Hindi', 'Tamil', 'Kannada']);
   const [selectedLang, setSelectedLang] = useState('English');
-  const [notice, setNotice] = useState({ title: 'Enterprise DPDP Privacy Notice', version: '1.0', notice_name: 'NOT-2026-0003' });
+  const [notice, setNotice] = useState({ title: 'DPDP Statutory Privacy Notice', version: '1.0', notice_name: '' });
   const [specifiedPurposes, setSpecifiedPurposes] = useState<ConsentPurposeItem[]>([]);
   const [optionalPurposes, setOptionalPurposes] = useState<ConsentPurposeItem[]>([]);
   const [preferences, setPreferences] = useState<Record<string, boolean>>({});
@@ -118,12 +117,13 @@ export default function SentinelPrivacyWidget({
       backgroundColor: '#f8fafc',
       margin: '16px 0',
       fontSize: '13px',
+      fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Devanagari", "Noto Sans Kannada", "Noto Sans", sans-serif',
       color: '#334155'
     }}>
       {/* Notice Title & Language Switcher */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
         <span style={{ fontWeight: '600', color: '#0f172a' }}>
-          🛡️ {notice.title} <span style={{ fontSize: '11px', color: '#64748b' }}>(v{notice.version})</span>
+          🛡️ {notice.title} {notice.version ? <span style={{ fontSize: '11px', color: '#64748b' }}>(v{notice.version})</span> : null}
         </span>
         <select 
           value={selectedLang} 
@@ -152,7 +152,7 @@ export default function SentinelPrivacyWidget({
       {/* Optional Unbundled Consents (Section 6 DPDP Act) */}
       {optionalPurposes.length > 0 ? (
         <div>
-          <div style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', color: '#64748b', marginBottom: '6px', letterSpacing: '0.5px' }}>
+          <div style={{ fontSize: '12px', fontWeight: 600, color: '#475569', marginBottom: '8px' }}>
             {(UI_LABELS[selectedLang] || UI_LABELS.English).optional}
           </div>
           {optionalPurposes.map(p => (
