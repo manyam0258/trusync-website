@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -40,12 +41,45 @@ export default function RootLayout({
         </main>
         <Footer />
         {/* AnythingLLM Chat Widget */}
-        <script
+        <Script
+          src="https://anythingllm.tridasa.cloud/embed/anythingllm-chat-widget.min.js"
           data-embed-id="3db2db9f-6b4c-40d5-9a17-5bc3b04f301d"
           data-base-api-url="https://anythingllm.tridasa.cloud/api/embed"
-          src="https://anythingllm.tridasa.cloud/embed/anythingllm-chat-widget.min.js"
-        ></script>
+          strategy="afterInteractive"
+        />
         {/* AnythingLLM (https://anythingllm.com) */}
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-6NYR2EEYG4"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-6NYR2EEYG4');
+            `,
+          }}
+        />
+        {/* Microsoft Clarity */}
+        <Script
+          id="microsoft-clarity"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "yswoc5dkok");
+            `,
+          }}
+        />
       </body>
     </html>
   );
