@@ -57,6 +57,20 @@ export async function submitContactForm(formData: FormData) {
             console.error("Telegram notification error:", telegramError);
         }
 
+        // === N8N WEBHOOK NOTIFICATION ===
+        try {
+            const webhookUrl = process.env.N8N_WEBHOOK_URL;
+            if (webhookUrl) {
+                await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, phone, service, message })
+                });
+            }
+        } catch (webhookError) {
+            console.error('N8N webhook error:', webhookError);
+        }
+
         return { success: true };
     } catch (err) {
         console.error("Unexpected error:", err);
