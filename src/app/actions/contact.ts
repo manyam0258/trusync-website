@@ -27,6 +27,36 @@ export async function submitContactForm(formData: FormData) {
             return { error: "Failed to submit form. Please try again." };
         }
 
+        // === TELEGRAM NOTIFICATION ===
+        try {
+            const botToken = process.env.TELEGRAM_BOT_TOKEN;
+            const chatId = process.env.TELEGRAM_CHAT_ID;
+            
+            if (botToken && chatId) {
+                const telegramMessage = `
+📬 *New Contact Form Submission*
+*Name:* ${name}
+*Email:* ${email}
+*Phone:* ${phone || 'Not provided'}
+*Service:* ${service || 'Not specified'}
+*Message:* ${message}
+                `.trim();
+
+                await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: telegramMessage,
+                        parse_mode: 'Markdown'
+                    })
+                });
+            }
+        } catch (telegramError) {
+            // Don't fail the form submission if Telegram notification fails
+            console.error("Telegram notification error:", telegramError);
+        }
+
         return { success: true };
     } catch (err) {
         console.error("Unexpected error:", err);
