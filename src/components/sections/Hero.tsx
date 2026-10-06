@@ -79,7 +79,7 @@ export function Hero() {
                     </motion.div>
 
                     {/* Stats Section */}
-                    <motion.div
+                    {/* <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.5 }}
@@ -96,7 +96,7 @@ export function Hero() {
                                 <div className="text-sm md:text-base text-slate-600 font-medium">{stat.label}</div>
                             </div>
                         ))}
-                    </motion.div>
+                    </motion.div> */}
                 </div>
             </Container>
         </section>
