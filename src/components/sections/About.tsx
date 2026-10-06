@@ -6,18 +6,18 @@ import { motion } from "framer-motion";
 import { CheckCircle2, Users, Award, TrendingUp, Globe } from "lucide-react";
 
 export function About() {
-    const stats = [
-        { value: "64+", label: "ERPNext Experts", icon: Users },
-        { value: "10+", label: "Industries", icon: Globe },
-        { value: "200+", label: "Projects", icon: TrendingUp },
-        { value: "5+", label: "Years Experience", icon: Award },
-    ];
+    // const stats = [
+    //     { value: "64+", label: "ERPNext Experts", icon: Users },
+    //     { value: "10+", label: "Industries", icon: Globe },
+    //     { value: "200+", label: "Projects", icon: TrendingUp },
+    //     { value: "5+", label: "Years Experience", icon: Award },
+    // ];
 
     return (
         <Section id="about" className="bg-white">
             <Container>
                 {/* Stats Bar */}
-                <div className="mb-20 grid grid-cols-2 md:grid-cols-4 gap-8">
+                {/* <div className="mb-20 grid grid-cols-2 md:grid-cols-4 gap-8">
                     {stats.map((stat, index) => (
                         <motion.div
                             key={stat.label}
@@ -34,7 +34,7 @@ export function About() {
                             <div className="text-sm md:text-base text-slate-600 font-medium">{stat.label}</div>
                         </motion.div>
                     ))}
-                </div>
+                </div> */}
 
                 {/* Main Content */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
