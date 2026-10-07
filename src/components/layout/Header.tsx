@@ -29,7 +29,7 @@ const navigation: NavigationItem[] = [
             { name: "HRMS", href: "/services/hr-payroll-module" },
             { name: "Manufacturing Software", href: "/industries/manufacturing" },
             { name: "Insights", href: "/solutions/frappe-insights" },
-            { name: "LMS", href: "/solutions/frappe-lms" },
+            { name: "Frappe LMS", href: "/solutions/frappe-lms" },
         ]
     },
     {
