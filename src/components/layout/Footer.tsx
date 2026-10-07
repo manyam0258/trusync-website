@@ -62,9 +62,9 @@ export function Footer() {
                     </div>
                 </div>
                 <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-                    <p>© 2025 TRUSYNC TECHNOLOGIES LLP. All rights reserved.</p>
+                    <p>© 2026 TRUSYNC TECHNOLOGIES LLP. All rights reserved.</p>
                     <div className="flex gap-4">
-                        <Link href="#" className="hover:text-white transition-colors"><Linkedin size={20} /></Link>
+                        <Link href="https://www.linkedin.com/company/trusync-technologies-llp/" className="hover:text-white transition-colors"><Linkedin size={20} /></Link>
                         <Link href="#" className="hover:text-white transition-colors"><Twitter size={20} /></Link>
                         <Link href="#" className="hover:text-white transition-colors"><Facebook size={20} /></Link>
                         <Link href="#" className="hover:text-white transition-colors"><Instagram size={20} /></Link>
