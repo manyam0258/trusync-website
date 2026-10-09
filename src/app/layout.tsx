@@ -19,9 +19,12 @@ export const metadata: Metadata = {
   title: "ERPNext Services & Frappe Partner in Hyderabad | TruSync",
   description: "TruSync is a certified Frappe and ERPNext partner in Hyderabad, Telangana. We deliver custom ERP implementation, CRM integrations, and smart AI workflow automation for SMEs.",
   icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
-    apple: '/logo.png',
+    icon: '/Trusync-icon-tinified.png',
+    shortcut: '/Trusync-icon-tinified.png',
+    apple: '/Trusync-icon-tinified.png',
+  },
+  verification: {
+    yandex: 'cf9f73defc0eba11',
   },
 };
 

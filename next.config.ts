@@ -15,11 +15,19 @@ const nextConfig: NextConfig = {
         },
         {
           source: '/services/hr-payroll-module',
-          destination: 'https://wp.trusync.in/hrms-payroll/',
+          destination: 'https://wp.trusync.in/hr-payroll-module/',
         },
         {
           source: '/services/hr-payroll-module/:path*',
-          destination: 'https://wp.trusync.in/hrms-payroll/:path*',
+          destination: 'https://wp.trusync.in/hr-payroll-module/:path*',
+        },
+        {
+          source: '/industries/construction',
+          destination: 'https://wp.trusync.in/construction/',
+        },
+        {
+          source: '/industries/construction/:path*',
+          destination: 'https://wp.trusync.in/construction/:path*',
         },
       ]
     };
