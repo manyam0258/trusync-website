@@ -23,9 +23,7 @@ export const metadata: Metadata = {
     shortcut: '/Trusync-icon-tinified.png',
     apple: '/Trusync-icon-tinified.png',
   },
-  verification: {
-    yandex: 'cf9f73defc0eba11',
-  },
+
 };
 
 export default function RootLayout({
