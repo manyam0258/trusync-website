@@ -29,6 +29,14 @@ const nextConfig: NextConfig = {
           source: '/industries/construction/:path*',
           destination: 'https://wp.trusync.in/construction/:path*',
         },
+        {
+          source: '/innovation/ai-automation',
+          destination: 'https://wp.trusync.in/ai-automation/',
+        },
+        {
+          source: '/innovation/ai-automation/:path*',
+          destination: 'https://wp.trusync.in/ai-automation/:path*',
+        },
       ]
     };
   },
