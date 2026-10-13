@@ -44,6 +44,7 @@ const navigation: NavigationItem[] = [
     { name: "Services", href: "/#services" },
     { name: "Industries", href: "/#industries" },
     { name: "Contact", href: "/#contact" },
+    { name: "Blog", href: "https://wp.trusync.in/blog/" }
 ];
 
 export function Header() {
