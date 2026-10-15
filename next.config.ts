@@ -37,6 +37,14 @@ const nextConfig: NextConfig = {
           source: '/innovation/ai-automation/:path*',
           destination: 'https://wp.trusync.in/ai-automation/:path*',
         },
+        {
+          source: '/solutions/frappe-lms',
+          destination: 'https://wp.trusync.in/frappe-lms/'
+        },
+        {
+          source: '/solutions/frappe-lms/:path*',
+          destination: 'https://wp.trusync.in/frappe-lms/:path*'
+        },
       ]
     };
   },
