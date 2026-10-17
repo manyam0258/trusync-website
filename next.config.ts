@@ -45,6 +45,14 @@ const nextConfig: NextConfig = {
           source: '/solutions/frappe-lms/:path*',
           destination: 'https://wp.trusync.in/frappe-lms/:path*'
         },
+        {
+          source: '/industries/real-estate',
+          destination: 'https://wp.trusync.in/real-estate/'
+        },
+        {
+          source: '/industries/real-estate/:path*',
+          destination: 'https://wp.trusync.in/real-estate/:path*'
+        }
       ]
     };
   },
