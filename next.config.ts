@@ -52,6 +52,14 @@ const nextConfig: NextConfig = {
         {
           source: '/industries/real-estate/:path*',
           destination: 'https://wp.trusync.in/real-estate/:path*'
+        },
+        {
+          source: '/services/erpnext-implementation',
+          destination: 'https://wp.trusync.in/erpnext-implementation/'
+        },
+        {
+          source: '/services/erpnext-implementation/:path*',
+          destination: 'https://wp.trusync.in/erpnext-implementation/:path*'
         }
       ]
     };
