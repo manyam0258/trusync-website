@@ -1,3 +1,4 @@
+import { source } from "framer-motion/client";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -59,8 +60,24 @@ const nextConfig: NextConfig = {
         },
         {
           source: '/services/erpnext-implementation/:path*',
-          destination: 'https://wp.trusync.in/erpnext-implementation/:path*'
-        }
+          destination: 'https://wp.trusync.in/erp-implementation/:path*'
+        },
+        {
+          source: '/innovation/dpdp-compliance',
+          destination: 'https://wp.trusync.in/dpdp-compliance/'
+        },
+        {
+          source: '/innovation/dpdp-compliance/:path*',
+          destination: 'https://wp.trusync.in/dpdp-compliance/:path*'
+        },
+        {
+          source: '/industries/healthcare',
+          destination: 'https://wp.trusync.in/healthcare/'
+        },
+        {
+          source: '/industries/healthcare/:path*',
+          destination: 'https://wp.trusync.in/healthcare/:path*'
+        },
       ]
     };
   },
