@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://trusync.in/sitemap.xml
+Sitemap: https://trusync.in/trusync-Oct-sitemap.xml

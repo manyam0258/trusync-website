@@ -1,3 +1,4 @@
+import { source } from "framer-motion/client";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -44,6 +45,38 @@ const nextConfig: NextConfig = {
         {
           source: '/solutions/frappe-lms/:path*',
           destination: 'https://wp.trusync.in/frappe-lms/:path*'
+        },
+        {
+          source: '/industries/real-estate',
+          destination: 'https://wp.trusync.in/real-estate/'
+        },
+        {
+          source: '/industries/real-estate/:path*',
+          destination: 'https://wp.trusync.in/real-estate/:path*'
+        },
+        {
+          source: '/services/erpnext-implementation',
+          destination: 'https://wp.trusync.in/erpnext-implementation/'
+        },
+        {
+          source: '/services/erpnext-implementation/:path*',
+          destination: 'https://wp.trusync.in/erp-implementation/:path*'
+        },
+        {
+          source: '/innovation/dpdp-compliance',
+          destination: 'https://wp.trusync.in/dpdp-compliance/'
+        },
+        {
+          source: '/innovation/dpdp-compliance/:path*',
+          destination: 'https://wp.trusync.in/dpdp-compliance/:path*'
+        },
+        {
+          source: '/industries/healthcare',
+          destination: 'https://wp.trusync.in/healthcare/'
+        },
+        {
+          source: '/industries/healthcare/:path*',
+          destination: 'https://wp.trusync.in/healthcare/:path*'
         },
       ]
     };
