@@ -71,7 +71,7 @@ export function Header() {
                 <nav className="flex items-center justify-between">
                     <Link href="/" className="flex items-center">
                         <Image
-                            src="/Trusync Logo - Transparent.png"
+                            src="/trusync-logo.png"
                             alt="TruSync Logo"
                             width={240}
                             height={80}

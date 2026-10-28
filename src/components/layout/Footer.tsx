@@ -11,7 +11,7 @@ export function Footer() {
                     <div className="space-y-4">
                         <Link href="/" className="block">
                             <Image
-                                src="/logo.png"
+                                src="/trusync-logo.png"
                                 alt="TruSync Logo"
                                 width={180}
                                 height={60}
