@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -39,14 +40,19 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        {/* AnythingLLM Chat Widget */}
-        <script
-          async
+        {/*
+          AnythingLLM Chat Widget
+          Lazy-loaded so the slow/hanging anythingllm.tridasa.cloud host
+          cannot block the document `load` event (and thus page reload time
+          and `page.goto({ waitUntil: 'load' })`).
+        */}
+        <Script
+          id="anythingllm-chat-widget"
+          strategy="lazy"
+          src="https://anythingllm.tridasa.cloud/embed/anythingllm-chat-widget.min.js"
           data-embed-id="3db2db9f-6b4c-40d5-9a17-5bc3b04f301d"
           data-base-api-url="https://anythingllm.tridasa.cloud/api/embed"
-          src="https://anythingllm.tridasa.cloud/embed/anythingllm-chat-widget.min.js"
-        ></script>
-        {/* AnythingLLM (https://anythingllm.com) */}
+        />
       </body>
     </html>
   );

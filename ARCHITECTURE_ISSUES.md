@@ -349,3 +349,12 @@
 **Recommended next plan (question for user):** Prioritize ARCH-03/04/13-14/30-31 as P0 for next sprint? Or draft `ARCHITECTURE_FIX_PLAN.md` with diffs?
 
 ---
+
+---
+
+## 2026-10-30 Update — Performance / E2E verification (branch redesign-ui-visual-design-kept)
+- ARCH-09 (raw script in layout.tsx) -> FIXED. Replaced with . Curl load time 0.00017s; Playwright  no longer times out on  event (previous 30s block). Widget script hangs at host (>25s) in background but does not block page or reload.
+- Playwright results (4 tests): all 4 fail now with **URL/routing issues** (not load-timeouts). 3:  unexpectedly lands at innovation subpages (, ) — likely pre-existing design-commit redirect or test-env root confusion (Playwright webServer selected  lockfile on first runs). 4th: form submits but success crypto message  not rendered — backend/DPDP integration gap, not frontend perf.
+- Design doc () remains ; payload blog build deferred until approved.
+- Branch  pushed to origin ( perf fix,  audit restore,  +  fix uncommitted — need to commit new  layout change separately or add to branch). Note:  edit to  is uncommitted in current working tree; commit and push when user confirms.
+
