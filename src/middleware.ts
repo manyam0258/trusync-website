@@ -2,12 +2,14 @@ import { NextResponse, type NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
   const host = (request.headers.get("host") ?? "").toLowerCase();
-  const rootUrl = request.nextUrl.clone();
-  rootUrl.protocol = "https:";
+  const hostname = host.split(":")[0];
 
   // www -> apex (Google sees identical content on both hosts otherwise)
-  if (host === "www.trusync.in") {
-    rootUrl.host = "trusync.in";
+  if (hostname === "www.trusync.in") {
+    const rootUrl = request.nextUrl.clone();
+    rootUrl.protocol = "https:";
+    rootUrl.hostname = "trusync.in";
+    rootUrl.port = ""; // drop any inherited port (e.g. :3000) so we land on the default https port
     return NextResponse.redirect(rootUrl, 308);
   }
 
