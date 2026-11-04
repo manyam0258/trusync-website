@@ -78,6 +78,14 @@ const nextConfig: NextConfig = {
           source: '/industries/healthcare/:path*',
           destination: 'https://wp.trusync.in/healthcare/:path*'
         },
+        {
+          source: '/services/helpdesk-module',
+          destination: 'https://wp.trusync.in/frappe-helpdesk/'
+        },
+        {
+          source: '/services/helpdesk-module/:path',
+          destination: 'https://wp.trusync.in/frappe-helpdesk/:path*'
+        }
       ]
     };
   },
