@@ -1,0 +1,14 @@
+.git
+.next
+node_modules
+media
+.env*
+!.env.example
+.agent
+.hermes
+skills
+tests
+*.md
+!README.md
+playwright.config.ts
+tsconfig.tsbuildinfo

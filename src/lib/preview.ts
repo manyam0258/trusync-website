@@ -2,7 +2,8 @@
 export const previewUrl = ({ slug, collection }: { slug?: string | null; collection: 'posts' | 'pages' }) => {
   if (!slug) return null
   // The page with the path "home" is the front page.
-  const path = collection === 'posts' ? `/blog/${slug}` : slug === 'home' ? '/' : `/${slug}`
+  // Drafts open under /draft so the public pages can stay cached.
+  const path = collection === 'posts' ? `/draft/blog/${slug}` : slug === 'home' ? '/draft' : `/draft/${slug}`
   const params = new URLSearchParams({
     slug,
     collection,

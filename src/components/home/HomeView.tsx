@@ -10,14 +10,12 @@ import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { Contact } from "@/components/sections/Contact";
 import JsonLd from "@/components/JsonLd";
 
-export const dynamic = "force-dynamic";
-
 type Seo = { title?: string | null; description?: string | null; image?: unknown };
 
 // The home page is the CMS page with the path "home". If it is missing or unpublished,
 // the original code version below is shown so the site never has a blank front page.
-export async function generateMetadata(): Promise<Metadata> {
-  const { doc } = await getPage("home");
+export async function homeMetadata(preview: boolean): Promise<Metadata> {
+  const { doc } = await getPage("home", preview).catch(() => ({ doc: null }));
   const meta = (doc?.meta ?? {}) as Seo;
   if (!doc || !meta.title) return {};
   return {
@@ -31,8 +29,9 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function Home() {
-  const { doc, preview } = await getPage("home");
+export async function HomeView({ preview }: { preview: boolean }) {
+  // If the database cannot be reached the original code version is shown instead of an error.
+  const { doc } = await getPage("home", preview).catch(() => ({ doc: null }));
   const schemaData = {
     "@context": "https://schema.org",
     "@graph": [

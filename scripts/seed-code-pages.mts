@@ -8,6 +8,7 @@
  */
 import { execSync } from 'node:child_process'
 import fs from 'node:fs'
+import { pathToFileURL } from 'node:url'
 
 const BASE = process.env.SEED_BASE || 'http://localhost:3000'
 const DRY = process.argv.includes('--dry-run')
@@ -15,7 +16,7 @@ const REPLACE = process.argv.includes('--replace') // delete and recreate: only 
 const only = process.argv.slice(2).filter((a) => !a.startsWith('--'))
 const BASE_COMMIT = '79f4016'
 
-const PAGES: Record<string, { path: string; title: string; metaTitle?: string; metaDescription?: string; metaFiles: string[] }> = {
+export const PAGES: Record<string, { path: string; title: string; metaTitle?: string; metaDescription?: string; metaFiles: string[] }> = {
   'accounting-module': { path: 'services/accounting-module', title: 'ERPNext Accounting and Asset Management', metaTitle: 'ERPNext Accounting & Asset Management Software in Hyderabad | TruSync', metaDescription: 'One system for financial accounting and fixed assets: chart of accounts, multi-currency, budgeting, tax compliance and asset lifecycle. ERPNext implemented by TruSync in Hyderabad.', metaFiles: ['services/accounting-module/layout.tsx', 'services/accounting-module/page.tsx'] },
   'hr-payroll-module': { path: 'services/hr-payroll-module', title: 'ERPNext HR and Payroll', metaFiles: ['services/hr-payroll-module/layout.tsx', 'services/hr-payroll-module/page.tsx'] },
   'order-management-module': { path: 'services/order-management-module', title: 'ERPNext Inventory and Order Management', metaTitle: 'ERPNext Inventory & Order Management Software in Hyderabad | TruSync', metaDescription: 'Manage stock, warehouses and items with ERPNext, integrated with procurement, accounting and sales. Implemented and customised by TruSync in Hyderabad.', metaFiles: ['services/order-management-module/layout.tsx', 'services/order-management-module/page.tsx'] },
@@ -27,7 +28,7 @@ const PAGES: Record<string, { path: string; title: string; metaTitle?: string; m
 const fromGit = (file: string) => {
   try { return execSync(`git show '${BASE_COMMIT}:src/app/(frontend)/${file}'`, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }) } catch { return '' }
 }
-const metaFrom = (files: string[]) => {
+export const metaFrom = (files: string[]) => {
   for (const f of files) {
     const full = fromGit(f)
     const at = full.indexOf('export const metadata')
@@ -42,7 +43,7 @@ const metaFrom = (files: string[]) => {
   return {} as { title?: string; description?: string }
 }
 
-type Catalog = { key: string; sections: { id: string; label: string; texts: { key: string; kind: string; value: string }[] }[]; loose: { key: string; kind: string; value: string }[] }
+export type Catalog = { key: string; sections: { id: string; label: string; texts: { key: string; kind: string; value: string }[] }[]; loose: { key: string; kind: string; value: string }[] }
 
 async function main() {
   const keys = (only.length ? only : Object.keys(PAGES)).filter((k) => fs.existsSync(`scripts/catalog/${k}.json`))
@@ -80,4 +81,4 @@ async function main() {
     console.log(`created ${page.path} (${sections.length} sections, ${count} texts)`)
   }
 }
-main().catch((e) => { console.error(e); process.exit(1) })
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) main().catch((e) => { console.error(e); process.exit(1) })

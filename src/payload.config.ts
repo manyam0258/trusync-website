@@ -18,6 +18,7 @@ import { SiteSettings } from './globals/SiteSettings'
 import { isSafeRedirectTarget } from './lib/safe-url'
 import { pageDescription, pageImage, toDescription } from './lib/seo-generate'
 import { mcpTools } from './mcp/tools'
+import { migrations } from './migrations'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -47,6 +48,12 @@ export default buildConfig({
   cors: ALLOWED_ORIGINS,
   // The website and admin do not use GraphQL, so it is switched off to reduce what is exposed.
   graphQL: { disable: true },
+  // Fills a new, empty database with the pages the site ships with (see src/seed/run.ts).
+  onInit: async (payload) => {
+    if (process.env.SEED_DEFAULT_PAGES === 'false') return
+    const { seedDefaultPages } = await import('./seed/run')
+    await seedDefaultPages(payload)
+  },
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
@@ -55,6 +62,9 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URL || '',
     },
+    // In production the tables are created and updated by the migrations in src/migrations, run on start.
+    // In development Payload keeps the schema in step on its own.
+    prodMigrations: migrations,
   }),
   sharp,
   plugins: [

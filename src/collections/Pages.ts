@@ -9,7 +9,7 @@ import { revalidateOnChange, revalidateOnDelete } from '../hooks/revalidate'
 import { redirectOnSlugChange } from '../hooks/slugRedirect'
 
 /** First path segments that belong to the application and cannot be used for CMS pages. */
-const RESERVED = ['admin', 'api', 'blog', 'preview', 'llms.txt', 'robots.txt', 'sitemap.xml', '_next']
+const RESERVED = ['admin', 'api', 'blog', 'preview', 'draft', 'llms.txt', 'robots.txt', 'sitemap.xml', '_next']
 
 export const Pages: CollectionConfig = {
   slug: 'pages',

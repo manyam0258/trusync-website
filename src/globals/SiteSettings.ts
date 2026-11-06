@@ -1,5 +1,7 @@
 import type { GlobalConfig } from 'payload'
 
+import { revalidatePath } from 'next/cache'
+
 import { isAdmin } from '../access'
 import { validateOptionalUrl } from '../lib/safe-url'
 
@@ -8,6 +10,19 @@ export const SiteSettings: GlobalConfig = {
   label: 'Site settings',
   admin: { group: 'Settings' },
   access: { read: () => true, update: isAdmin },
+  hooks: {
+    // Site-wide details appear on cached pages, so refresh them all when the settings change.
+    afterChange: [
+      ({ doc }) => {
+        try {
+          revalidatePath('/', 'layout')
+        } catch {
+          // Not inside a Next.js request (for example a script): nothing cached to refresh.
+        }
+        return doc
+      },
+    ],
+  },
   fields: [
     { name: 'siteName', type: 'text', required: true, defaultValue: 'TruSync' },
     { name: 'legalName', type: 'text', defaultValue: 'TruSync Technologies LLP' },

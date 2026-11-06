@@ -33,8 +33,7 @@ export async function isPreview(): Promise<boolean> {
   }
 }
 
-export async function getPage(path: string) {
-  const preview = await isPreview()
+export async function getPage(path: string, preview = false) {
   const payload = await getPayloadClient()
   const { docs } = await payload.find({
     collection: 'pages',
@@ -49,8 +48,7 @@ export async function getPage(path: string) {
   return { doc: docs[0] ?? null, preview }
 }
 
-export async function getPost(slug: string) {
-  const preview = await isPreview()
+export async function getPost(slug: string, preview = false) {
   const payload = await getPayloadClient()
   const { docs } = await payload.find({
     collection: 'posts',

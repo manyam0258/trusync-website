@@ -11,6 +11,7 @@
 import { execSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
+import { pathToFileURL } from 'node:url'
 
 
 // Talks to a running site over its REST API, signed in as an admin:
@@ -22,7 +23,7 @@ const BASE_COMMIT = '79f4016' // the last commit that still has the old route fi
 
 type Block = Record<string, unknown> & { blockType: string }
 type Ctx = { md: (t: string) => Promise<unknown>; media: (file: string, alt: string) => Promise<number> }
-type Seed = { slug: string; title: string; metaTitle?: string; metaDescription?: string; noindex?: boolean; layout: (ctx: Ctx) => Promise<Block[]> }
+export type Seed = { slug: string; title: string; metaTitle?: string; metaDescription?: string; noindex?: boolean; layout: (ctx: Ctx) => Promise<Block[]> }
 
 const fromGit = (file: string): string => {
   try {
@@ -48,7 +49,7 @@ const metaFrom = (...sources: string[]) => {
 }
 
 /** Plain paragraphs as rich text (blank line between paragraphs). Editors can format them in the admin afterwards. */
-const paragraphs = (text: string) => ({
+export const paragraphs = (text: string) => ({
   root: {
     type: 'root', format: '', indent: 0, version: 1, direction: 'ltr',
     children: text.split(/\n\s*\n/).map((t) => ({
@@ -469,8 +470,10 @@ const uploadMedia = (authed: Record<string, string>) => {
   }
 }
 
+export const allSeeds = (): Seed[] => [homeSeed, ...SERVICE_TEMPLATE_PAGES.map(serviceSeed).filter((s): s is Seed => !!s), ...STUBS.map(stubSeed), ...LARGE_PAGES]
+
 async function main() {
-  const seeds: Seed[] = [homeSeed, ...SERVICE_TEMPLATE_PAGES.map(serviceSeed).filter((s): s is Seed => !!s), ...STUBS.map(stubSeed), ...LARGE_PAGES]
+  const seeds: Seed[] = allSeeds()
   const missing = SERVICE_TEMPLATE_PAGES.filter((s) => !fromGit(`${PAGE_ROUTE_DIR}/${s}/page.tsx`))
   if (missing.length) console.warn('Original files not found in git for:', missing.join(', '))
 
@@ -506,4 +509,4 @@ async function main() {
   console.log(`Done. ${created} page(s) created.`)
 }
 
-main().catch((err) => { console.error(err); process.exit(1) })
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) main().catch((err) => { console.error(err); process.exit(1) })

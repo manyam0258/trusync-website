@@ -1,0 +1,43 @@
+# The whole site in one stack: the website and CMS, and its Postgres database.
+# Use this with Coolify's "Docker Compose" build pack, or locally with `docker compose up --build`.
+# Values in ${...} come from the environment (in Coolify: the resource's Environment Variables).
+services:
+  web:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_SERVER_URL: ${NEXT_PUBLIC_SERVER_URL:?set the public address, for example https://trusync.in}
+        NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL:-}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY:-}
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://trusync:${POSTGRES_PASSWORD:?set a database password}@db:5432/trusync_cms
+      PAYLOAD_SECRET: ${PAYLOAD_SECRET:?set a long random secret}
+      NEXT_PUBLIC_SERVER_URL: ${NEXT_PUBLIC_SERVER_URL}
+      PREVIEW_SECRET: ${PREVIEW_SECRET:?set a long random secret}
+    volumes:
+      - media:/app/media
+    ports:
+      - "3000"
+
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: trusync
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: trusync_cms
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U trusync -d trusync_cms"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  media:
+  pgdata:
