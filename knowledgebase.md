@@ -169,6 +169,22 @@ Done on 2026-11-07, on this branch.
 - **Known gap:** the home page "Healthcare" tile has no link because no healthcare page exists yet.
 - **Production note:** database content is not in git. Run `scripts/seed-pages.mts` and `scripts/seed-code-pages.mts` once against the production site (or copy the database), otherwise these URLs return 404 there. The seed scripts read the original files from git commit 79f4016 and `scripts/catalog/`, so keep both.
 
+### Status and next steps (2026-11-07)
+**Done:** Payload CMS with blog, pages and SEO; MCP for AI drafts; security hardening; every page of the website is now managed from the admin (home, 22 block-based pages, CRM, manufacturing, education, and six hand-built designs). Parity checks showed the hand-built pages unchanged.
+
+**Next, in this order:**
+1. **Never-404 safety (see the decision below).** Seed missing pages automatically on start, show the hand-built designs from code when the database has no page for them.
+2. **Fast, cacheable pages.** Serve CMS pages as cached static HTML that is rebuilt when someone publishes (ISR), instead of querying the database on every request.
+3. **Production setup on Coolify:** production Postgres, S3-compatible media storage (local disk is lost on redeploy), migrations, `NEXT_PUBLIC_SERVER_URL=https://trusync.in` as a build argument, the `prod` branch, deploy rehearsal on a staging address.
+4. **Before go-live:** rotate the admin password and the MCP key that were shared in chat; run `npm audit` and review; add rate limiting at the reverse proxy; CSP in report-only mode; remove unused components (LeadMagnet, StickyCTA, WhatsAppFloat).
+5. **After launch:** submit the sitemap in Google Search Console and Bing Webmaster Tools; PostHog with a consent banner; fix the contact-flow issues; write real client testimonials for the education page; add a healthcare page or remove its home tile.
+
+### Decision: pages from the database, SEO, and the 404 risk
+- **Search engines are not affected by pages coming from the database.** Pages are rendered on the server, so a crawler receives complete HTML with title, description, canonical address, the single `h1`, body text and structured data. Checked with `curl` on the home, a block-based page and a hand-built page. Crawlers cannot tell a database page from a static file.
+- **Two real differences:** (1) pages are marked `force-dynamic`, so every visit queries the database and the response is `Cache-Control: no-store`, which is slower than cached HTML and fails if the database is down; (2) on a new environment with an empty database the CMS pages do not exist, so their addresses return 404 until seeded.
+- **Recommended solution (not built yet):** keep the database as the source of truth, and add (a) idempotent seeding on start so a fresh environment fills itself, (b) a code fallback for the six hand-built designs, which already carry their original wording as defaults, so they render even with no database row, and (c) ISR: pages served as cached static HTML, rebuilt on publish (the publish hooks already call `revalidatePath`). Draft preview needs its own uncached route because Next treats draft mode as dynamic.
+- **Rejected:** keeping a second copy of every page as static route files. Next gives static routes priority over the CMS catch-all, so the code copy would hide editors' changes and would have to be kept in step by hand.
+
 ### Decisions and cautions
 - Payload and `@payloadcms/*` packages must all be the same exact version (currently 3.93.0). Do not use caret ranges.
 - `images.localPatterns` in `next.config.ts` blocks every local image that is not listed. Add a pattern for any new folder that `next/image` must serve.
