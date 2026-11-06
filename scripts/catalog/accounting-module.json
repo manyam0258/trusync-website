@@ -1,0 +1,897 @@
+{
+ "key": "accounting-module",
+ "sections": [
+  {
+   "id": "s1",
+   "label": "Financial Mastery Meets Asset Intelligence",
+   "texts": [
+    {
+     "key": "s1.1",
+     "kind": "text",
+     "value": "Financial Mastery Meets"
+    },
+    {
+     "key": "s1.2",
+     "kind": "text",
+     "value": "Asset Intelligence"
+    },
+    {
+     "key": "s1.3",
+     "kind": "text",
+     "value": "A Unified Ecosystem for ERPNext Accounting and Asset Management"
+    },
+    {
+     "key": "s1.4",
+     "kind": "text",
+     "value": "Move beyond scattered spreadsheets and disconnected records. ERPNext unifies financial accounting and fixed asset management into a single source of truth."
+    },
+    {
+     "key": "s1.5",
+     "kind": "text",
+     "value": "Accounting Core: Multi-currency, budgeting, compliance."
+    },
+    {
+     "key": "s1.6",
+     "kind": "text",
+     "value": "Asset Lifecycle: From procurement to retirement."
+    },
+    {
+     "key": "s1.7",
+     "kind": "text",
+     "value": "Seamless Integration: Physical actions update financial ledgers."
+    },
+    {
+     "key": "s1.8",
+     "kind": "url",
+     "value": "/#contact"
+    },
+    {
+     "key": "s1.9",
+     "kind": "text",
+     "value": "Get Started"
+    },
+    {
+     "key": "s1.10",
+     "kind": "text",
+     "value": "General Ledger"
+    },
+    {
+     "key": "s1.11",
+     "kind": "text",
+     "value": "01/01/24 Asset Purchase"
+    },
+    {
+     "key": "s1.12",
+     "kind": "text",
+     "value": "01/01/24 Asset Install"
+    },
+    {
+     "key": "s1.13",
+     "kind": "text",
+     "value": "Total Assets"
+    },
+    {
+     "key": "s1.14",
+     "kind": "text",
+     "value": "Plant A"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "label": "The Foundation: Intelligent Chart of Accounts",
+   "texts": [
+    {
+     "key": "s2.1",
+     "kind": "text",
+     "value": "The Foundation: Intelligent Chart of Accounts"
+    },
+    {
+     "key": "s2.2",
+     "kind": "text",
+     "value": "Flexible Structure"
+    },
+    {
+     "key": "s2.3",
+     "kind": "text",
+     "value": "Adapts to any business model. Organize ledgers into parent and child nodes for detailed categorization."
+    },
+    {
+     "key": "s2.4",
+     "kind": "text",
+     "value": "General Ledger Integration"
+    },
+    {
+     "key": "s2.5",
+     "kind": "text",
+     "value": "Every transaction automatically creates a GL entry, forming the foundation of all reporting."
+    },
+    {
+     "key": "s2.6",
+     "kind": "text",
+     "value": "Drill-Down Capability"
+    },
+    {
+     "key": "s2.7",
+     "kind": "text",
+     "value": "Trace transactions from high-level reports down to individual ledger postings."
+    },
+    {
+     "key": "s2.8",
+     "kind": "text",
+     "value": "Key Benefit:"
+    },
+    {
+     "key": "s2.9",
+     "kind": "text",
+     "value": "Maintain accurate records for statutory compliance and real-time financial health visibility."
+    },
+    {
+     "key": "s2.10",
+     "kind": "text",
+     "value": "Chart of Accounts"
+    },
+    {
+     "key": "s2.11",
+     "kind": "text",
+     "value": "Assets"
+    },
+    {
+     "key": "s2.12",
+     "kind": "text",
+     "value": "Current Assets"
+    },
+    {
+     "key": "s2.13",
+     "kind": "text",
+     "value": "Fixed Assets"
+    },
+    {
+     "key": "s2.14",
+     "kind": "text",
+     "value": "Buildings"
+    },
+    {
+     "key": "s2.15",
+     "kind": "text",
+     "value": "Electronic Equipment"
+    },
+    {
+     "key": "s2.16",
+     "kind": "text",
+     "value": "Furniture"
+    },
+    {
+     "key": "s2.17",
+     "kind": "text",
+     "value": "Liabilities"
+    },
+    {
+     "key": "s2.18",
+     "kind": "text",
+     "value": "Income"
+    },
+    {
+     "key": "s2.19",
+     "kind": "text",
+     "value": "Expenses"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "label": "The Unified Financial Ecosystem",
+   "texts": [
+    {
+     "key": "s3.1",
+     "kind": "text",
+     "value": "The Unified Financial Ecosystem"
+    },
+    {
+     "key": "s3.2",
+     "kind": "text",
+     "value": "The Challenge"
+    },
+    {
+     "key": "s3.3",
+     "kind": "text",
+     "value": "Businesses suffer from \"ghost assets,\" manual errors, and disconnected records."
+    },
+    {
+     "key": "s3.4",
+     "kind": "text",
+     "value": "One Centralized System"
+    },
+    {
+     "key": "s3.5",
+     "kind": "text",
+     "value": "Procurement"
+    },
+    {
+     "key": "s3.6",
+     "kind": "text",
+     "value": "Asset Creation"
+    },
+    {
+     "key": "s3.7",
+     "kind": "text",
+     "value": "Depreciation"
+    },
+    {
+     "key": "s3.8",
+     "kind": "text",
+     "value": "General Ledger"
+    },
+    {
+     "key": "s3.9",
+     "kind": "text",
+     "value": "Reporting"
+    },
+    {
+     "key": "s3.10",
+     "kind": "text",
+     "value": "The Solution"
+    },
+    {
+     "key": "s3.11",
+     "kind": "text",
+     "value": "Unified Truth:"
+    },
+    {
+     "key": "s3.12",
+     "kind": "text",
+     "value": "One platform for financials and fixed assets."
+    },
+    {
+     "key": "s3.13",
+     "kind": "text",
+     "value": "Automation:"
+    },
+    {
+     "key": "s3.14",
+     "kind": "text",
+     "value": "Auto-calculated depreciation and recurring invoices."
+    },
+    {
+     "key": "s3.15",
+     "kind": "text",
+     "value": "Compliance:"
+    },
+    {
+     "key": "s3.16",
+     "kind": "text",
+     "value": "Built-in tax templates and localization."
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "label": "Scaling Globally: Multi-Company & Multi-Currency",
+   "texts": [
+    {
+     "key": "s4.1",
+     "kind": "text",
+     "value": "Scaling Globally: Multi-Company & Multi-Currency"
+    },
+    {
+     "key": "s4.2",
+     "kind": "text",
+     "value": "Multi-Company Management"
+    },
+    {
+     "key": "s4.3",
+     "kind": "text",
+     "value": "Manage multiple entities across regions within a single ERPNext account. Generate inter-company sales and purchase transactions effortlessly."
+    },
+    {
+     "key": "s4.4",
+     "kind": "text",
+     "value": "Consolidation"
+    },
+    {
+     "key": "s4.5",
+     "kind": "text",
+     "value": "Consolidate financials for group-level reporting. View a unified picture of global health."
+    },
+    {
+     "key": "s4.6",
+     "kind": "text",
+     "value": "Currency Precision"
+    },
+    {
+     "key": "s4.7",
+     "kind": "text",
+     "value": "• Capture balances in base and transaction currencies."
+    },
+    {
+     "key": "s4.8",
+     "kind": "text",
+     "value": "• Generate GL reports in local currencies."
+    },
+    {
+     "key": "s4.9",
+     "kind": "text",
+     "value": "• Real-time valuation for international transactions."
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "label": "Optimizing Cash Flow: Receivables & Payables",
+   "texts": [
+    {
+     "key": "s5.1",
+     "kind": "text",
+     "value": "Optimizing Cash Flow: Receivables & Payables"
+    },
+    {
+     "key": "s5.2",
+     "kind": "text",
+     "value": "Inflow: Accounts Receivable"
+    },
+    {
+     "key": "s5.3",
+     "kind": "text",
+     "value": "Invoice ID"
+    },
+    {
+     "key": "s5.4",
+     "kind": "text",
+     "value": "Customer"
+    },
+    {
+     "key": "s5.5",
+     "kind": "text",
+     "value": "Amount"
+    },
+    {
+     "key": "s5.6",
+     "kind": "text",
+     "value": "Status"
+    },
+    {
+     "key": "s5.7",
+     "kind": "text",
+     "value": "INV-001"
+    },
+    {
+     "key": "s5.8",
+     "kind": "text",
+     "value": "Acme Corp"
+    },
+    {
+     "key": "s5.9",
+     "kind": "text",
+     "value": "Paid"
+    },
+    {
+     "key": "s5.10",
+     "kind": "text",
+     "value": "INV-002"
+    },
+    {
+     "key": "s5.11",
+     "kind": "text",
+     "value": "Beta Inc"
+    },
+    {
+     "key": "s5.12",
+     "kind": "text",
+     "value": "Overdue"
+    },
+    {
+     "key": "s5.13",
+     "kind": "text",
+     "value": "Streamline invoicing and payment tracking."
+    },
+    {
+     "key": "s5.14",
+     "kind": "text",
+     "value": "Automated follow-ups for outstanding payments."
+    },
+    {
+     "key": "s5.15",
+     "kind": "text",
+     "value": "Outflow: Accounts Payable"
+    },
+    {
+     "key": "s5.16",
+     "kind": "text",
+     "value": "Bill ID"
+    },
+    {
+     "key": "s5.17",
+     "kind": "text",
+     "value": "Vendor"
+    },
+    {
+     "key": "s5.18",
+     "kind": "text",
+     "value": "Amount"
+    },
+    {
+     "key": "s5.19",
+     "kind": "text",
+     "value": "Status"
+    },
+    {
+     "key": "s5.20",
+     "kind": "text",
+     "value": "BILL-101"
+    },
+    {
+     "key": "s5.21",
+     "kind": "text",
+     "value": "Supplier X"
+    },
+    {
+     "key": "s5.22",
+     "kind": "text",
+     "value": "Scheduled"
+    },
+    {
+     "key": "s5.23",
+     "kind": "text",
+     "value": "BILL-102"
+    },
+    {
+     "key": "s5.24",
+     "kind": "text",
+     "value": "Vendor Y"
+    },
+    {
+     "key": "s5.25",
+     "kind": "text",
+     "value": "Due Soon"
+    },
+    {
+     "key": "s5.26",
+     "kind": "text",
+     "value": "Track vendor invoices to avoid duplicate payments."
+    },
+    {
+     "key": "s5.27",
+     "kind": "text",
+     "value": "Manage liabilities effectively."
+    },
+    {
+     "key": "s5.28",
+     "kind": "text",
+     "value": "Reconciliation: Intuitive tools to match payments seamlessly."
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "label": "Strategic Control: Cost Centers & Budgeting",
+   "texts": [
+    {
+     "key": "s6.1",
+     "kind": "text",
+     "value": "Strategic Control: Cost Centers & Budgeting"
+    },
+    {
+     "key": "s6.2",
+     "kind": "text",
+     "value": "Cost Centers & Dimensions"
+    },
+    {
+     "key": "s6.3",
+     "kind": "text",
+     "value": "Track profitability by unit, branch, or project. Tag transactions with dimensions to generate"
+    },
+    {
+     "key": "s6.4",
+     "kind": "text",
+     "value": "segmented P&L reports instantly."
+    },
+    {
+     "key": "s6.5",
+     "kind": "text",
+     "value": "Budgeting Discipline"
+    },
+    {
+     "key": "s6.6",
+     "kind": "text",
+     "value": "Define budgets for specific cost centers."
+    },
+    {
+     "key": "s6.7",
+     "kind": "text",
+     "value": "Break down budgets into monthly splits."
+    },
+    {
+     "key": "s6.8",
+     "kind": "text",
+     "value": "Enforcement:"
+    },
+    {
+     "key": "s6.9",
+     "kind": "text",
+     "value": "System prevents transactions that exceed allocated funds."
+    },
+    {
+     "key": "s6.10",
+     "kind": "text",
+     "value": "Profitability by Cost Center"
+    },
+    {
+     "key": "s6.11",
+     "kind": "text",
+     "value": "New York Branch"
+    },
+    {
+     "key": "s6.12",
+     "kind": "text",
+     "value": "$1.2M"
+    },
+    {
+     "key": "s6.13",
+     "kind": "text",
+     "value": "London Branch"
+    },
+    {
+     "key": "s6.14",
+     "kind": "text",
+     "value": "Near Limit"
+    },
+    {
+     "key": "s6.15",
+     "kind": "text",
+     "value": "Online Store"
+    },
+    {
+     "key": "s6.16",
+     "kind": "text",
+     "value": "$900K"
+    },
+    {
+     "key": "s6.17",
+     "kind": "text",
+     "value": "Budget $1.0M"
+    },
+    {
+     "key": "s6.18",
+     "kind": "text",
+     "value": "Budget"
+    },
+    {
+     "key": "s6.19",
+     "kind": "text",
+     "value": "Actual"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "label": "Compliance & Taxation Engines",
+   "texts": [
+    {
+     "key": "s7.1",
+     "kind": "text",
+     "value": "Compliance & Taxation Engines"
+    },
+    {
+     "key": "s7.2",
+     "kind": "text",
+     "value": "Configurable Tax Templates"
+    },
+    {
+     "key": "s7.3",
+     "kind": "text",
+     "value": "Pre-configure Sales and Purchase templates to fetch tax ledgers automatically. Reduces manual data entry errors."
+    },
+    {
+     "key": "s7.4",
+     "kind": "text",
+     "value": "Regional Localization"
+    },
+    {
+     "key": "s7.5",
+     "kind": "text",
+     "value": "Support for GST, VAT, and consumption taxes. Integration with government portals for direct E-Invoicing via API."
+    },
+    {
+     "key": "s7.6",
+     "kind": "text",
+     "value": "GST"
+    },
+    {
+     "key": "s7.7",
+     "kind": "text",
+     "value": "VAT"
+    },
+    {
+     "key": "s7.8",
+     "kind": "text",
+     "value": "E-Invoice"
+    },
+    {
+     "key": "s7.9",
+     "kind": "text",
+     "value": "Withholding"
+    },
+    {
+     "key": "s7.10",
+     "kind": "text",
+     "value": "TAX"
+    },
+    {
+     "key": "s7.11",
+     "kind": "text",
+     "value": "Item Linking"
+    },
+    {
+     "key": "s7.12",
+     "kind": "text",
+     "value": "Link specific items to specific tax ledgers. Ensures automatic, accurate calculation even on complex mixed bills."
+    },
+    {
+     "key": "s7.13",
+     "kind": "text",
+     "value": "Withholding Tax"
+    },
+    {
+     "key": "s7.14",
+     "kind": "text",
+     "value": "Configure taxation and withholding clauses directly within invoices."
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "label": "End-of-Life: Selling & Scrapping",
+   "texts": [
+    {
+     "key": "s8.1",
+     "kind": "text",
+     "value": "End-of-Life: Selling & Scrapping"
+    },
+    {
+     "key": "s8.2",
+     "kind": "text",
+     "value": "Asset Disposal Action"
+    },
+    {
+     "key": "s8.3",
+     "kind": "text",
+     "value": "Sell Asset"
+    },
+    {
+     "key": "s8.4",
+     "kind": "text",
+     "value": "Create Sales Invoice."
+    },
+    {
+     "key": "s8.5",
+     "kind": "text",
+     "value": "Gain/Loss"
+    },
+    {
+     "key": "s8.6",
+     "kind": "text",
+     "value": "Calculated Automatically."
+    },
+    {
+     "key": "s8.7",
+     "kind": "text",
+     "value": "Scrap Asset"
+    },
+    {
+     "key": "s8.8",
+     "kind": "text",
+     "value": "Write off value."
+    },
+    {
+     "key": "s8.9",
+     "kind": "text",
+     "value": "Post entry to"
+    },
+    {
+     "key": "s8.10",
+     "kind": "text",
+     "value": "Loss on Scrap"
+    },
+    {
+     "key": "s8.11",
+     "kind": "text",
+     "value": "account."
+    },
+    {
+     "key": "s8.12",
+     "kind": "text",
+     "value": "Gain/Loss Calculation"
+    },
+    {
+     "key": "s8.13",
+     "kind": "text",
+     "value": "The system automatically compares the"
+    },
+    {
+     "key": "s8.14",
+     "kind": "text",
+     "value": "Book Value"
+    },
+    {
+     "key": "s8.15",
+     "kind": "text",
+     "value": "with the"
+    },
+    {
+     "key": "s8.16",
+     "kind": "text",
+     "value": "Selling Price"
+    },
+    {
+     "key": "s8.17",
+     "kind": "text",
+     "value": "and posts the difference to the Gain/Loss on Asset Disposal account."
+    },
+    {
+     "key": "s8.18",
+     "kind": "text",
+     "value": "One-Click Journal Entry"
+    },
+    {
+     "key": "s8.19",
+     "kind": "text",
+     "value": "No manual calculations needed. The predefined Asset Disposal account template handles the GL posting instantly."
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "label": "Asset Tracking, Maintenance & Adjustment",
+   "texts": [
+    {
+     "key": "s9.1",
+     "kind": "text",
+     "value": "Asset Tracking, Maintenance & Adjustment"
+    },
+    {
+     "key": "s9.2",
+     "kind": "text",
+     "value": "Value Adjustment"
+    },
+    {
+     "key": "s9.3",
+     "kind": "text",
+     "value": "Revalue assets due to market changes or damage."
+    },
+    {
+     "key": "s9.4",
+     "kind": "text",
+     "value": "Update Current Value instantly."
+    },
+    {
+     "key": "s9.5",
+     "kind": "text",
+     "value": "Automatically posts GL entries."
+    },
+    {
+     "key": "s9.6",
+     "kind": "text",
+     "value": "Movement & Tracking"
+    },
+    {
+     "key": "s9.7",
+     "kind": "text",
+     "value": "Track asset location and custodian history."
+    },
+    {
+     "key": "s9.8",
+     "kind": "text",
+     "value": "Issue to Employees (Custodians)."
+    },
+    {
+     "key": "s9.9",
+     "kind": "text",
+     "value": "Transfer between locations."
+    },
+    {
+     "key": "s9.10",
+     "kind": "text",
+     "value": "Maintenance"
+    },
+    {
+     "key": "s9.11",
+     "kind": "text",
+     "value": "Schedule repairs and track maintenance costs."
+    },
+    {
+     "key": "s9.12",
+     "kind": "text",
+     "value": "Preventative maintenance schedules."
+    },
+    {
+     "key": "s9.13",
+     "kind": "text",
+     "value": "Log repair entries & capitalization."
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "label": "Intelligence at Your Fingertips",
+   "texts": [
+    {
+     "key": "s10.1",
+     "kind": "text",
+     "value": "Intelligence at Your Fingertips"
+    },
+    {
+     "key": "s10.2",
+     "kind": "text",
+     "value": "Financial Statements"
+    },
+    {
+     "key": "s10.3",
+     "kind": "text",
+     "value": "Balance Sheet, Profit & Loss, and Cash Flow statements. Drill down to any level."
+    },
+    {
+     "key": "s10.4",
+     "kind": "text",
+     "value": "Asset Analytics"
+    },
+    {
+     "key": "s10.5",
+     "kind": "text",
+     "value": "Fixed Asset Register, Depreciation Schedule, and Asset Maintenance Reports."
+    },
+    {
+     "key": "s10.6",
+     "kind": "text",
+     "value": "Budget vs. Actual"
+    },
+    {
+     "key": "s10.7",
+     "kind": "text",
+     "value": "Real-time variance analysis for cost centers and projects."
+    },
+    {
+     "key": "s10.8",
+     "kind": "text",
+     "value": "Custom Report Builder"
+    },
+    {
+     "key": "s10.9",
+     "kind": "text",
+     "value": "Create custom reports with drag-and-drop ease. No coding required."
+    },
+    {
+     "key": "s10.10",
+     "kind": "text",
+     "value": "Explore Reports"
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "label": "Ready to Streamline Your Finances?",
+   "texts": [
+    {
+     "key": "s11.1",
+     "kind": "text",
+     "value": "Ready to Streamline Your Finances?"
+    },
+    {
+     "key": "s11.2",
+     "kind": "text",
+     "value": "Get a unified view of your assets and accounting with ERPNext."
+    },
+    {
+     "key": "s11.3",
+     "kind": "url",
+     "value": "/#contact"
+    },
+    {
+     "key": "s11.4",
+     "kind": "text",
+     "value": "Book a Free Consultation"
+    }
+   ]
+  }
+ ],
+ "loose": []
+}

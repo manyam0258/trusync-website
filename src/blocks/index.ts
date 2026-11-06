@@ -1,5 +1,6 @@
 import type { Block, Field } from 'payload'
 
+import { CODE_PAGES } from '../lib/code-pages'
 import { URL_HELP, validateOptionalUrl } from '../lib/safe-url'
 
 const linkFields = (name: string, label: string): Field => ({
@@ -255,6 +256,52 @@ export const ContactBlock: Block = {
   ],
 }
 
+export const CodePageBlock: Block = {
+  slug: 'codePage',
+  labels: { singular: 'Built-in page design', plural: 'Built-in page designs' },
+  fields: [
+    {
+      name: 'page',
+      type: 'select',
+      required: true,
+      options: CODE_PAGES.map((p) => ({ label: p.label, value: p.key })),
+      admin: { description: 'This page keeps its hand-built design. Change its wording, links and sections below. Add your own sections above or below it.' },
+    },
+    {
+      name: 'sections',
+      type: 'array',
+      admin: {
+        initCollapsed: true,
+        description: 'Each row is one section of the page, in page order. Tick "Hide this section" to remove it from the page, or open a row to edit its text. Clear a text to go back to the original wording.',
+        components: { RowLabel: '/components/admin/RowLabel#SectionRowLabel' },
+      },
+      fields: [
+        { name: 'sectionId', type: 'text', required: true, admin: { readOnly: true, hidden: true } },
+        { name: 'label', type: 'text', admin: { readOnly: true } },
+        { name: 'hidden', type: 'checkbox', label: 'Hide this section', defaultValue: false },
+        {
+          name: 'texts',
+          type: 'array',
+          admin: { initCollapsed: true, components: { RowLabel: '/components/admin/RowLabel#TextRowLabel' } },
+          fields: [
+            { name: 'key', type: 'text', required: true, admin: { readOnly: true, hidden: true } },
+            { name: 'kind', type: 'text', admin: { readOnly: true, hidden: true } },
+            {
+              name: 'value',
+              type: 'textarea',
+              validate: (value: unknown, { siblingData }: { siblingData?: unknown }) => {
+                const kind = (siblingData as { kind?: string } | undefined)?.kind
+                if ((kind === 'url' || kind === 'image') && value && validateOptionalUrl(value) !== true) return URL_HELP
+                return true
+              },
+            },
+          ],
+        },
+      ],
+    },
+  ],
+}
+
 const rawBlocks: Block[] = [
   HeroBlock,
   RichTextBlock,
@@ -277,4 +324,4 @@ const anchorField: Field = {
     value === undefined || value === null || value === '' || (typeof value === 'string' && /^[a-z0-9-]+$/.test(value)) || 'Use lowercase letters, numbers and dashes only.',
 }
 
-export const pageBlocks: Block[] = rawBlocks.map((block) => ({ ...block, fields: [...block.fields, anchorField] }))
+export const pageBlocks: Block[] = [...rawBlocks.map((block) => ({ ...block, fields: [...block.fields, anchorField] })), CodePageBlock]

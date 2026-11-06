@@ -1,0 +1,298 @@
+{
+ "key": "ai-automation",
+ "sections": [
+  {
+   "id": "s1",
+   "label": "Generative AI & LLM Solutions",
+   "texts": [
+    {
+     "key": "s1.1",
+     "kind": "text",
+     "value": "Generative AI & LLM Solutions"
+    },
+    {
+     "key": "s1.2",
+     "kind": "text",
+     "value": "Turn AI Possibilities into Real Business Results"
+    },
+    {
+     "key": "s1.3",
+     "kind": "text",
+     "value": "Generative AI is transforming the way businesses work—from automating repetitive tasks and processing documents to creating intelligent assistants and accelerating decision-making. We help organizations move beyond AI experimentation and implement practical, secure and scalable Generative AI and Large Language Model (LLM) solutions that deliver measurable business value."
+    },
+    {
+     "key": "s1.4",
+     "kind": "text",
+     "value": "Whether you are exploring your first AI use case or looking to scale an existing AI initiative, we work with you from strategy and use-case identification to development, integration and deployment."
+    },
+    {
+     "key": "s1.5",
+     "kind": "text",
+     "value": "How We Help Your Business"
+    },
+    {
+     "key": "s1.6",
+     "kind": "text",
+     "value": "Automate Knowledge-Intensive Work"
+    },
+    {
+     "key": "s1.7",
+     "kind": "text",
+     "value": "Reduce manual effort by using AI to understand documents, emails, reports and business information and convert them into actionable insights."
+    },
+    {
+     "key": "s1.8",
+     "kind": "text",
+     "value": "Build Intelligent Business Assistants"
+    },
+    {
+     "key": "s1.9",
+     "kind": "text",
+     "value": "Create AI-powered assistants that help employees and customers find information, answer questions and complete routine tasks faster."
+    },
+    {
+     "key": "s1.10",
+     "kind": "text",
+     "value": "Unlock Enterprise Knowledge"
+    },
+    {
+     "key": "s1.11",
+     "kind": "text",
+     "value": "Connect AI with your organization's approved documents, policies, procedures and knowledge repositories to make information easier to access and use."
+    },
+    {
+     "key": "s1.12",
+     "kind": "text",
+     "value": "Improve Decision-Making"
+    },
+    {
+     "key": "s1.13",
+     "kind": "text",
+     "value": "Use AI to summarize large volumes of information, identify patterns, generate insights and support faster business decisions."
+    },
+    {
+     "key": "s1.14",
+     "kind": "text",
+     "value": "Transform Document Processing"
+    },
+    {
+     "key": "s1.15",
+     "kind": "text",
+     "value": "Automate the extraction, validation and classification of information from invoices, contracts, purchase orders, applications and other business documents."
+    },
+    {
+     "key": "s1.16",
+     "kind": "text",
+     "value": "Accelerate Product & Application Development"
+    },
+    {
+     "key": "s1.17",
+     "kind": "text",
+     "value": "Leverage AI to accelerate software development, documentation, testing, knowledge management and product innovation."
+    },
+    {
+     "key": "s1.18",
+     "kind": "text",
+     "value": "AI Strategy & Consulting"
+    },
+    {
+     "key": "s1.19",
+     "kind": "text",
+     "value": "Comprehensive AI strategy development, use-case identification and assessment for enterprise AI initiatives."
+    },
+    {
+     "key": "s1.20",
+     "kind": "text",
+     "value": "Our Generative AI Services"
+    },
+    {
+     "key": "s1.21",
+     "kind": "text",
+     "value": "We offer a comprehensive suite of Generative AI and LLM services designed to address diverse business needs across industries."
+    },
+    {
+     "key": "s1.22",
+     "kind": "text",
+     "value": "Generative AI Strategy & Consulting"
+    },
+    {
+     "key": "s1.23",
+     "kind": "text",
+     "value": "AI Use-Case Identification & Assessment"
+    },
+    {
+     "key": "s1.24",
+     "kind": "text",
+     "value": "Enterprise AI Assistants"
+    },
+    {
+     "key": "s1.25",
+     "kind": "text",
+     "value": "AI Chatbots & Conversational AI"
+    },
+    {
+     "key": "s1.26",
+     "kind": "text",
+     "value": "Retrieval-Augmented Generation (RAG)"
+    },
+    {
+     "key": "s1.27",
+     "kind": "text",
+     "value": "Intelligent Document Processing"
+    },
+    {
+     "key": "s1.28",
+     "kind": "text",
+     "value": "AI-powered Search & Knowledge Management"
+    },
+    {
+     "key": "s1.29",
+     "kind": "text",
+     "value": "AI Workflow Automation"
+    },
+    {
+     "key": "s1.30",
+     "kind": "text",
+     "value": "AI Integration with ERP, CRM and Business Applications"
+    },
+    {
+     "key": "s1.31",
+     "kind": "text",
+     "value": "AI Proof of Concept (PoC) Development"
+    },
+    {
+     "key": "s1.32",
+     "kind": "text",
+     "value": "AI Application Modernization"
+    },
+    {
+     "key": "s1.33",
+     "kind": "text",
+     "value": "AI Governance & Responsible AI Advisory"
+    },
+    {
+     "key": "s1.34",
+     "kind": "text",
+     "value": "Ready to Transform Your Business with AI?"
+    },
+    {
+     "key": "s1.35",
+     "kind": "text",
+     "value": "Whether you're starting your AI journey or looking to scale existing initiatives, our team of AI specialists can help you achieve measurable business results through practical, secure and scalable AI solutions."
+    },
+    {
+     "key": "s1.36",
+     "kind": "url",
+     "value": "#contact"
+    },
+    {
+     "key": "s1.37",
+     "kind": "text",
+     "value": "Get Started with AI Consulting"
+    },
+    {
+     "key": "s1.38",
+     "kind": "url",
+     "value": "/services/ai-development"
+    },
+    {
+     "key": "s1.39",
+     "kind": "text",
+     "value": "View Our AI Development Services"
+    }
+   ]
+  }
+ ],
+ "loose": [
+  {
+   "key": "x.1",
+   "kind": "text",
+   "value": "Generative AI & LLM Solutions"
+  },
+  {
+   "key": "x.2",
+   "kind": "text",
+   "value": "Turn AI Possibilities into Real Business Results"
+  },
+  {
+   "key": "x.3",
+   "kind": "text",
+   "value": "Manual Effort"
+  },
+  {
+   "key": "x.4",
+   "kind": "text",
+   "value": "Teams spending excessive time on repetitive, manual tasks."
+  },
+  {
+   "key": "x.5",
+   "kind": "text",
+   "value": "Limited Insights"
+  },
+  {
+   "key": "x.6",
+   "kind": "text",
+   "value": "Difficulty extracting actionable intelligence from business data."
+  },
+  {
+   "key": "x.7",
+   "kind": "text",
+   "value": "Slow Decision-Making"
+  },
+  {
+   "key": "x.8",
+   "kind": "text",
+   "value": "Inability to quickly process information for timely decisions."
+  },
+  {
+   "key": "x.9",
+   "kind": "text",
+   "value": "Knowledge Automation"
+  },
+  {
+   "key": "x.10",
+   "kind": "text",
+   "value": "AI-powered understanding of documents, emails and reports."
+  },
+  {
+   "key": "x.11",
+   "kind": "text",
+   "value": "Intelligent Assistants"
+  },
+  {
+   "key": "x.12",
+   "kind": "text",
+   "value": "AI chatbots and virtual agents for employees and customers."
+  },
+  {
+   "key": "x.13",
+   "kind": "text",
+   "value": "Decision Support"
+  },
+  {
+   "key": "x.14",
+   "kind": "text",
+   "value": "AI-enhanced analysis for faster, data-driven decisions."
+  },
+  {
+   "key": "x.15",
+   "kind": "text",
+   "value": "Document Processing"
+  },
+  {
+   "key": "x.16",
+   "kind": "text",
+   "value": "Automated extraction and classification of business documents."
+  },
+  {
+   "key": "x.17",
+   "kind": "text",
+   "value": "Explore AI Solutions"
+  },
+  {
+   "key": "x.18",
+   "kind": "url",
+   "value": "#services"
+  }
+ ]
+}

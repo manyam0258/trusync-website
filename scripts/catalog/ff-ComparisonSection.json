@@ -1,0 +1,87 @@
+{
+ "key": "ff-ComparisonSection",
+ "sections": [
+  {
+   "id": "compar-s1",
+   "label": "Replace chaos with a unified, scalable foundation",
+   "texts": [
+    {
+     "key": "compar-s1.1",
+     "kind": "text",
+     "value": "Replace chaos with a"
+    },
+    {
+     "key": "compar-s1.2",
+     "kind": "text",
+     "value": "unified, scalable foundation"
+    },
+    {
+     "key": "compar-s1.3",
+     "kind": "text",
+     "value": "The Friction"
+    },
+    {
+     "key": "compar-s1.4",
+     "kind": "text",
+     "value": "Scattered processes and disconnected records lead to data silos."
+    },
+    {
+     "key": "compar-s1.5",
+     "kind": "text",
+     "value": "Proprietary SaaS models enforce 'per-user' licensing penalties."
+    },
+    {
+     "key": "compar-s1.6",
+     "kind": "text",
+     "value": "Black-box code creates vendor lock-in and hinders customization."
+    },
+    {
+     "key": "compar-s1.7",
+     "kind": "text",
+     "value": "The Frappe Advantage"
+    },
+    {
+     "key": "compar-s1.8",
+     "kind": "text",
+     "value": "100% Open Source:"
+    },
+    {
+     "key": "compar-s1.9",
+     "kind": "text",
+     "value": " No vendor lock-in; you own your data and code."
+    },
+    {
+     "key": "compar-s1.10",
+     "kind": "text",
+     "value": "Unified Truth:"
+    },
+    {
+     "key": "compar-s1.11",
+     "kind": "text",
+     "value": " Eliminate silos—HR, Finance, and Sales share one database."
+    },
+    {
+     "key": "compar-s1.12",
+     "kind": "text",
+     "value": "Fair Pricing:"
+    },
+    {
+     "key": "compar-s1.13",
+     "kind": "text",
+     "value": " Pay for computational resources consumed, not per user."
+    },
+    {
+     "key": "compar-s1.14",
+     "kind": "text",
+     "value": "Batteries Included:"
+    },
+    {
+     "key": "compar-s1.15",
+     "kind": "text",
+     "value": " Everything needed is built-in, from database abstraction to UI."
+    }
+   ]
+  }
+ ],
+ "loose": []
+}

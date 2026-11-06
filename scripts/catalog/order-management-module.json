@@ -1,0 +1,2335 @@
+{
+ "key": "order-management-module",
+ "sections": [
+  {
+   "id": "s1",
+   "label": "Mastering Inventory & Order Management",
+   "texts": [
+    {
+     "key": "s1.1",
+     "kind": "text",
+     "value": "Mastering Inventory &"
+    },
+    {
+     "key": "s1.2",
+     "kind": "text",
+     "value": "Order Management"
+    },
+    {
+     "key": "s1.3",
+     "kind": "text",
+     "value": "A Comprehensive Guide to Stock, Warehouse, and Item Management with ERPNext."
+    },
+    {
+     "key": "s1.4",
+     "kind": "text",
+     "value": "Whether you manage a single room or a multi-national network, model your physical space digitally with precision and integrate stock directly with Procurement, Accounting, and Sales."
+    },
+    {
+     "key": "s1.5",
+     "kind": "text",
+     "value": "Stock Module: Central nervous system of operations."
+    },
+    {
+     "key": "s1.6",
+     "kind": "text",
+     "value": "Flexible Warehouses: Reality-mirroring hierarchy."
+    },
+    {
+     "key": "s1.7",
+     "kind": "text",
+     "value": "Real-Time Valuation: Perpetual inventory accounting."
+    },
+    {
+     "key": "s1.8",
+     "kind": "url",
+     "value": "/#contact"
+    },
+    {
+     "key": "s1.9",
+     "kind": "text",
+     "value": "Get Started"
+    },
+    {
+     "key": "s1.10",
+     "kind": "text",
+     "value": "Inventory"
+    },
+    {
+     "key": "s1.11",
+     "kind": "text",
+     "value": "Sales"
+    },
+    {
+     "key": "s1.12",
+     "kind": "text",
+     "value": "Procurement"
+    },
+    {
+     "key": "s1.13",
+     "kind": "text",
+     "value": "Manufacturing"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "label": "The Backbone of Retail, Distribution, and Manufacturing",
+   "texts": [
+    {
+     "key": "s2.1",
+     "kind": "text",
+     "value": "The Backbone of Retail, Distribution, and Manufacturing"
+    },
+    {
+     "key": "s2.2",
+     "kind": "text",
+     "value": "Effective stock management is the central nervous system of your operation. ERPNext breaks down silos by integrating Stock directly with Procurement, Accounting, and Sales."
+    },
+    {
+     "key": "s2.3",
+     "kind": "text",
+     "value": "Accounting"
+    },
+    {
+     "key": "s2.4",
+     "kind": "text",
+     "value": "Real-time valuation updates with every stock move."
+    },
+    {
+     "key": "s2.5",
+     "kind": "text",
+     "value": "Sales"
+    },
+    {
+     "key": "s2.6",
+     "kind": "text",
+     "value": "Immediate reservation and delivery status visibility."
+    },
+    {
+     "key": "s2.7",
+     "kind": "text",
+     "value": "STOCK"
+    },
+    {
+     "key": "s2.8",
+     "kind": "text",
+     "value": "MODULE"
+    },
+    {
+     "key": "s2.9",
+     "kind": "text",
+     "value": "Procurement"
+    },
+    {
+     "key": "s2.10",
+     "kind": "text",
+     "value": "Automated replenishment based on reorder levels."
+    },
+    {
+     "key": "s2.11",
+     "kind": "text",
+     "value": "Manufacturing"
+    },
+    {
+     "key": "s2.12",
+     "kind": "text",
+     "value": "BOM planning and raw material consumption."
+    },
+    {
+     "key": "s2.13",
+     "kind": "text",
+     "value": "100% Visibility: Changes in inventory instantly reflect in financial books."
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "label": "Mirroring Reality with Flexible Warehouses",
+   "texts": [
+    {
+     "key": "s3.1",
+     "kind": "text",
+     "value": "Mirroring Reality with Flexible Warehouses"
+    },
+    {
+     "key": "s3.2",
+     "kind": "text",
+     "value": "Whether you manage a single room or a multi-national network, model your physical space digitally with precision."
+    },
+    {
+     "key": "s3.3",
+     "kind": "text",
+     "value": "Warehouse Hierarchy"
+    },
+    {
+     "key": "s3.4",
+     "kind": "text",
+     "value": "Company Head Office"
+    },
+    {
+     "key": "s3.5",
+     "kind": "text",
+     "value": "New York Warehouse"
+    },
+    {
+     "key": "s3.6",
+     "kind": "text",
+     "value": "Aisle A"
+    },
+    {
+     "key": "s3.7",
+     "kind": "text",
+     "value": "Rack 1"
+    },
+    {
+     "key": "s3.8",
+     "kind": "text",
+     "value": "Bin 04"
+    },
+    {
+     "key": "s3.9",
+     "kind": "text",
+     "value": "Aisle B"
+    },
+    {
+     "key": "s3.10",
+     "kind": "text",
+     "value": "London Warehouse"
+    },
+    {
+     "key": "s3.11",
+     "kind": "text",
+     "value": "Virtual Warehouse (In Transit)"
+    },
+    {
+     "key": "s3.12",
+     "kind": "text",
+     "value": "Tree-View Hierarchy"
+    },
+    {
+     "key": "s3.13",
+     "kind": "text",
+     "value": "Organize warehouses in a parent-child structure. Drill down from Company to Bin location with a single click."
+    },
+    {
+     "key": "s3.14",
+     "kind": "text",
+     "value": "Virtual Warehouses"
+    },
+    {
+     "key": "s3.15",
+     "kind": "text",
+     "value": "Track 'In Transit' stock moving between locations. Know exactly what is on the water or on the road."
+    },
+    {
+     "key": "s3.16",
+     "kind": "text",
+     "value": "Location Management"
+    },
+    {
+     "key": "s3.17",
+     "kind": "text",
+     "value": "Optimize picking paths and retrieval times by knowing exactly which Bin contains your Stock Item."
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "label": "Precision Tracking: Serials & Batches",
+   "texts": [
+    {
+     "key": "s4.1",
+     "kind": "text",
+     "value": "Precision Tracking: Serials & Batches"
+    },
+    {
+     "key": "s4.2",
+     "kind": "text",
+     "value": "Manage high-value assets and perishables with granular traceability. Know exactly which unit went to which customer."
+    },
+    {
+     "key": "s4.3",
+     "kind": "text",
+     "value": "Serialized Inventory"
+    },
+    {
+     "key": "s4.4",
+     "kind": "text",
+     "value": "Tracking Unit #SN-998877"
+    },
+    {
+     "key": "s4.5",
+     "kind": "text",
+     "value": "Full Service History"
+    },
+    {
+     "key": "s4.6",
+     "kind": "text",
+     "value": "Warranty: Active (2 Years)"
+    },
+    {
+     "key": "s4.7",
+     "kind": "text",
+     "value": "Batch Management"
+    },
+    {
+     "key": "s4.8",
+     "kind": "text",
+     "value": "Batch #B-2024"
+    },
+    {
+     "key": "s4.9",
+     "kind": "text",
+     "value": "Expiry Date: 12/2025"
+    },
+    {
+     "key": "s4.10",
+     "kind": "text",
+     "value": "Mfg Date: 01/2024"
+    },
+    {
+     "key": "s4.11",
+     "kind": "text",
+     "value": "Expires in 30 Days"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "label": "Optimized Fulfillment & Picking",
+   "texts": [
+    {
+     "key": "s5.1",
+     "kind": "text",
+     "value": "Optimized Fulfillment & Picking"
+    },
+    {
+     "key": "s5.2",
+     "kind": "text",
+     "value": "Accelerate stock picking while eliminating errors. System-generated pick lists guide staff through the optimal path in the warehouse."
+    },
+    {
+     "key": "s5.3",
+     "kind": "text",
+     "value": "Stock Reservation"
+    },
+    {
+     "key": "s5.4",
+     "kind": "text",
+     "value": "Auto-hold stock for confirmed Sales Orders."
+    },
+    {
+     "key": "s5.5",
+     "kind": "text",
+     "value": "Smart Pick Lists"
+    },
+    {
+     "key": "s5.6",
+     "kind": "text",
+     "value": "Group items by aisle to minimize walking time."
+    },
+    {
+     "key": "s5.7",
+     "kind": "text",
+     "value": "Barcode Validation"
+    },
+    {
+     "key": "s5.8",
+     "kind": "text",
+     "value": "Scan to verify items at packing stage."
+    },
+    {
+     "key": "s5.9",
+     "kind": "text",
+     "value": "Pick List #PL-404"
+    },
+    {
+     "key": "s5.10",
+     "kind": "text",
+     "value": "In Progress"
+    },
+    {
+     "key": "s5.11",
+     "kind": "text",
+     "value": "Item A - Widget"
+    },
+    {
+     "key": "s5.12",
+     "kind": "text",
+     "value": "Aisle 3 • Bin 42"
+    },
+    {
+     "key": "s5.13",
+     "kind": "text",
+     "value": "Item B - Gadget"
+    },
+    {
+     "key": "s5.14",
+     "kind": "text",
+     "value": "Aisle 4 • Bin 12"
+    },
+    {
+     "key": "s5.15",
+     "kind": "text",
+     "value": "Complete Picking"
+    },
+    {
+     "key": "s5.16",
+     "kind": "text",
+     "value": "Reserved"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "label": "Updates in Sync with Reality",
+   "texts": [
+    {
+     "key": "s6.1",
+     "kind": "text",
+     "value": "Updates in Sync with Reality"
+    },
+    {
+     "key": "s6.2",
+     "kind": "text",
+     "value": "Course-correct discrepancies easily. Reconcile physical counts with system counts and gain full visibility into warehouse transfers."
+    },
+    {
+     "key": "s6.3",
+     "kind": "text",
+     "value": "Physical Count"
+    },
+    {
+     "key": "s6.4",
+     "kind": "text",
+     "value": "System Count"
+    },
+    {
+     "key": "s6.5",
+     "kind": "text",
+     "value": "Stock Entry"
+    },
+    {
+     "key": "s6.6",
+     "kind": "text",
+     "value": "Inter-Warehouse Transfer"
+    },
+    {
+     "key": "s6.7",
+     "kind": "text",
+     "value": "Audit Trail"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "label": "Sell with Confidence Using Real-Time Inventory",
+   "texts": [
+    {
+     "key": "s7.1",
+     "kind": "text",
+     "value": "Modern Enterprise Clarity"
+    },
+    {
+     "key": "s7.2",
+     "kind": "text",
+     "value": "Sell with Confidence Using Real-Time Inventory"
+    },
+    {
+     "key": "s7.3",
+     "kind": "text",
+     "value": "Never sell what you don't have. ERPNext provides instant visibility into stock levels during the sales process."
+    },
+    {
+     "key": "s7.4",
+     "kind": "text",
+     "value": "Stock Reservation"
+    },
+    {
+     "key": "s7.5",
+     "kind": "text",
+     "value": "Reserve batches specifically for high-priority orders."
+    },
+    {
+     "key": "s7.6",
+     "kind": "text",
+     "value": "Projected Quantity"
+    },
+    {
+     "key": "s7.7",
+     "kind": "text",
+     "value": "See what's on the shelf vs. what's already committed."
+    },
+    {
+     "key": "s7.8",
+     "kind": "text",
+     "value": "Multi-Warehouse"
+    },
+    {
+     "key": "s7.9",
+     "kind": "text",
+     "value": "Check availability across all stores instantly."
+    },
+    {
+     "key": "s7.10",
+     "kind": "text",
+     "value": "Sales Order Item"
+    },
+    {
+     "key": "s7.11",
+     "kind": "text",
+     "value": "Item Code"
+    },
+    {
+     "key": "s7.12",
+     "kind": "text",
+     "value": "Description"
+    },
+    {
+     "key": "s7.13",
+     "kind": "text",
+     "value": "Quantity"
+    },
+    {
+     "key": "s7.14",
+     "kind": "text",
+     "value": "Action"
+    },
+    {
+     "key": "s7.15",
+     "kind": "text",
+     "value": "ITEM-001"
+    },
+    {
+     "key": "s7.16",
+     "kind": "text",
+     "value": "Wireless Mouse"
+    },
+    {
+     "key": "s7.17",
+     "kind": "text",
+     "value": "Actual Qty:"
+    },
+    {
+     "key": "s7.18",
+     "kind": "text",
+     "value": "Reserved Qty:"
+    },
+    {
+     "key": "s7.19",
+     "kind": "text",
+     "value": "Available:"
+    },
+    {
+     "key": "s7.20",
+     "kind": "text",
+     "value": "Reserve Stock"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "label": "Mobile & Barcode Integration",
+   "texts": [
+    {
+     "key": "s8.1",
+     "kind": "text",
+     "value": "Mobile & Barcode Integration"
+    },
+    {
+     "key": "s8.2",
+     "kind": "text",
+     "value": "Untether your workforce. Manage operations directly from the warehouse floor with the ERPNext mobile app."
+    },
+    {
+     "key": "s8.3",
+     "kind": "text",
+     "value": "Scan to Search"
+    },
+    {
+     "key": "s8.4",
+     "kind": "text",
+     "value": "Instantly retrieve item details by scanning barcodes."
+    },
+    {
+     "key": "s8.5",
+     "kind": "text",
+     "value": "Mobile UI"
+    },
+    {
+     "key": "s8.6",
+     "kind": "text",
+     "value": "Create stock entries and check levels on the go."
+    },
+    {
+     "key": "s8.7",
+     "kind": "text",
+     "value": "Efficiency Boost"
+    },
+    {
+     "key": "s8.8",
+     "kind": "text",
+     "value": "Reduce manual data entry errors by 90%."
+    },
+    {
+     "key": "s8.9",
+     "kind": "text",
+     "value": "Item Identified"
+    },
+    {
+     "key": "s8.10",
+     "kind": "text",
+     "value": "Widget A - 50 Units"
+    },
+    {
+     "key": "s8.11",
+     "kind": "text",
+     "value": "View Details"
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "label": "Real-Time Inventory Valuation & Accounting",
+   "texts": [
+    {
+     "key": "s9.1",
+     "kind": "text",
+     "value": "Real-Time Inventory Valuation & Accounting"
+    },
+    {
+     "key": "s9.2",
+     "kind": "text",
+     "value": "With Perpetual Inventory, every stock movement automatically posts a corresponding entry to the General Ledger. Say goodbye to end-of-year inventory reconciliation nightmares."
+    },
+    {
+     "key": "s9.3",
+     "kind": "text",
+     "value": "Valuation Methods"
+    },
+    {
+     "key": "s9.4",
+     "kind": "text",
+     "value": "FIFO, Moving Average, and Standard Costing supported out of the box."
+    },
+    {
+     "key": "s9.5",
+     "kind": "text",
+     "value": "Landed Cost Vouchers"
+    },
+    {
+     "key": "s9.6",
+     "kind": "text",
+     "value": "Distribute shipping, customs, and insurance costs to items for true profitability analysis."
+    },
+    {
+     "key": "s9.7",
+     "kind": "text",
+     "value": "Asset Capitalization"
+    },
+    {
+     "key": "s9.8",
+     "kind": "text",
+     "value": "Easily track inventory details of fixed assets and manage depreciation."
+    },
+    {
+     "key": "s9.9",
+     "kind": "text",
+     "value": "Transaction"
+    },
+    {
+     "key": "s9.10",
+     "kind": "text",
+     "value": "Delivery Note #DN-001"
+    },
+    {
+     "key": "s9.11",
+     "kind": "text",
+     "value": "GL Entry"
+    },
+    {
+     "key": "s9.12",
+     "kind": "text",
+     "value": "Journal #JV-005"
+    },
+    {
+     "key": "s9.13",
+     "kind": "text",
+     "value": "Account"
+    },
+    {
+     "key": "s9.14",
+     "kind": "text",
+     "value": "Debit"
+    },
+    {
+     "key": "s9.15",
+     "kind": "text",
+     "value": "Credit"
+    },
+    {
+     "key": "s9.16",
+     "kind": "text",
+     "value": "Cost of Goods Sold"
+    },
+    {
+     "key": "s9.17",
+     "kind": "text",
+     "value": "Stock In Hand"
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "label": "Strategic Procurement with ERPNext",
+   "texts": [
+    {
+     "key": "s10.1",
+     "kind": "text",
+     "value": "The Buying Module"
+    },
+    {
+     "key": "s10.2",
+     "kind": "text",
+     "value": "Strategic"
+    },
+    {
+     "key": "s10.3",
+     "kind": "text",
+     "value": "Procurement"
+    },
+    {
+     "key": "s10.4",
+     "kind": "text",
+     "value": "with ERPNext"
+    },
+    {
+     "key": "s10.5",
+     "kind": "text",
+     "value": "A comprehensive guide to the Procure-to-Pay lifecycle: from automated replenishment to data-driven supplier analysis."
+    },
+    {
+     "key": "s10.6",
+     "kind": "text",
+     "value": "Planning Phase"
+    },
+    {
+     "key": "s10.7",
+     "kind": "text",
+     "value": "Procurement Starts with"
+    },
+    {
+     "key": "s10.8",
+     "kind": "text",
+     "value": "Intelligent Planning"
+    },
+    {
+     "key": "s10.9",
+     "kind": "text",
+     "value": "Optimized purchasing is about buying the right quantity at the fair price. The process begins with identifying the need before it becomes an emergency."
+    },
+    {
+     "key": "s10.10",
+     "kind": "text",
+     "value": "Material Request Source"
+    },
+    {
+     "key": "s10.11",
+     "kind": "text",
+     "value": "Sales Forecast"
+    },
+    {
+     "key": "s10.12",
+     "kind": "text",
+     "value": "Manufacturing Plan"
+    },
+    {
+     "key": "s10.13",
+     "kind": "text",
+     "value": "Re-order Levels"
+    },
+    {
+     "key": "s10.14",
+     "kind": "text",
+     "value": "Unified Material Request"
+    },
+    {
+     "key": "s10.15",
+     "kind": "text",
+     "value": "Alert: Low Stock Warning"
+    },
+    {
+     "key": "s10.16",
+     "kind": "text",
+     "value": "Stock for"
+    },
+    {
+     "key": "s10.17",
+     "kind": "text",
+     "value": "Widget-A"
+    },
+    {
+     "key": "s10.18",
+     "kind": "text",
+     "value": "is below re-order level (50 units)."
+    },
+    {
+     "key": "s10.19",
+     "kind": "text",
+     "value": "Auto-request generated."
+    },
+    {
+     "key": "s10.20",
+     "kind": "text",
+     "value": "Auto-Replenishment"
+    },
+    {
+     "key": "s10.21",
+     "kind": "text",
+     "value": "AI-enabled assistant monitors thresholds and triggers requests automatically, preventing human error."
+    },
+    {
+     "key": "s10.22",
+     "kind": "text",
+     "value": "> Check_Levels()"
+    },
+    {
+     "key": "s10.23",
+     "kind": "text",
+     "value": "OK"
+    },
+    {
+     "key": "s10.24",
+     "kind": "text",
+     "value": "> Create_PO()"
+    },
+    {
+     "key": "s10.25",
+     "kind": "text",
+     "value": "Benefit: Prevents stock-outs & eliminates over-ordering."
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "label": "Data-Driven Vendor Selection",
+   "texts": [
+    {
+     "key": "s11.1",
+     "kind": "text",
+     "value": "Data-Driven"
+    },
+    {
+     "key": "s11.2",
+     "kind": "text",
+     "value": "Vendor Selection"
+    },
+    {
+     "key": "s11.3",
+     "kind": "text",
+     "value": "Make informed purchasing decisions by comparing offers side-by-side rather than sifting through spreadsheets."
+    },
+    {
+     "key": "s11.4",
+     "kind": "text",
+     "value": "Criteria"
+    },
+    {
+     "key": "s11.5",
+     "kind": "text",
+     "value": "Supplier A"
+    },
+    {
+     "key": "s11.6",
+     "kind": "text",
+     "value": "Supplier B"
+    },
+    {
+     "key": "s11.7",
+     "kind": "text",
+     "value": "Best Match"
+    },
+    {
+     "key": "s11.8",
+     "kind": "text",
+     "value": "Supplier C"
+    },
+    {
+     "key": "s11.9",
+     "kind": "text",
+     "value": "Item Price"
+    },
+    {
+     "key": "s11.10",
+     "kind": "text",
+     "value": "Lead Time"
+    },
+    {
+     "key": "s11.11",
+     "kind": "text",
+     "value": "10 Days"
+    },
+    {
+     "key": "s11.12",
+     "kind": "text",
+     "value": "7 Days"
+    },
+    {
+     "key": "s11.13",
+     "kind": "text",
+     "value": "14 Days"
+    },
+    {
+     "key": "s11.14",
+     "kind": "text",
+     "value": "Payment Terms"
+    },
+    {
+     "key": "s11.15",
+     "kind": "text",
+     "value": "Net 30"
+    },
+    {
+     "key": "s11.16",
+     "kind": "text",
+     "value": "Net 60"
+    },
+    {
+     "key": "s11.17",
+     "kind": "text",
+     "value": "Net 30"
+    },
+    {
+     "key": "s11.18",
+     "kind": "text",
+     "value": "Supplier Quotation"
+    },
+    {
+     "key": "s11.19",
+     "kind": "text",
+     "value": "Standardized bid capture from all vendors via Supplier Portal."
+    },
+    {
+     "key": "s11.20",
+     "kind": "text",
+     "value": "Comparison Report"
+    },
+    {
+     "key": "s11.21",
+     "kind": "text",
+     "value": "Auto-generated line-by-line analysis highlighted best value."
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "label": "Step 5: Receiving, Quality, and Organization",
+   "texts": [
+    {
+     "key": "s12.1",
+     "kind": "text",
+     "value": "Step 5:"
+    },
+    {
+     "key": "s12.2",
+     "kind": "text",
+     "value": "Receiving, Quality, and Organization"
+    },
+    {
+     "key": "s12.3",
+     "kind": "text",
+     "value": "Timely receipt is critical. Ensure you get exactly what you paid for before it hits your shelves."
+    },
+    {
+     "key": "s12.4",
+     "kind": "text",
+     "value": "Goods Arrival"
+    },
+    {
+     "key": "s12.5",
+     "kind": "text",
+     "value": "Purchase Receipt"
+    },
+    {
+     "key": "s12.6",
+     "kind": "text",
+     "value": "Quality Inspection"
+    },
+    {
+     "key": "s12.7",
+     "kind": "text",
+     "value": "Put-away"
+    },
+    {
+     "key": "s12.8",
+     "kind": "text",
+     "value": "Benefit: Complete Visibility"
+    },
+    {
+     "key": "s12.9",
+     "kind": "text",
+     "value": "Accurate inventory valuation and 100% visibility of stock movement."
+    },
+    {
+     "key": "s12.10",
+     "kind": "text",
+     "value": "Stock Updated: Just Now"
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "label": "Step 6: Closing the Financial Loop",
+   "texts": [
+    {
+     "key": "s13.1",
+     "kind": "text",
+     "value": "Step 6:"
+    },
+    {
+     "key": "s13.2",
+     "kind": "text",
+     "value": "Closing the Financial Loop"
+    },
+    {
+     "key": "s13.3",
+     "kind": "text",
+     "value": "Automated 3-Way Matching ensures you never overpay. System verifies that Invoice matches PO and Receipt before releasing payment."
+    },
+    {
+     "key": "s13.4",
+     "kind": "text",
+     "value": "Purchase Order"
+    },
+    {
+     "key": "s13.5",
+     "kind": "text",
+     "value": "Purchase Receipt"
+    },
+    {
+     "key": "s13.6",
+     "kind": "text",
+     "value": "Purchase Invoice"
+    },
+    {
+     "key": "s13.7",
+     "kind": "text",
+     "value": "Match"
+    },
+    {
+     "key": "s13.8",
+     "kind": "text",
+     "value": "Approved"
+    },
+    {
+     "key": "s13.9",
+     "kind": "text",
+     "value": "Payment Protection"
+    },
+    {
+     "key": "s13.10",
+     "kind": "text",
+     "value": "Prevents payment for unreceived goods."
+    },
+    {
+     "key": "s13.11",
+     "kind": "text",
+     "value": "Blocks invoices with price discrepancies greater than tolerance."
+    },
+    {
+     "key": "s13.12",
+     "kind": "text",
+     "value": "Auto-releases payments for perfect matches."
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "label": "The Procurement Advantage",
+   "texts": [
+    {
+     "key": "s14.1",
+     "kind": "text",
+     "value": "Why ERPNext?"
+    },
+    {
+     "key": "s14.2",
+     "kind": "text",
+     "value": "The Procurement Advantage"
+    },
+    {
+     "key": "s14.3",
+     "kind": "text",
+     "value": "Transform procurement from a cost center to a strategic asset."
+    },
+    {
+     "key": "s14.4",
+     "kind": "text",
+     "value": "Efficiency"
+    },
+    {
+     "key": "s14.5",
+     "kind": "text",
+     "value": "Reduce cycle time by 40% with automated workflows."
+    },
+    {
+     "key": "s14.6",
+     "kind": "text",
+     "value": "Control"
+    },
+    {
+     "key": "s14.7",
+     "kind": "text",
+     "value": "100% compliance with budget and approval hierarchies."
+    },
+    {
+     "key": "s14.8",
+     "kind": "text",
+     "value": "Visibility"
+    },
+    {
+     "key": "s14.9",
+     "kind": "text",
+     "value": "Real-time dashboard for spending and supplier performance."
+    },
+    {
+     "key": "s14.10",
+     "kind": "text",
+     "value": "Savings"
+    },
+    {
+     "key": "s14.11",
+     "kind": "text",
+     "value": "Lower costs through better negotiation and rate locking."
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "label": "The Connected Architecture of Buying",
+   "texts": [
+    {
+     "key": "s15.1",
+     "kind": "text",
+     "value": "The Connected Architecture of"
+    },
+    {
+     "key": "s15.2",
+     "kind": "text",
+     "value": "Buying"
+    },
+    {
+     "key": "s15.3",
+     "kind": "text",
+     "value": "Seamless integration means data is entered once and reflects everywhere instantly."
+    },
+    {
+     "key": "s15.4",
+     "kind": "text",
+     "value": "Inventory Updates"
+    },
+    {
+     "key": "s15.5",
+     "kind": "text",
+     "value": "GL Entries & Payments"
+    },
+    {
+     "key": "s15.6",
+     "kind": "text",
+     "value": "Inspections"
+    },
+    {
+     "key": "s15.7",
+     "kind": "text",
+     "value": "BOM & Raw Materials"
+    },
+    {
+     "key": "s15.8",
+     "kind": "text",
+     "value": "Buying Module"
+    },
+    {
+     "key": "s15.9",
+     "kind": "text",
+     "value": "Stock"
+    },
+    {
+     "key": "s15.10",
+     "kind": "text",
+     "value": "Accounting"
+    },
+    {
+     "key": "s15.11",
+     "kind": "text",
+     "value": "Quality"
+    },
+    {
+     "key": "s15.12",
+     "kind": "text",
+     "value": "Manufacturing"
+    },
+    {
+     "key": "s15.13",
+     "kind": "text",
+     "value": "Buying"
+    },
+    {
+     "key": "s15.14",
+     "kind": "text",
+     "value": "Stock"
+    },
+    {
+     "key": "s15.15",
+     "kind": "text",
+     "value": "Inventory Updates"
+    },
+    {
+     "key": "s15.16",
+     "kind": "text",
+     "value": "Manufacturing"
+    },
+    {
+     "key": "s15.17",
+     "kind": "text",
+     "value": "BOM & Raw Materials"
+    },
+    {
+     "key": "s15.18",
+     "kind": "text",
+     "value": "Accounting"
+    },
+    {
+     "key": "s15.19",
+     "kind": "text",
+     "value": "GL Entries"
+    },
+    {
+     "key": "s15.20",
+     "kind": "text",
+     "value": "Quality"
+    },
+    {
+     "key": "s15.21",
+     "kind": "text",
+     "value": "Inspections"
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "label": "Strategic Insight: Supplier Scorecards",
+   "texts": [
+    {
+     "key": "s16.1",
+     "kind": "text",
+     "value": "Strategic Insight:"
+    },
+    {
+     "key": "s16.2",
+     "kind": "text",
+     "value": "Supplier Scorecards"
+    },
+    {
+     "key": "s16.3",
+     "kind": "text",
+     "value": "Move from transactional buying to strategic relationship management. Know who your best partners are."
+    },
+    {
+     "key": "s16.4",
+     "kind": "text",
+     "value": "Supplier Name:"
+    },
+    {
+     "key": "s16.5",
+     "kind": "text",
+     "value": "Acme Corp"
+    },
+    {
+     "key": "s16.6",
+     "kind": "text",
+     "value": "Preferred Partner"
+    },
+    {
+     "key": "s16.7",
+     "kind": "text",
+     "value": "Delivery Score"
+    },
+    {
+     "key": "s16.8",
+     "kind": "text",
+     "value": "On-Time Delivery"
+    },
+    {
+     "key": "s16.9",
+     "kind": "text",
+     "value": "Quality Score"
+    },
+    {
+     "key": "s16.10",
+     "kind": "text",
+     "value": "Low Defect Rate"
+    },
+    {
+     "key": "s16.11",
+     "kind": "text",
+     "value": "Pricing Trends"
+    },
+    {
+     "key": "s16.12",
+     "kind": "text",
+     "value": "Stable"
+    },
+    {
+     "key": "s16.13",
+     "kind": "text",
+     "value": "Supplier Groups"
+    },
+    {
+     "key": "s16.14",
+     "kind": "text",
+     "value": "Categorize vendors for strategic analysis. Identify risks and opportunities in your supply chain."
+    },
+    {
+     "key": "s16.15",
+     "kind": "text",
+     "value": "Category Management"
+    },
+    {
+     "key": "s16.16",
+     "kind": "text",
+     "value": "Group by Raw Material, Service, etc."
+    },
+    {
+     "key": "s16.17",
+     "kind": "text",
+     "value": "Performance Tracking"
+    },
+    {
+     "key": "s16.18",
+     "kind": "text",
+     "value": "Auto-calculated scorecards."
+    },
+    {
+     "key": "s16.19",
+     "kind": "text",
+     "value": "Benefit: Unified Supplier Insights"
+    },
+    {
+     "key": "s16.20",
+     "kind": "text",
+     "value": "Identify top performers and negotiate better terms based on real-time data, not gut feeling."
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "label": "Order to Cash Efficiency",
+   "texts": [
+    {
+     "key": "s17.1",
+     "kind": "text",
+     "value": "Selling Module"
+    },
+    {
+     "key": "s17.2",
+     "kind": "text",
+     "value": "Order to Cash Efficiency"
+    },
+    {
+     "key": "s17.3",
+     "kind": "text",
+     "value": "Accelerate your sales cycle. Quotations, orders, shipments, and invoicing in one seamless flow."
+    },
+    {
+     "key": "s17.4",
+     "kind": "text",
+     "value": "Quotation"
+    },
+    {
+     "key": "s17.5",
+     "kind": "text",
+     "value": "Create professional quotes that convert instantly to Sales Orders."
+    },
+    {
+     "key": "s17.6",
+     "kind": "text",
+     "value": "Sales Order"
+    },
+    {
+     "key": "s17.7",
+     "kind": "text",
+     "value": "Reserve stock immediately. Trigger procurement if out of stock."
+    },
+    {
+     "key": "s17.8",
+     "kind": "text",
+     "value": "Delivery Note"
+    },
+    {
+     "key": "s17.9",
+     "kind": "text",
+     "value": "Pick, Pack, and Ship. Stock is deducted from specific warehouses."
+    },
+    {
+     "key": "s17.10",
+     "kind": "text",
+     "value": "Invoice & Pay"
+    },
+    {
+     "key": "s17.11",
+     "kind": "text",
+     "value": "Automated billing based on delivery or order. Real-time AR tracking."
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "label": "The Growth Engine: Accelerate Your Order-to-Cash Cycle",
+   "texts": [
+    {
+     "key": "s18.1",
+     "kind": "text",
+     "value": "The Growth Engine: Accelerate Your Order-to-Cash Cycle"
+    },
+    {
+     "key": "s18.2",
+     "kind": "text",
+     "value": "Run a lightning-fast cycle from the first quote to the final payment. Sales is the heartbeat of your organization—keep it strong, rhythmic, and connected."
+    },
+    {
+     "key": "s18.3",
+     "kind": "text",
+     "value": "Quote"
+    },
+    {
+     "key": "s18.4",
+     "kind": "text",
+     "value": "Deliver"
+    },
+    {
+     "key": "s18.5",
+     "kind": "text",
+     "value": "Cash"
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "label": "CRM and Order-to-Cash, All in One App",
+   "texts": [
+    {
+     "key": "s19.1",
+     "kind": "text",
+     "value": "CRM and Order-to-Cash, All in One App"
+    },
+    {
+     "key": "s19.2",
+     "kind": "text",
+     "value": "Eliminate the friction of disconnected systems. Experience the flow of a single source of truth."
+    },
+    {
+     "key": "s19.3",
+     "kind": "text",
+     "value": "THE FRICTION"
+    },
+    {
+     "key": "s19.4",
+     "kind": "text",
+     "value": "Disconnected Chaos"
+    },
+    {
+     "key": "s19.5",
+     "kind": "text",
+     "value": "Spreadsheet"
+    },
+    {
+     "key": "s19.6",
+     "kind": "text",
+     "value": "Excel"
+    },
+    {
+     "key": "s19.7",
+     "kind": "text",
+     "value": "Email"
+    },
+    {
+     "key": "s19.8",
+     "kind": "text",
+     "value": "Outlook"
+    },
+    {
+     "key": "s19.9",
+     "kind": "text",
+     "value": "Legacy"
+    },
+    {
+     "key": "s19.10",
+     "kind": "text",
+     "value": "Database"
+    },
+    {
+     "key": "s19.11",
+     "kind": "text",
+     "value": "Phone"
+    },
+    {
+     "key": "s19.12",
+     "kind": "text",
+     "value": "Calls"
+    },
+    {
+     "key": "s19.13",
+     "kind": "text",
+     "value": "Manual entry errors, out-of-stock sales, delayed invoicing."
+    },
+    {
+     "key": "s19.14",
+     "kind": "text",
+     "value": "THE FLOW"
+    },
+    {
+     "key": "s19.15",
+     "kind": "text",
+     "value": "Seamless Velocity"
+    },
+    {
+     "key": "s19.16",
+     "kind": "text",
+     "value": "Lead"
+    },
+    {
+     "key": "s19.17",
+     "kind": "text",
+     "value": "Quote"
+    },
+    {
+     "key": "s19.18",
+     "kind": "text",
+     "value": "Order"
+    },
+    {
+     "key": "s19.19",
+     "kind": "text",
+     "value": "Cash"
+    },
+    {
+     "key": "s19.20",
+     "kind": "text",
+     "value": "Sales data instantly updates inventory and financial records."
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "label": "Win Business with Professional Quotations",
+   "texts": [
+    {
+     "key": "s20.1",
+     "kind": "text",
+     "value": "Win Business with Professional Quotations"
+    },
+    {
+     "key": "s20.2",
+     "kind": "text",
+     "value": "Speed kills the competition. Create competitive proposals on the fly using pre-configured masters."
+    },
+    {
+     "key": "s20.3",
+     "kind": "text",
+     "value": "Instant Masters"
+    },
+    {
+     "key": "s20.4",
+     "kind": "text",
+     "value": "Fetch customer details and items in seconds."
+    },
+    {
+     "key": "s20.5",
+     "kind": "text",
+     "value": "Print Designer"
+    },
+    {
+     "key": "s20.6",
+     "kind": "text",
+     "value": "Generate branded, pixel-perfect PDFs."
+    },
+    {
+     "key": "s20.7",
+     "kind": "text",
+     "value": "Automated Follow-up"
+    },
+    {
+     "key": "s20.8",
+     "kind": "text",
+     "value": "Email directly from the system."
+    },
+    {
+     "key": "s20.9",
+     "kind": "text",
+     "value": "New Quotation"
+    },
+    {
+     "key": "s20.10",
+     "kind": "text",
+     "value": "Customer"
+    },
+    {
+     "key": "s20.11",
+     "kind": "text",
+     "value": "TechCorp Inc."
+    },
+    {
+     "key": "s20.12",
+     "kind": "text",
+     "value": "Item"
+    },
+    {
+     "key": "s20.13",
+     "kind": "text",
+     "value": "High-Performance Laptop"
+    },
+    {
+     "key": "s20.14",
+     "kind": "text",
+     "value": "Rate"
+    },
+    {
+     "key": "s20.15",
+     "kind": "text",
+     "value": "INVOICE"
+    },
+    {
+     "key": "s20.16",
+     "kind": "text",
+     "value": "#INV-2024-001"
+    },
+    {
+     "key": "s20.17",
+     "kind": "text",
+     "value": "Item"
+    },
+    {
+     "key": "s20.18",
+     "kind": "text",
+     "value": "Amount"
+    },
+    {
+     "key": "s20.19",
+     "kind": "text",
+     "value": "Laptop SKU-99"
+    },
+    {
+     "key": "s20.20",
+     "kind": "text",
+     "value": "Total"
+    }
+   ]
+  },
+  {
+   "id": "s21",
+   "label": "Automate Strategy with Pricing Rules",
+   "texts": [
+    {
+     "key": "s21.1",
+     "kind": "text",
+     "value": "Automate Strategy with Pricing Rules"
+    },
+    {
+     "key": "s21.2",
+     "kind": "text",
+     "value": "Automate your negotiation logic to protect margins while encouraging volume."
+    },
+    {
+     "key": "s21.3",
+     "kind": "text",
+     "value": "Incoming Sales Order"
+    },
+    {
+     "key": "s21.4",
+     "kind": "text",
+     "value": "Is Customer Group = \"Gold Partner\"?"
+    },
+    {
+     "key": "s21.5",
+     "kind": "text",
+     "value": "Yes"
+    },
+    {
+     "key": "s21.6",
+     "kind": "text",
+     "value": "Apply 15% Discount"
+    },
+    {
+     "key": "s21.7",
+     "kind": "text",
+     "value": "Is Quantity"
+    },
+    {
+     "key": "s21.8",
+     "kind": "text",
+     "value": "Yes"
+    },
+    {
+     "key": "s21.9",
+     "kind": "text",
+     "value": "Apply Bulk Pricing Tier"
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "label": "\"The Frictionless Journey\" in ERPNext Blue (#2563EB)",
+   "texts": [
+    {
+     "key": "s22.1",
+     "kind": "text",
+     "value": "\"The Frictionless Journey\" in ERPNext Blue"
+    },
+    {
+     "key": "s22.2",
+     "kind": "text",
+     "value": "(#2563EB)"
+    },
+    {
+     "key": "s22.3",
+     "kind": "text",
+     "value": "Your roadmap to sales velocity in ERPNext."
+    },
+    {
+     "key": "s22.4",
+     "kind": "text",
+     "value": "The Pitch"
+    },
+    {
+     "key": "s22.5",
+     "kind": "text",
+     "value": "Professional Quotations"
+    },
+    {
+     "key": "s22.6",
+     "kind": "text",
+     "value": "The Strategy"
+    },
+    {
+     "key": "s22.7",
+     "kind": "text",
+     "value": "Pricing Rules & Logic"
+    },
+    {
+     "key": "s22.8",
+     "kind": "text",
+     "value": "The Commitment"
+    },
+    {
+     "key": "s22.9",
+     "kind": "text",
+     "value": "Sales Orders & Stock"
+    },
+    {
+     "key": "s22.10",
+     "kind": "text",
+     "value": "The Fulfillment"
+    },
+    {
+     "key": "s22.11",
+     "kind": "text",
+     "value": "Delivery & Logistics"
+    },
+    {
+     "key": "s22.12",
+     "kind": "text",
+     "value": "The Reward"
+    },
+    {
+     "key": "s22.13",
+     "kind": "text",
+     "value": "Invoicing & Cash"
+    },
+    {
+     "key": "s22.14",
+     "kind": "text",
+     "value": "Integrated throughout:"
+    },
+    {
+     "key": "s22.15",
+     "kind": "text",
+     "value": "Real-time Analytics & CRM Nurturing."
+    }
+   ]
+  },
+  {
+   "id": "s23",
+   "label": "The Sales Order: Backbone of Repeat Business",
+   "texts": [
+    {
+     "key": "s23.1",
+     "kind": "text",
+     "value": "The Sales Order:"
+    },
+    {
+     "key": "s23.2",
+     "kind": "text",
+     "value": "Backbone of Repeat Business"
+    },
+    {
+     "key": "s23.3",
+     "kind": "text",
+     "value": "The Sales Order is the pivot point where a promise becomes an operation."
+    },
+    {
+     "key": "s23.4",
+     "kind": "text",
+     "value": "It triggers the entire supply chain."
+    },
+    {
+     "key": "s23.5",
+     "kind": "text",
+     "value": "Logistics"
+    },
+    {
+     "key": "s23.6",
+     "kind": "text",
+     "value": "Plan Dispatch & Route"
+    },
+    {
+     "key": "s23.7",
+     "kind": "text",
+     "value": "ACTIVE"
+    },
+    {
+     "key": "s23.8",
+     "kind": "text",
+     "value": "Sales Order"
+    },
+    {
+     "key": "s23.9",
+     "kind": "text",
+     "value": "#SO-2024-001"
+    },
+    {
+     "key": "s23.10",
+     "kind": "text",
+     "value": "Confirms details, reserves stock, and initiates fulfillment."
+    },
+    {
+     "key": "s23.11",
+     "kind": "text",
+     "value": "Manufacturing"
+    },
+    {
+     "key": "s23.12",
+     "kind": "text",
+     "value": "Trigger Work Order"
+    },
+    {
+     "key": "s23.13",
+     "kind": "text",
+     "value": "Procurement"
+    },
+    {
+     "key": "s23.14",
+     "kind": "text",
+     "value": "Generate Material Request"
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "label": "Flawless Fulfillment and Delivery",
+   "texts": [
+    {
+     "key": "s24.1",
+     "kind": "text",
+     "value": "Flawless Fulfillment and Delivery"
+    },
+    {
+     "key": "s24.2",
+     "kind": "text",
+     "value": "Move from digital promise to physical delivery without data re-entry."
+    },
+    {
+     "key": "s24.3",
+     "kind": "text",
+     "value": "Sales Order"
+    },
+    {
+     "key": "s24.4",
+     "kind": "text",
+     "value": "Delivery Note"
+    },
+    {
+     "key": "s24.5",
+     "kind": "text",
+     "value": "Stock Ledger"
+    },
+    {
+     "key": "s24.6",
+     "kind": "text",
+     "value": "Item Code"
+    },
+    {
+     "key": "s24.7",
+     "kind": "text",
+     "value": "Wh"
+    },
+    {
+     "key": "s24.8",
+     "kind": "text",
+     "value": "Open"
+    },
+    {
+     "key": "s24.9",
+     "kind": "text",
+     "value": "Close"
+    },
+    {
+     "key": "s24.10",
+     "kind": "text",
+     "value": "ITEM-001"
+    },
+    {
+     "key": "s24.11",
+     "kind": "text",
+     "value": "WH-01"
+    },
+    {
+     "key": "s24.12",
+     "kind": "text",
+     "value": "Pick List"
+    },
+    {
+     "key": "s24.13",
+     "kind": "text",
+     "value": "Group orders for efficient picking tours."
+    },
+    {
+     "key": "s24.14",
+     "kind": "text",
+     "value": "Barcode Scan"
+    },
+    {
+     "key": "s24.15",
+     "kind": "text",
+     "value": "Mobile scanning for error-free dispatch."
+    },
+    {
+     "key": "s24.16",
+     "kind": "text",
+     "value": "Batch Tracking"
+    },
+    {
+     "key": "s24.17",
+     "kind": "text",
+     "value": "Full traceability from supplier to customer."
+    }
+   ]
+  },
+  {
+   "id": "s25",
+   "label": "Faster Invoicing, Healthy Cash Flow",
+   "texts": [
+    {
+     "key": "s25.1",
+     "kind": "text",
+     "value": "Financial Velocity"
+    },
+    {
+     "key": "s25.2",
+     "kind": "text",
+     "value": "Faster Invoicing,"
+    },
+    {
+     "key": "s25.3",
+     "kind": "text",
+     "value": "Healthy Cash Flow"
+    },
+    {
+     "key": "s25.4",
+     "kind": "text",
+     "value": "A sale isn't complete until the money is in the bank. Convert delivery notes to invoices instantly and monitor payments in real-time."
+    },
+    {
+     "key": "s25.5",
+     "kind": "text",
+     "value": "Instant Conversion"
+    },
+    {
+     "key": "s25.6",
+     "kind": "text",
+     "value": "Generate invoices directly from delivery notes or sales orders."
+    },
+    {
+     "key": "s25.7",
+     "kind": "text",
+     "value": "Automated Reminders"
+    },
+    {
+     "key": "s25.8",
+     "kind": "text",
+     "value": "Never chase a payment manually again with auto-emailers."
+    },
+    {
+     "key": "s25.9",
+     "kind": "text",
+     "value": "Direct Payment Links"
+    },
+    {
+     "key": "s25.10",
+     "kind": "text",
+     "value": "Include Razorpay, PayPal, or Stripe links in every PDF."
+    },
+    {
+     "key": "s25.11",
+     "kind": "text",
+     "value": "Sales Invoice"
+    },
+    {
+     "key": "s25.12",
+     "kind": "text",
+     "value": "#INV-2024-089"
+    },
+    {
+     "key": "s25.13",
+     "kind": "text",
+     "value": "Subtotal:"
+    },
+    {
+     "key": "s25.14",
+     "kind": "text",
+     "value": "Tax (VAT 5%):"
+    },
+    {
+     "key": "s25.15",
+     "kind": "text",
+     "value": "Total:"
+    },
+    {
+     "key": "s25.16",
+     "kind": "text",
+     "value": "CREATE INVOICE"
+    },
+    {
+     "key": "s25.17",
+     "kind": "text",
+     "value": "Aging Summary"
+    },
+    {
+     "key": "s25.18",
+     "kind": "text",
+     "value": "0-30 DAYS"
+    },
+    {
+     "key": "s25.19",
+     "kind": "text",
+     "value": "$45.5k"
+    },
+    {
+     "key": "s25.20",
+     "kind": "text",
+     "value": "30-60 DAYS"
+    },
+    {
+     "key": "s25.21",
+     "kind": "text",
+     "value": "$12.2k"
+    },
+    {
+     "key": "s25.22",
+     "kind": "text",
+     "value": "60+ DAYS"
+    },
+    {
+     "key": "s25.23",
+     "kind": "text",
+     "value": "$3.1k"
+    }
+   ]
+  },
+  {
+   "id": "s26",
+   "label": "Strategic Insights & Sales Analytics",
+   "texts": [
+    {
+     "key": "s26.1",
+     "kind": "text",
+     "value": "Strategic Insights & Sales Analytics"
+    },
+    {
+     "key": "s26.2",
+     "kind": "text",
+     "value": "Turn raw data into predictable revenue growth. Identify high-value territories and optimize your sales conversion funnel."
+    },
+    {
+     "key": "s26.3",
+     "kind": "text",
+     "value": "Conversion Funnel"
+    },
+    {
+     "key": "s26.4",
+     "kind": "text",
+     "value": "LIVE"
+    },
+    {
+     "key": "s26.5",
+     "kind": "text",
+     "value": "Leads Generated"
+    },
+    {
+     "key": "s26.6",
+     "kind": "text",
+     "value": "Quotations"
+    },
+    {
+     "key": "s26.7",
+     "kind": "text",
+     "value": "Sales Orders"
+    },
+    {
+     "key": "s26.8",
+     "kind": "text",
+     "value": "Lead to Cash Velocity"
+    },
+    {
+     "key": "s26.9",
+     "kind": "text",
+     "value": "Monthly Revenue"
+    },
+    {
+     "key": "s26.10",
+     "kind": "text",
+     "value": "k"
+    },
+    {
+     "key": "s26.11",
+     "kind": "text",
+     "value": "JAN"
+    },
+    {
+     "key": "s26.12",
+     "kind": "text",
+     "value": "FEB"
+    },
+    {
+     "key": "s26.13",
+     "kind": "text",
+     "value": "MAR"
+    },
+    {
+     "key": "s26.14",
+     "kind": "text",
+     "value": "APR"
+    },
+    {
+     "key": "s26.15",
+     "kind": "text",
+     "value": "MAY"
+    },
+    {
+     "key": "s26.16",
+     "kind": "text",
+     "value": "JUN"
+    },
+    {
+     "key": "s26.17",
+     "kind": "text",
+     "value": "JUL"
+    },
+    {
+     "key": "s26.18",
+     "kind": "text",
+     "value": "Territory Insights"
+    },
+    {
+     "key": "s26.19",
+     "kind": "text",
+     "value": "North America leads with 45% of total Q3 volume."
+    }
+   ]
+  },
+  {
+   "id": "s27",
+   "label": "Unified Retail Point of Sale (POS)",
+   "texts": [
+    {
+     "key": "s27.1",
+     "kind": "text",
+     "value": "Retail Excellence"
+    },
+    {
+     "key": "s27.2",
+     "kind": "text",
+     "value": "Unified Retail Point of Sale (POS)"
+    },
+    {
+     "key": "s27.3",
+     "kind": "text",
+     "value": "Sell anywhere, anytime. A high-performance retail interface that stays operational even when the internet goes down."
+    },
+    {
+     "key": "s27.4",
+     "kind": "text",
+     "value": "TRUSYNC"
+    },
+    {
+     "key": "s27.5",
+     "kind": "text",
+     "value": "POS"
+    },
+    {
+     "key": "s27.6",
+     "kind": "text",
+     "value": "Main Store - Register 01"
+    },
+    {
+     "key": "s27.7",
+     "kind": "text",
+     "value": "OFFLINE MODE ACTIVE"
+    },
+    {
+     "key": "s27.8",
+     "kind": "text",
+     "value": "Premium Product"
+    },
+    {
+     "key": "s27.9",
+     "kind": "text",
+     "value": "Current Order"
+    },
+    {
+     "key": "s27.10",
+     "kind": "text",
+     "value": "Product 1 x 2"
+    },
+    {
+     "key": "s27.11",
+     "kind": "text",
+     "value": "Product 3 x 1"
+    },
+    {
+     "key": "s27.12",
+     "kind": "text",
+     "value": "Subtotal:"
+    },
+    {
+     "key": "s27.13",
+     "kind": "text",
+     "value": "Total:"
+    },
+    {
+     "key": "s27.14",
+     "kind": "text",
+     "value": "CHECKOUT"
+    },
+    {
+     "key": "s27.15",
+     "kind": "text",
+     "value": "Automated Offline Sync"
+    },
+    {
+     "key": "s27.16",
+     "kind": "text",
+     "value": "Transactions are stored locally and automatically synced to the clerk's ledger once the connection is restored."
+    },
+    {
+     "key": "s27.17",
+     "kind": "text",
+     "value": "Hardware Ready"
+    },
+    {
+     "key": "s27.18",
+     "kind": "text",
+     "value": "Native support for thermal printers, barcode scanners, and cash drawers via Frappe Raw Printing."
+    },
+    {
+     "key": "s27.19",
+     "kind": "text",
+     "value": "Multi-Store Control"
+    },
+    {
+     "key": "s27.20",
+     "kind": "text",
+     "value": "Manage pricing, loyalty points, and stock levels across 100+ locations from a single dashboard."
+    }
+   ]
+  },
+  {
+   "id": "s28",
+   "label": "Powered by the Frappe Framework",
+   "texts": [
+    {
+     "key": "s28.1",
+     "kind": "text",
+     "value": "Powered by the"
+    },
+    {
+     "key": "s28.2",
+     "kind": "text",
+     "value": "Frappe Framework"
+    },
+    {
+     "key": "s28.3",
+     "kind": "text",
+     "value": "Built on a full-stack, battery-included framework designed for flexibility and power. Future-proof your business with open source technology."
+    },
+    {
+     "key": "s28.4",
+     "kind": "text",
+     "value": "No-Code Customization"
+    },
+    {
+     "key": "s28.5",
+     "kind": "text",
+     "value": "Modify forms, fields, and workflows without writing a single line of code."
+    },
+    {
+     "key": "s28.6",
+     "kind": "text",
+     "value": "API-First Design"
+    },
+    {
+     "key": "s28.7",
+     "kind": "text",
+     "value": "Seamlessly integrate with third-party apps via REST and Socket.io APIs."
+    },
+    {
+     "key": "s28.8",
+     "kind": "text",
+     "value": "100% Open Source"
+    },
+    {
+     "key": "s28.9",
+     "kind": "text",
+     "value": "No vendor lock-in. Own your data and your code specifically tailored to you."
+    }
+   ]
+  },
+  {
+   "id": "s29",
+   "label": "Ready to Optimize Your Supply Chain?",
+   "texts": [
+    {
+     "key": "s29.1",
+     "kind": "text",
+     "value": "Ready to Optimize Your Supply Chain?"
+    },
+    {
+     "key": "s29.2",
+     "kind": "text",
+     "value": "Join thousands of businesses using ERPNext to gain total visibility and control over their inventory."
+    },
+    {
+     "key": "s29.3",
+     "kind": "url",
+     "value": "/#contact"
+    },
+    {
+     "key": "s29.4",
+     "kind": "text",
+     "value": "Book a Free Consultation"
+    }
+   ]
+  }
+ ],
+ "loose": []
+}

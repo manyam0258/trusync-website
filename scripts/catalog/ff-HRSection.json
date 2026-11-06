@@ -1,0 +1,78 @@
+{
+ "key": "ff-HRSection",
+ "sections": [
+  {
+   "id": "hrsect-s1",
+   "label": "Section 1",
+   "texts": [
+    {
+     "key": "hrsect-s1.1",
+     "kind": "text",
+     "value": "Frappe HR: Focus on"
+    },
+    {
+     "key": "hrsect-s1.2",
+     "kind": "text",
+     "value": "people, not paperwork"
+    },
+    {
+     "key": "hrsect-s1.3",
+     "kind": "text",
+     "value": "A complete HRMS solution to drive excellence from onboarding to exit."
+    }
+   ]
+  }
+ ],
+ "loose": [
+  {
+   "key": "hrsect-x.1",
+   "kind": "text",
+   "value": "Onboarding"
+  },
+  {
+   "key": "hrsect-x.2",
+   "kind": "text",
+   "value": "Lifecycle Management.\nOnboarding to Exit Interviews."
+  },
+  {
+   "key": "hrsect-x.3",
+   "kind": "text",
+   "value": "Attendance"
+  },
+  {
+   "key": "hrsect-x.4",
+   "kind": "text",
+   "value": "Geo-fenced mobile check-ins & Biometric integration."
+  },
+  {
+   "key": "hrsect-x.5",
+   "kind": "text",
+   "value": "Performance"
+  },
+  {
+   "key": "hrsect-x.6",
+   "kind": "text",
+   "value": "Track KRAs, goals, and appraisals."
+  },
+  {
+   "key": "hrsect-x.7",
+   "kind": "text",
+   "value": "Payroll"
+  },
+  {
+   "key": "hrsect-x.8",
+   "kind": "text",
+   "value": "Configurable salary structures & automated slip generation."
+  },
+  {
+   "key": "hrsect-x.9",
+   "kind": "text",
+   "value": "Expense Claims"
+  },
+  {
+   "key": "hrsect-x.10",
+   "kind": "text",
+   "value": "Multi-level approval workflows linked to ERPNext accounting."
+  }
+ ]
+}

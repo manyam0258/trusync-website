@@ -1,0 +1,82 @@
+{
+ "key": "ff-ERPFlowSection",
+ "sections": [
+  {
+   "id": "erpflo-s1",
+   "label": "Complete visibility from procurement to production",
+   "texts": [
+    {
+     "key": "erpflo-s1.1",
+     "kind": "text",
+     "value": "Complete visibility from"
+    },
+    {
+     "key": "erpflo-s1.2",
+     "kind": "text",
+     "value": "procurement to production"
+    },
+    {
+     "key": "erpflo-s1.3",
+     "kind": "text",
+     "value": "Procurement"
+    },
+    {
+     "key": "erpflo-s1.4",
+     "kind": "text",
+     "value": "Auto-Replenishment triggers Material Requests.\\nTraceability via Serial/Batch #."
+    },
+    {
+     "key": "erpflo-s1.5",
+     "kind": "text",
+     "value": "Manufacturing"
+    },
+    {
+     "key": "erpflo-s1.6",
+     "kind": "text",
+     "value": "Multi-level BOMs & Production Planning.\\nCapacity tracking per workstation."
+    },
+    {
+     "key": "erpflo-s1.7",
+     "kind": "text",
+     "value": "Distribution"
+    },
+    {
+     "key": "erpflo-s1.8",
+     "kind": "text",
+     "value": "Pick-list strategies.\\nSubcontracting management."
+    },
+    {
+     "key": "erpflo-s1.9",
+     "kind": "text",
+     "value": "Warehouse Management"
+    },
+    {
+     "key": "erpflo-s1.10",
+     "kind": "text",
+     "value": "Tree-view structure (Racks, Bins) with Put-away strategies."
+    },
+    {
+     "key": "erpflo-s1.11",
+     "kind": "text",
+     "value": "Production Planning"
+    },
+    {
+     "key": "erpflo-s1.12",
+     "kind": "text",
+     "value": "Fetches raw material availability to initiate Work Orders."
+    },
+    {
+     "key": "erpflo-s1.13",
+     "kind": "text",
+     "value": "Subcontracting"
+    },
+    {
+     "key": "erpflo-s1.14",
+     "kind": "text",
+     "value": "Manage supply of raw materials to third parties and track receipts."
+    }
+   ]
+  }
+ ],
+ "loose": []
+}

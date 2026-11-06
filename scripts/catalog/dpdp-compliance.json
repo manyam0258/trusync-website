@@ -1,0 +1,943 @@
+{
+ "key": "dpdp-compliance",
+ "sections": [
+  {
+   "id": "s1",
+   "label": "What is the DPDP Act?",
+   "texts": [
+    {
+     "key": "s1.1",
+     "kind": "text",
+     "value": "What is the DPDP Act?"
+    },
+    {
+     "key": "s1.2",
+     "kind": "text",
+     "value": "The"
+    },
+    {
+     "key": "s1.3",
+     "kind": "text",
+     "value": "DPDP Act, 2023"
+    },
+    {
+     "key": "s1.4",
+     "kind": "text",
+     "value": "is India's primary framework for regulating the processing of digital personal data."
+    },
+    {
+     "key": "s1.5",
+     "kind": "text",
+     "value": "It establishes requirements relating to:"
+    },
+    {
+     "key": "s1.6",
+     "kind": "text",
+     "value": "Personal data processing"
+    },
+    {
+     "key": "s1.7",
+     "kind": "text",
+     "value": "Consent and lawful processing"
+    },
+    {
+     "key": "s1.8",
+     "kind": "text",
+     "value": "Data Principal rights"
+    },
+    {
+     "key": "s1.9",
+     "kind": "text",
+     "value": "Data security"
+    },
+    {
+     "key": "s1.10",
+     "kind": "text",
+     "value": "Breach management"
+    },
+    {
+     "key": "s1.11",
+     "kind": "text",
+     "value": "Grievance redressal"
+    },
+    {
+     "key": "s1.12",
+     "kind": "text",
+     "value": "Children's data"
+    },
+    {
+     "key": "s1.13",
+     "kind": "text",
+     "value": "Significant Data Fiduciaries"
+    },
+    {
+     "key": "s1.14",
+     "kind": "text",
+     "value": "Regulatory oversight"
+    },
+    {
+     "key": "s1.15",
+     "kind": "text",
+     "value": "The"
+    },
+    {
+     "key": "s1.16",
+     "kind": "text",
+     "value": "Digital Personal Data Protection Rules, 2025"
+    },
+    {
+     "key": "s1.17",
+     "kind": "text",
+     "value": "provide detailed operational requirements under the framework."
+    },
+    {
+     "key": "s1.18",
+     "kind": "text",
+     "value": "Who Needs to Consider DPDP?"
+    },
+    {
+     "key": "s1.19",
+     "kind": "text",
+     "value": "DPDP requirements can apply to organisations across industries that process digital personal data."
+    },
+    {
+     "key": "s1.20",
+     "kind": "text",
+     "value": "Manufacturing"
+    },
+    {
+     "key": "s1.21",
+     "kind": "text",
+     "value": "Customer, employee, dealer, supplier and enquiry data."
+    },
+    {
+     "key": "s1.22",
+     "kind": "text",
+     "value": "Real Estate"
+    },
+    {
+     "key": "s1.23",
+     "kind": "text",
+     "value": "Buyer, tenant, lead, broker and customer information."
+    },
+    {
+     "key": "s1.24",
+     "kind": "text",
+     "value": "IT & SaaS"
+    },
+    {
+     "key": "s1.25",
+     "kind": "text",
+     "value": "User, customer, support, application and marketing data."
+    },
+    {
+     "key": "s1.26",
+     "kind": "text",
+     "value": "Hotels & Hospitality"
+    },
+    {
+     "key": "s1.27",
+     "kind": "text",
+     "value": "Guest, booking, contact, loyalty and marketing information."
+    },
+    {
+     "key": "s1.28",
+     "kind": "text",
+     "value": "Healthcare"
+    },
+    {
+     "key": "s1.29",
+     "kind": "text",
+     "value": "Patient, appointment, employee and related personal data."
+    },
+    {
+     "key": "s1.30",
+     "kind": "text",
+     "value": "Education"
+    },
+    {
+     "key": "s1.31",
+     "kind": "text",
+     "value": "Student, parent/guardian, admission and academic information."
+    },
+    {
+     "key": "s1.32",
+     "kind": "text",
+     "value": "Banking & Financial Services"
+    },
+    {
+     "key": "s1.33",
+     "kind": "text",
+     "value": "Customer, KYC, employee and financial-service related data."
+    },
+    {
+     "key": "s1.34",
+     "kind": "text",
+     "value": "Retail & E-Commerce"
+    },
+    {
+     "key": "s1.35",
+     "kind": "text",
+     "value": "Customer accounts, orders, delivery, support and marketing information."
+    },
+    {
+     "key": "s1.36",
+     "kind": "text",
+     "value": "Every organisation should assess its own processing activities and applicable requirements."
+    },
+    {
+     "key": "s1.37",
+     "kind": "text",
+     "value": "Key Areas of DPDP Compliance"
+    },
+    {
+     "key": "s1.38",
+     "kind": "text",
+     "value": "Data Discovery & Inventory"
+    },
+    {
+     "key": "s1.39",
+     "kind": "text",
+     "value": "Identify personal data, systems, applications, processing activities and data flows across the organisation."
+    },
+    {
+     "key": "s1.40",
+     "kind": "text",
+     "value": "Purpose & Lawful Basis"
+    },
+    {
+     "key": "s1.41",
+     "kind": "text",
+     "value": "Map each processing activity to its purpose and applicable lawful basis."
+    },
+    {
+     "key": "s1.42",
+     "kind": "text",
+     "value": "Privacy Notices"
+    },
+    {
+     "key": "s1.43",
+     "kind": "text",
+     "value": "Provide clear information about personal data collection, processing purposes and applicable rights."
+    },
+    {
+     "key": "s1.44",
+     "kind": "text",
+     "value": "Consent Management"
+    },
+    {
+     "key": "s1.45",
+     "kind": "text",
+     "value": "Where consent is the applicable basis, manage consent, preferences, evidence and withdrawal throughout the lifecycle."
+    },
+    {
+     "key": "s1.46",
+     "kind": "text",
+     "value": "Data Principal Rights"
+    },
+    {
+     "key": "s1.47",
+     "kind": "text",
+     "value": "Enable applicable requests such as access, correction, erasure, consent withdrawal and grievance redressal."
+    },
+    {
+     "key": "s1.48",
+     "kind": "text",
+     "value": "Data Security"
+    },
+    {
+     "key": "s1.49",
+     "kind": "text",
+     "value": "Implement appropriate technical and organisational safeguards including access control, encryption, logging, monitoring and secure disposal."
+    },
+    {
+     "key": "s1.50",
+     "kind": "text",
+     "value": "Breach Management"
+    },
+    {
+     "key": "s1.51",
+     "kind": "text",
+     "value": "Establish processes to detect, assess, respond to and document personal-data breaches."
+    },
+    {
+     "key": "s1.52",
+     "kind": "text",
+     "value": "Retention & Erasure"
+    },
+    {
+     "key": "s1.53",
+     "kind": "text",
+     "value": "Define appropriate retention periods and implement controlled review, deletion and disposal processes."
+    },
+    {
+     "key": "s1.54",
+     "kind": "text",
+     "value": "Processor & Vendor Governance"
+    },
+    {
+     "key": "s1.55",
+     "kind": "text",
+     "value": "Identify third parties processing personal data and manage their contracts, data access, security and compliance responsibilities."
+    },
+    {
+     "key": "s1.56",
+     "kind": "text",
+     "value": "DPIA & Privacy Risk"
+    },
+    {
+     "key": "s1.57",
+     "kind": "text",
+     "value": "Assess privacy risks associated with applicable processing activities and implement appropriate controls."
+    },
+    {
+     "key": "s1.58",
+     "kind": "text",
+     "value": "Children & Guardian Data"
+    },
+    {
+     "key": "s1.59",
+     "kind": "text",
+     "value": "Implement appropriate controls for processing children's personal data and applicable guardian-related requirements."
+    },
+    {
+     "key": "s1.60",
+     "kind": "text",
+     "value": "Governance & Audit"
+    },
+    {
+     "key": "s1.61",
+     "kind": "text",
+     "value": "Maintain policies, responsibilities, assessments, audit trails, evidence, findings and remediation activities."
+    },
+    {
+     "key": "s1.62",
+     "kind": "text",
+     "value": "DPDPA Technology Consulting"
+    },
+    {
+     "key": "s1.63",
+     "kind": "text",
+     "value": "Turning Privacy Requirements into Technology & Business Controls"
+    },
+    {
+     "key": "s1.64",
+     "kind": "text",
+     "value": "We provide"
+    },
+    {
+     "key": "s1.65",
+     "kind": "text",
+     "value": "DPDPA Technology Consulting"
+    },
+    {
+     "key": "s1.66",
+     "kind": "text",
+     "value": "to help organisations translate India's"
+    },
+    {
+     "key": "s1.67",
+     "kind": "text",
+     "value": "Digital Personal Data Protection Act (DPDP Act)"
+    },
+    {
+     "key": "s1.68",
+     "kind": "text",
+     "value": "requirements into practical technology, processes and governance controls."
+    },
+    {
+     "key": "s1.69",
+     "kind": "text",
+     "value": "Our consulting approach covers the complete personal data lifecycle:"
+    },
+    {
+     "key": "s1.70",
+     "kind": "text",
+     "value": "Collection → Consent → Processing → Storage → Sharing → Retention → Deletion"
+    },
+    {
+     "key": "s1.71",
+     "kind": "text",
+     "value": "with a focus on improving"
+    },
+    {
+     "key": "s1.72",
+     "kind": "text",
+     "value": "privacy, security and regulatory readiness"
+    },
+    {
+     "key": "s1.73",
+     "kind": "text",
+     "value": "Our Key Consulting Areas"
+    },
+    {
+     "key": "s1.74",
+     "kind": "text",
+     "value": "DPDPA Readiness Assessment"
+    },
+    {
+     "key": "s1.75",
+     "kind": "text",
+     "value": "Assess your current technology, processes and controls to identify compliance gaps and priorities."
+    },
+    {
+     "key": "s1.76",
+     "kind": "text",
+     "value": "Personal Data Discovery & Mapping"
+    },
+    {
+     "key": "s1.77",
+     "kind": "text",
+     "value": "Discover, classify and map personal data across applications, databases, business processes and data flows."
+    },
+    {
+     "key": "s1.78",
+     "kind": "text",
+     "value": "Consent & Preference Management"
+    },
+    {
+     "key": "s1.79",
+     "kind": "text",
+     "value": "Design and implement consent, preference and withdrawal workflows where applicable."
+    },
+    {
+     "key": "s1.80",
+     "kind": "text",
+     "value": "Data Principal Rights"
+    },
+    {
+     "key": "s1.81",
+     "kind": "text",
+     "value": "Enable technology-driven workflows for applicable access, correction, erasure and other rights requests."
+    },
+    {
+     "key": "s1.82",
+     "kind": "text",
+     "value": "Privacy Notice & Consent Workflows"
+    },
+    {
+     "key": "s1.83",
+     "kind": "text",
+     "value": "Integrate privacy notices and applicable consent mechanisms into websites, applications and business processes."
+    },
+    {
+     "key": "s1.84",
+     "kind": "text",
+     "value": "Retention & Deletion Automation"
+    },
+    {
+     "key": "s1.85",
+     "kind": "text",
+     "value": "Define retention policies and automate applicable review, deletion and disposal processes."
+    },
+    {
+     "key": "s1.86",
+     "kind": "text",
+     "value": "Data Breach & Incident Management"
+    },
+    {
+     "key": "s1.87",
+     "kind": "text",
+     "value": "Design workflows for incident detection, assessment, escalation, response, notification and evidence management."
+    },
+    {
+     "key": "s1.88",
+     "kind": "text",
+     "value": "Vendor & Third-Party Governance"
+    },
+    {
+     "key": "s1.89",
+     "kind": "text",
+     "value": "Assess and manage third-party processors, data sharing, contractual controls and data flows."
+    },
+    {
+     "key": "s1.90",
+     "kind": "text",
+     "value": "Privacy-by-Design Assessment"
+    },
+    {
+     "key": "s1.91",
+     "kind": "text",
+     "value": "Evaluate applications and new initiatives for privacy requirements before implementation or release."
+    },
+    {
+     "key": "s1.92",
+     "kind": "text",
+     "value": "Audit Trails & Compliance Reporting"
+    },
+    {
+     "key": "s1.93",
+     "kind": "text",
+     "value": "Establish evidence, audit trails, compliance dashboards, assessments and management reporting."
+    },
+    {
+     "key": "s1.94",
+     "kind": "text",
+     "value": "Enterprise Application Integration"
+    },
+    {
+     "key": "s1.95",
+     "kind": "text",
+     "value": "Integrate DPDP controls with ERP, CRM, HRMS, websites, mobile applications, APIs and other business systems."
+    },
+    {
+     "key": "s1.96",
+     "kind": "text",
+     "value": "Privacy Technology Roadmap"
+    },
+    {
+     "key": "s1.97",
+     "kind": "text",
+     "value": "Develop a practical roadmap for implementing and continuously improving privacy technology and controls."
+    },
+    {
+     "key": "s1.98",
+     "kind": "text",
+     "value": "Our DPDP Implementation Approach"
+    },
+    {
+     "key": "s1.99",
+     "kind": "text",
+     "value": "We help organisations move from"
+    },
+    {
+     "key": "s1.100",
+     "kind": "text",
+     "value": "compliance requirements to an operational privacy framework"
+    },
+    {
+     "key": "s1.101",
+     "kind": "text",
+     "value": "Assess"
+    },
+    {
+     "key": "s1.102",
+     "kind": "text",
+     "value": "Understand your organisation, personal data, systems, processes and current compliance posture."
+    },
+    {
+     "key": "s1.103",
+     "kind": "text",
+     "value": "Design"
+    },
+    {
+     "key": "s1.104",
+     "kind": "text",
+     "value": "Define the appropriate privacy processes, technology controls, governance structure and implementation roadmap."
+    },
+    {
+     "key": "s1.105",
+     "kind": "text",
+     "value": "Implement"
+    },
+    {
+     "key": "s1.106",
+     "kind": "text",
+     "value": "Implement notices, consent, rights, retention, security, processor, incident and governance controls."
+    },
+    {
+     "key": "s1.107",
+     "kind": "text",
+     "value": "Integrate"
+    },
+    {
+     "key": "s1.108",
+     "kind": "text",
+     "value": "Connect privacy controls with your existing business applications and technology ecosystem."
+    },
+    {
+     "key": "s1.109",
+     "kind": "text",
+     "value": "Monitor"
+    },
+    {
+     "key": "s1.110",
+     "kind": "text",
+     "value": "Continuously track compliance activities, risks, requests, incidents, vendors and remediation."
+    },
+    {
+     "key": "s1.111",
+     "kind": "text",
+     "value": "Demonstrate"
+    },
+    {
+     "key": "s1.112",
+     "kind": "text",
+     "value": "Maintain evidence, audit trails, reports and compliance records to demonstrate your privacy posture."
+    },
+    {
+     "key": "s1.113",
+     "kind": "text",
+     "value": "Sentinel-DPDP"
+    },
+    {
+     "key": "s1.114",
+     "kind": "text",
+     "value": "Your DPDP Compliance Control Center"
+    },
+    {
+     "key": "s1.115",
+     "kind": "text",
+     "value": "Sentinel-DPDP"
+    },
+    {
+     "key": "s1.116",
+     "kind": "text",
+     "value": "helps organisations operationalise their privacy programme through a unified platform covering:"
+    },
+    {
+     "key": "s1.117",
+     "kind": "text",
+     "value": "Data Inventory & Processing"
+    },
+    {
+     "key": "s1.118",
+     "kind": "text",
+     "value": "Purpose & Lawful Basis"
+    },
+    {
+     "key": "s1.119",
+     "kind": "text",
+     "value": "Privacy Notices"
+    },
+    {
+     "key": "s1.120",
+     "kind": "text",
+     "value": "Consent Management"
+    },
+    {
+     "key": "s1.121",
+     "kind": "text",
+     "value": "Data Principal Rights"
+    },
+    {
+     "key": "s1.122",
+     "kind": "text",
+     "value": "Grievance Management"
+    },
+    {
+     "key": "s1.123",
+     "kind": "text",
+     "value": "Processor & Data Sharing Management"
+    },
+    {
+     "key": "s1.124",
+     "kind": "text",
+     "value": "Retention & Erasure"
+    },
+    {
+     "key": "s1.125",
+     "kind": "text",
+     "value": "Breach Management"
+    },
+    {
+     "key": "s1.126",
+     "kind": "text",
+     "value": "DPIA & Privacy Risk"
+    },
+    {
+     "key": "s1.127",
+     "kind": "text",
+     "value": "Security & Governance"
+    },
+    {
+     "key": "s1.128",
+     "kind": "text",
+     "value": "Audit & Compliance Evidence"
+    },
+    {
+     "key": "s1.129",
+     "kind": "text",
+     "value": "Compliance Monitoring & Reporting"
+    },
+    {
+     "key": "s1.130",
+     "kind": "text",
+     "value": "From Data Discovery to Demonstrable Compliance."
+    },
+    {
+     "key": "s1.131",
+     "kind": "text",
+     "value": "DPDP Compliance Lifecycle"
+    },
+    {
+     "key": "s1.132",
+     "kind": "text",
+     "value": "Discover"
+    },
+    {
+     "key": "s1.133",
+     "kind": "text",
+     "value": "Identify personal data, systems, applications and processors."
+    },
+    {
+     "key": "s1.134",
+     "kind": "text",
+     "value": "Assess"
+    },
+    {
+     "key": "s1.135",
+     "kind": "text",
+     "value": "Understand purposes, lawful basis, risks and compliance gaps."
+    },
+    {
+     "key": "s1.136",
+     "kind": "text",
+     "value": "Implement"
+    },
+    {
+     "key": "s1.137",
+     "kind": "text",
+     "value": "Deploy the required privacy, security and governance controls."
+    },
+    {
+     "key": "s1.138",
+     "kind": "text",
+     "value": "Integrate"
+    },
+    {
+     "key": "s1.139",
+     "kind": "text",
+     "value": "Connect DPDP controls with your business applications."
+    },
+    {
+     "key": "s1.140",
+     "kind": "text",
+     "value": "Monitor"
+    },
+    {
+     "key": "s1.141",
+     "kind": "text",
+     "value": "Track compliance, risks, incidents, rights and remediation."
+    },
+    {
+     "key": "s1.142",
+     "kind": "text",
+     "value": "Audit & Improve"
+    },
+    {
+     "key": "s1.143",
+     "kind": "text",
+     "value": "Maintain evidence, assess controls and continuously improve."
+    },
+    {
+     "key": "s1.144",
+     "kind": "text",
+     "value": "Why Choose Us?"
+    },
+    {
+     "key": "s1.145",
+     "kind": "text",
+     "value": "Technology + Compliance + Business Process"
+    },
+    {
+     "key": "s1.146",
+     "kind": "text",
+     "value": "DPDP compliance cannot be addressed through documentation alone."
+    },
+    {
+     "key": "s1.147",
+     "kind": "text",
+     "value": "Our approach combines:"
+    },
+    {
+     "key": "s1.148",
+     "kind": "text",
+     "value": "Regulatory Understanding"
+    },
+    {
+     "key": "s1.149",
+     "kind": "text",
+     "value": "Business Process"
+    },
+    {
+     "key": "s1.150",
+     "kind": "text",
+     "value": "Technology"
+    },
+    {
+     "key": "s1.151",
+     "kind": "text",
+     "value": "Security"
+    },
+    {
+     "key": "s1.152",
+     "kind": "text",
+     "value": "Automation"
+    },
+    {
+     "key": "s1.153",
+     "kind": "text",
+     "value": "Governance"
+    },
+    {
+     "key": "s1.154",
+     "kind": "text",
+     "value": "Continuous Monitoring"
+    },
+    {
+     "key": "s1.155",
+     "kind": "text",
+     "value": "This enables organisations to move beyond a static compliance programme and build an"
+    },
+    {
+     "key": "s1.156",
+     "kind": "text",
+     "value": "operational privacy framework integrated into their everyday business processes and technology landscape."
+    },
+    {
+     "key": "s1.157",
+     "kind": "text",
+     "value": "Start Your DPDP Journey"
+    },
+    {
+     "key": "s1.158",
+     "kind": "text",
+     "value": "Not sure where your organisation stands?"
+    },
+    {
+     "key": "s1.159",
+     "kind": "text",
+     "value": "We can help you assess your current DPDP readiness, identify technology and process gaps, and develop a practical implementation roadmap."
+    },
+    {
+     "key": "s1.160",
+     "kind": "url",
+     "value": "#assessment"
+    },
+    {
+     "key": "s1.161",
+     "kind": "text",
+     "value": "Request a DPDP Assessment"
+    },
+    {
+     "key": "s1.162",
+     "kind": "url",
+     "value": "#contact"
+    },
+    {
+     "key": "s1.163",
+     "kind": "text",
+     "value": "Talk to Our DPDPA Technology Consultants"
+    },
+    {
+     "key": "s1.164",
+     "kind": "url",
+     "value": "#contact"
+    },
+    {
+     "key": "s1.165",
+     "kind": "text",
+     "value": "Explore Sentinel-DPDP"
+    },
+    {
+     "key": "s1.166",
+     "kind": "text",
+     "value": "Disclaimer"
+    },
+    {
+     "key": "s1.167",
+     "kind": "text",
+     "value": "This content is provided for general informational purposes and does not constitute legal advice. DPDP applicability and obligations may vary depending on the organisation, processing activities, sector, exemptions and applicable legal requirements."
+    },
+    {
+     "key": "s1.168",
+     "kind": "text",
+     "value": "Last Reviewed: August 2026"
+    }
+   ]
+  }
+ ],
+ "loose": [
+  {
+   "key": "x.1",
+   "kind": "text",
+   "value": "Digital Personal Data Protection (DPDP) Act, 2023"
+  },
+  {
+   "key": "x.2",
+   "kind": "text",
+   "value": "Simplifying DPDP Compliance Through Technology"
+  },
+  {
+   "key": "x.3",
+   "kind": "text",
+   "value": "Legal Risks"
+  },
+  {
+   "key": "x.4",
+   "kind": "text",
+   "value": "High penalties for non-compliance with the new DPDP Act."
+  },
+  {
+   "key": "x.5",
+   "kind": "text",
+   "value": "Data Breaches"
+  },
+  {
+   "key": "x.6",
+   "kind": "text",
+   "value": "Vulnerable data infrastructure risking customer trust."
+  },
+  {
+   "key": "x.7",
+   "kind": "text",
+   "value": "Consent Management"
+  },
+  {
+   "key": "x.8",
+   "kind": "text",
+   "value": "Complexities in managing user consent and data rights."
+  },
+  {
+   "key": "x.9",
+   "kind": "text",
+   "value": "Gap Analysis"
+  },
+  {
+   "key": "x.10",
+   "kind": "text",
+   "value": "Comprehensive audit of current data practices against DPDP requirements."
+  },
+  {
+   "key": "x.11",
+   "kind": "text",
+   "value": "Policy Framework"
+  },
+  {
+   "key": "x.12",
+   "kind": "text",
+   "value": "Drafting robust privacy policies and consent mechanisms."
+  },
+  {
+   "key": "x.13",
+   "kind": "text",
+   "value": "Data Mapping"
+  },
+  {
+   "key": "x.14",
+   "kind": "text",
+   "value": "Visualizing data flow to ensure lawful processing."
+  },
+  {
+   "key": "x.15",
+   "kind": "text",
+   "value": "Compliance Dashboard"
+  },
+  {
+   "key": "x.16",
+   "kind": "text",
+   "value": "Real-time monitoring of compliance status."
+  },
+  {
+   "key": "x.17",
+   "kind": "text",
+   "value": "Start Your DPDP Journey"
+  },
+  {
+   "key": "x.18",
+   "kind": "url",
+   "value": "#assessment"
+  }
+ ]
+}

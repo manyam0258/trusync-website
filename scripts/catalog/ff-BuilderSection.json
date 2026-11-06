@@ -1,0 +1,137 @@
+{
+ "key": "ff-BuilderSection",
+ "sections": [
+  {
+   "id": "builde-s1",
+   "label": "Web publishing and knowledge management redefined",
+   "texts": [
+    {
+     "key": "builde-s1.1",
+     "kind": "text",
+     "value": "Web publishing and knowledge"
+    },
+    {
+     "key": "builde-s1.2",
+     "kind": "text",
+     "value": "management redefined"
+    },
+    {
+     "key": "builde-s1.3",
+     "kind": "text",
+     "value": "Frappe Builder"
+    },
+    {
+     "key": "builde-s1.4",
+     "kind": "text",
+     "value": "VISUAL EDITOR"
+    },
+    {
+     "key": "builde-s1.5",
+     "kind": "text",
+     "value": "<!DOCTYPE html>"
+    },
+    {
+     "key": "builde-s1.6",
+     "kind": "text",
+     "value": "<html>"
+    },
+    {
+     "key": "builde-s1.7",
+     "kind": "text",
+     "value": "<body>"
+    },
+    {
+     "key": "builde-s1.8",
+     "kind": "text",
+     "value": "<div class=\"hero-section\">"
+    },
+    {
+     "key": "builde-s1.9",
+     "kind": "text",
+     "value": "Generated optimized code..."
+    },
+    {
+     "key": "builde-s1.10",
+     "kind": "text",
+     "value": "<h1>"
+    },
+    {
+     "key": "builde-s1.11",
+     "kind": "text",
+     "value": "Welcome"
+    },
+    {
+     "key": "builde-s1.12",
+     "kind": "text",
+     "value": "</h1>"
+    },
+    {
+     "key": "builde-s1.13",
+     "kind": "text",
+     "value": "</div>"
+    },
+    {
+     "key": "builde-s1.14",
+     "kind": "text",
+     "value": "</body>"
+    },
+    {
+     "key": "builde-s1.15",
+     "kind": "text",
+     "value": "</html>"
+    },
+    {
+     "key": "builde-s1.16",
+     "kind": "text",
+     "value": "CODE VIEW"
+    },
+    {
+     "key": "builde-s1.17",
+     "kind": "text",
+     "value": "Visual Editor:"
+    },
+    {
+     "key": "builde-s1.18",
+     "kind": "text",
+     "value": "Design responsive websites with a drag-and-drop interface."
+    },
+    {
+     "key": "builde-s1.19",
+     "kind": "text",
+     "value": "Performance:"
+    },
+    {
+     "key": "builde-s1.20",
+     "kind": "text",
+     "value": "Generates clean code scoring high on Google Lighthouse."
+    },
+    {
+     "key": "builde-s1.21",
+     "kind": "text",
+     "value": "One-Click Publishing:"
+    },
+    {
+     "key": "builde-s1.22",
+     "kind": "text",
+     "value": "Instant deployment."
+    },
+    {
+     "key": "builde-s1.23",
+     "kind": "text",
+     "value": "M↓"
+    },
+    {
+     "key": "builde-s1.24",
+     "kind": "text",
+     "value": "Frappe Wiki:"
+    },
+    {
+     "key": "builde-s1.25",
+     "kind": "text",
+     "value": "Internal knowledge base with Markdown support, version history, and approval workflows."
+    }
+   ]
+  }
+ ],
+ "loose": []
+}

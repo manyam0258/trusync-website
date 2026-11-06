@@ -1,0 +1,138 @@
+{
+ "key": "ff-POSSection",
+ "sections": [
+  {
+   "id": "possec-s1",
+   "label": "Accelerating the Order-to-Cash cycle",
+   "texts": [
+    {
+     "key": "possec-s1.1",
+     "kind": "text",
+     "value": "Accelerating the"
+    },
+    {
+     "key": "possec-s1.2",
+     "kind": "text",
+     "value": "Order-to-Cash cycle"
+    },
+    {
+     "key": "possec-s1.3",
+     "kind": "text",
+     "value": "POS Terminal #04 • Online"
+    },
+    {
+     "key": "possec-s1.4",
+     "kind": "text",
+     "value": "All Items"
+    },
+    {
+     "key": "possec-s1.5",
+     "kind": "text",
+     "value": "Beverages"
+    },
+    {
+     "key": "possec-s1.6",
+     "kind": "text",
+     "value": "Snacks"
+    },
+    {
+     "key": "possec-s1.7",
+     "kind": "text",
+     "value": "Current Order"
+    },
+    {
+     "key": "possec-s1.8",
+     "kind": "text",
+     "value": "Subtotal"
+    },
+    {
+     "key": "possec-s1.9",
+     "kind": "text",
+     "value": "Tax"
+    },
+    {
+     "key": "possec-s1.10",
+     "kind": "text",
+     "value": "Pay"
+    },
+    {
+     "key": "possec-s1.11",
+     "kind": "text",
+     "value": "Touch-Friendly UI"
+    },
+    {
+     "key": "possec-s1.12",
+     "kind": "text",
+     "value": "Optimised for touch."
+    },
+    {
+     "key": "possec-s1.13",
+     "kind": "text",
+     "value": "Shift Management"
+    },
+    {
+     "key": "possec-s1.14",
+     "kind": "text",
+     "value": "Consolidated closing."
+    },
+    {
+     "key": "possec-s1.15",
+     "kind": "text",
+     "value": "Sales Workflow"
+    },
+    {
+     "key": "possec-s1.16",
+     "kind": "text",
+     "value": "Lead -> Order"
+    },
+    {
+     "key": "possec-s1.17",
+     "kind": "text",
+     "value": "Offline Mode"
+    },
+    {
+     "key": "possec-s1.18",
+     "kind": "text",
+     "value": "Syncs automatically."
+    },
+    {
+     "key": "possec-s1.19",
+     "kind": "text",
+     "value": "Smart Invoicing"
+    },
+    {
+     "key": "possec-s1.20",
+     "kind": "text",
+     "value": "Auto receivables."
+    },
+    {
+     "key": "possec-s1.21",
+     "kind": "text",
+     "value": "Touch-Friendly UI"
+    },
+    {
+     "key": "possec-s1.22",
+     "kind": "text",
+     "value": "Offline Capability"
+    },
+    {
+     "key": "possec-s1.23",
+     "kind": "text",
+     "value": "Shift Management"
+    },
+    {
+     "key": "possec-s1.24",
+     "kind": "text",
+     "value": "Smart Invoicing"
+    }
+   ]
+  }
+ ],
+ "loose": [
+  {
+   "key": "possec-x.1",
+   "kind": "text",
+   "value": "Qty:"
+  }
+ ]
+}

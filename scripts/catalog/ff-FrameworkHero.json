@@ -1,0 +1,97 @@
+{
+ "key": "ff-FrameworkHero",
+ "sections": [
+  {
+   "id": "framew-s1",
+   "label": "The Operating System for Modern Business",
+   "texts": [
+    {
+     "key": "framew-s1.1",
+     "kind": "text",
+     "value": "The Operating System for"
+    },
+    {
+     "key": "framew-s1.2",
+     "kind": "text",
+     "value": "Modern Business"
+    },
+    {
+     "key": "framew-s1.3",
+     "kind": "text",
+     "value": "A unified, open-source ecosystem that breaks down silos and powers your entire enterprise."
+    },
+    {
+     "key": "framew-s1.4",
+     "kind": "text",
+     "value": "Frappe"
+    },
+    {
+     "key": "framew-s1.5",
+     "kind": "text",
+     "value": "Framework"
+    },
+    {
+     "key": "framew-s1.6",
+     "kind": "text",
+     "value": "ERPNext"
+    },
+    {
+     "key": "framew-s1.7",
+     "kind": "text",
+     "value": "HR"
+    },
+    {
+     "key": "framew-s1.8",
+     "kind": "text",
+     "value": "Helpdesk"
+    },
+    {
+     "key": "framew-s1.9",
+     "kind": "text",
+     "value": "Commerce"
+    },
+    {
+     "key": "framew-s1.10",
+     "kind": "text",
+     "value": "Insights"
+    },
+    {
+     "key": "framew-s1.11",
+     "kind": "text",
+     "value": "Builder"
+    },
+    {
+     "key": "framew-s1.12",
+     "kind": "text",
+     "value": "LMS"
+    },
+    {
+     "key": "framew-s1.13",
+     "kind": "text",
+     "value": "Custom Apps"
+    },
+    {
+     "key": "framew-s1.14",
+     "kind": "text",
+     "value": "ERPNext"
+    },
+    {
+     "key": "framew-s1.15",
+     "kind": "text",
+     "value": "HR"
+    },
+    {
+     "key": "framew-s1.16",
+     "kind": "text",
+     "value": "Helpdesk"
+    },
+    {
+     "key": "framew-s1.17",
+     "kind": "text",
+     "value": "Insights"
+    }
+   ]
+  }
+ ],
+ "loose": []
+}

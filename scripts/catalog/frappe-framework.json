@@ -1,0 +1,1199 @@
+{
+ "key": "frappe-framework",
+ "sections": [
+  {
+   "id": "framew-s1",
+   "label": "The Operating System for Modern Business",
+   "texts": [
+    {
+     "key": "framew-s1.1",
+     "kind": "text",
+     "value": "The Operating System for"
+    },
+    {
+     "key": "framew-s1.2",
+     "kind": "text",
+     "value": "Modern Business"
+    },
+    {
+     "key": "framew-s1.3",
+     "kind": "text",
+     "value": "A unified, open-source ecosystem that breaks down silos and powers your entire enterprise."
+    },
+    {
+     "key": "framew-s1.4",
+     "kind": "text",
+     "value": "Frappe"
+    },
+    {
+     "key": "framew-s1.5",
+     "kind": "text",
+     "value": "Framework"
+    },
+    {
+     "key": "framew-s1.6",
+     "kind": "text",
+     "value": "ERPNext"
+    },
+    {
+     "key": "framew-s1.7",
+     "kind": "text",
+     "value": "HR"
+    },
+    {
+     "key": "framew-s1.8",
+     "kind": "text",
+     "value": "Helpdesk"
+    },
+    {
+     "key": "framew-s1.9",
+     "kind": "text",
+     "value": "Commerce"
+    },
+    {
+     "key": "framew-s1.10",
+     "kind": "text",
+     "value": "Insights"
+    },
+    {
+     "key": "framew-s1.11",
+     "kind": "text",
+     "value": "Builder"
+    },
+    {
+     "key": "framew-s1.12",
+     "kind": "text",
+     "value": "LMS"
+    },
+    {
+     "key": "framew-s1.13",
+     "kind": "text",
+     "value": "Custom Apps"
+    },
+    {
+     "key": "framew-s1.14",
+     "kind": "text",
+     "value": "ERPNext"
+    },
+    {
+     "key": "framew-s1.15",
+     "kind": "text",
+     "value": "HR"
+    },
+    {
+     "key": "framew-s1.16",
+     "kind": "text",
+     "value": "Helpdesk"
+    },
+    {
+     "key": "framew-s1.17",
+     "kind": "text",
+     "value": "Insights"
+    }
+   ]
+  },
+  {
+   "id": "archit-s1",
+   "label": "Built on the Frappe Framework: Low-code, high performance",
+   "texts": [
+    {
+     "key": "archit-s1.1",
+     "kind": "text",
+     "value": "Built on the Frappe Framework:"
+    },
+    {
+     "key": "archit-s1.2",
+     "kind": "text",
+     "value": "Low-code, high performance"
+    },
+    {
+     "key": "archit-s1.3",
+     "kind": "text",
+     "value": "All apps in the ecosystem share the same DNA. A full-stack web application framework (Python/JS) where metadata is treated as data."
+    },
+    {
+     "key": "archit-s1.4",
+     "kind": "text",
+     "value": "Powers the entire Ecosystem"
+    },
+    {
+     "key": "archit-s1.5",
+     "kind": "text",
+     "value": "Frappe UI & Espresso"
+    },
+    {
+     "key": "archit-s1.6",
+     "kind": "text",
+     "value": "Vue-based library."
+    },
+    {
+     "key": "archit-s1.7",
+     "kind": "text",
+     "value": "Modernism and minimalism."
+    },
+    {
+     "key": "archit-s1.8",
+     "kind": "text",
+     "value": "Frappe Studio"
+    },
+    {
+     "key": "archit-s1.9",
+     "kind": "text",
+     "value": "Visual app builder."
+    },
+    {
+     "key": "archit-s1.10",
+     "kind": "text",
+     "value": "Drag-and-drop interface."
+    },
+    {
+     "key": "archit-s1.11",
+     "kind": "text",
+     "value": "Core Engine"
+    },
+    {
+     "key": "archit-s1.12",
+     "kind": "text",
+     "value": "Python & JS."
+    },
+    {
+     "key": "archit-s1.13",
+     "kind": "text",
+     "value": "High performance backend."
+    },
+    {
+     "key": "archit-s1.14",
+     "kind": "text",
+     "value": "Rapid Development:"
+    },
+    {
+     "key": "archit-s1.15",
+     "kind": "text",
+     "value": "Metadata-driven architecture."
+    },
+    {
+     "key": "archit-s1.16",
+     "kind": "text",
+     "value": "Connectivity:"
+    },
+    {
+     "key": "archit-s1.17",
+     "kind": "text",
+     "value": "Built-in REST API, Auth, DB Abstraction."
+    },
+    {
+     "key": "archit-s1.18",
+     "kind": "text",
+     "value": "Frappe Framework"
+    }
+   ]
+  },
+  {
+   "id": "erpnex-s1",
+   "label": "ERPNext: The financial backbone of the enterprise",
+   "texts": [
+    {
+     "key": "erpnex-s1.1",
+     "kind": "text",
+     "value": "ERPNext: The financial backbone of the"
+    },
+    {
+     "key": "erpnex-s1.2",
+     "kind": "text",
+     "value": "enterprise"
+    },
+    {
+     "key": "erpnex-s1.3",
+     "kind": "text",
+     "value": "Financial Accounting"
+    },
+    {
+     "key": "erpnex-s1.4",
+     "kind": "text",
+     "value": "Tree-View Chart of Accounts:"
+    },
+    {
+     "key": "erpnex-s1.5",
+     "kind": "text",
+     "value": "Organise ledgers into parent and child nodes."
+    },
+    {
+     "key": "erpnex-s1.6",
+     "kind": "text",
+     "value": "Global Compliance:"
+    },
+    {
+     "key": "erpnex-s1.7",
+     "kind": "text",
+     "value": "Multi-company, multi-currency support with consolidated financial statements (GL, P&L, Balance Sheet)."
+    },
+    {
+     "key": "erpnex-s1.8",
+     "kind": "text",
+     "value": "Dimensions:"
+    },
+    {
+     "key": "erpnex-s1.9",
+     "kind": "text",
+     "value": "Track profitability using Cost Centres and Accounting Dimensions."
+    },
+    {
+     "key": "erpnex-s1.10",
+     "kind": "text",
+     "value": "Asset Management"
+    },
+    {
+     "key": "erpnex-s1.11",
+     "kind": "text",
+     "value": "Full Lifecycle:"
+    },
+    {
+     "key": "erpnex-s1.12",
+     "kind": "text",
+     "value": "Track assets from acquisition to retirement."
+    },
+    {
+     "key": "erpnex-s1.13",
+     "kind": "text",
+     "value": "Automation:"
+    },
+    {
+     "key": "erpnex-s1.14",
+     "kind": "text",
+     "value": "Auto-calculate depreciation (Straight Line, Double Declining)."
+    },
+    {
+     "key": "erpnex-s1.15",
+     "kind": "text",
+     "value": "Maintenance:"
+    },
+    {
+     "key": "erpnex-s1.16",
+     "kind": "text",
+     "value": "Schedule asset maintenance and value adjustments."
+    },
+    {
+     "key": "erpnex-s1.17",
+     "kind": "text",
+     "value": "Profit & Loss"
+    },
+    {
+     "key": "erpnex-s1.18",
+     "kind": "text",
+     "value": "Inter, Slate Grey"
+    },
+    {
+     "key": "erpnex-s1.19",
+     "kind": "text",
+     "value": "View Report"
+    },
+    {
+     "key": "erpnex-s1.20",
+     "kind": "text",
+     "value": "Jan"
+    },
+    {
+     "key": "erpnex-s1.21",
+     "kind": "text",
+     "value": "Feb"
+    },
+    {
+     "key": "erpnex-s1.22",
+     "kind": "text",
+     "value": "Mar"
+    },
+    {
+     "key": "erpnex-s1.23",
+     "kind": "text",
+     "value": "Apr"
+    },
+    {
+     "key": "erpnex-s1.24",
+     "kind": "text",
+     "value": "May"
+    },
+    {
+     "key": "erpnex-s1.25",
+     "kind": "text",
+     "value": "Jun"
+    },
+    {
+     "key": "erpnex-s1.26",
+     "kind": "text",
+     "value": "Jul"
+    },
+    {
+     "key": "erpnex-s1.27",
+     "kind": "text",
+     "value": "Asset Card"
+    },
+    {
+     "key": "erpnex-s1.28",
+     "kind": "text",
+     "value": "Active"
+    },
+    {
+     "key": "erpnex-s1.29",
+     "kind": "text",
+     "value": "MacBook Pro M2"
+    },
+    {
+     "key": "erpnex-s1.30",
+     "kind": "text",
+     "value": "ID: ASSET-001"
+    },
+    {
+     "key": "erpnex-s1.31",
+     "kind": "text",
+     "value": "Depreciation"
+    },
+    {
+     "key": "erpnex-s1.32",
+     "kind": "text",
+     "value": "65% Depreciated"
+    }
+   ]
+  },
+  {
+   "id": "possec-s1",
+   "label": "Accelerating the Order-to-Cash cycle",
+   "texts": [
+    {
+     "key": "possec-s1.1",
+     "kind": "text",
+     "value": "Accelerating the"
+    },
+    {
+     "key": "possec-s1.2",
+     "kind": "text",
+     "value": "Order-to-Cash cycle"
+    },
+    {
+     "key": "possec-s1.3",
+     "kind": "text",
+     "value": "POS Terminal #04 \u2022 Online"
+    },
+    {
+     "key": "possec-s1.4",
+     "kind": "text",
+     "value": "All Items"
+    },
+    {
+     "key": "possec-s1.5",
+     "kind": "text",
+     "value": "Beverages"
+    },
+    {
+     "key": "possec-s1.6",
+     "kind": "text",
+     "value": "Snacks"
+    },
+    {
+     "key": "possec-s1.7",
+     "kind": "text",
+     "value": "Current Order"
+    },
+    {
+     "key": "possec-s1.8",
+     "kind": "text",
+     "value": "Subtotal"
+    },
+    {
+     "key": "possec-s1.9",
+     "kind": "text",
+     "value": "Tax"
+    },
+    {
+     "key": "possec-s1.10",
+     "kind": "text",
+     "value": "Pay"
+    },
+    {
+     "key": "possec-s1.11",
+     "kind": "text",
+     "value": "Touch-Friendly UI"
+    },
+    {
+     "key": "possec-s1.12",
+     "kind": "text",
+     "value": "Optimised for touch."
+    },
+    {
+     "key": "possec-s1.13",
+     "kind": "text",
+     "value": "Shift Management"
+    },
+    {
+     "key": "possec-s1.14",
+     "kind": "text",
+     "value": "Consolidated closing."
+    },
+    {
+     "key": "possec-s1.15",
+     "kind": "text",
+     "value": "Sales Workflow"
+    },
+    {
+     "key": "possec-s1.16",
+     "kind": "text",
+     "value": "Lead -> Order"
+    },
+    {
+     "key": "possec-s1.17",
+     "kind": "text",
+     "value": "Offline Mode"
+    },
+    {
+     "key": "possec-s1.18",
+     "kind": "text",
+     "value": "Syncs automatically."
+    },
+    {
+     "key": "possec-s1.19",
+     "kind": "text",
+     "value": "Smart Invoicing"
+    },
+    {
+     "key": "possec-s1.20",
+     "kind": "text",
+     "value": "Auto receivables."
+    },
+    {
+     "key": "possec-s1.21",
+     "kind": "text",
+     "value": "Touch-Friendly UI"
+    },
+    {
+     "key": "possec-s1.22",
+     "kind": "text",
+     "value": "Offline Capability"
+    },
+    {
+     "key": "possec-s1.23",
+     "kind": "text",
+     "value": "Shift Management"
+    },
+    {
+     "key": "possec-s1.24",
+     "kind": "text",
+     "value": "Smart Invoicing"
+    }
+   ]
+  },
+  {
+   "id": "hrsect-s1",
+   "label": "Section 1",
+   "texts": [
+    {
+     "key": "hrsect-s1.1",
+     "kind": "text",
+     "value": "Frappe HR: Focus on"
+    },
+    {
+     "key": "hrsect-s1.2",
+     "kind": "text",
+     "value": "people, not paperwork"
+    },
+    {
+     "key": "hrsect-s1.3",
+     "kind": "text",
+     "value": "A complete HRMS solution to drive excellence from onboarding to exit."
+    }
+   ]
+  },
+  {
+   "id": "insigh-s1",
+   "label": "Insights and collaboration without the license fees",
+   "texts": [
+    {
+     "key": "insigh-s1.1",
+     "kind": "text",
+     "value": "Insights and collaboration"
+    },
+    {
+     "key": "insigh-s1.2",
+     "kind": "text",
+     "value": "without the license fees"
+    },
+    {
+     "key": "insigh-s1.3",
+     "kind": "text",
+     "value": "Frappe Insights (BI)"
+    },
+    {
+     "key": "insigh-s1.4",
+     "kind": "text",
+     "value": "No-SQL Required:"
+    },
+    {
+     "key": "insigh-s1.5",
+     "kind": "text",
+     "value": "Visual query builder for everyone."
+    },
+    {
+     "key": "insigh-s1.6",
+     "kind": "text",
+     "value": "Visualisation:"
+    },
+    {
+     "key": "insigh-s1.7",
+     "kind": "text",
+     "value": "Diverse chart types (eCharts) and drag-and-drop dashboards."
+    },
+    {
+     "key": "insigh-s1.8",
+     "kind": "text",
+     "value": "Sources:"
+    },
+    {
+     "key": "insigh-s1.9",
+     "kind": "text",
+     "value": "Connects to PostgreSQL, MariaDB, CSVs."
+    },
+    {
+     "key": "insigh-s1.10",
+     "kind": "text",
+     "value": "Frappe Drive"
+    },
+    {
+     "key": "insigh-s1.11",
+     "kind": "text",
+     "value": "Storage:"
+    },
+    {
+     "key": "insigh-s1.12",
+     "kind": "text",
+     "value": "Folder uploads, large file support, previews."
+    },
+    {
+     "key": "insigh-s1.13",
+     "kind": "text",
+     "value": "Real-time Writer:"
+    },
+    {
+     "key": "insigh-s1.14",
+     "kind": "text",
+     "value": "Collaborative document editing (powered by TipTap/YJS)."
+    },
+    {
+     "key": "insigh-s1.15",
+     "kind": "text",
+     "value": "Sharing:"
+    },
+    {
+     "key": "insigh-s1.16",
+     "kind": "text",
+     "value": "Granular permissions and public links."
+    }
+   ]
+  },
+  {
+   "id": "crmhel-s1",
+   "label": "Modernizing customer relationships and support",
+   "texts": [
+    {
+     "key": "crmhel-s1.1",
+     "kind": "text",
+     "value": "Modernizing customer"
+    },
+    {
+     "key": "crmhel-s1.2",
+     "kind": "text",
+     "value": "relationships and support"
+    },
+    {
+     "key": "crmhel-s1.3",
+     "kind": "text",
+     "value": "Frappe CRM"
+    },
+    {
+     "key": "crmhel-s1.4",
+     "kind": "text",
+     "value": "Digital Deal Pipelines: Custom views (Kanban, List)."
+    },
+    {
+     "key": "crmhel-s1.5",
+     "kind": "text",
+     "value": "Meta & WhatsApp Integration: Direct lead pull from Socials. Chat directly from deal page."
+    },
+    {
+     "key": "crmhel-s1.6",
+     "kind": "text",
+     "value": "Omnichannel: Integration with Twilio and Exotel."
+    },
+    {
+     "key": "crmhel-s1.7",
+     "kind": "text",
+     "value": "Deals"
+    },
+    {
+     "key": "crmhel-s1.8",
+     "kind": "text",
+     "value": "Gantt"
+    },
+    {
+     "key": "crmhel-s1.9",
+     "kind": "text",
+     "value": "Lead"
+    },
+    {
+     "key": "crmhel-s1.10",
+     "kind": "text",
+     "value": "Contacted"
+    },
+    {
+     "key": "crmhel-s1.11",
+     "kind": "text",
+     "value": "Proposal"
+    },
+    {
+     "key": "crmhel-s1.12",
+     "kind": "text",
+     "value": "Won"
+    },
+    {
+     "key": "crmhel-s1.13",
+     "kind": "text",
+     "value": "Frappe Helpdesk"
+    },
+    {
+     "key": "crmhel-s1.14",
+     "kind": "text",
+     "value": "Unified Inbox: Converts emails/calls to tickets automatically."
+    },
+    {
+     "key": "crmhel-s1.15",
+     "kind": "text",
+     "value": "SLA Tracking: Real-time resolution timers."
+    },
+    {
+     "key": "crmhel-s1.16",
+     "kind": "text",
+     "value": "Automation: Round-robin assignment rules."
+    },
+    {
+     "key": "crmhel-s1.17",
+     "kind": "text",
+     "value": "Self-Service: Integrated Knowledge Base portal."
+    },
+    {
+     "key": "crmhel-s1.18",
+     "kind": "text",
+     "value": "Inbox"
+    },
+    {
+     "key": "crmhel-s1.19",
+     "kind": "text",
+     "value": "Ticket"
+    }
+   ]
+  },
+  {
+   "id": "vertic-s1",
+   "label": "Deep vertical capabilities: Education and Lending",
+   "texts": [
+    {
+     "key": "vertic-s1.1",
+     "kind": "text",
+     "value": "Deep vertical capabilities:"
+    },
+    {
+     "key": "vertic-s1.2",
+     "kind": "text",
+     "value": "Education and Lending"
+    },
+    {
+     "key": "vertic-s1.3",
+     "kind": "text",
+     "value": "Frappe Education"
+    },
+    {
+     "key": "vertic-s1.4",
+     "kind": "text",
+     "value": "Student Lifecycle:"
+    },
+    {
+     "key": "vertic-s1.5",
+     "kind": "text",
+     "value": "Applicant -> Student -> Alumni."
+    },
+    {
+     "key": "vertic-s1.6",
+     "kind": "text",
+     "value": "Academics:"
+    },
+    {
+     "key": "vertic-s1.7",
+     "kind": "text",
+     "value": "Course scheduling, assessment plans, grading."
+    },
+    {
+     "key": "vertic-s1.8",
+     "kind": "text",
+     "value": "Portals:"
+    },
+    {
+     "key": "vertic-s1.9",
+     "kind": "text",
+     "value": "Student self-service for fees and timetables."
+    },
+    {
+     "key": "vertic-s1.10",
+     "kind": "text",
+     "value": "Frappe Lending"
+    },
+    {
+     "key": "vertic-s1.11",
+     "kind": "text",
+     "value": "Loan Lifecycle:"
+    },
+    {
+     "key": "vertic-s1.12",
+     "kind": "text",
+     "value": "Origination -> Disbursement -> Closure."
+    },
+    {
+     "key": "vertic-s1.13",
+     "kind": "text",
+     "value": "Risk Engine:"
+    },
+    {
+     "key": "vertic-s1.14",
+     "kind": "text",
+     "value": "Automated NPA classification and DPD tracking."
+    },
+    {
+     "key": "vertic-s1.15",
+     "kind": "text",
+     "value": "Complex Accounting:"
+    },
+    {
+     "key": "vertic-s1.16",
+     "kind": "text",
+     "value": "Co-lending support, collateral management."
+    }
+   ]
+  },
+  {
+   "id": "builde-s1",
+   "label": "Web publishing and knowledge management redefined",
+   "texts": [
+    {
+     "key": "builde-s1.1",
+     "kind": "text",
+     "value": "Web publishing and knowledge"
+    },
+    {
+     "key": "builde-s1.2",
+     "kind": "text",
+     "value": "management redefined"
+    },
+    {
+     "key": "builde-s1.3",
+     "kind": "text",
+     "value": "Frappe Builder"
+    },
+    {
+     "key": "builde-s1.4",
+     "kind": "text",
+     "value": "VISUAL EDITOR"
+    },
+    {
+     "key": "builde-s1.5",
+     "kind": "text",
+     "value": "<!DOCTYPE html>"
+    },
+    {
+     "key": "builde-s1.6",
+     "kind": "text",
+     "value": "<html>"
+    },
+    {
+     "key": "builde-s1.7",
+     "kind": "text",
+     "value": "<body>"
+    },
+    {
+     "key": "builde-s1.8",
+     "kind": "text",
+     "value": "<div class=\"hero-section\">"
+    },
+    {
+     "key": "builde-s1.9",
+     "kind": "text",
+     "value": "Generated optimized code..."
+    },
+    {
+     "key": "builde-s1.10",
+     "kind": "text",
+     "value": "<h1>"
+    },
+    {
+     "key": "builde-s1.11",
+     "kind": "text",
+     "value": "Welcome"
+    },
+    {
+     "key": "builde-s1.12",
+     "kind": "text",
+     "value": "</h1>"
+    },
+    {
+     "key": "builde-s1.13",
+     "kind": "text",
+     "value": "</div>"
+    },
+    {
+     "key": "builde-s1.14",
+     "kind": "text",
+     "value": "</body>"
+    },
+    {
+     "key": "builde-s1.15",
+     "kind": "text",
+     "value": "</html>"
+    },
+    {
+     "key": "builde-s1.16",
+     "kind": "text",
+     "value": "CODE VIEW"
+    },
+    {
+     "key": "builde-s1.17",
+     "kind": "text",
+     "value": "Visual Editor:"
+    },
+    {
+     "key": "builde-s1.18",
+     "kind": "text",
+     "value": "Design responsive websites with a drag-and-drop interface."
+    },
+    {
+     "key": "builde-s1.19",
+     "kind": "text",
+     "value": "Performance:"
+    },
+    {
+     "key": "builde-s1.20",
+     "kind": "text",
+     "value": "Generates clean code scoring high on Google Lighthouse."
+    },
+    {
+     "key": "builde-s1.21",
+     "kind": "text",
+     "value": "One-Click Publishing:"
+    },
+    {
+     "key": "builde-s1.22",
+     "kind": "text",
+     "value": "Instant deployment."
+    },
+    {
+     "key": "builde-s1.23",
+     "kind": "text",
+     "value": "M\u2193"
+    },
+    {
+     "key": "builde-s1.24",
+     "kind": "text",
+     "value": "Frappe Wiki:"
+    },
+    {
+     "key": "builde-s1.25",
+     "kind": "text",
+     "value": "Internal knowledge base with Markdown support, version history, and approval workflows."
+    }
+   ]
+  },
+  {
+   "id": "pricin-s1",
+   "label": "The Fairness Model: Pay for compute, not users",
+   "texts": [
+    {
+     "key": "pricin-s1.1",
+     "kind": "text",
+     "value": "The Fairness Model:"
+    },
+    {
+     "key": "pricin-s1.2",
+     "kind": "text",
+     "value": "Pay for compute, not users"
+    },
+    {
+     "key": "pricin-s1.3",
+     "kind": "text",
+     "value": "The Old Way"
+    },
+    {
+     "key": "pricin-s1.4",
+     "kind": "text",
+     "value": "Penalty for Growth."
+    },
+    {
+     "key": "pricin-s1.5",
+     "kind": "text",
+     "value": "Pricing based on User Count."
+    },
+    {
+     "key": "pricin-s1.6",
+     "kind": "text",
+     "value": "The Frappe Way"
+    },
+    {
+     "key": "pricin-s1.7",
+     "kind": "text",
+     "value": "CPU/RAM"
+    },
+    {
+     "key": "pricin-s1.8",
+     "kind": "text",
+     "value": "Pay for Consumption."
+    },
+    {
+     "key": "pricin-s1.9",
+     "kind": "text",
+     "value": "Pricing based on Compute Resources."
+    },
+    {
+     "key": "pricin-s1.10",
+     "kind": "text",
+     "value": "Instances start from ~$5/month for UNLIMITED users."
+    },
+    {
+     "key": "pricin-s1.11",
+     "kind": "text",
+     "value": "Frappe Cloud"
+    },
+    {
+     "key": "pricin-s1.12",
+     "kind": "text",
+     "value": "Managed hosting, automated backups, one-click install."
+    },
+    {
+     "key": "pricin-s1.13",
+     "kind": "text",
+     "value": "Self-Hosted"
+    },
+    {
+     "key": "pricin-s1.14",
+     "kind": "text",
+     "value": "Docker containers, Bench CLI, full code access."
+    }
+   ]
+  },
+  {
+   "id": "erpflo-s1",
+   "label": "Complete visibility from procurement to production",
+   "texts": [
+    {
+     "key": "erpflo-s1.1",
+     "kind": "text",
+     "value": "Complete visibility from"
+    },
+    {
+     "key": "erpflo-s1.2",
+     "kind": "text",
+     "value": "procurement to production"
+    },
+    {
+     "key": "erpflo-s1.3",
+     "kind": "text",
+     "value": "Procurement"
+    },
+    {
+     "key": "erpflo-s1.4",
+     "kind": "text",
+     "value": "Auto-Replenishment triggers Material Requests.\\nTraceability via Serial/Batch #."
+    },
+    {
+     "key": "erpflo-s1.5",
+     "kind": "text",
+     "value": "Manufacturing"
+    },
+    {
+     "key": "erpflo-s1.6",
+     "kind": "text",
+     "value": "Multi-level BOMs & Production Planning.\\nCapacity tracking per workstation."
+    },
+    {
+     "key": "erpflo-s1.7",
+     "kind": "text",
+     "value": "Distribution"
+    },
+    {
+     "key": "erpflo-s1.8",
+     "kind": "text",
+     "value": "Pick-list strategies.\\nSubcontracting management."
+    },
+    {
+     "key": "erpflo-s1.9",
+     "kind": "text",
+     "value": "Warehouse Management"
+    },
+    {
+     "key": "erpflo-s1.10",
+     "kind": "text",
+     "value": "Tree-view structure (Racks, Bins) with Put-away strategies."
+    },
+    {
+     "key": "erpflo-s1.11",
+     "kind": "text",
+     "value": "Production Planning"
+    },
+    {
+     "key": "erpflo-s1.12",
+     "kind": "text",
+     "value": "Fetches raw material availability to initiate Work Orders."
+    },
+    {
+     "key": "erpflo-s1.13",
+     "kind": "text",
+     "value": "Subcontracting"
+    },
+    {
+     "key": "erpflo-s1.14",
+     "kind": "text",
+     "value": "Manage supply of raw materials to third parties and track receipts."
+    }
+   ]
+  },
+  {
+   "id": "compar-s1",
+   "label": "Replace chaos with a unified, scalable foundation",
+   "texts": [
+    {
+     "key": "compar-s1.1",
+     "kind": "text",
+     "value": "Replace chaos with a"
+    },
+    {
+     "key": "compar-s1.2",
+     "kind": "text",
+     "value": "unified, scalable foundation"
+    },
+    {
+     "key": "compar-s1.3",
+     "kind": "text",
+     "value": "The Friction"
+    },
+    {
+     "key": "compar-s1.4",
+     "kind": "text",
+     "value": "Scattered processes and disconnected records lead to data silos."
+    },
+    {
+     "key": "compar-s1.5",
+     "kind": "text",
+     "value": "Proprietary SaaS models enforce 'per-user' licensing penalties."
+    },
+    {
+     "key": "compar-s1.6",
+     "kind": "text",
+     "value": "Black-box code creates vendor lock-in and hinders customization."
+    },
+    {
+     "key": "compar-s1.7",
+     "kind": "text",
+     "value": "The Frappe Advantage"
+    },
+    {
+     "key": "compar-s1.8",
+     "kind": "text",
+     "value": "100% Open Source:"
+    },
+    {
+     "key": "compar-s1.9",
+     "kind": "text",
+     "value": " No vendor lock-in; you own your data and code."
+    },
+    {
+     "key": "compar-s1.10",
+     "kind": "text",
+     "value": "Unified Truth:"
+    },
+    {
+     "key": "compar-s1.11",
+     "kind": "text",
+     "value": " Eliminate silos\u2014HR, Finance, and Sales share one database."
+    },
+    {
+     "key": "compar-s1.12",
+     "kind": "text",
+     "value": "Fair Pricing:"
+    },
+    {
+     "key": "compar-s1.13",
+     "kind": "text",
+     "value": " Pay for computational resources consumed, not per user."
+    },
+    {
+     "key": "compar-s1.14",
+     "kind": "text",
+     "value": "Batteries Included:"
+    },
+    {
+     "key": "compar-s1.15",
+     "kind": "text",
+     "value": " Everything needed is built-in, from database abstraction to UI."
+    }
+   ]
+  }
+ ],
+ "loose": [
+  {
+   "key": "possec-x.1",
+   "kind": "text",
+   "value": "Qty:"
+  },
+  {
+   "key": "hrsect-x.1",
+   "kind": "text",
+   "value": "Onboarding"
+  },
+  {
+   "key": "hrsect-x.2",
+   "kind": "text",
+   "value": "Lifecycle Management.\nOnboarding to Exit Interviews."
+  },
+  {
+   "key": "hrsect-x.3",
+   "kind": "text",
+   "value": "Attendance"
+  },
+  {
+   "key": "hrsect-x.4",
+   "kind": "text",
+   "value": "Geo-fenced mobile check-ins & Biometric integration."
+  },
+  {
+   "key": "hrsect-x.5",
+   "kind": "text",
+   "value": "Performance"
+  },
+  {
+   "key": "hrsect-x.6",
+   "kind": "text",
+   "value": "Track KRAs, goals, and appraisals."
+  },
+  {
+   "key": "hrsect-x.7",
+   "kind": "text",
+   "value": "Payroll"
+  },
+  {
+   "key": "hrsect-x.8",
+   "kind": "text",
+   "value": "Configurable salary structures & automated slip generation."
+  },
+  {
+   "key": "hrsect-x.9",
+   "kind": "text",
+   "value": "Expense Claims"
+  },
+  {
+   "key": "hrsect-x.10",
+   "kind": "text",
+   "value": "Multi-level approval workflows linked to ERPNext accounting."
+  }
+ ]
+}

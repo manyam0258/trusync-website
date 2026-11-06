@@ -10,6 +10,9 @@ import JsonLd from '@/components/JsonLd'
 import { isMedia, type MediaDoc } from '@/lib/cms'
 import { safeHref } from '@/lib/safe-url'
 
+import { CodePageProvider } from '@/components/code-pages/runtime'
+import { CODE_PAGE_COMPONENTS } from '@/components/code-pages/registry'
+
 import { GRADIENTS, iconFor } from './icons'
 import { RichTextContent } from './RichTextContent'
 
@@ -432,6 +435,25 @@ function renderBlock(block: Block, index: number) {
             <CmsLink link={b.button} className={blue ? 'bg-white text-blue-600 hover:bg-blue-50' : undefined} />
           </Container>
         </Section>
+      )
+    }
+    case 'codePage': {
+      const b = block as Block & {
+        page?: keyof typeof CODE_PAGE_COMPONENTS
+        sections?: { sectionId: string; hidden?: boolean | null; texts?: { key: string; value?: string | null }[] | null }[] | null
+      }
+      const Page = b.page ? CODE_PAGE_COMPONENTS[b.page] : undefined
+      if (!Page) return null
+      const texts: Record<string, string> = {}
+      const hidden: string[] = []
+      for (const s of b.sections ?? []) {
+        if (s.hidden) hidden.push(s.sectionId)
+        for (const t of s.texts ?? []) if (t.value) texts[t.key] = t.value
+      }
+      return (
+        <CodePageProvider key={key} texts={texts} hidden={hidden}>
+          <Page />
+        </CodePageProvider>
       )
     }
     case 'contactForm': {

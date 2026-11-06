@@ -1,0 +1,82 @@
+{
+ "key": "ff-PricingSection",
+ "sections": [
+  {
+   "id": "pricin-s1",
+   "label": "The Fairness Model: Pay for compute, not users",
+   "texts": [
+    {
+     "key": "pricin-s1.1",
+     "kind": "text",
+     "value": "The Fairness Model:"
+    },
+    {
+     "key": "pricin-s1.2",
+     "kind": "text",
+     "value": "Pay for compute, not users"
+    },
+    {
+     "key": "pricin-s1.3",
+     "kind": "text",
+     "value": "The Old Way"
+    },
+    {
+     "key": "pricin-s1.4",
+     "kind": "text",
+     "value": "Penalty for Growth."
+    },
+    {
+     "key": "pricin-s1.5",
+     "kind": "text",
+     "value": "Pricing based on User Count."
+    },
+    {
+     "key": "pricin-s1.6",
+     "kind": "text",
+     "value": "The Frappe Way"
+    },
+    {
+     "key": "pricin-s1.7",
+     "kind": "text",
+     "value": "CPU/RAM"
+    },
+    {
+     "key": "pricin-s1.8",
+     "kind": "text",
+     "value": "Pay for Consumption."
+    },
+    {
+     "key": "pricin-s1.9",
+     "kind": "text",
+     "value": "Pricing based on Compute Resources."
+    },
+    {
+     "key": "pricin-s1.10",
+     "kind": "text",
+     "value": "Instances start from ~$5/month for UNLIMITED users."
+    },
+    {
+     "key": "pricin-s1.11",
+     "kind": "text",
+     "value": "Frappe Cloud"
+    },
+    {
+     "key": "pricin-s1.12",
+     "kind": "text",
+     "value": "Managed hosting, automated backups, one-click install."
+    },
+    {
+     "key": "pricin-s1.13",
+     "kind": "text",
+     "value": "Self-Hosted"
+    },
+    {
+     "key": "pricin-s1.14",
+     "kind": "text",
+     "value": "Docker containers, Bench CLI, full code access."
+    }
+   ]
+  }
+ ],
+ "loose": []
+}

@@ -1,0 +1,172 @@
+{
+ "key": "ff-ERPNextSection",
+ "sections": [
+  {
+   "id": "erpnex-s1",
+   "label": "ERPNext: The financial backbone of the enterprise",
+   "texts": [
+    {
+     "key": "erpnex-s1.1",
+     "kind": "text",
+     "value": "ERPNext: The financial backbone of the"
+    },
+    {
+     "key": "erpnex-s1.2",
+     "kind": "text",
+     "value": "enterprise"
+    },
+    {
+     "key": "erpnex-s1.3",
+     "kind": "text",
+     "value": "Financial Accounting"
+    },
+    {
+     "key": "erpnex-s1.4",
+     "kind": "text",
+     "value": "Tree-View Chart of Accounts:"
+    },
+    {
+     "key": "erpnex-s1.5",
+     "kind": "text",
+     "value": "Organise ledgers into parent and child nodes."
+    },
+    {
+     "key": "erpnex-s1.6",
+     "kind": "text",
+     "value": "Global Compliance:"
+    },
+    {
+     "key": "erpnex-s1.7",
+     "kind": "text",
+     "value": "Multi-company, multi-currency support with consolidated financial statements (GL, P&L, Balance Sheet)."
+    },
+    {
+     "key": "erpnex-s1.8",
+     "kind": "text",
+     "value": "Dimensions:"
+    },
+    {
+     "key": "erpnex-s1.9",
+     "kind": "text",
+     "value": "Track profitability using Cost Centres and Accounting Dimensions."
+    },
+    {
+     "key": "erpnex-s1.10",
+     "kind": "text",
+     "value": "Asset Management"
+    },
+    {
+     "key": "erpnex-s1.11",
+     "kind": "text",
+     "value": "Full Lifecycle:"
+    },
+    {
+     "key": "erpnex-s1.12",
+     "kind": "text",
+     "value": "Track assets from acquisition to retirement."
+    },
+    {
+     "key": "erpnex-s1.13",
+     "kind": "text",
+     "value": "Automation:"
+    },
+    {
+     "key": "erpnex-s1.14",
+     "kind": "text",
+     "value": "Auto-calculate depreciation (Straight Line, Double Declining)."
+    },
+    {
+     "key": "erpnex-s1.15",
+     "kind": "text",
+     "value": "Maintenance:"
+    },
+    {
+     "key": "erpnex-s1.16",
+     "kind": "text",
+     "value": "Schedule asset maintenance and value adjustments."
+    },
+    {
+     "key": "erpnex-s1.17",
+     "kind": "text",
+     "value": "Profit & Loss"
+    },
+    {
+     "key": "erpnex-s1.18",
+     "kind": "text",
+     "value": "Inter, Slate Grey"
+    },
+    {
+     "key": "erpnex-s1.19",
+     "kind": "text",
+     "value": "View Report"
+    },
+    {
+     "key": "erpnex-s1.20",
+     "kind": "text",
+     "value": "Jan"
+    },
+    {
+     "key": "erpnex-s1.21",
+     "kind": "text",
+     "value": "Feb"
+    },
+    {
+     "key": "erpnex-s1.22",
+     "kind": "text",
+     "value": "Mar"
+    },
+    {
+     "key": "erpnex-s1.23",
+     "kind": "text",
+     "value": "Apr"
+    },
+    {
+     "key": "erpnex-s1.24",
+     "kind": "text",
+     "value": "May"
+    },
+    {
+     "key": "erpnex-s1.25",
+     "kind": "text",
+     "value": "Jun"
+    },
+    {
+     "key": "erpnex-s1.26",
+     "kind": "text",
+     "value": "Jul"
+    },
+    {
+     "key": "erpnex-s1.27",
+     "kind": "text",
+     "value": "Asset Card"
+    },
+    {
+     "key": "erpnex-s1.28",
+     "kind": "text",
+     "value": "Active"
+    },
+    {
+     "key": "erpnex-s1.29",
+     "kind": "text",
+     "value": "MacBook Pro M2"
+    },
+    {
+     "key": "erpnex-s1.30",
+     "kind": "text",
+     "value": "ID: ASSET-001"
+    },
+    {
+     "key": "erpnex-s1.31",
+     "kind": "text",
+     "value": "Depreciation"
+    },
+    {
+     "key": "erpnex-s1.32",
+     "kind": "text",
+     "value": "65% Depreciated"
+    }
+   ]
+  }
+ ],
+ "loose": []
+}

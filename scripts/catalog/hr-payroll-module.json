@@ -1,0 +1,1211 @@
+{
+ "key": "hr-payroll-module",
+ "sections": [
+  {
+   "id": "s1",
+   "label": "Section 1",
+   "texts": [
+    {
+     "key": "s1.1",
+     "kind": "text",
+     "value": "Frappe HR & ERPNext:"
+    },
+    {
+     "key": "s1.2",
+     "kind": "text",
+     "value": "People, Not Paperwork."
+    },
+    {
+     "key": "s1.3",
+     "kind": "text",
+     "value": "A comprehensive, open-source HRMS and Payroll solution designed for the modern enterprise."
+    },
+    {
+     "key": "s1.4",
+     "kind": "text",
+     "value": "Drive excellence with a solution that covers everything from Onboarding to Separation. Open Source. Modern. Integrated."
+    },
+    {
+     "key": "s1.5",
+     "kind": "image",
+     "value": "/assets/hero-team.png"
+    },
+    {
+     "key": "s1.6",
+     "kind": "alt",
+     "value": "Frappe HR Team Collaboration"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "label": "Why Choose Frappe HR?",
+   "texts": [
+    {
+     "key": "s2.1",
+     "kind": "text",
+     "value": "Why Choose Frappe HR?"
+    },
+    {
+     "key": "s2.2",
+     "kind": "text",
+     "value": "No Vendor Lock-in"
+    },
+    {
+     "key": "s2.3",
+     "kind": "text",
+     "value": "Cost Effective"
+    },
+    {
+     "key": "s2.4",
+     "kind": "text",
+     "value": "Community"
+    },
+    {
+     "key": "s2.5",
+     "kind": "text",
+     "value": "Fully Integrated"
+    },
+    {
+     "key": "s2.6",
+     "kind": "text",
+     "value": "Transform your employee experience."
+    },
+    {
+     "key": "s2.7",
+     "kind": "text",
+     "value": "Start your journey with Frappe HR today."
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "label": "Built on the Frappe Framework",
+   "texts": [
+    {
+     "key": "s3.1",
+     "kind": "text",
+     "value": "Built on the Frappe Framework"
+    },
+    {
+     "key": "s3.2",
+     "kind": "text",
+     "value": "A powerful, low-code foundation that powers the world's best open-source ERP."
+    },
+    {
+     "key": "s3.3",
+     "kind": "text",
+     "value": "Frappe HR & ERPNext"
+    },
+    {
+     "key": "s3.4",
+     "kind": "text",
+     "value": "Frappe Framework"
+    },
+    {
+     "key": "s3.5",
+     "kind": "text",
+     "value": "(Low Code, API, Permissions)"
+    },
+    {
+     "key": "s3.6",
+     "kind": "text",
+     "value": "Python & MariaDB"
+    },
+    {
+     "key": "s3.7",
+     "kind": "text",
+     "value": "Low Code"
+    },
+    {
+     "key": "s3.8",
+     "kind": "text",
+     "value": "Customize fields and forms without coding."
+    },
+    {
+     "key": "s3.9",
+     "kind": "text",
+     "value": "API First"
+    },
+    {
+     "key": "s3.10",
+     "kind": "text",
+     "value": "Easy integration with 3rd party tools."
+    },
+    {
+     "key": "s3.11",
+     "kind": "text",
+     "value": "Robust Security"
+    },
+    {
+     "key": "s3.12",
+     "kind": "text",
+     "value": "Granular Role-Based Permissions."
+    },
+    {
+     "key": "s3.13",
+     "kind": "text",
+     "value": "Open Source"
+    },
+    {
+     "key": "s3.14",
+     "kind": "text",
+     "value": "Built on standard, modern technologies."
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "label": "Everything Under One Roof",
+   "texts": [
+    {
+     "key": "s4.1",
+     "kind": "text",
+     "value": "Everything Under One Roof"
+    },
+    {
+     "key": "s4.2",
+     "kind": "text",
+     "value": "A unified ecosystem for your entire workforce."
+    },
+    {
+     "key": "s4.3",
+     "kind": "text",
+     "value": "Employee Master"
+    },
+    {
+     "key": "s4.4",
+     "kind": "text",
+     "value": "Recruitment"
+    },
+    {
+     "key": "s4.5",
+     "kind": "text",
+     "value": "Onboarding"
+    },
+    {
+     "key": "s4.6",
+     "kind": "text",
+     "value": "Attendance"
+    },
+    {
+     "key": "s4.7",
+     "kind": "text",
+     "value": "Payroll"
+    },
+    {
+     "key": "s4.8",
+     "kind": "text",
+     "value": "Performance"
+    },
+    {
+     "key": "s4.9",
+     "kind": "text",
+     "value": "Expenses"
+    },
+    {
+     "key": "s4.10",
+     "kind": "text",
+     "value": "Complete Coverage"
+    },
+    {
+     "key": "s4.11",
+     "kind": "text",
+     "value": "13+ integrated modules covering the entire lifecycle."
+    },
+    {
+     "key": "s4.12",
+     "kind": "text",
+     "value": "Single Source of Truth"
+    },
+    {
+     "key": "s4.13",
+     "kind": "text",
+     "value": "Update once, reflect everywhere. No more data duplication."
+    },
+    {
+     "key": "s4.14",
+     "kind": "text",
+     "value": "Strategic Focus"
+    },
+    {
+     "key": "s4.15",
+     "kind": "text",
+     "value": "Automate administrative tasks to focus on company culture."
+    },
+    {
+     "key": "s4.16",
+     "kind": "text",
+     "value": "Scale Ready"
+    },
+    {
+     "key": "s4.17",
+     "kind": "text",
+     "value": "Proven architecture that scales from 10 to 10,000 employees."
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "label": "Strategic Talent Acquisition",
+   "texts": [
+    {
+     "key": "s5.1",
+     "kind": "text",
+     "value": "Strategic Talent Acquisition"
+    },
+    {
+     "key": "s5.2",
+     "kind": "text",
+     "value": "Staffing Plan"
+    },
+    {
+     "key": "s5.3",
+     "kind": "text",
+     "value": "Job Portal Publishing"
+    },
+    {
+     "key": "s5.4",
+     "kind": "text",
+     "value": "Interview Management"
+    },
+    {
+     "key": "s5.5",
+     "kind": "text",
+     "value": "Job Offer & Hiring"
+    },
+    {
+     "key": "s5.6",
+     "kind": "text",
+     "value": "Seamless Transition:"
+    },
+    {
+     "key": "s5.7",
+     "kind": "text",
+     "value": "Applicant Data → Employee Master"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "label": "Frictionless Onboarding & Lifecycle Management",
+   "texts": [
+    {
+     "key": "s6.1",
+     "kind": "text",
+     "value": "Frictionless Onboarding & Lifecycle Management"
+    },
+    {
+     "key": "s6.2",
+     "kind": "text",
+     "value": "Employee Lifecycle"
+    },
+    {
+     "key": "s6.3",
+     "kind": "text",
+     "value": "Track Onboarding to Separation."
+    },
+    {
+     "key": "s6.4",
+     "kind": "text",
+     "value": "Asset Management"
+    },
+    {
+     "key": "s6.5",
+     "kind": "text",
+     "value": "Link devices to users for accountability."
+    },
+    {
+     "key": "s6.6",
+     "kind": "text",
+     "value": "Role-Based Permissions"
+    },
+    {
+     "key": "s6.7",
+     "kind": "text",
+     "value": "Auto-assign access based on Designation."
+    },
+    {
+     "key": "s6.8",
+     "kind": "text",
+     "value": "Document Management"
+    },
+    {
+     "key": "s6.9",
+     "kind": "text",
+     "value": "Digital storage for all proofs."
+    },
+    {
+     "key": "s6.10",
+     "kind": "text",
+     "value": "Employee Skill Map"
+    },
+    {
+     "key": "s6.11",
+     "kind": "text",
+     "value": "Python"
+    },
+    {
+     "key": "s6.12",
+     "kind": "text",
+     "value": "Communication"
+    },
+    {
+     "key": "s6.13",
+     "kind": "text",
+     "value": "Leadership"
+    },
+    {
+     "key": "s6.14",
+     "kind": "text",
+     "value": "Project Mgmt"
+    },
+    {
+     "key": "s6.15",
+     "kind": "text",
+     "value": "Data Analysis"
+    },
+    {
+     "key": "s6.16",
+     "kind": "text",
+     "value": "Onboarding Checklist"
+    },
+    {
+     "key": "s6.17",
+     "kind": "text",
+     "value": "Create Corporate Email"
+    },
+    {
+     "key": "s6.18",
+     "kind": "text",
+     "value": "Assign Laptop (Asset Linked)"
+    },
+    {
+     "key": "s6.19",
+     "kind": "text",
+     "value": "Upload ID Proofs"
+    },
+    {
+     "key": "s6.20",
+     "kind": "text",
+     "value": "Introductory Meeting"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "label": "Frappe HR",
+   "texts": [
+    {
+     "key": "s7.1",
+     "kind": "text",
+     "value": "Frappe HR"
+    },
+    {
+     "key": "s7.2",
+     "kind": "text",
+     "value": "High-fidelity HR app"
+    },
+    {
+     "key": "s7.3",
+     "kind": "text",
+     "value": "Check-in"
+    },
+    {
+     "key": "s7.4",
+     "kind": "text",
+     "value": "09:02 AM"
+    },
+    {
+     "key": "s7.5",
+     "kind": "text",
+     "value": "Location: HQ Office (Geofenced)"
+    },
+    {
+     "key": "s7.6",
+     "kind": "text",
+     "value": "Precision in Time & Attendance"
+    },
+    {
+     "key": "s7.7",
+     "kind": "text",
+     "value": "Smart Check-ins"
+    },
+    {
+     "key": "s7.8",
+     "kind": "text",
+     "value": "Geolocation validation for field staff."
+    },
+    {
+     "key": "s7.9",
+     "kind": "text",
+     "value": "Biometric Integration"
+    },
+    {
+     "key": "s7.10",
+     "kind": "text",
+     "value": "Sync with office hardware."
+    },
+    {
+     "key": "s7.11",
+     "kind": "text",
+     "value": "Shift Management"
+    },
+    {
+     "key": "s7.12",
+     "kind": "text",
+     "value": "Complex roster handling."
+    },
+    {
+     "key": "s7.13",
+     "kind": "text",
+     "value": "Auto Attendance"
+    },
+    {
+     "key": "s7.14",
+     "kind": "text",
+     "value": "Automated presence marking based on logs."
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "label": "Transparent Leave Management",
+   "texts": [
+    {
+     "key": "s8.1",
+     "kind": "text",
+     "value": "Transparent Leave Management"
+    },
+    {
+     "key": "s8.2",
+     "kind": "text",
+     "value": "Leave Calendar"
+    },
+    {
+     "key": "s8.3",
+     "kind": "text",
+     "value": "October 2024"
+    },
+    {
+     "key": "s8.4",
+     "kind": "text",
+     "value": "Leave Balance"
+    },
+    {
+     "key": "s8.5",
+     "kind": "text",
+     "value": "Casual Leave"
+    },
+    {
+     "key": "s8.6",
+     "kind": "text",
+     "value": "5 Days"
+    },
+    {
+     "key": "s8.7",
+     "kind": "text",
+     "value": "Sick Leave"
+    },
+    {
+     "key": "s8.8",
+     "kind": "text",
+     "value": "8 Days"
+    },
+    {
+     "key": "s8.9",
+     "kind": "text",
+     "value": "Privilege Leave"
+    },
+    {
+     "key": "s8.10",
+     "kind": "text",
+     "value": "12 Days"
+    },
+    {
+     "key": "s8.11",
+     "kind": "text",
+     "value": "Policy & Allocation"
+    },
+    {
+     "key": "s8.12",
+     "kind": "text",
+     "value": "Define rules by region/dept."
+    },
+    {
+     "key": "s8.13",
+     "kind": "text",
+     "value": "Ledger Integrity"
+    },
+    {
+     "key": "s8.14",
+     "kind": "text",
+     "value": "Track every accrual and usage."
+    },
+    {
+     "key": "s8.15",
+     "kind": "text",
+     "value": "Approval Workflows"
+    },
+    {
+     "key": "s8.16",
+     "kind": "text",
+     "value": "Configurable multi-level routing."
+    },
+    {
+     "key": "s8.17",
+     "kind": "text",
+     "value": "Special Cases"
+    },
+    {
+     "key": "s8.18",
+     "kind": "text",
+     "value": "Handle LWP & compensatory requests."
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "label": "Expenses, Claims & Accounting Integration",
+   "texts": [
+    {
+     "key": "s9.1",
+     "kind": "text",
+     "value": "Expenses, Claims & Accounting Integration"
+    },
+    {
+     "key": "s9.2",
+     "kind": "text",
+     "value": "Expense Claim"
+    },
+    {
+     "key": "s9.3",
+     "kind": "text",
+     "value": "Receipt"
+    },
+    {
+     "key": "s9.4",
+     "kind": "text",
+     "value": "Flight to NY - $400"
+    },
+    {
+     "key": "s9.5",
+     "kind": "text",
+     "value": "Auto-Posting"
+    },
+    {
+     "key": "s9.6",
+     "kind": "text",
+     "value": "GL Entry"
+    },
+    {
+     "key": "s9.7",
+     "kind": "text",
+     "value": "Debit:"
+    },
+    {
+     "key": "s9.8",
+     "kind": "text",
+     "value": "Travel Expense"
+    },
+    {
+     "key": "s9.9",
+     "kind": "text",
+     "value": "Credit:"
+    },
+    {
+     "key": "s9.10",
+     "kind": "text",
+     "value": "Employee Payables"
+    },
+    {
+     "key": "s9.11",
+     "kind": "text",
+     "value": "Streamlined Claims"
+    },
+    {
+     "key": "s9.12",
+     "kind": "text",
+     "value": "Digital submission with attachments."
+    },
+    {
+     "key": "s9.13",
+     "kind": "text",
+     "value": "Multi-Currency"
+    },
+    {
+     "key": "s9.14",
+     "kind": "text",
+     "value": "Native support for international travel."
+    },
+    {
+     "key": "s9.15",
+     "kind": "text",
+     "value": "Employee Advances"
+    },
+    {
+     "key": "s9.16",
+     "kind": "text",
+     "value": "Reconcile advances against future claims."
+    },
+    {
+     "key": "s9.17",
+     "kind": "text",
+     "value": "ERPNext Synergy"
+    },
+    {
+     "key": "s9.18",
+     "kind": "text",
+     "value": "Zero reconciliation errors with integrated accounting."
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "label": "Automated Payroll Processing",
+   "texts": [
+    {
+     "key": "s10.1",
+     "kind": "text",
+     "value": "Automated Payroll Processing"
+    },
+    {
+     "key": "s10.2",
+     "kind": "text",
+     "value": "One-Click Generation"
+    },
+    {
+     "key": "s10.3",
+     "kind": "text",
+     "value": "Batch process for the entire company."
+    },
+    {
+     "key": "s10.4",
+     "kind": "text",
+     "value": "Intelligent Linking"
+    },
+    {
+     "key": "s10.5",
+     "kind": "text",
+     "value": "Auto-adjusts for Leave Without Pay (LWP)."
+    },
+    {
+     "key": "s10.6",
+     "kind": "text",
+     "value": "Distribution"
+    },
+    {
+     "key": "s10.7",
+     "kind": "text",
+     "value": "Instant email delivery of password-protected slips."
+    },
+    {
+     "key": "s10.8",
+     "kind": "text",
+     "value": "Bank Integration"
+    },
+    {
+     "key": "s10.9",
+     "kind": "text",
+     "value": "Generate bank-ready payment files."
+    },
+    {
+     "key": "s10.10",
+     "kind": "text",
+     "value": "Payroll Entry"
+    },
+    {
+     "key": "s10.11",
+     "kind": "text",
+     "value": "Process Payroll"
+    },
+    {
+     "key": "s10.12",
+     "kind": "text",
+     "value": "Salary Slip"
+    },
+    {
+     "key": "s10.13",
+     "kind": "text",
+     "value": "Employee Name"
+    },
+    {
+     "key": "s10.14",
+     "kind": "text",
+     "value": "Salary Manajar"
+    },
+    {
+     "key": "s10.15",
+     "kind": "text",
+     "value": "Earnings"
+    },
+    {
+     "key": "s10.16",
+     "kind": "text",
+     "value": "Basic"
+    },
+    {
+     "key": "s10.17",
+     "kind": "text",
+     "value": "HRA"
+    },
+    {
+     "key": "s10.18",
+     "kind": "text",
+     "value": "Special"
+    },
+    {
+     "key": "s10.19",
+     "kind": "text",
+     "value": "Deductions"
+    },
+    {
+     "key": "s10.20",
+     "kind": "text",
+     "value": "PF"
+    },
+    {
+     "key": "s10.21",
+     "kind": "text",
+     "value": "Tax"
+    },
+    {
+     "key": "s10.22",
+     "kind": "text",
+     "value": "Net Pay"
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "label": "Payroll: The Foundation",
+   "texts": [
+    {
+     "key": "s11.1",
+     "kind": "text",
+     "value": "Payroll: The Foundation"
+    },
+    {
+     "key": "s11.2",
+     "kind": "text",
+     "value": "Flexible Structures"
+    },
+    {
+     "key": "s11.3",
+     "kind": "text",
+     "value": "Configure salary components based on Grades or Designations."
+    },
+    {
+     "key": "s11.4",
+     "kind": "text",
+     "value": "Complex Logic"
+    },
+    {
+     "key": "s11.5",
+     "kind": "text",
+     "value": "Use Python/JS formulas for intricate calculations."
+    },
+    {
+     "key": "s11.6",
+     "kind": "text",
+     "value": "Tax Slabs"
+    },
+    {
+     "key": "s11.7",
+     "kind": "text",
+     "value": "Pre-configured regionally compliant tax brackets."
+    },
+    {
+     "key": "s11.8",
+     "kind": "text",
+     "value": "Timesheet Integration"
+    },
+    {
+     "key": "s11.9",
+     "kind": "text",
+     "value": "Auto-process pay based on billable hours."
+    },
+    {
+     "key": "s11.10",
+     "kind": "text",
+     "value": "Input"
+    },
+    {
+     "key": "s11.11",
+     "kind": "text",
+     "value": "Earnings"
+    },
+    {
+     "key": "s11.12",
+     "kind": "text",
+     "value": "Basic, HRA, Special"
+    },
+    {
+     "key": "s11.13",
+     "kind": "text",
+     "value": "Input"
+    },
+    {
+     "key": "s11.14",
+     "kind": "text",
+     "value": "Deductions"
+    },
+    {
+     "key": "s11.15",
+     "kind": "text",
+     "value": "PF, Tax, Loan"
+    },
+    {
+     "key": "s11.16",
+     "kind": "text",
+     "value": "Salary Structure & Processing"
+    },
+    {
+     "key": "s11.17",
+     "kind": "text",
+     "value": "Salary Slip"
+    },
+    {
+     "key": "s11.18",
+     "kind": "text",
+     "value": "Generated & Distributed"
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "label": "Compliance, Taxation & Benefits",
+   "texts": [
+    {
+     "key": "s12.1",
+     "kind": "text",
+     "value": "Compliance, Taxation & Benefits"
+    },
+    {
+     "key": "s12.2",
+     "kind": "text",
+     "value": "Tax Exemption Declaration"
+    },
+    {
+     "key": "s12.3",
+     "kind": "text",
+     "value": "Digital submission of proofs and exemptions."
+    },
+    {
+     "key": "s12.4",
+     "kind": "text",
+     "value": "Flexible Benefit Allocation"
+    },
+    {
+     "key": "s12.5",
+     "kind": "text",
+     "value": "Employees structure their own allowances."
+    },
+    {
+     "key": "s12.6",
+     "kind": "text",
+     "value": "Full & Final Settlement"
+    },
+    {
+     "key": "s12.7",
+     "kind": "text",
+     "value": "Automated encashment and recovery on exit."
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "label": "Performance & Talent Development",
+   "texts": [
+    {
+     "key": "s13.1",
+     "kind": "text",
+     "value": "Performance & Talent Development"
+    },
+    {
+     "key": "s13.2",
+     "kind": "text",
+     "value": "Appraisals"
+    },
+    {
+     "key": "s13.3",
+     "kind": "text",
+     "value": "Track Goals and KRAs with unified dashboards."
+    },
+    {
+     "key": "s13.4",
+     "kind": "text",
+     "value": "360 Feedback"
+    },
+    {
+     "key": "s13.5",
+     "kind": "text",
+     "value": "Collect insights from Self, Peers, and Managers."
+    },
+    {
+     "key": "s13.6",
+     "kind": "text",
+     "value": "Skill Mapping"
+    },
+    {
+     "key": "s13.7",
+     "kind": "text",
+     "value": "Identify skill gaps and nurture internal talent."
+    },
+    {
+     "key": "s13.8",
+     "kind": "text",
+     "value": "Training"
+    },
+    {
+     "key": "s13.9",
+     "kind": "text",
+     "value": "Schedule events and track training effectiveness."
+    },
+    {
+     "key": "s13.10",
+     "kind": "text",
+     "value": "Skill Matrix 2024"
+    },
+    {
+     "key": "s13.11",
+     "kind": "text",
+     "value": "Coding"
+    },
+    {
+     "key": "s13.12",
+     "kind": "text",
+     "value": "Teamwork"
+    },
+    {
+     "key": "s13.13",
+     "kind": "text",
+     "value": "Delivery"
+    },
+    {
+     "key": "s13.14",
+     "kind": "text",
+     "value": "Innovation"
+    },
+    {
+     "key": "s13.15",
+     "kind": "text",
+     "value": "Communication"
+    },
+    {
+     "key": "s13.16",
+     "kind": "text",
+     "value": "Training Calendar"
+    },
+    {
+     "key": "s13.17",
+     "kind": "text",
+     "value": "Leadership"
+    },
+    {
+     "key": "s13.18",
+     "kind": "text",
+     "value": "Oct 12"
+    },
+    {
+     "key": "s13.19",
+     "kind": "text",
+     "value": "Python Adv"
+    },
+    {
+     "key": "s13.20",
+     "kind": "text",
+     "value": "Nov 05"
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "label": "HR in Your Pocket",
+   "texts": [
+    {
+     "key": "s14.1",
+     "kind": "text",
+     "value": "HR in Your Pocket"
+    },
+    {
+     "key": "s14.2",
+     "kind": "text",
+     "value": "Full functionality on the go using our PWA-ready mobile interface."
+    },
+    {
+     "key": "s14.3",
+     "kind": "text",
+     "value": "Frappe HR"
+    },
+    {
+     "key": "s14.4",
+     "kind": "text",
+     "value": "Leave Balance"
+    },
+    {
+     "key": "s14.5",
+     "kind": "text",
+     "value": "12 Days"
+    },
+    {
+     "key": "s14.6",
+     "kind": "text",
+     "value": "Upcoming Holidays"
+    },
+    {
+     "key": "s14.7",
+     "kind": "text",
+     "value": "Dussehra"
+    },
+    {
+     "key": "s14.8",
+     "kind": "text",
+     "value": "Oct 25"
+    },
+    {
+     "key": "s14.9",
+     "kind": "text",
+     "value": "Diwali"
+    },
+    {
+     "key": "s14.10",
+     "kind": "text",
+     "value": "Nov 1"
+    },
+    {
+     "key": "s14.11",
+     "kind": "text",
+     "value": "Expense Claim"
+    },
+    {
+     "key": "s14.12",
+     "kind": "text",
+     "value": "Expense Type"
+    },
+    {
+     "key": "s14.13",
+     "kind": "text",
+     "value": "Amount"
+    },
+    {
+     "key": "s14.14",
+     "kind": "text",
+     "value": "Scan Receipt"
+    },
+    {
+     "key": "s14.15",
+     "kind": "text",
+     "value": "Payslip View"
+    },
+    {
+     "key": "s14.16",
+     "kind": "text",
+     "value": "September 2023"
+    },
+    {
+     "key": "s14.17",
+     "kind": "text",
+     "value": "Paid"
+    },
+    {
+     "key": "s14.18",
+     "kind": "text",
+     "value": "Gross"
+    },
+    {
+     "key": "s14.19",
+     "kind": "text",
+     "value": "Deductions"
+    },
+    {
+     "key": "s14.20",
+     "kind": "text",
+     "value": "Download PDF"
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "label": "The Cost of Disconnected Systems",
+   "texts": [
+    {
+     "key": "s15.1",
+     "kind": "text",
+     "value": "The Cost of Disconnected Systems"
+    },
+    {
+     "key": "s15.2",
+     "kind": "text",
+     "value": "Manual Payroll"
+    },
+    {
+     "key": "s15.3",
+     "kind": "text",
+     "value": "Excel"
+    },
+    {
+     "key": "s15.4",
+     "kind": "text",
+     "value": "Onboarding Files"
+    },
+    {
+     "key": "s15.5",
+     "kind": "text",
+     "value": "Physical/Drive"
+    },
+    {
+     "key": "s15.6",
+     "kind": "text",
+     "value": "Leave Requests"
+    },
+    {
+     "key": "s15.7",
+     "kind": "text",
+     "value": "Email/Chat"
+    },
+    {
+     "key": "s15.8",
+     "kind": "text",
+     "value": "Scattered Processes"
+    },
+    {
+     "key": "s15.9",
+     "kind": "text",
+     "value": "Employee data lives in silos, leading to duplication and errors."
+    },
+    {
+     "key": "s15.10",
+     "kind": "text",
+     "value": "Manual Overload"
+    },
+    {
+     "key": "s15.11",
+     "kind": "text",
+     "value": "Payroll calculations done on spreadsheets risk compliance and accuracy."
+    },
+    {
+     "key": "s15.12",
+     "kind": "text",
+     "value": "Disconnected Records"
+    },
+    {
+     "key": "s15.13",
+     "kind": "text",
+     "value": "No single source of truth for employee history or assets."
+    },
+    {
+     "key": "s15.14",
+     "kind": "text",
+     "value": "Time-Consuming"
+    },
+    {
+     "key": "s15.15",
+     "kind": "text",
+     "value": "Chasing managers for signatures instead of strategic talent management."
+    }
+   ]
+  }
+ ],
+ "loose": []
+}
