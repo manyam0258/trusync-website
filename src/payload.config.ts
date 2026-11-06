@@ -16,7 +16,7 @@ import { Posts } from './collections/Posts'
 import { Users } from './collections/Users'
 import { SiteSettings } from './globals/SiteSettings'
 import { isSafeRedirectTarget } from './lib/safe-url'
-import { serverUrl } from './lib/server-url'
+import { allowedOrigins, serverUrl } from './lib/server-url'
 import { pageDescription, pageImage, toDescription } from './lib/seo-generate'
 import { mcpTools } from './mcp/tools'
 import { migrations } from './migrations'
@@ -27,13 +27,9 @@ const dirname = path.dirname(filename)
 const SITE_NAME = 'TruSync'
 
 // Browsers may only send logged-in (cookie) requests from these addresses.
-// Set NEXT_PUBLIC_SERVER_URL to the public address of the site, and PAYLOAD_ALLOWED_ORIGINS
-// (comma separated) for any extra address, such as a staging site.
-const ALLOWED_ORIGINS = [
-  serverUrl(),
-  ...(process.env.PAYLOAD_ALLOWED_ORIGINS?.split(',').map((o) => o.trim()).filter(Boolean) ?? []),
-  ...(process.env.NODE_ENV !== 'production' ? ['http://localhost:3000'] : []),
-]
+// The public address comes from NEXT_PUBLIC_SERVER_URL (and Coolify's COOLIFY_URL); add any extra address,
+// such as a staging site, to PAYLOAD_ALLOWED_ORIGINS (comma separated). See src/lib/server-url.ts.
+const ALLOWED_ORIGINS = [...allowedOrigins(), ...(process.env.NODE_ENV !== 'production' ? ['http://localhost:3000'] : [])]
 
 export default buildConfig({
   admin: {
