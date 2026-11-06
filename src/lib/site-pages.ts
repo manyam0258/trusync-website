@@ -14,7 +14,6 @@ export const CODE_PAGE_GROUPS: { group: string; pages: { path: string; label: st
     group: 'ERPNext modules and services',
     pages: [
       { path: '/services/accounting-module', label: 'Accounting module' },
-      { path: '/services/crm-module', label: 'CRM module' },
       { path: '/services/hr-payroll-module', label: 'HR and payroll module' },
       { path: '/services/order-management-module', label: 'Order management module' },
     ],
@@ -29,8 +28,6 @@ export const CODE_PAGE_GROUPS: { group: string; pages: { path: string; label: st
   {
     group: 'Industries',
     pages: [
-      { path: '/industries/education', label: 'Education' },
-      { path: '/industries/manufacturing', label: 'Manufacturing' },
     ],
   },
 ]

@@ -158,6 +158,7 @@ function renderBlock(block: Block, index: number) {
                 <H className="mb-8 text-4xl font-extrabold leading-tight tracking-tight text-slate-900 md:text-6xl lg:text-7xl">{heading}</H>
                 {b.subheading && <p className="mx-auto mb-12 max-w-3xl text-xl font-medium leading-relaxed text-slate-600 md:text-2xl">{b.subheading}</p>}
                 {buttons}
+                <CmsImage media={b.image} className="mx-auto mt-14 h-auto w-full rounded-2xl border border-slate-200 shadow-2xl" priority={index === 0} />
                 {stats}
               </div>
             </Container>
@@ -302,6 +303,7 @@ function renderBlock(block: Block, index: number) {
       const b = block as Block & {
         eyebrow?: string; heading: string; body?: unknown; image?: unknown; imageSide?: 'left' | 'right'
         points?: { id?: string; text: string }[]; badgeTitle?: string; badgeText?: string; theme?: string
+        items?: { id?: string; title: string; description?: string | null }[]; button?: LinkValue
       }
       const theme = themeOf(b.theme, 'white')
       const hasImage = isMedia(b.image) && !!b.image.url
@@ -314,7 +316,22 @@ function renderBlock(block: Block, index: number) {
                   <span className="mb-6 inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">{b.eyebrow}</span>
                 )}
                 <h2 className={`mb-6 text-3xl font-bold leading-tight md:text-4xl ${theme.head}`}>{b.heading}</h2>
-                <RichTextContent data={b.body} />
+                <RichTextContent data={b.body} className={theme.dark ? 'rich-text-dark' : ''} />
+                {!!b.items?.length && (
+                  <div className="mt-8 space-y-5">
+                    {b.items.map((it, i) => (
+                      <div key={it.id ?? i} className="flex gap-4">
+                        <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                          <CheckCircle2 className="h-4 w-4 text-primary" />
+                        </span>
+                        <div>
+                          <h3 className={`text-lg font-semibold ${theme.head}`}>{it.title}</h3>
+                          {it.description && <p className={theme.body}>{it.description}</p>}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
                 {!!b.points?.length && (
                   <ul className="mt-8 space-y-4">
                     {b.points.map((p, i) => (
@@ -326,6 +343,11 @@ function renderBlock(block: Block, index: number) {
                       </li>
                     ))}
                   </ul>
+                )}
+                {b.button?.label && (
+                  <div className="mt-8">
+                    <CmsLink link={b.button} />
+                  </div>
                 )}
               </div>
               {hasImage ? (

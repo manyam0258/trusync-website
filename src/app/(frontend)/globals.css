@@ -60,6 +60,8 @@ body {
 
 /* Content written in the CMS rich text editor */
 .rich-text { color: #334155; line-height: 1.75; }
+.rich-text.rich-text-dark { color: #cbd5e1; }
+.rich-text.rich-text-dark h2, .rich-text.rich-text-dark h3, .rich-text.rich-text-dark h4 { color: #fff; }
 .rich-text > * + * { margin-top: 1.25rem; }
 .rich-text h2 { font-size: 1.875rem; line-height: 2.25rem; font-weight: 700; color: #0f172a; margin-top: 2.5rem; }
 .rich-text h3 { font-size: 1.5rem; line-height: 2rem; font-weight: 600; color: #0f172a; margin-top: 2rem; }

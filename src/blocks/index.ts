@@ -146,6 +146,16 @@ export const ImageTextBlock: Block = {
       admin: { description: 'Optional ticked list shown under the text.' },
       fields: [{ name: 'text', type: 'text', required: true }],
     },
+    {
+      name: 'items',
+      type: 'array',
+      admin: { description: 'Optional short points with a title and one line of detail.' },
+      fields: [
+        { name: 'title', type: 'text', required: true },
+        { name: 'description', type: 'textarea' },
+      ],
+    },
+    linkFields('button', 'Button (optional)'),
     { name: 'image', type: 'upload', relationTo: 'media', admin: { description: 'Leave empty to show the badge below instead.' } },
     { name: 'badgeTitle', type: 'text', admin: { description: 'Shown instead of an image, for example "Certified Partner".' } },
     { name: 'badgeText', type: 'text' },
