@@ -150,6 +150,19 @@ Browser tests (Playwright) against the local admin and site, about 90 checks, te
 - `npm install` can hang in peer-dependency resolution; `.npmrc` sets `legacy-peer-deps=true` to prevent that.
 - Uploaded media is stored in `./media/` locally (git-ignored).
 
+### Editable pages (migrated from code to the CMS)
+Done on 2026-11-07, on this branch.
+
+- **What moved:** the home page (path `home`, shown at `/`), 14 template-based pages (industries dairy, distribution, construction, EPC, textile, NBFC, crowdfunding, HR and payroll; solutions Frappe Insights and Frappe LMS; open-source integrations; website, helpdesk and asset-management modules) and 8 placeholder pages (consulting, implementation, development, migrations, mobile apps, training, agriculture, real estate). Their old route files were deleted; the URLs are unchanged. The 8 placeholders are published with "noindex" until real content is written, and are left out of the sitemap.
+- **Still in code (not yet editable):** the big hand-built pages: CRM, accounting, HR and payroll module, order management, manufacturing, education, AI automation, DPDP compliance and Frappe Framework. They hold diagrams, animations and long data tables, so each needs its own conversion.
+- **How an editor works:** Admin > Pages > open a page > add, remove or reorder sections, edit text, replace images from the media library, then Publish. Preview and Live Preview show drafts first. Authors can only edit unpublished pages; editors and admins publish.
+- **Section types:** Hero (split, centered with figures, or dark), Text, Cards and lists (simple, icon, tiles, problem cards, checklist; 2 to 6 per row; light, white or dark background), Figures, Image and text (with ticked points, or a badge when there is no image), Technology badges, FAQ (adds FAQ structured data), Call to action (dark or blue), Contact form. Every section has an optional "anchor" so links like `#services` work. In a heading, words between `*asterisks*` get the brand gradient.
+- **Home page:** `src/app/(frontend)/page.tsx` shows the CMS page `home`. If it is deleted or unpublished it falls back to the original code version, so the front page is never blank. `/home` redirects to `/`.
+- **Seed script:** `scripts/seed-pages.mts` created these pages from the original files in git commit 79f4016. It only creates missing pages, so edits are never overwritten. Run it against a running site with `SEED_EMAIL`, `SEED_PASSWORD` and optionally `SEED_BASE` (use it again on the production site after deploy; the pages live in the database, not in git).
+- **Blocks and icons** are defined in `src/blocks/index.ts` and rendered in `src/components/cms/RenderBlocks.tsx`. To offer a new icon, add it to `ICON_OPTIONS` and to `src/components/cms/icons.tsx`.
+- **Known gap:** the home page "Healthcare" tile has no link because no healthcare page exists yet.
+- **Production note:** database content is not in git. The seed script must be run once on the production database, or the production database copied, otherwise these URLs would 404 there.
+
 ### Decisions and cautions
 - Payload and `@payloadcms/*` packages must all be the same exact version (currently 3.93.0). Do not use caret ranges.
 - `images.localPatterns` in `next.config.ts` blocks every local image that is not listed. Add a pattern for any new folder that `next/image` must serve.

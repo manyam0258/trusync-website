@@ -35,7 +35,7 @@ export async function GET() {
     })
     if (pages.docs.length) {
       lines.push('## More pages', '')
-      for (const p of pages.docs) lines.push(`- [${clean(p.title)}](${absoluteUrl(`/${p.slug}`)})`)
+      for (const p of pages.docs.filter((d) => d.slug !== 'home')) lines.push(`- [${clean(p.title)}](${absoluteUrl(`/${p.slug}`)})`)
       lines.push('')
     }
     const { docs: posts } = await getPosts({ limit: 50 })

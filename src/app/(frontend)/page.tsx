@@ -1,3 +1,7 @@
+import type { Metadata } from "next";
+import { DraftBanner } from "@/components/cms/DraftBanner";
+import { RenderBlocks } from "@/components/cms/RenderBlocks";
+import { absoluteUrl, getPage, isMedia } from "@/lib/cms";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Services } from "@/components/sections/Services";
@@ -6,7 +10,29 @@ import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { Contact } from "@/components/sections/Contact";
 import JsonLd from "@/components/JsonLd";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+type Seo = { title?: string | null; description?: string | null; image?: unknown };
+
+// The home page is the CMS page with the path "home". If it is missing or unpublished,
+// the original code version below is shown so the site never has a blank front page.
+export async function generateMetadata(): Promise<Metadata> {
+  const { doc } = await getPage("home");
+  const meta = (doc?.meta ?? {}) as Seo;
+  if (!doc || !meta.title) return {};
+  return {
+    title: meta.title,
+    description: meta.description || undefined,
+    openGraph: {
+      title: meta.title,
+      description: meta.description || undefined,
+      images: isMedia(meta.image) && meta.image.url ? [{ url: absoluteUrl(meta.image.url) }] : undefined,
+    },
+  };
+}
+
+export default async function Home() {
+  const { doc, preview } = await getPage("home");
   const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -51,12 +77,21 @@ export default function Home() {
   return (
     <>
       <JsonLd data={schemaData as any} />
-      <Hero />
-      <About />
-      <Services />
-      <Industries />
-      <WhyChooseUs />
-      <Contact />
+      {doc ? (
+        <>
+          {preview && <DraftBanner status={doc._status} />}
+          <RenderBlocks blocks={doc.layout as never} />
+        </>
+      ) : (
+        <>
+          <Hero />
+          <About />
+          <Services />
+          <Industries />
+          <WhyChooseUs />
+          <Contact />
+        </>
+      )}
     </>
   );
 }

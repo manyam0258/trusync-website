@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 
 import { DraftBanner } from '@/components/cms/DraftBanner'
 import { RenderBlocks } from '@/components/cms/RenderBlocks'
@@ -37,6 +37,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CmsPage({ params }: Props) {
   const { slug } = await params
   const path = slug.join('/')
+  // The CMS page called "home" is the front page, so /home is just a second address for it.
+  if (path === 'home') permanentRedirect('/')
   const { doc: page, preview } = await getPage(path)
 
   if (!page) {

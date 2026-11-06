@@ -1,7 +1,8 @@
 /** Builds the admin Preview URL. Returns null until the document has a slug. */
 export const previewUrl = ({ slug, collection }: { slug?: string | null; collection: 'posts' | 'pages' }) => {
   if (!slug) return null
-  const path = collection === 'posts' ? `/blog/${slug}` : `/${slug}`
+  // The page with the path "home" is the front page.
+  const path = collection === 'posts' ? `/blog/${slug}` : slug === 'home' ? '/' : `/${slug}`
   const params = new URLSearchParams({
     slug,
     collection,

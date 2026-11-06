@@ -31,6 +31,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       }),
     ])
     for (const p of pages.docs) {
+      if (p.slug === 'home') continue // the front page is already listed
       entries.push({ url: `${SITE_URL}/${p.slug}`, lastModified: p.updatedAt as string })
     }
     for (const p of posts.docs) {
