@@ -1,6 +1,6 @@
 import type { CollectionConfig } from 'payload'
 
-import { isLoggedIn } from '../access'
+import { isLoggedIn, publishersOnly } from '../access'
 import { slugField } from '../fields/slug'
 
 export const Categories: CollectionConfig = {
@@ -9,8 +9,8 @@ export const Categories: CollectionConfig = {
   access: {
     read: () => true,
     create: isLoggedIn,
-    update: isLoggedIn,
-    delete: isLoggedIn,
+    update: publishersOnly,
+    delete: publishersOnly,
   },
   fields: [
     { name: 'title', type: 'text', required: true },

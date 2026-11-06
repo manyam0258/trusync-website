@@ -1,7 +1,7 @@
 import type { CollectionConfig } from 'payload'
 import { APIError } from 'payload'
 
-import { canPublish, isLoggedIn, publishedOrStaff } from '../access'
+import { canPublish, editUnlessLive, isLoggedIn, publishedOrStaff, publishersOnly } from '../access'
 import { slugField } from '../fields/slug'
 import { previewBreakpoints, previewUrl } from '../lib/preview'
 import { revalidateOnChange, revalidateOnDelete } from '../hooks/revalidate'
@@ -22,8 +22,8 @@ export const Posts: CollectionConfig = {
   access: {
     read: publishedOrStaff,
     create: isLoggedIn,
-    update: isLoggedIn,
-    delete: isLoggedIn,
+    update: editUnlessLive,
+    delete: publishersOnly,
   },
   versions: {
     maxPerDoc: 25,

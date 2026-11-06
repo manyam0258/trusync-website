@@ -2,6 +2,7 @@ import { draftMode } from 'next/headers'
 import { permanentRedirect, redirect } from 'next/navigation'
 
 import { getPayloadClient } from './payload'
+import { isSafeRedirectTarget } from './safe-url'
 
 export const SITE_URL = process.env.NEXT_PUBLIC_SERVER_URL || 'https://trusync.in'
 export const SITE_NAME = 'TruSync'
@@ -169,6 +170,7 @@ export async function findRedirect(path: string) {
   }
   // A redirect that points at the page being requested would loop forever.
   if (!target || target === `/${path}` || target === path) return null
+  if (!isSafeRedirectTarget(target)) return null
   return { target, permanent: doc.type !== '302' }
 }
 

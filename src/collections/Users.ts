@@ -1,7 +1,7 @@
 import type { CollectionConfig } from 'payload'
 import { APIError } from 'payload'
 
-import { isAdmin, isAdminField, isLoggedIn } from '../access'
+import { isAdmin, isAdminField, isLoggedIn, isStaff } from '../access'
 
 export const Users: CollectionConfig = {
   slug: 'users',
@@ -25,9 +25,9 @@ export const Users: CollectionConfig = {
     read: isLoggedIn,
     create: isAdmin,
     update: ({ req: { user }, id }) => {
-      if (!user) return false
+      if (!isStaff(user)) return false
       if ((user as { role?: string }).role === 'admin') return true
-      return user.id === id
+      return user?.id === id
     },
     delete: isAdmin,
   },

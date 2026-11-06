@@ -27,3 +27,17 @@ export const validateOptionalUrl = (value: unknown): true | string => {
   if (value === undefined || value === null || value === '') return true
   return isSafeUrl(value) || URL_HELP
 }
+
+/** Redirects may only lead to a path on this site or to one of the site's own hosts. */
+export const isSafeRedirectTarget = (value: unknown): boolean => {
+  if (typeof value !== 'string') return false
+  const url = value.trim()
+  if (/^\/(?![/\\])/.test(url)) return !/[\u0000-\u001f]/.test(url)
+  try {
+    const parsed = new URL(url)
+    const own = new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'https://trusync.in').hostname
+    return parsed.protocol === 'https:' && [own, 'trusync.in', 'www.trusync.in'].includes(parsed.hostname)
+  } catch {
+    return false
+  }
+}

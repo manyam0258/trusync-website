@@ -8,12 +8,14 @@ import { APIError, buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
+import { publishersOnly } from './access'
 import { Categories } from './collections/Categories'
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
 import { Posts } from './collections/Posts'
 import { Users } from './collections/Users'
 import { SiteSettings } from './globals/SiteSettings'
+import { isSafeRedirectTarget } from './lib/safe-url'
 import { pageDescription, pageImage, toDescription } from './lib/seo-generate'
 import { mcpTools } from './mcp/tools'
 
@@ -77,12 +79,17 @@ export default buildConfig({
       redirectTypes: ['301', '302'],
       overrides: {
         admin: { group: 'Settings' },
+        // Redirects go live at once, so only editors and admins may change them.
+        access: { create: publishersOnly, update: publishersOnly, delete: publishersOnly },
         hooks: {
           beforeChange: [
             ({ data }) => {
               const norm = (v?: string) => (v ?? '').trim().replace(/^\/+|\/+$/g, '').toLowerCase()
               if (data?.to?.type === 'custom' && norm(data.to.url) === norm(data.from)) {
                 throw new APIError('A redirect cannot point to the same address it starts from.', 400)
+              }
+              if (data?.to?.type === 'custom' && !isSafeRedirectTarget(data.to.url)) {
+                throw new APIError('A redirect may only lead to a path on this site (such as /blog/new-post) or to a trusync.in address.', 400)
               }
               return data
             },

@@ -1,10 +1,15 @@
 import type { CollectionConfig } from 'payload'
 
+import { isLoggedIn, publishersOnly } from '../access'
+
 export const Media: CollectionConfig = {
   slug: 'media',
   admin: { group: 'Content' },
   access: {
     read: () => true,
+    create: isLoggedIn,
+    update: publishersOnly,
+    delete: publishersOnly,
   },
   fields: [
     {

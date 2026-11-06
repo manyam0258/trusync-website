@@ -123,10 +123,14 @@ Browser tests (Playwright) against the local admin and site, about 90 checks, te
 - MCP: caps on sizes and counts, database errors hidden, `proxy.ts` returns 400/413 for empty or malformed bodies (the plugin otherwise hangs).
 - Checks run: `tsc` clean, eslint clean on changed files (52 older errors remain in untouched files), `npm run build` succeeds.
 
-**Security review findings, NOT yet fixed** (each needs a logged-in account or MCP key, so none is anonymous):
-1. **High: key to admin takeover.** The MCP key also authenticates REST. `Users.update` compares `user.id === id` without checking `user.collection`, so key #1 can edit user #1 (email and password). Fix: require `user.collection === 'users'` in `isLoggedIn`, `publishedOrStaff` and `Users.update`.
-2. **High: publish guard bypass.** `PATCH` or `DELETE` on `/api/pages/:id` and `/api/posts/:id` by an Author or key edits or removes live content, because the hook only blocks an explicit `_status: published` and update/delete only need a login. Fix: block non-publishers when `originalDoc._status === 'published'` unless `draft=true`, and limit delete to admin and editor.
-3. **Medium: open redirect.** Redirects collection is writable by any logged-in user and `to.url` is unchecked. Fix: restrict access to publishers and validate `to.url` (site paths or allow-listed hosts).
+**Security review findings, now FIXED (2026-11-07)** and verified with an authorization test (22 checks) plus the regression suite (44 checks):
+1. **Key to admin takeover.** `src/access/index.ts` now treats only documents of the `users` collection as staff (`isStaff`). An MCP key signing in over REST is a document of `payload-mcp-api-keys`, so it is refused everywhere: no user list, no user edits, no page, post or redirect writes. MCP tools still work because the plugin sets the key owner as `req.user` with `collection: 'users'`.
+2. **Publish guard bypass.** Pages and posts: `update` uses `editUnlessLive` and `delete` is for editors and admins only (`publishersOnly`). Authors can create drafts and edit documents that are not live yet. Changing a live page or post needs an editor or admin. Categories and media: create for staff, update and delete for editors and admins.
+3. **Open redirect.** Redirects: create, update and delete need an editor or admin, and `to.url` must be a site path or a `trusync.in` address (`isSafeRedirectTarget` in `src/lib/safe-url.ts`). `findRedirect` also refuses unsafe targets already stored.
+
+**Effect on agents:** an agent key owned by an Author can write new drafts and edit its own unpublished drafts, but cannot edit an already published post or page (even as a draft). Ask an editor to make that change, or create the key under an Editor user (editors still cannot be made to publish by MCP, because the tools refuse `published`).
+
+**Test scripts** (kept outside the repo): authorization test, MCP end-to-end, regression. Tests that call the REST API with a cookie must send an `Origin` header, or the CSRF allowlist treats the call as anonymous. The MCP end-to-end script still lists 4 outdated expectations (the optional `slug` argument, slug cleaning of `llms.txt` and dotted paths, and a one-character path); the behaviour itself is correct.
 
 **Before go-live:** rotate the MCP key and admin password that were shared in chat; create the key under an Author user; add a CSP (report-only first) and rate limiting at the reverse proxy; run `npm audit` and review the high transitive items.
 
