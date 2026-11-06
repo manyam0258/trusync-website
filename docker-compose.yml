@@ -9,6 +9,7 @@ services:
         NEXT_PUBLIC_SERVER_URL: ${NEXT_PUBLIC_SERVER_URL:?set the public address, for example https://trusync.in}
         NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL:-}
         NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY:-}
+        NEXT_PUBLIC_SENTINEL_URL: ${NEXT_PUBLIC_SENTINEL_URL:-}
     restart: unless-stopped
     depends_on:
       db:
@@ -18,6 +19,9 @@ services:
       PAYLOAD_SECRET: ${PAYLOAD_SECRET:?set a long random secret}
       NEXT_PUBLIC_SERVER_URL: ${NEXT_PUBLIC_SERVER_URL}
       PREVIEW_SECRET: ${PREVIEW_SECRET:?set a long random secret}
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+      TELEGRAM_CHAT_ID: ${TELEGRAM_CHAT_ID:-}
+      N8N_WEBHOOK_URL: ${N8N_WEBHOOK_URL:-}
     volumes:
       - media:/app/media
     ports:
