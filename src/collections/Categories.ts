@@ -14,7 +14,7 @@ export const Categories: CollectionConfig = {
   },
   fields: [
     { name: 'title', type: 'text', required: true },
-    slugField(),
+    slugField({ fallback: 'category' }),
     {
       name: 'description',
       type: 'textarea',

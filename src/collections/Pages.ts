@@ -4,10 +4,12 @@ import { APIError } from 'payload'
 import { canPublish, isLoggedIn, publishedOrStaff } from '../access'
 import { pageBlocks } from '../blocks'
 import { slugField } from '../fields/slug'
+import { previewBreakpoints, previewUrl } from '../lib/preview'
 import { revalidateOnChange, revalidateOnDelete } from '../hooks/revalidate'
+import { redirectOnSlugChange } from '../hooks/slugRedirect'
 
 /** First path segments that belong to the application and cannot be used for CMS pages. */
-const RESERVED = ['admin', 'api', 'blog', '_next']
+const RESERVED = ['admin', 'api', 'blog', 'preview', 'llms.txt', 'robots.txt', 'sitemap.xml', '_next']
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -15,6 +17,11 @@ export const Pages: CollectionConfig = {
     useAsTitle: 'title',
     group: 'Content',
     defaultColumns: ['title', 'slug', 'updatedAt', '_status'],
+    preview: (doc) => previewUrl({ slug: doc?.slug as string | undefined, collection: 'pages' }),
+    livePreview: {
+      url: ({ data }) => previewUrl({ slug: data?.slug as string | undefined, collection: 'pages' }),
+      breakpoints: previewBreakpoints,
+    },
   },
   access: {
     read: publishedOrStaff,
@@ -24,11 +31,15 @@ export const Pages: CollectionConfig = {
   },
   versions: {
     maxPerDoc: 25,
-    drafts: { autosave: { interval: 2000 } },
+    drafts: { autosave: { interval: 2000, showSaveDraftButton: true } },
   },
   hooks: {
     beforeChange: [
       ({ data, req }) => {
+        // Agents connected over MCP may only save drafts.
+        if ((req.payloadAPI as string) === 'MCP' && data._status === 'published') {
+          throw new APIError('AI agents cannot publish. Save as a draft and ask a person to publish.', 403)
+        }
         if (data._status === 'published' && !canPublish(req.user)) {
           throw new APIError('Only editors and admins can publish. Save as draft instead.', 403)
         }
@@ -39,12 +50,12 @@ export const Pages: CollectionConfig = {
         return data
       },
     ],
-    afterChange: [revalidateOnChange('')],
+    afterChange: [revalidateOnChange(''), redirectOnSlugChange('pages', '')],
     afterDelete: [revalidateOnDelete('')],
   },
   fields: [
     { name: 'title', type: 'text', required: true },
-    slugField({ allowSlashes: true }),
+    slugField({ allowSlashes: true, fallback: 'page' }),
     {
       name: 'noindex',
       type: 'checkbox',

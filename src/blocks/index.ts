@@ -1,5 +1,7 @@
 import type { Block, Field } from 'payload'
 
+import { URL_HELP, validateOptionalUrl } from '../lib/safe-url'
+
 const linkFields = (name: string, label: string): Field => ({
   name,
   type: 'group',
@@ -9,7 +11,8 @@ const linkFields = (name: string, label: string): Field => ({
     {
       name: 'url',
       type: 'text',
-      admin: { description: 'A page path such as /services/consulting, or a full https:// address.' },
+      validate: validateOptionalUrl,
+      admin: { description: URL_HELP },
     },
   ],
 })
@@ -52,7 +55,8 @@ export const FeaturesBlock: Block = {
         {
           name: 'url',
           type: 'text',
-          admin: { description: 'Optional. Makes the whole card a link.' },
+          validate: validateOptionalUrl,
+          admin: { description: 'Optional. Makes the whole card a link. ' + URL_HELP },
         },
       ],
     },

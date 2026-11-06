@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { APIError } from 'payload'
 
 import { isAdmin, isAdminField, isLoggedIn } from '../access'
 
@@ -10,6 +11,16 @@ export const Users: CollectionConfig = {
     defaultColumns: ['name', 'email', 'role'],
   },
   auth: true,
+  hooks: {
+    beforeValidate: [
+      ({ data }) => {
+        if (typeof data?.password === 'string' && data.password.length < 12) {
+          throw new APIError('Use a password of at least 12 characters.', 400)
+        }
+        return data
+      },
+    ],
+  },
   access: {
     read: isLoggedIn,
     create: isAdmin,

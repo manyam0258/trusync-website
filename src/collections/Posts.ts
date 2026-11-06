@@ -3,7 +3,9 @@ import { APIError } from 'payload'
 
 import { canPublish, isLoggedIn, publishedOrStaff } from '../access'
 import { slugField } from '../fields/slug'
+import { previewBreakpoints, previewUrl } from '../lib/preview'
 import { revalidateOnChange, revalidateOnDelete } from '../hooks/revalidate'
+import { redirectOnSlugChange } from '../hooks/slugRedirect'
 
 export const Posts: CollectionConfig = {
   slug: 'posts',
@@ -11,6 +13,11 @@ export const Posts: CollectionConfig = {
     useAsTitle: 'title',
     group: 'Content',
     defaultColumns: ['title', 'author', 'publishedAt', '_status'],
+    preview: (doc) => previewUrl({ slug: doc?.slug as string | undefined, collection: 'posts' }),
+    livePreview: {
+      url: ({ data }) => previewUrl({ slug: data?.slug as string | undefined, collection: 'posts' }),
+      breakpoints: previewBreakpoints,
+    },
   },
   access: {
     read: publishedOrStaff,
@@ -20,13 +27,20 @@ export const Posts: CollectionConfig = {
   },
   versions: {
     maxPerDoc: 25,
-    drafts: { autosave: { interval: 2000 } },
+    drafts: { autosave: { interval: 2000, showSaveDraftButton: true } },
   },
   hooks: {
     beforeChange: [
       ({ data, req }) => {
+        // Agents connected over MCP may only save drafts.
+        if ((req.payloadAPI as string) === 'MCP' && data._status === 'published') {
+          throw new APIError('AI agents cannot publish. Save as a draft and ask a person to publish.', 403)
+        }
         if (data._status === 'published' && !canPublish(req.user)) {
           throw new APIError('Only editors and admins can publish. Save as draft instead.', 403)
+        }
+        if (['category', 'rss'].includes(String(data.slug ?? ''))) {
+          throw new APIError('"category" and "rss" are reserved for blog features. Choose another slug.', 400)
         }
         if (data._status === 'published' && !data.publishedAt) {
           data.publishedAt = new Date().toISOString()
@@ -35,7 +49,7 @@ export const Posts: CollectionConfig = {
         return data
       },
     ],
-    afterChange: [revalidateOnChange('/blog')],
+    afterChange: [revalidateOnChange('/blog'), redirectOnSlugChange('posts', '/blog')],
     afterDelete: [revalidateOnDelete('/blog')],
   },
   fields: [
@@ -63,6 +77,7 @@ export const Posts: CollectionConfig = {
               name: 'faq',
               type: 'array',
               label: 'FAQ',
+              labels: { singular: 'question', plural: 'questions' },
               admin: { description: 'Optional. Rendered at the end of the post and published as FAQ structured data.' },
               fields: [
                 { name: 'question', type: 'text', required: true },
@@ -79,7 +94,7 @@ export const Posts: CollectionConfig = {
         },
       ],
     },
-    slugField(),
+    slugField({ fallback: 'post' }),
     {
       name: 'categories',
       type: 'relationship',
