@@ -43,6 +43,7 @@ const navigation: NavigationItem[] = [
     },
     { name: "Services", href: "/#services" },
     { name: "Industries", href: "/#industries" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/#contact" },
 ];
 
