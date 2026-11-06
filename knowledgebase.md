@@ -191,6 +191,14 @@ Done on 2026-11-07, on this branch.
 - **Solution (built 2026-11-07):** keep the database as the source of truth, and add (a) idempotent seeding on start so a fresh environment fills itself, (b) a code fallback for the six hand-built designs, which already carry their original wording as defaults, so they render even with no database row, and (c) ISR: pages served as cached static HTML, rebuilt on publish (the publish hooks already call `revalidatePath`). Draft preview needs its own uncached route because Next treats draft mode as dynamic.
 - **Rejected:** keeping a second copy of every page as static route files. Next gives static routes priority over the CMS catch-all, so the code copy would hide editors' changes and would have to be kept in step by hand.
 
+### Lesson from the first Coolify deploy: "You are not allowed to perform this action"
+- **Symptom:** after registering the first admin and signing in, creating users, saving and publishing all failed with "You are not allowed to perform this action", and edits did not show on the site.
+- **Cause:** the admin only accepts logged-in (cookie) saves from addresses on an allow-list (`csrf` in `src/payload.config.ts`), built from `NEXT_PUBLIC_SERVER_URL`. Next.js copies `process.env.NEXT_PUBLIC_...` into the build, so the allow-list was frozen at build time with whatever value the build had (or the default `https://trusync.in`). Opened from any other address (a test domain, sslip.io, http instead of https, www) every save was treated as not signed in. Signing in itself still worked, which hid the problem.
+- **Fix:** `src/lib/server-url.ts` reads the address when the server starts. Checked by building with one address and starting with another: saves from the run-time address succeed, saves from the build-time address and from other sites are refused. Note that the bundler also folds `process.env[CONSTANT]`; copy `process.env` first as `serverUrl()` does.
+- **Quick fix without redeploying the code:** set `PAYLOAD_ALLOWED_ORIGINS` (comma separated, exact addresses such as `https://new.trusync.in`) and restart.
+- **Rule:** the address in the browser, `NEXT_PUBLIC_SERVER_URL` and the Coolify domain must be identical (scheme and host, no trailing slash). Mark `NEXT_PUBLIC_SERVER_URL` as a Build Variable too, because the browser code and canonical links also use it.
+- **Drafts:** "Save draft" and autosave store changes without publishing. The public site shows only published content; use the Preview button (opens `/draft/...`) to see drafts, and press Publish to put them live.
+
 ### Decisions and cautions
 - Payload and `@payloadcms/*` packages must all be the same exact version (currently 3.93.0). Do not use caret ranges.
 - `images.localPatterns` in `next.config.ts` blocks every local image that is not listed. Add a pattern for any new folder that `next/image` must serve.

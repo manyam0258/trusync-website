@@ -4,6 +4,7 @@ import { z } from 'zod/v3'
 
 import { formatSlug } from '../fields/slug'
 import { isSafeUrl, URL_HELP } from '../lib/safe-url'
+import { serverUrl } from '../lib/server-url'
 
 /**
  * Tools that let an AI agent write blog posts and pages through the Payload MCP endpoint.
@@ -17,7 +18,7 @@ import { isSafeUrl, URL_HELP } from '../lib/safe-url'
 
 type ToolResult = { content: { type: 'text'; text: string }[] }
 const text = (message: string): ToolResult => ({ content: [{ type: 'text', text: message }] })
-const SERVER = () => process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'
+const SERVER = () => serverUrl('http://localhost:3000')
 
 const markdownToRichText = async (req: PayloadRequest, markdown: string) => {
   const editorConfig = await editorConfigFactory.default({ config: req.payload.config })

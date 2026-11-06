@@ -1,3 +1,5 @@
+import { serverUrl } from './server-url'
+
 /**
  * Links typed into the CMS or sent by an AI agent are untrusted. Only site paths and
  * these schemes may become a clickable link: javascript:, data:, vbscript: and the like are refused.
@@ -35,7 +37,7 @@ export const isSafeRedirectTarget = (value: unknown): boolean => {
   if (/^\/(?![/\\])/.test(url)) return !/[\u0000-\u001f]/.test(url)
   try {
     const parsed = new URL(url)
-    const own = new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'https://trusync.in').hostname
+    const own = new URL(serverUrl()).hostname
     return parsed.protocol === 'https:' && [own, 'trusync.in', 'www.trusync.in'].includes(parsed.hostname)
   } catch {
     return false

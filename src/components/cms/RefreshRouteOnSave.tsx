@@ -9,7 +9,8 @@ export function RefreshRouteOnSave() {
   return (
     <PayloadRefresh
       refresh={() => router.refresh()}
-      serverURL={process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'}
+      // Live Preview runs inside the admin, on the same address as this page.
+      serverURL={typeof window !== 'undefined' ? window.location.origin : ''}
     />
   )
 }

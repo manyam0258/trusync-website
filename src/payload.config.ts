@@ -16,6 +16,7 @@ import { Posts } from './collections/Posts'
 import { Users } from './collections/Users'
 import { SiteSettings } from './globals/SiteSettings'
 import { isSafeRedirectTarget } from './lib/safe-url'
+import { serverUrl } from './lib/server-url'
 import { pageDescription, pageImage, toDescription } from './lib/seo-generate'
 import { mcpTools } from './mcp/tools'
 import { migrations } from './migrations'
@@ -29,7 +30,7 @@ const SITE_NAME = 'TruSync'
 // Set NEXT_PUBLIC_SERVER_URL to the public address of the site, and PAYLOAD_ALLOWED_ORIGINS
 // (comma separated) for any extra address, such as a staging site.
 const ALLOWED_ORIGINS = [
-  process.env.NEXT_PUBLIC_SERVER_URL || 'https://trusync.in',
+  serverUrl(),
   ...(process.env.PAYLOAD_ALLOWED_ORIGINS?.split(',').map((o) => o.trim()).filter(Boolean) ?? []),
   ...(process.env.NODE_ENV !== 'production' ? ['http://localhost:3000'] : []),
 ]
@@ -79,7 +80,7 @@ export default buildConfig({
       generateImage: ({ doc, collectionSlug }) =>
         collectionSlug === 'posts' ? doc?.heroImage : pageImage(doc),
       generateURL: ({ doc, collectionSlug }) => {
-        const base = process.env.NEXT_PUBLIC_SERVER_URL || 'https://trusync.in'
+        const base = serverUrl()
         if (collectionSlug === 'posts') return `${base}/blog/${doc?.slug ?? ''}`
         return `${base}/${doc?.slug ?? ''}`
       },

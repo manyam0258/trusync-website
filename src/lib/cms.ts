@@ -2,9 +2,10 @@ import { draftMode } from 'next/headers'
 import { permanentRedirect, redirect } from 'next/navigation'
 
 import { getPayloadClient } from './payload'
+import { serverUrl } from './server-url'
 import { isSafeRedirectTarget } from './safe-url'
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SERVER_URL || 'https://trusync.in'
+export const SITE_URL = serverUrl()
 export const SITE_NAME = 'TruSync'
 export const POSTS_PER_PAGE = 12
 
