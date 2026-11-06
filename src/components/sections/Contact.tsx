@@ -19,7 +19,7 @@ interface SentinelReceipt {
   message?: string;
 }
 
-export function Contact() {
+export function Contact({ heading }: { heading?: string } = {}) {
   const [toast, setToast] = useState<{ isVisible: boolean; message: string; type: "success" | "error" }>({
     isVisible: false,
     message: "",
@@ -127,7 +127,7 @@ export function Contact() {
             <span className="inline-block px-4 py-2 mb-4 text-sm font-semibold text-primary bg-primary/10 rounded-full">
               Contact Us
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Get In Touch</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">{heading || "Get In Touch"}</h2>
             <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
               Ready to transform your business? Let's discuss how we can help you.
             </p>

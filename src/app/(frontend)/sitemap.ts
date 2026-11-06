@@ -2,46 +2,15 @@ import type { MetadataRoute } from 'next'
 
 import { getPayloadClient } from '@/lib/payload'
 import { SITE_URL } from '@/lib/cms'
+import { CODE_ROUTES } from '@/lib/site-pages'
 
 export const dynamic = 'force-dynamic'
-
-/**
- * Pages that still live in code. Remove an entry once the page is moved to the CMS,
- * because CMS pages are added below automatically. Placeholder pages with no real
- * content yet are left out on purpose.
- */
-const CODE_ROUTES = [
-  '/',
-  '/solutions/frappe-framework',
-  '/solutions/frappe-insights',
-  '/solutions/frappe-lms',
-  '/services/accounting-module',
-  '/services/asset-management-module',
-  '/services/crm-module',
-  '/services/helpdesk-module',
-  '/services/hr-payroll-module',
-  '/services/order-management-module',
-  '/services/website-module',
-  '/innovation/ai-automation',
-  '/innovation/dpdp-compliance',
-  '/innovation/open-source-integrations',
-  '/industries/construction',
-  '/industries/crowdfunding',
-  '/industries/dairy',
-  '/industries/distribution',
-  '/industries/education',
-  '/industries/epc',
-  '/industries/hr-payroll',
-  '/industries/manufacturing',
-  '/industries/nbfc',
-  '/industries/textile',
-  '/blog',
-]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = CODE_ROUTES.map((path) => ({
     url: `${SITE_URL}${path === '/' ? '' : path}`,
   }))
+  entries.push({ url: `${SITE_URL}/blog` })
 
   try {
     const payload = await getPayloadClient()
@@ -67,6 +36,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const p of posts.docs) {
       entries.push({ url: `${SITE_URL}/blog/${p.slug}`, lastModified: p.updatedAt as string })
     }
+    const categories = await payload.find({ collection: 'categories', limit: 1000, depth: 0, select: { slug: true } })
+    for (const c of categories.docs) entries.push({ url: `${SITE_URL}/blog/category/${c.slug}` })
   } catch (err) {
     console.error('Sitemap: could not read CMS content', err)
   }

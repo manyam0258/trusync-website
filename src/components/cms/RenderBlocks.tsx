@@ -7,6 +7,7 @@ import { Section } from '@/components/ui/Section'
 import { Contact } from '@/components/sections/Contact'
 import JsonLd from '@/components/JsonLd'
 import { isMedia, type MediaDoc } from '@/lib/cms'
+import { safeHref } from '@/lib/safe-url'
 
 import { RichTextContent } from './RichTextContent'
 
@@ -16,13 +17,14 @@ type Block = { id?: string | null; blockType: string } & Record<string, unknown>
 const isExternal = (url: string) => /^https?:\/\//.test(url)
 
 function CmsLink({ link, variant }: { link?: LinkValue; variant?: 'default' | 'outline' }) {
-  if (!link?.label || !link.url) return null
+  const url = safeHref(link?.url)
+  if (!link?.label || !url) return null
   return (
     <Button asChild size="lg" variant={variant}>
-      {isExternal(link.url) ? (
-        <a href={link.url} rel="noopener">{link.label}</a>
+      {isExternal(url) ? (
+        <a href={url} rel="noopener noreferrer">{link.label}</a>
       ) : (
-        <Link href={link.url}>{link.label}</Link>
+        <Link href={url}>{link.label}</Link>
       )}
     </Button>
   )
@@ -45,6 +47,8 @@ function CmsImage({ media, className, priority }: { media: unknown; className?: 
 
 function renderBlock(block: Block, index: number) {
   const key = block.id ?? `${block.blockType}-${index}`
+  // The site header is fixed, so the first section needs room underneath it.
+  const top = index === 0 ? 'pt-32 md:pt-36' : ''
   switch (block.blockType) {
     case 'hero': {
       const b = block as Block & {
@@ -52,7 +56,7 @@ function renderBlock(block: Block, index: number) {
         primaryCta?: LinkValue; secondaryCta?: LinkValue; image?: unknown
       }
       return (
-        <Section key={key} className="bg-slate-50">
+        <Section key={key} className={`bg-slate-50 ${top}`}>
           <Container>
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div>
@@ -81,7 +85,7 @@ function renderBlock(block: Block, index: number) {
     case 'richText': {
       const b = block as Block & { heading?: string; content?: unknown }
       return (
-        <Section key={key} className="bg-white">
+        <Section key={key} className={`bg-white ${top}`}>
           <Container className="max-w-3xl">
             {b.heading && <h2 className="mb-6 text-3xl font-bold text-slate-900 md:text-4xl">{b.heading}</h2>}
             <RichTextContent data={b.content} />
@@ -95,7 +99,7 @@ function renderBlock(block: Block, index: number) {
         items?: { id?: string; title: string; description: string; url?: string | null }[]
       }
       return (
-        <Section key={key} className="bg-slate-50">
+        <Section key={key} className={`bg-slate-50 ${top}`}>
           <Container>
             {(b.heading || b.intro) && (
               <div className="mx-auto mb-12 max-w-3xl text-center">
@@ -112,11 +116,12 @@ function renderBlock(block: Block, index: number) {
                   </div>
                 )
                 const k = item.id ?? i
-                if (!item.url) return <div key={k}>{card}</div>
-                return isExternal(item.url) ? (
-                  <a key={k} href={item.url} rel="noopener" className="block h-full">{card}</a>
+                const href = safeHref(item.url)
+                if (!href) return <div key={k}>{card}</div>
+                return isExternal(href) ? (
+                  <a key={k} href={href} rel="noopener noreferrer" className="block h-full">{card}</a>
                 ) : (
-                  <Link key={k} href={item.url} className="block h-full">{card}</Link>
+                  <Link key={k} href={href} className="block h-full">{card}</Link>
                 )
               })}
             </div>
@@ -127,7 +132,7 @@ function renderBlock(block: Block, index: number) {
     case 'imageText': {
       const b = block as Block & { heading: string; body?: unknown; image?: unknown; imageSide?: 'left' | 'right' }
       return (
-        <Section key={key} className="bg-white">
+        <Section key={key} className={`bg-white ${top}`}>
           <Container>
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div className={b.imageSide === 'left' ? 'lg:order-2' : ''}>
@@ -144,7 +149,7 @@ function renderBlock(block: Block, index: number) {
       const b = block as Block & { heading?: string; items?: { id?: string; question: string; answer: string }[] }
       const items = b.items ?? []
       return (
-        <Section key={key} className="bg-white">
+        <Section key={key} className={`bg-white ${top}`}>
           <Container className="max-w-3xl">
             <h2 className="mb-8 text-3xl font-bold text-slate-900 md:text-4xl">{b.heading}</h2>
             <div className="space-y-4">
@@ -173,7 +178,7 @@ function renderBlock(block: Block, index: number) {
     case 'cta': {
       const b = block as Block & { heading: string; body?: string; button?: LinkValue }
       return (
-        <Section key={key} className="bg-slate-900 text-white">
+        <Section key={key} className={`bg-slate-900 text-white ${top}`}>
           <Container className="max-w-3xl text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">{b.heading}</h2>
             {b.body && <p className="mb-8 text-lg text-slate-300">{b.body}</p>}
@@ -182,8 +187,10 @@ function renderBlock(block: Block, index: number) {
         </Section>
       )
     }
-    case 'contactForm':
-      return <Contact key={key} />
+    case 'contactForm': {
+      const b = block as Block & { heading?: string }
+      return <Contact key={key} heading={b.heading} />
+    }
     default:
       return null
   }

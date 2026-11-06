@@ -1,37 +1,47 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
 
+import JsonLd from '@/components/JsonLd'
+import { CategoryNav } from '@/components/blog/CategoryNav'
+import { Pagination } from '@/components/blog/Pagination'
+import { PostCard } from '@/components/blog/PostCard'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
-import { absoluteUrl, getPublishedPosts, isMedia } from '@/lib/cms'
+import { absoluteUrl, getCategories, getPosts, SITE_URL } from '@/lib/cms'
 
 export const dynamic = 'force-dynamic'
 
-export const metadata: Metadata = {
-  title: 'ERPNext and Frappe Blog | TruSync',
-  description:
-    'Practical guides on ERPNext, Frappe, AI automation and DPDP compliance for growing businesses, from the TruSync team in Hyderabad.',
-  alternates: { canonical: absoluteUrl('/blog') },
+type Props = { searchParams: Promise<{ page?: string }> }
+
+const pageNumber = (v?: string) => Math.max(1, Number.parseInt(v ?? '1', 10) || 1)
+
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const page = pageNumber((await searchParams).page)
+  return {
+    title: page > 1 ? `ERPNext and Frappe Blog, page ${page} | TruSync` : 'ERPNext and Frappe Blog | TruSync',
+    description:
+      'Practical guides on ERPNext, Frappe, AI automation and DPDP compliance for growing businesses, from the TruSync team in Hyderabad.',
+    alternates: {
+      canonical: absoluteUrl(page > 1 ? `/blog?page=${page}` : '/blog'),
+      types: { 'application/rss+xml': absoluteUrl('/blog/rss.xml') },
+    },
+  }
 }
 
-const formatDate = (value?: string | null) =>
-  value
-    ? new Date(value).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })
-    : ''
-
-export default async function BlogIndex() {
-  const posts = await getPublishedPosts()
+export default async function BlogIndex({ searchParams }: Props) {
+  const page = pageNumber((await searchParams).page)
+  const [{ docs: posts, totalPages }, categories] = await Promise.all([getPosts({ page }), getCategories()])
 
   return (
-    <Section className="bg-white pt-32">
+    <Section className="bg-white pt-32 md:pt-36">
       <Container>
-        <header className="mb-12 max-w-3xl">
+        <header className="mb-10 max-w-3xl">
           <h1 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl">Blog</h1>
           <p className="text-lg text-slate-600">
             Guides and notes on ERPNext, Frappe, AI automation and data protection.
           </p>
         </header>
+
+        <CategoryNav categories={categories} />
 
         {posts.length === 0 ? (
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-10 text-center">
@@ -40,35 +50,33 @@ export default async function BlogIndex() {
           </div>
         ) : (
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => {
-              const hero = isMedia(post.heroImage) ? post.heroImage : null
-              return (
-                <article
-                  key={post.id}
-                  className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-md"
-                >
-                  <Link href={`/blog/${post.slug}`} className="block h-full">
-                    {hero?.url && (
-                      <Image
-                        src={hero.url}
-                        alt={hero.alt || ''}
-                        width={hero.width || 1200}
-                        height={hero.height || 630}
-                        className="aspect-[16/9] w-full object-cover"
-                      />
-                    )}
-                    <div className="p-6">
-                      <time className="text-sm text-slate-500">{formatDate(post.publishedAt)}</time>
-                      <h2 className="mt-2 mb-3 text-xl font-semibold text-slate-900">{post.title}</h2>
-                      <p className="text-slate-600">{post.excerpt}</p>
-                    </div>
-                  </Link>
-                </article>
-              )
-            })}
+            {posts.map((post) => (
+              <PostCard key={post.id} post={post} />
+            ))}
           </div>
         )}
+
+        <Pagination page={page} totalPages={totalPages} basePath="/blog" />
       </Container>
+
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'TruSync blog',
+          url: absoluteUrl('/blog'),
+          isPartOf: { '@type': 'WebSite', name: 'TruSync', url: SITE_URL },
+          mainEntity: {
+            '@type': 'ItemList',
+            itemListElement: posts.map((post, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              url: absoluteUrl(`/blog/${post.slug}`),
+              name: post.title,
+            })),
+          },
+        }}
+      />
     </Section>
   )
 }
