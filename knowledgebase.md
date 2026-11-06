@@ -200,6 +200,12 @@ Done on 2026-11-07, on this branch.
 - **Rule:** the address in the browser, `NEXT_PUBLIC_SERVER_URL` and the Coolify domain must be identical (scheme and host, no trailing slash). Mark `NEXT_PUBLIC_SERVER_URL` as a Build Variable too, because the browser code and canonical links also use it.
 - **Drafts:** "Save draft" and autosave store changes without publishing. The public site shows only published content; use the Preview button (opens `/draft/...`) to see drafts, and press Publish to put them live.
 
+### Open issues to resume (noted 2026-11-07)
+1. **Coolify admin saves return 403** ("You are not allowed to perform this action"): user list, page save, creating users. Admin address is the generated domain `https://clqgddem292gxgu9lbylvmbw.trusync.cloud`, which differs from `NEXT_PUBLIC_SERVER_URL`, so the site treats the browser as signed out. Next: set `PAYLOAD_ALLOWED_ORIGINS` to that address and restart; then `git push` and redeploy (commits a861615, 334374f read the address at run time and add `COOLIFY_URL`); set `NEXT_PUBLIC_SERVER_URL` to the real address as a Build Variable. Confirm a PATCH returns 200 and a new Editor can be created.
+2. **Edits not visible:** expected to clear once saves succeed; check Preview (`/draft/...`) and Publish.
+3. **Indexing of the generated test domain:** decide whether to add an `ALLOW_INDEXING=false` switch (robots disallow plus noindex).
+4. Then continue with the "Before go-live" list: rotate admin password and MCP key, backups, domain cutover.
+
 ### Decisions and cautions
 - Payload and `@payloadcms/*` packages must all be the same exact version (currently 3.93.0). Do not use caret ranges.
 - `images.localPatterns` in `next.config.ts` blocks every local image that is not listed. Add a pattern for any new folder that `next/image` must serve.
