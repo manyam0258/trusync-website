@@ -10,12 +10,12 @@ import { Factory, Stethoscope, Users, Building2, Briefcase, ShoppingCart, HardHa
 const industries = [
     { title: "Manufacturing", icon: Factory, color: "from-blue-500 to-cyan-500", href: "/industries/manufacturing" },
     { title: "Healthcare", icon: Stethoscope, color: "from-red-500 to-orange-500", href: "/industries/healthcare" },
-    { title: "Retail & Distribution", icon: ShoppingCart, color: "from-green-500 to-emerald-500", href: "/industries/retail-distribution" },
+    { title: "Retail & Distribution", icon: ShoppingCart, color: "from-green-500 to-emerald-500", href: "/industries/distribution" },
     { title: "Construction", icon: HardHat, color: "from-orange-500 to-amber-500", href: "/industries/construction" },
     { title: "Real Estate", icon: Building2, color: "from-pink-500 to-rose-500", href: "/industries/real-estate" },
     { title: "Agriculture", icon: Feather, color: "from-yellow-500 to-orange-500", href: "/industries/agriculture" },
     { title: "Education", icon: Users, color: "from-teal-500 to-cyan-500", href: "/industries/education" },
-    { title: "Financial Services", icon: Banknote, color: "from-indigo-500 to-purple-500", href: "/industries/financial-services" }
+    { title: "Financial Services", icon: Banknote, color: "from-indigo-500 to-purple-500", href: "/industries/nbfc" }
 ];
 
 export function Industries() {

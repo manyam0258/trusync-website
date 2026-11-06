@@ -16,7 +16,7 @@ const services = [
         href: "/services/consulting"
     },
     {
-        title: "ERPnext Implementation",
+        title: "ERPNext Implementation",
         description: "Complete ERPNext implementation tailored to your business requirements.",
         icon: Briefcase,
         color: "from-purple-500 to-pink-500",
@@ -37,7 +37,7 @@ const services = [
         href: "/services/migrations"
     },
     {
-        title: "Mobile App development",
+        title: "Mobile App Development",
         description: "Custom mobile applications integrated with ERPNext.",
         icon: Phone,
         color: "from-indigo-500 to-purple-500",
