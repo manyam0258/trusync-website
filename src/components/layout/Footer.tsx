@@ -41,7 +41,7 @@ export function Footer({ logo }: { logo?: BrandImage | null }) {
                             <li><Link href="#about" className="hover:text-primary transition-colors">About Us</Link></li>
                             <li><Link href="#industries" className="hover:text-primary transition-colors">Industries</Link></li>
                             <li><Link href="#contact" className="hover:text-primary transition-colors">Contact</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
                             <li><CookieSettingsButton className="text-left hover:text-primary transition-colors" /></li>
                         </ul>
                     </div>

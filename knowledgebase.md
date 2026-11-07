@@ -213,6 +213,11 @@ Done on 2026-11-07, on this branch.
 - **To turn analytics on:** set `NEXT_PUBLIC_POSTHOG_KEY` (PostHog project API key) and `NEXT_PUBLIC_POSTHOG_HOST` (default `https://us.i.posthog.com`) as Build Variables in Coolify, then redeploy.
 - **Still to do:** link the Privacy Policy in the footer (it is a placeholder `#`); the cookie banner text should be reviewed for DPDP wording.
 
+### Privacy policy page (2026-11-07)
+- **Page:** `/privacy-policy`, a CMS page (editable under Pages) created on start by the default-pages seed. Written to the DPDP Act, 2023 and to what the site actually does: enquiry form data, Supabase storage, Telegram and n8n notifications, PostHog analytics only after consent, the `trusync_consent` cookie, and the rights of the data principal. The footer's Privacy Policy link points to it.
+- **Needs review before go-live:** this is a working draft, not legal advice. Check the retention wording in section 5, confirm the contact details, and confirm the complaints route in section 6 (the Data Protection Board of India once operational).
+- **To change it:** edit the page in the admin. To change the seeded default text, edit `privacySeed` in `scripts/seed-pages.mts` and run `npx tsx scripts/build-seed-data.mts`. Existing pages are never overwritten by the seed.
+
 ### Decisions and cautions
 - Payload and `@payloadcms/*` packages must all be the same exact version (currently 3.93.0). Do not use caret ranges.
 - `images.localPatterns` in `next.config.ts` blocks every local image that is not listed. Add a pattern for any new folder that `next/image` must serve.

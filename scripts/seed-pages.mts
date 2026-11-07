@@ -470,7 +470,35 @@ const uploadMedia = (authed: Record<string, string>) => {
   }
 }
 
-export const allSeeds = (): Seed[] => [homeSeed, ...SERVICE_TEMPLATE_PAGES.map(serviceSeed).filter((s): s is Seed => !!s), ...STUBS.map(stubSeed), ...LARGE_PAGES]
+/**
+ * Privacy notice, written to the Digital Personal Data Protection Act, 2023 (India) and to what this site actually does.
+ * It is a starting draft: review it with your advisers, then edit it in the admin under Pages.
+ */
+const PRIVACY_UPDATED = '7 November 2026'
+const privacySeed: Seed = {
+  slug: 'privacy-policy',
+  title: 'Privacy Policy',
+  metaTitle: 'Privacy Policy | TruSync',
+  metaDescription: 'How TruSync Technologies LLP collects, uses and protects personal data from website enquiries, analytics and cookies, and how to use your rights under the DPDP Act, 2023.',
+  layout: async ({ md }) => {
+    const section = async (heading: string, text: string) => ({ blockType: 'richText', heading, content: await md(text) })
+    return [
+      { blockType: 'richText', heading: 'Privacy Policy',
+        content: await md(`This notice explains how TruSync Technologies LLP ("TruSync", "we", "us") handles personal data collected through this website. It is written under the Digital Personal Data Protection Act, 2023 (DPDP Act). Last updated: ${PRIVACY_UPDATED}.`) },
+      await section('1. Who we are', 'TruSync Technologies LLP, H.No. 30-265/25/56A/S-2, Sai Plaza, Neredmet, Hyderabad, Telangana 500056, India.\n\nEmail: surendhranath@trusync.in\n\nPhone: +91 81434 83438\n\nWe act as the data fiduciary for the personal data described here.'),
+      await section('2. What we collect', 'Enquiry form: your name, email address, phone number (optional), the service you are interested in and your message. We collect these only when you send them to us.\n\nAnalytics: only if you accept analytics cookies. We then record which pages you visit, how long you stay and basic device and browser details, using PostHog. Nothing is sent before you choose.\n\nCookies: a cookie named trusync_consent records your choice about analytics for 180 days. Analytics cookies are set only after you accept.\n\nHosting: our hosting provider may keep standard server logs, such as the time of a visit and the address requested.'),
+      await section('3. Why we use it and on what basis', 'To answer your enquiry and arrange a call or demo. The basis is the consent you give when you submit the form, which the form asks for before you send it.\n\nTo understand which pages help visitors, only if you accept analytics. You can withdraw consent at any time from the Cookie settings link in the footer.\n\nWe do not use your data to make automated decisions about you, and we do not sell it.'),
+      await section('4. Who receives it', 'Enquiries are stored in our database hosted with Supabase. A notification is sent to our team through Telegram, and to our internal automation through an n8n webhook, so that we can reply quickly. Analytics data goes to PostHog only if you accept. Our hosting provider stores the website and its database.\n\nThese providers process the data on our instructions. We share no other personal data unless the law requires it.'),
+      await section('5. How long we keep it', 'We keep enquiries for as long as needed to reply to you and to keep our business records, and delete them when you ask us to, unless the law requires us to keep them. Analytics data is kept according to the PostHog settings we choose and is removed when you withdraw consent where we can.'),
+      await section('6. Your rights', 'Under the DPDP Act you can ask us to:\n\n- confirm what personal data we hold about you and give you a copy;\n- correct or update it;\n- delete it;\n- withdraw your consent at any time, without affecting anything we did before you withdrew it.\n\nTo use any of these rights, email surendhranath@trusync.in from the address you used, or write to us at the address above. We will respond within the time the law requires. If you are not satisfied with our answer, you may complain to the Data Protection Board of India once it is in operation.'),
+      await section('7. Children', 'Our services are for businesses. We do not knowingly collect personal data from children under 18. If you believe a child has sent us personal data, contact us and we will delete it.'),
+      await section('8. Changes to this notice', 'We may update this notice. The date at the top shows when it last changed. Where a change is material, we will say so on this page.'),
+      { blockType: 'contactForm', heading: 'Questions about your data? Write to us' },
+    ]
+  },
+}
+
+export const allSeeds = (): Seed[] => [homeSeed, ...SERVICE_TEMPLATE_PAGES.map(serviceSeed).filter((s): s is Seed => !!s), ...STUBS.map(stubSeed), ...LARGE_PAGES, privacySeed]
 
 async function main() {
   const seeds: Seed[] = allSeeds()
