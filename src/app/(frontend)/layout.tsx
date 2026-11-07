@@ -4,6 +4,8 @@ import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { Analytics } from "@/components/analytics/Consent";
+import { siteBranding } from "@/lib/brand";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -15,7 +17,13 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+const DEFAULT_ICON = "/Trusync-icon-tinified.png";
+
+// The browser icon comes from Site settings in the admin, with the shipped icon as the fallback.
+export async function generateMetadata(): Promise<Metadata> {
+  const { favicon } = await siteBranding();
+  const icon = favicon ?? DEFAULT_ICON;
+  return {
   metadataBase: new URL("https://trusync.in"),
   alternates: {
     canonical: "./",
@@ -23,30 +31,36 @@ export const metadata: Metadata = {
   title: "ERPNext Services & Frappe Partner in Hyderabad | TruSync",
   description: "TruSync is a certified Frappe and ERPNext partner in Hyderabad, Telangana. We deliver custom ERP implementation, CRM integrations, and smart AI workflow automation for SMEs.",
   icons: {
-    icon: '/Trusync-icon-tinified.png',
-    shortcut: '/Trusync-icon-tinified.png',
-    apple: '/Trusync-icon-tinified.png',
+    icon,
+    shortcut: icon,
+    apple: icon,
   },
   verification: {
     yandex: 'cf9f73defc0eba11',
   },
-};
+  };
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const brand = await siteBranding();
   return (
     <html lang="en" className="scroll-smooth">
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased font-sans flex flex-col min-h-screen`}
       >
-        <Header />
+        <Header logo={brand.logo} />
         <main className="flex-grow">
           {children}
         </main>
-        <Footer />
+        <Footer logo={brand.footerLogo} />
+        <Analytics
+          posthogKey={process.env.NEXT_PUBLIC_POSTHOG_KEY ?? ""}
+          posthogHost={process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com"}
+        />
         {/*
           AnythingLLM Chat Widget
           Lazy-loaded so the slow/hanging anythingllm.tridasa.cloud host

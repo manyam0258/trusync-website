@@ -1,5 +1,7 @@
 "use client";
 
+import type { BrandImage } from "@/lib/brand";
+
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -47,7 +49,7 @@ const navigation: NavigationItem[] = [
     { name: "Contact", href: "/#contact" },
 ];
 
-export function Header() {
+export function Header({ logo }: { logo?: BrandImage | null }) {
     const [isOpen, setIsOpen] = React.useState(false);
     const [isScrolled, setIsScrolled] = React.useState(false);
     const [mobileSubmenu, setMobileSubmenu] = React.useState<string | null>(null);
@@ -71,10 +73,10 @@ export function Header() {
                 <nav className="flex items-center justify-between">
                     <Link href="/" className="flex items-center">
                         <Image
-                            src="/logo.png"
-                            alt="TruSync Logo"
-                            width={240}
-                            height={80}
+                            src={logo?.url ?? "/logo.png"}
+                            alt={logo?.alt ?? "TruSync Logo"}
+                            width={logo?.width ?? 240}
+                            height={logo?.height ?? 80}
                             className="h-20 w-auto"
                             priority
                         />

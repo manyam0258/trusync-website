@@ -34,6 +34,10 @@ const ALLOWED_ORIGINS = [...allowedOrigins(), ...(process.env.NODE_ENV !== 'prod
 export default buildConfig({
   admin: {
     user: Users.slug,
+    components: {
+      // Log out button in the top bar of the admin.
+      actions: ['/components/admin/LogoutButton#LogoutButton'],
+    },
     importMap: {
       baseDir: path.resolve(dirname),
     },

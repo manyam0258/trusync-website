@@ -206,6 +206,13 @@ Done on 2026-11-07, on this branch.
 3. **Indexing of the generated test domain:** decide whether to add an `ALLOW_INDEXING=false` switch (robots disallow plus noindex).
 4. Then continue with the "Before go-live" list: rotate admin password and MCP key, backups, domain cutover.
 
+### Admin logout, editable logo and favicon, analytics with consent (2026-11-07)
+- **Log out:** a button in the admin's top bar, next to the account icon (`src/components/admin/LogoutButton.tsx`, set in `admin.components.actions`). Tested: it signs out and the admin asks for login again.
+- **Logo and favicon in the admin:** Site settings now has **Logo** (navigation bar), **Footer logo** (falls back to the navigation logo) and **Favicon** (browser tab). Empty fields keep the shipped files. Tested: a chosen logo appears in the header, the favicon is the only icon served, and clearing the fields restores the defaults. The old `src/app/favicon.ico` was removed because it competed with the chosen icon. These fields need migration `20261107_090000_site_branding`, which production applies on start; tested on a fresh database.
+- **Analytics (PostHog):** `posthog-js` 1.438.21 (pinned, released 2026-10-23, so it is at least two weeks old, as the guidelines require). Nothing is sent and no analytics cookie is set until the visitor clicks **Accept**. **Decline** keeps analytics off. The choice is a `trusync_consent` cookie kept 180 days. The footer's **Cookie settings** link reopens the banner. Tested in a browser: no requests to the PostHog host before a choice, none after Decline, requests after Accept. The banner shows only when `NEXT_PUBLIC_POSTHOG_KEY` is set. Note: the analytics library's code file is downloaded with the page but does not start or send anything until consent.
+- **To turn analytics on:** set `NEXT_PUBLIC_POSTHOG_KEY` (PostHog project API key) and `NEXT_PUBLIC_POSTHOG_HOST` (default `https://us.i.posthog.com`) as Build Variables in Coolify, then redeploy.
+- **Still to do:** link the Privacy Policy in the footer (it is a placeholder `#`); the cookie banner text should be reviewed for DPDP wording.
+
 ### Decisions and cautions
 - Payload and `@payloadcms/*` packages must all be the same exact version (currently 3.93.0). Do not use caret ranges.
 - `images.localPatterns` in `next.config.ts` blocks every local image that is not listed. Add a pattern for any new folder that `next/image` must serve.

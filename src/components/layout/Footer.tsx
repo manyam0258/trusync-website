@@ -1,9 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { CookieSettingsButton } from "@/components/analytics/Consent";
+import type { BrandImage } from "@/lib/brand";
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
-export function Footer() {
+export function Footer({ logo }: { logo?: BrandImage | null }) {
     return (
         <footer className="bg-slate-900 text-slate-200 py-12 border-t border-slate-800">
             <Container>
@@ -11,10 +13,10 @@ export function Footer() {
                     <div className="space-y-4">
                         <Link href="/" className="block">
                             <Image
-                                src="/logo.png"
-                                alt="TruSync Logo"
-                                width={180}
-                                height={60}
+                                src={logo?.url ?? "/logo.png"}
+                                alt={logo?.alt ?? "TruSync Logo"}
+                                width={logo?.width ?? 180}
+                                height={logo?.height ?? 60}
                                 className="h-16 w-auto"
                             />
                         </Link>
@@ -40,6 +42,7 @@ export function Footer() {
                             <li><Link href="#industries" className="hover:text-primary transition-colors">Industries</Link></li>
                             <li><Link href="#contact" className="hover:text-primary transition-colors">Contact</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+                            <li><CookieSettingsButton className="text-left hover:text-primary transition-colors" /></li>
                         </ul>
                     </div>
 
