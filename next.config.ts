@@ -7,6 +7,22 @@ const nextConfig: NextConfig = {
     return {
       beforeFiles: [
         {
+          source: '/industries/healthcare',
+          destination: 'https://wp.trusync.in/healthcare/'
+        },
+        {
+          source: '/industries/healthcare/:path*',
+          destination: 'https://wp.trusync.in/healthcare/:path*'
+        },
+        {
+          source: '/services/helpdesk-module',
+          destination: 'https://wp.trusync.in/frappe-helpdesk/'
+        },
+        {
+          source: '/services/helpdesk-module/:path',
+          destination: 'https://wp.trusync.in/frappe-helpdesk/:path*'
+        },
+        {
           source: '/services/crm-module',
           destination: 'https://wp.trusync.in/crm-module/',
         },
@@ -69,22 +85,6 @@ const nextConfig: NextConfig = {
         {
           source: '/innovation/dpdp-compliance/:path*',
           destination: 'https://wp.trusync.in/dpdp-compliance/:path*'
-        },
-        {
-          source: '/industries/healthcare',
-          destination: 'https://wp.trusync.in/healthcare/'
-        },
-        {
-          source: '/industries/healthcare/:path*',
-          destination: 'https://wp.trusync.in/healthcare/:path*'
-        },
-        {
-          source: '/services/helpdesk-module',
-          destination: 'https://wp.trusync.in/frappe-helpdesk/'
-        },
-        {
-          source: '/services/helpdesk-module/:path',
-          destination: 'https://wp.trusync.in/frappe-helpdesk/:path*'
         }
       ]
     };
