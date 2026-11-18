@@ -5,7 +5,7 @@ export default function RealEstatePage() {
     return (
         <Section>
             <Container>
-                <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Real Estate Solutions</h1>
+                <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Real Estate ERPNext Solutions</h1>
                 <p className="text-lg md:text-xl text-slate-600 max-w-3xl mb-8">
                     Complete property management ERPNext solution powered by Tridasa
                 </p>

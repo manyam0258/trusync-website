@@ -27,10 +27,10 @@ export function FrameworkHero() {
                         transition={{ duration: 0.6 }}
                     >
                         <h1 className="text-4xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-6">
-                            The Operating System for <span className="text-blue-600">Modern Business</span>
+                            The <span className="text-blue-600">Frappe Framework</span>: The Operating System for Modern Business
                         </h1>
                         <p className="text-lg lg:text-xl text-slate-600 mb-8 leading-relaxed">
-                            A unified, open-source ecosystem that breaks down silos and powers your entire enterprise.
+                            The Frappe Framework is a unified, open-source low-code platform for building Frappe ERP systems that break down silos and power your modern enterprise.
                         </p>
                     </motion.div>
                 </div>

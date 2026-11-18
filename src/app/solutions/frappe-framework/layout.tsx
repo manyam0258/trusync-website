@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Frappe Framework Custom Development in Hyderabad | TruSync",
-  description: "Enterprise app development using Frappe Framework. Certified developers in Hyderabad building robust custom modules, APIs, and portals.",
+  title: "Frappe Framework Development | Low Code Platform",
+  description: "Enterprise app development using the Frappe Framework. Frappe framework development services in Hyderabad building robust custom modules, APIs, and portals.",
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

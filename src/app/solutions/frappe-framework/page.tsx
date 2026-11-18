@@ -16,7 +16,15 @@ import { Contact } from '@/components/sections/Contact';
 
 export const metadata: Metadata = {
     title: 'Frappe Framework Development | Low Code Platform',
-    description: 'Build robust, scalable enterprise applications with Frappe Framework. Python + JS based low-code web framework.',
+    description: 'Build robust, scalable enterprise applications with the Frappe Framework. Frappe framework development services using Python + JS low-code web framework.',
+    keywords: [
+        'frappe framework',
+        'frappe framework development',
+        'frappe framework development services',
+        'what is frappe framework',
+        'frappe development services',
+        'frappe low code platform',
+    ],
 };
 
 export default function FrappeFrameworkPage() {

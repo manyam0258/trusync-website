@@ -4,14 +4,18 @@ import { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'DPDP Compliance Solutions | Digital Personal Data Protection Act, 2023',
-    description: 'Comprehensive DPDP Act, 2023 compliance solutions. From assessment to implementation, we help organisations build operational privacy frameworks.',
+    title: "DPDP Compliance Software & Solutions | Digital Personal Data Protection Act, 2023",
+    description: "DPDP compliance software and compliance solutions for the Digital Personal Data Protection Act, 2023. From assessment to implementation, TruSync helps organisations build operational privacy frameworks, consent management, and security controls.",
     keywords: [
-        'dpdp compliance solutions',
-        'dpdp compliance',
-        'trusync dpdp compliance',
-        'dpdp compliance services',
-        'dpdp compliance consulting',
+        "dpdp compliance software",
+        "dpdp compliance platform",
+        "dpdp compliance solution",
+        "dpdpa compliance software",
+        "local cloud dpdpa compliance platform",
+        "dpdp compliance management software",
+        "dpdp compliance technology",
+        "dpdp compliance services",
+        "dpdp compliance consulting",
     ],
 };
 
@@ -20,8 +24,8 @@ export default function DPDPCompliancePage() {
         <>
             {/* Hero Section - Using ServicePageLayout for consistent styling */}
             <ServicePageLayout
-                title="Digital Personal Data Protection (DPDP) Act, 2023"
-                subtitle="Trusync is your one-stop shop for dpdp compliance solution"
+                title="DPDP Compliance Software & Solutions"
+                subtitle="Trusync is your one-stop shop for DPDP compliance software and solutions"
                 painPoints={[
                     { title: 'Legal Risks', description: 'High penalties for non-compliance with the new DPDP Act.' },
                     { title: 'Data Breaches', description: 'Vulnerable data infrastructure risking customer trust.' },

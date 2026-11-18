@@ -17,7 +17,7 @@ const Page = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <h1 className="text-4xl lg:text-5xl font-bold mb-6 tracking-tight leading-tight text-slate-900">
-                            Financial Mastery Meets <br />
+                            ERPNext Accounting Software: Financial Mastery Meets <br />
                             <span className="text-blue-600">Asset Intelligence</span>
                         </h1>
                         <p className="text-xl font-medium text-slate-700 mb-4">

@@ -4,7 +4,14 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Frappe LMS | Learning Management System',
-    description: 'Train your workforce and educate customers with an open-source Learning Management System.',
+    description: 'Train your workforce and educate customers with an open-source Learning Management System built for ERPNext teams.',
+    keywords: [
+        'frappe lms',
+        'lms frappe',
+        'frappe learning management system',
+        'frappe lms for erpnext',
+        'frappe training lms',
+    ],
 };
 
 export default function FrappeLMSPage() {
@@ -24,7 +31,7 @@ export default function FrappeLMSPage() {
     return (
         <ServicePageLayout
             title="Frappe LMS"
-            subtitle="Empower your organization with a comprehensive learning and training platform."
+            subtitle="Empower your organization with a comprehensive Frappe LMS for learning and training."
             painPoints={painPoints}
             features={features}
             techStack={['Frappe', 'Video.js', 'Quiz Module']}
