@@ -63,7 +63,7 @@ const Page = () => {
                     >
                         <h1 className="text-4xl lg:text-5xl font-bold mb-6 tracking-tight leading-tight text-slate-900">
                             Mastering Inventory & <br />
-                            <span className="text-blue-600">Order Management</span>
+                            <span className="text-blue-600">Order Management with ERPNext</span>
                         </h1>
                         <p className="text-xl font-medium text-slate-700 mb-4">
                             A Comprehensive Guide to Stock, Warehouse, and Item Management with ERPNext.

@@ -3,8 +3,15 @@ import ServicePageLayout from '@/components/ServicePageLayout';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Frappe Insights | Open Source Business Intelligence',
-    description: 'Data analytics and visualization tool for your ERP. Make informed decisions with Frappe Insights.',
+    title: 'Frappe Insights for ERPNext | Open Source Business Intelligence',
+    description: 'Frappe Insights is an open-source business intelligence tool for your ERPNext. Make informed decisions with Frappe Insights and ERPNext insights for your operations.',
+    keywords: [
+        'frappe insights',
+        'erpnext insights',
+        'frappe business intelligence',
+        'erpnext business intelligence',
+        'frappe insights erpnext',
+    ],
 };
 
 export default function FrappeInsightsPage() {
@@ -23,8 +30,8 @@ export default function FrappeInsightsPage() {
 
     return (
         <ServicePageLayout
-            title="Frappe Insights"
-            subtitle="Turn your raw data into actionable business intelligence with a powerful, open-source BI tool."
+            title="Frappe Insights for ERPNext"
+            subtitle="Turn your ERPNext data into actionable business intelligence with Frappe Insights, the open-source BI tool for your operations."
             painPoints={painPoints}
             features={features}
             techStack={['React', 'Python', 'SQL', 'Chart.js']}
