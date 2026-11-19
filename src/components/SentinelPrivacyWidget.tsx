@@ -53,6 +53,9 @@ export default function SentinelPrivacyWidget({
   const [optionalPurposes, setOptionalPurposes] = useState<ConsentPurposeItem[]>([]);
   const [preferences, setPreferences] = useState<Record<string, boolean>>({});
   const [loading, setLoading] = useState(true);
+  // Only shown once Sentinel DPDP actually returns a policy for this form.
+  // If Sentinel is not linked or unreachable, the widget renders nothing.
+  const [linked, setLinked] = useState(false);
 
   // Fetch multilingual policy from Sentinel Gateway (via Same-Origin Next.js Proxy)
   useEffect(() => {
@@ -60,8 +63,11 @@ export default function SentinelPrivacyWidget({
       setLoading(true);
       try {
         const res = await fetch(`/api/sentinel/get_form_policy?form_id=${encodeURIComponent(formId)}&language=${encodeURIComponent(selectedLang)}`);
+        if (!res.ok) throw new Error(`Sentinel policy request failed (${res.status})`);
         const json = await res.json();
         const data = json.message || json;
+        if (!data || !data.notice) throw new Error('Sentinel returned no policy for this form');
+        setLinked(true);
         if (data.notice) {
           setNotice(data.notice);
           if (onPolicyLoaded) onPolicyLoaded(data);
@@ -108,6 +114,8 @@ export default function SentinelPrivacyWidget({
     const anyMarketing = Object.entries(updated).some(([k, v]) => v);
     if (onMarketingChange) onMarketingChange(anyMarketing);
   };
+
+  if (!linked) return null;
 
   return (
     <div style={{
