@@ -105,7 +105,13 @@ export function Contact({ heading }: { heading?: string } = {}) {
         console.warn('Sentinel consent capture unavailable; enquiry will still be saved:', sentinelErr);
       }
 
-      // 2. Always save the enquiry to the CRM/backend (Supabase).
+      // 2. Always save the enquiry to the backend (Payload CMS and Supabase),
+      //    with the consent details recorded alongside it.
+      formData.set('consent_language', selectedLanguage);
+      formData.set('consent_marketing', String(marketingConsent));
+      if (sealed?.consent_receipt?.proof_hash) {
+        formData.set('consent_proof_hash', sealed.consent_receipt.proof_hash);
+      }
       const crmResult = await submitContactForm(formData);
       if (crmResult.error) {
         showToast(crmResult.error, "error");

@@ -10,6 +10,7 @@ import sharp from 'sharp'
 
 import { publishersOnly } from './access'
 import { Categories } from './collections/Categories'
+import { Enquiries } from './collections/Enquiries'
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
 import { Posts } from './collections/Posts'
@@ -42,7 +43,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Pages, Posts, Categories, Media, Users],
+  collections: [Pages, Posts, Categories, Media, Users, Enquiries],
   globals: [SiteSettings],
   editor: lexicalEditor(),
   csrf: ALLOWED_ORIGINS,
