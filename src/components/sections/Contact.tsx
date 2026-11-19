@@ -61,53 +61,66 @@ export function Contact() {
     setSubmitting(true);
 
     try {
-      // 1. Send Privacy & Consent Event to Sentinel Ingestion Gateway
-      const res = await fetch('/api/sentinel/capture_event', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          principal: {
-            name: formDataObj.name,
-            email: formDataObj.email,
-            phone: formDataObj.phone
+      // 1. Best-effort: seal DPDP consent with Sentinel. This must never block the
+      //    enquiry from being saved — if Sentinel is down the enquiry still submits.
+      let sealed: SentinelReceipt | null = null;
+      try {
+        const res = await fetch('/api/sentinel/capture_event', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
           },
-          processing: {
-            purpose: 'ENQUIRY_HANDLING',
-            lawful_basis: 'Certain Legitimate Use - Specified Purpose Voluntary'
-          },
-          preferences: preferences,
-          notice: {
-            language: selectedLanguage
-          },
-          source: {
-            system: 'TruSync-Website',
-            form: 'contact-us-pilot',
-            service_requested: formDataObj.service
-          }
-        })
-      });
+          body: JSON.stringify({
+            principal: {
+              name: formDataObj.name,
+              email: formDataObj.email,
+              phone: formDataObj.phone
+            },
+            processing: {
+              purpose: 'ENQUIRY_HANDLING',
+              lawful_basis: 'Certain Legitimate Use - Specified Purpose Voluntary'
+            },
+            preferences: preferences,
+            notice: {
+              language: selectedLanguage
+            },
+            source: {
+              system: 'TruSync-Website',
+              form: 'contact-us-pilot',
+              service_requested: formDataObj.service
+            }
+          })
+        });
 
-      const data = await res.json();
-      const result = data.message || data;
-
-      if (result.success) {
-        setSealedReceipt(result as SentinelReceipt);
-        // 2. Proceed with standard CRM/backend ingestion (existing Supabase call)
-        const crmResult = await submitContactForm(formData);
-        if (crmResult.error) {
-          showToast(crmResult.error, "error");
+        const data = await res.json();
+        const result = data.message || data;
+        if (result.success) {
+          sealed = result as SentinelReceipt;
+          setSealedReceipt(sealed);
         } else {
-          showToast('Enquiry submitted and cryptographically sealed under DPDP Act!', "success");
-          (document.getElementById("contact-form") as HTMLFormElement)?.reset();
+          console.warn('Sentinel consent not sealed:', result.message || result);
         }
-      } else {
-        throw new Error(result.message || 'Submission failed');
+      } catch (sentinelErr) {
+        console.warn('Sentinel consent capture unavailable; enquiry will still be saved:', sentinelErr);
       }
+
+      // 2. Always save the enquiry to the CRM/backend (Supabase).
+      const crmResult = await submitContactForm(formData);
+      if (crmResult.error) {
+        showToast(crmResult.error, "error");
+        return;
+      }
+
+      (document.getElementById("contact-form") as HTMLFormElement)?.reset();
+      showToast(
+        sealed
+          ? 'Enquiry submitted and cryptographically sealed under DPDP Act!'
+          : 'Enquiry submitted successfully!',
+        "success"
+      );
     } catch (err: any) {
-      console.error('Sentinel submission error:', err);
+      console.error('Submission error:', err);
       showToast('Error submitting enquiry: ' + err.message, "error");
     } finally {
       setSubmitting(false);
