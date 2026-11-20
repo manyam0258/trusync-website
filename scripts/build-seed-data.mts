@@ -11,6 +11,7 @@ import fs from 'node:fs'
 
 import { PAGES, metaFrom, type Catalog } from './seed-code-pages.mjs'
 import { allSeeds, paragraphs } from './seed-pages.mjs'
+import { dpdpSeeds } from './seed-dpdp-pages.mjs'
 
 type Out = { slug: string; title: string; noindex: boolean; meta: { title?: string; description?: string }; layout: unknown[] }
 const out: Out[] = []
@@ -45,6 +46,9 @@ for (const [key, page] of Object.entries(PAGES)) {
     }],
   })
 }
+
+// The Sentinel DPDP product pages (/dpdp/...), written directly as section data.
+out.push(...dpdpSeeds())
 
 fs.mkdirSync('src/seed', { recursive: true })
 fs.writeFileSync('src/seed/default-pages.json', JSON.stringify(out))

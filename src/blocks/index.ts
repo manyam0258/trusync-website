@@ -1,6 +1,7 @@
 import type { Block, Field } from 'payload'
 
 import { CODE_PAGES } from '../lib/code-pages'
+import { dpdpBlocks } from './dpdp'
 import { URL_HELP, validateOptionalUrl } from '../lib/safe-url'
 
 const linkFields = (name: string, label: string): Field => ({
@@ -312,6 +313,8 @@ const rawBlocks: Block[] = [
   FaqBlock,
   CtaBlock,
   ContactBlock,
+  // Sentinel DPDP product sections (src/blocks/dpdp.ts)
+  ...dpdpBlocks,
 ]
 
 const anchorField: Field = {

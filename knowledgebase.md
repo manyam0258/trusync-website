@@ -218,6 +218,16 @@ Done on 2026-11-07, on this branch.
 - **Needs review before go-live:** this is a working draft, not legal advice. Check the retention wording in section 5, confirm the contact details, and confirm the complaints route in section 6 (the Data Protection Board of India once operational).
 - **To change it:** edit the page in the admin. To change the seeded default text, edit `privacySeed` in `scripts/seed-pages.mts` and run `npx tsx scripts/build-seed-data.mts`. Existing pages are never overwritten by the seed.
 
+### Sentinel DPDP product section (2026-11-19)
+- **What:** 35 CMS pages under `/dpdp` for TruSync's own DPDP compliance product, Sentinel DPDP, plus one code page, `/dpdp/sdf-assessment`. The structure (platform modules, industries, by role, by Data Principal, resources) was modelled on a competitor's information architecture. **All wording is original**: no competitor names, images, logos, people, press, certifications or customer claims. Headings were compared against the competitor's headings, and close matches were rewritten.
+- **Menu:** a "Sentinel DPDP" mega menu in `src/components/layout/Header.tsx`, with links in `src/lib/dpdp-menu.ts`. The desktop menu now shows from 1024px (`lg`); below that the hamburger menu is used, because nine items do not fit at tablet widths.
+- **Content:** `scripts/seed-dpdp-pages.mts` defines every page with the standard sections, using shared templates for module, industry and resource pages. `build-seed-data.mts` adds them to `src/seed/default-pages.json`, so a fresh database creates them on start. After changing that file, run `npx tsx scripts/build-seed-data.mts`. Existing pages are never overwritten; edit them in the admin.
+- **SDF readiness check:** `src/components/dpdp/SdfAssessment.tsx` scores the Section 10(1) factors and shows a likelihood, never a verdict. The DPDP Act has no numeric threshold; only a Government notification makes an SDF. It is `force-dynamic` because the shared layout reads the logo from the database.
+- **Section headings** now support `*asterisk*` gradient emphasis, as the hero already did.
+- **Needs review before go-live:**
+  - The module pages describe capabilities (data discovery scanning, cookie scanning, DPIA and TPRM workflows, breach countdowns and others). Remove or reword any that Sentinel DPDP does not offer yet.
+  - The legal summaries follow the Act and the DPDP Rules, 2025, but are not legal advice. Have counsel check the Act, Rules, GDPR comparison and FAQ pages.
+
 ### Decisions and cautions
 - Payload and `@payloadcms/*` packages must all be the same exact version (currently 3.93.0). Do not use caret ranges.
 - `images.localPatterns` in `next.config.ts` blocks every local image that is not listed. Add a pattern for any new folder that `next/image` must serve.

@@ -2,6 +2,7 @@ import { convertMarkdownToLexical, editorConfigFactory } from '@payloadcms/richt
 import type { PayloadRequest } from 'payload'
 import { z } from 'zod/v3'
 
+import { DPDP_BLOCK_SLUGS, dpdpBlocks } from '../blocks/dpdp'
 import { formatSlug } from '../fields/slug'
 import { isSafeUrl, URL_HELP } from '../lib/safe-url'
 import { serverUrl } from '../lib/server-url'
@@ -100,6 +101,21 @@ const postFields = {
   seoDescription: z.string().max(170).optional().describe('Search description, about 150 to 160 characters.'),
 }
 
+/** One line per Sentinel DPDP section type, listing its fields, so an agent knows what to send. Built from the block config. */
+type FieldLike = { name?: string; type: string; fields?: FieldLike[]; options?: { value: string }[] }
+const describeFields = (fields: FieldLike[]): string =>
+  fields
+    .filter((f) => f.name)
+    .map((f) => {
+      if (f.type === 'array') return `${f.name}[{${describeFields(f.fields ?? [])}}]`
+      if (f.type === 'group') return `${f.name}{${describeFields(f.fields ?? [])}}`
+      if (f.type === 'select' && f.options && f.options.length <= 8) return `${f.name}(${f.options.map((o) => o.value).join('|')})`
+      if (f.type === 'select') return `${f.name}(icon name)`
+      return f.name
+    })
+    .join(', ')
+const DESIGN_GUIDE = dpdpBlocks.map((b) => `${b.slug}: ${describeFields(b.fields as FieldLike[])}`).join('\n')
+
 const sectionSchema = z.discriminatedUnion('type', [
   z.object({
     type: z.literal('hero'),
@@ -125,6 +141,11 @@ const sectionSchema = z.discriminatedUnion('type', [
     buttonUrl: safeUrl.optional(),
   }),
   z.object({ type: z.literal('contactForm'), heading: z.string().optional() }),
+  z.object({
+    type: z.literal('design'),
+    block: z.enum(DPDP_BLOCK_SLUGS as [string, ...string[]]).describe('A Sentinel DPDP section type.'),
+    data: z.record(z.unknown()).describe(`The section's fields. Arrays of rows are lists of objects. Fields per section type:\n${DESIGN_GUIDE}`),
+  }),
 ])
 type Section = z.infer<typeof sectionSchema>
 
@@ -152,6 +173,9 @@ const toBlocks = async (req: PayloadRequest, sections: Section[]) => {
         body: s.body,
         button: s.buttonLabel && s.buttonUrl ? { label: s.buttonLabel, url: s.buttonUrl } : undefined,
       })
+    } else if (s.type === 'design') {
+      // Payload validates the fields against the block config, including link safety.
+      blocks.push({ ...s.data, blockType: s.block })
     } else {
       blocks.push({ blockType: 'contactForm', heading: s.heading })
     }
@@ -277,7 +301,7 @@ export const mcpTools = [
   {
     name: 'createPageDraft',
     description:
-      'Creates a website page as a draft, made of sections (hero, text, features, faq, cta, contactForm). Never publishes. The path is the URL without a leading slash, for example "services/sap-migration".',
+      'Creates a website page as a draft, made of sections (hero, text, features, faq, cta, contactForm, and "design" sections for the Sentinel DPDP pages). Never publishes. The path is the URL without a leading slash, for example "services/sap-migration".',
     parameters: {
       title: z.string().min(3),
       path: z.string().min(2).describe('URL path without a leading slash. Lowercase, hyphens, slashes for nesting.'),

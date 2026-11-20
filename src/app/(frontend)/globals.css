@@ -73,3 +73,12 @@ body {
 .rich-text blockquote { border: 1px solid var(--border); border-radius: 0.75rem; padding: 1rem 1.25rem; background: var(--muted); }
 .rich-text img { border-radius: 0.75rem; }
 .rich-text code { background: var(--secondary); padding: 0.125rem 0.375rem; border-radius: 0.375rem; font-size: 0.9em; }
+
+/* Sentinel DPDP product pages (src/components/dpdp/sections) */
+:root {
+  --dp-navy: #0B1F33;
+  --dp-soft: #F5F9FB;
+  --dp-line: #E3EBF0;
+  --dp-ink: #0F172A;
+  --dp-muted: #5B6B7B;
+}

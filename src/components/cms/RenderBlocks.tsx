@@ -1,5 +1,7 @@
 import { AlertTriangle, Award, CheckCircle2 } from 'lucide-react'
 import Image from 'next/image'
+
+import { DpdpSection, isDpdpBlock } from '@/components/dpdp/sections'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/Button'
@@ -93,7 +95,7 @@ function SectionHead({ eyebrow, heading, intro, theme, h1 }: { eyebrow?: string 
           {eyebrow}
         </span>
       )}
-      {heading && <H className={`mb-4 text-3xl font-bold md:text-4xl ${theme.head}`}>{heading}</H>}
+      {heading && <H className={`mb-4 text-3xl font-bold md:text-4xl ${theme.head}`}><Highlighted text={heading} /></H>}
       {intro && <p className={`text-lg ${theme.body}`}>{intro}</p>}
     </div>
   )
@@ -461,7 +463,8 @@ function renderBlock(block: Block, index: number) {
       return <Contact key={key} heading={b.heading} />
     }
     default:
-      return null
+      // Sentinel DPDP product sections (src/blocks/dpdp.ts)
+      return isDpdpBlock(block.blockType) ? <DpdpSection key={key} block={block} first={index === 0} anchor={anchor} /> : null
   }
 }
 
