@@ -13,6 +13,8 @@ import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import { pathToFileURL } from 'node:url'
 
+import { CONTENT_PAGES } from './seed-content-pages.mjs'
+
 
 // Talks to a running site over its REST API, signed in as an admin:
 //   SEED_BASE=http://localhost:3000 SEED_EMAIL=you@example.com SEED_PASSWORD=... npx tsx scripts/seed-pages.mts
@@ -498,7 +500,16 @@ const privacySeed: Seed = {
   },
 }
 
-export const allSeeds = (): Seed[] => [homeSeed, ...SERVICE_TEMPLATE_PAGES.map(serviceSeed).filter((s): s is Seed => !!s), ...STUBS.map(stubSeed), ...LARGE_PAGES, privacySeed]
+/** Template and placeholder pages that now have full content (scripts/seed-content-pages.mts) use it instead. */
+const withContent = (seed: Seed): Seed => CONTENT_PAGES[seed.slug] ?? seed
+
+export const allSeeds = (): Seed[] => [
+  homeSeed,
+  ...SERVICE_TEMPLATE_PAGES.map(serviceSeed).filter((s): s is Seed => !!s).map(withContent),
+  ...STUBS.map(stubSeed).map(withContent),
+  ...LARGE_PAGES,
+  privacySeed,
+]
 
 async function main() {
   const seeds: Seed[] = allSeeds()
