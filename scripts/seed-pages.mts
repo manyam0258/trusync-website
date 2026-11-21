@@ -507,7 +507,7 @@ export const allSeeds = (): Seed[] => [
   homeSeed,
   ...SERVICE_TEMPLATE_PAGES.map(serviceSeed).filter((s): s is Seed => !!s).map(withContent),
   ...STUBS.map(stubSeed).map(withContent),
-  ...LARGE_PAGES,
+  ...LARGE_PAGES.map(withContent),
   privacySeed,
 ]
 
